@@ -152,6 +152,11 @@ async function callClaude() {
   }
 
   // ツール呼び出しの引数は、APIが型に沿って生成するため、素のJSON.parseは不要
+  if (!submitBlock.input || !Array.isArray(submitBlock.input.items)) {
+    console.error("submitBlock.input の中身が想定と異なります:");
+    console.error(JSON.stringify(submitBlock.input, null, 2).slice(0, 3000));
+    throw new Error("submitBlock.input.items が配列ではありません。上記ログを確認してください。");
+  }
   return submitBlock.input.items;
 }
 
