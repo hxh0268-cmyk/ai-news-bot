@@ -36,7 +36,7 @@ function cardHtml(item, index, total, bgPath) {
   body::after{
     content:"";
     position:absolute; inset:0;
-    background:linear-gradient(to bottom, rgba(10,12,20,0.05) 0%, rgba(10,12,20,0.35) 72%, rgba(10,12,20,0.6) 100%);
+    background:linear-gradient(to bottom, rgba(10,12,20,0.15) 0%, rgba(10,12,20,0.55) 65%, rgba(10,12,20,0.82) 100%);
     z-index:0;
   }
   .top, .tag, h1, .dek, .statrow, .footer{ position:relative; z-index:1; }
