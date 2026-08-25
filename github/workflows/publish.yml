@@ -1,0 +1,57 @@
+name: Daily Content - Publish After Approval
+
+# ブランチ名 "content/<topic>/<run_number>" のPull RequestがMergeされたときだけ動く。
+# ブランチ名から話題(topic)を自動的に読み取るため、話題を追加してもこのファイルの編集は不要。
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    # ★killスイッチ: KILL_SWITCH が "true" の間は、PRがMergeされても投稿処理は起動しません。
+    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'content/') && vars.KILL_SWITCH != 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: ブランチ名から話題(topic)を取り出す
+        id: parse
+        run: |
+          REF="${{ github.event.pull_request.head.ref }}"
+          # "content/<topic>/<run_number>" の <topic> 部分を取り出す
+          TOPIC=$(echo "$REF" | cut -d'/' -f2)
+          echo "検出した話題: $TOPIC"
+          echo "topic=$TOPIC" >> "$GITHUB_OUTPUT"
+
+      - name: STEP4 Zapier webhookへ送信
+        env:
+          ZAPIER_WEBHOOKS_JSON: ${{ secrets.ZAPIER_WEBHOOKS_JSON }}
+          TOPIC: ${{ steps.parse.outputs.topic }}
+        run: node scripts/publish.mjs
+
+      - name: ledger（重複投稿防止の記録）をmainにコミット
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[${{ steps.parse.outputs.topic }}] ledger更新（投稿記録）"
+          file_pattern: "ledger/*.json"
+
+      - name: 失敗時にSlack通知（設定していればのみ動作）
+        if: failure()
+        run: |
+          if [ -n "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
+            curl -s -X POST -H 'Content-type: application/json' \
+              --data "{\"text\":\"⚠️ [${{ steps.parse.outputs.topic }}] SNS投稿処理が失敗しました。GitHub Actionsのログを確認してください: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+              "${{ secrets.SLACK_WEBHOOK_URL }}"
+          else
+            echo "SLACK_WEBHOOK_URL が未設定のため通知はスキップされました。"
+          fi

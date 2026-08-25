@@ -1,0 +1,62 @@
+name: Weekly Review - P/L & Content Analysis
+
+on:
+  schedule:
+    # 毎週月曜 22:00 UTC（日本時間 火曜7:00）。実行のたびに直近7日分を集計する。
+    - cron: "0 22 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover-topics:
+    runs-on: ubuntu-latest
+    outputs:
+      topics: ${{ steps.list.outputs.topics }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        run: |
+          TOPICS=$(ls config/topics/*.json | xargs -n1 basename | sed 's/\.json$//' | jq -R . | jq -s -c .)
+          echo "topics=$TOPICS" >> "$GITHUB_OUTPUT"
+
+  weekly-review:
+    needs: discover-topics
+    if: ${{ vars.KILL_SWITCH != 'true' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        topic: ${{ fromJson(needs.discover-topics.outputs.topics) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 週次レビューを生成
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/weekly-review.mjs
+
+      - name: レビュー結果と収益入力テンプレートをPull Requestとして提出
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "[${{ matrix.topic }}] 週次レビューを生成"
+          branch: "weekly-review/${{ matrix.topic }}/${{ github.run_number }}"
+          title: "【週次レビュー】${{ matrix.topic }} (${{ github.run_id }})"
+          body: |
+            直近7日分の投稿傾向分析＋収支サマリーです。
+
+            - `output/${{ matrix.topic }}/weekly-reviews/<週>.md`：レポート本体
+            - `metrics/${{ matrix.topic }}/<週>.json`：収益・エンゲージメントの入力欄（Buffer/GA4/noteの管理画面を見て埋めてください）
+
+            数値を入力し、必要であれば再実行（workflow_dispatch）してレポートを更新してからMergeしてください。
+          add-paths: |
+            output/${{ matrix.topic }}/weekly-reviews/**
+            metrics/${{ matrix.topic }}/**

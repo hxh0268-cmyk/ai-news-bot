@@ -1,0 +1,136 @@
+name: Daily Content - Generate & Request Check
+
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  # config/topics/ 内のJSONファイルを自動検出し、話題の一覧をマトリクスとして出力する。
+  # 新しい話題を増やしたいときは、config/topics/に設定ファイルを1つ追加するだけでよく、
+  # このワークフロー自体を編集する必要はない。
+  discover-topics:
+    runs-on: ubuntu-latest
+    outputs:
+      topics: ${{ steps.list.outputs.topics }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: list
+        run: |
+          TOPICS=$(ls config/topics/*.json | xargs -n1 basename | sed 's/\.json$//' | jq -R . | jq -s -c .)
+          echo "検出した話題: $TOPICS"
+          echo "topics=$TOPICS" >> "$GITHUB_OUTPUT"
+
+  generate:
+    needs: discover-topics
+    # ★killスイッチ: Settings > Secrets and variables > Actions > Variables で
+    #   KILL_SWITCH を "true" にすると、次回以降このジョブは一切実行されずスキップされます。
+    #   緊急停止したい場合は、コードを一切触らずここだけ切り替えてください。
+    if: ${{ vars.KILL_SWITCH != 'true' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        topic: ${{ fromJson(needs.discover-topics.outputs.topics) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - run: npm install
+
+      - name: STEP1 ニュース7本を収集・重要度5本を選定
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/generate.mjs
+
+      - name: STEP1.5 アフィリエイトリンク挿入・PR表記処理
+        env:
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/monetize.mjs
+
+      - name: STEP1.8 note販売用の記事ドラフトを生成
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/generate-note-article.mjs
+
+      - name: STEP2a Nano Banana Proで背景ビジュアルを生成
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/generate-visuals.mjs
+
+      - name: STEP2 5枚の画像カードを生成
+        env:
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/render-cards.mjs
+
+      - name: STEP2.5 広告枠付きサイトを生成
+        env:
+          ADSENSE_CLIENT_ID: ${{ secrets.ADSENSE_CLIENT_ID }}
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/render-site.mjs
+
+      - name: STEP3a Kling AIで動画クリップを生成（失敗しても全体は継続）
+        continue-on-error: true
+        env:
+          KLING_API_KEY: ${{ secrets.KLING_API_KEY }}
+          KLING_API_BASE_URL: ${{ secrets.KLING_API_BASE_URL }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/generate-video-clips.mjs
+
+      - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
+        continue-on-error: true
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
+          TOPIC: ${{ matrix.topic }}
+        run: node scripts/generate-narration.mjs
+
+      - name: STEP3c クリップ結合＋ナレーション合成
+        env:
+          TOPIC: ${{ matrix.topic }}
+        run: bash scripts/build-video.sh
+
+      - name: 生成物をPull Requestとして提出（★Human Check★）
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "[${{ matrix.topic }}] 本日分のコンテンツを自動生成"
+          branch: "content/${{ matrix.topic }}/${{ github.run_number }}"
+          title: "【要確認・GO判定】${{ matrix.topic }} (${{ github.run_id }})"
+          body: |
+            話題「${{ matrix.topic }}」の本日分の投稿案です。
+
+            - `output/${{ matrix.topic }}/<日付>/cards/1〜5.png`：Instagram/Threads向け画像（縦長）
+            - `output/${{ matrix.topic }}/<日付>/cards-x/1〜5.png`：X向け画像（横長）
+            - `output/${{ matrix.topic }}/<日付>/slideshow.mp4`：動画（上位本数のみ。生成失敗時は静止画スライドショーに自動代替）
+            - `output/${{ matrix.topic }}/<日付>/note-article.md`：note販売用の記事ドラフト（手動貼り付け）
+            - `output/${{ matrix.topic }}/<日付>/monetization-report.md`：**アフィリエイト・PR表記の確認レポート（必読）**
+            - `docs/${{ matrix.topic }}/index.html`：広告枠付きの記事サイト
+
+            内容を確認し、問題なければこのPRをMergeしてください。Mergeが「GO」判定になり、
+            自動的にSNSへの投稿処理が始まります。
+          add-paths: |
+            output/${{ matrix.topic }}/**
+            docs/${{ matrix.topic }}/**
+
+      - name: 失敗時にSlack通知（設定していればのみ動作）
+        if: failure()
+        run: |
+          if [ -n "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
+            curl -s -X POST -H 'Content-type: application/json' \
+              --data "{\"text\":\"⚠️ [${{ matrix.topic }}] 本日のコンテンツ生成が失敗しました。GitHub Actionsのログを確認してください: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+              "${{ secrets.SLACK_WEBHOOK_URL }}"
+          else
+            echo "SLACK_WEBHOOK_URL が未設定のため通知はスキップされました。"
+          fi
