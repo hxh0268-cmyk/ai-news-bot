@@ -68,7 +68,8 @@ async function main() {
     console.log(`[${topic.slug}] 背景ビジュアル生成中 (${i + 1}/${top5.length})...`);
     try {
       const buf = await withRetry(() => generateOne(buildPrompt(top5[i])), {
-        retries: 3,
+        retries: 5,
+        baseDelayMs: 15000, // Nano Banana Pro側の一時的な混雑（503）を乗り越えるため、待機時間を長めに取る
         label: `背景ビジュアル生成(${i + 1})`,
       });
       fs.writeFileSync(path.join(bgDir, `${i + 1}.png`), buf);
