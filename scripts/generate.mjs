@@ -30,30 +30,85 @@ ${topic.systemPrompt}
 【本日の見出しスタイル指定（A/Bテスト中・variant ${variant}）】
 ${variantInstruction}
 
-出力は必ず有効なJSON配列のみとしてください。前後に説明文やMarkdownのコードフェンス（\`\`\`）を付けないでください。
-配列の要素数は必ず7個。各要素は以下のキーを持つオブジェクトにしてください：
+以下の項目を持つニュース7件を集めてください：
 
-{
-  "importance": 1〜7の整数（1が最重要。7件で重複なく順位をつける）,
-  "category": "カテゴリ名（英語、例: Speed / OpenAI）",
-  "catColor": "${(topic.categoryColors || ["#F4B942", "#7C6FE0", "#1F8A83", "#E1636F"]).join('" か "')} のいずれか",
-  "headline": "見出し（日本語、20〜28字程度、画像内に収まる長さ）",
-  "dek": "見出し下の一行説明（日本語、30字程度）",
-  "body": ["本文の段落1", "本文の段落2", "本文の段落3"],
-  "stats": [{"n": "数値", "l": "説明ラベル"}],
-  "why": "なぜ重要かの説明（日本語、2〜3文）",
-  "chips": ["関連キーワード1", "関連キーワード2"],
-  "sourceLine": "出典（媒体名、日付）",
-  "videoId": "関連する公式YouTube動画のIDが確実に分かる場合のみ記入。分からなければ null",
-  "captionX": "X投稿用の文章（日本語、120字以内、ハッシュタグ2個程度含む）",
-  "captionThreads": "Threads投稿用の文章（日本語、200字以内、少し会話的なトーン）",
-  "captionInstagram": "Instagram投稿用の文章（日本語、300字程度、詳しめの説明＋ハッシュタグ5個程度）"
-}
+- importance: 1〜7の整数（1が最重要。7件で重複なく順位をつける）
+- category: カテゴリ名（英語、例: Speed / OpenAI）
+- catColor: ${(topic.categoryColors || ["#F4B942", "#7C6FE0", "#1F8A83", "#E1636F"]).join(" か ")} のいずれか
+- headline: 見出し（日本語、20〜28字程度、画像内に収まる長さ）
+- dek: 見出し下の一行説明（日本語、30字程度）
+- body: 本文の段落（2〜4個の配列）
+- stats: 数値と説明ラベルの組（配列）
+- why: なぜ重要かの説明（日本語、2〜3文）
+- chips: 関連キーワード（配列）
+- sourceLine: 出典（媒体名、日付）
+- videoId: 関連する公式YouTube動画のIDが確実に分かる場合のみ。分からなければ null
+- captionX: X投稿用の文章（日本語、120字以内、ハッシュタグ2個程度含む）
+- captionThreads: Threads投稿用の文章（日本語、200字以内、少し会話的なトーン）
+- captionInstagram: Instagram投稿用の文章（日本語、300字程度、詳しめの説明＋ハッシュタグ5個程度）
 
 正確性を最優先してください。数値や固有名詞は必ずWeb検索で確認したものだけを使い、不確かな情報は書かないでください。
+
+【固有名詞の表記ルール】
+企業名・サービス名・製品名・アプリ名などの固有名詞は、カタカナ訳をせず、必ず公式の英語表記（アルファベット）のまま使ってください。
+例：「アンソロピック」ではなく「Anthropic」、「オープンAI」ではなく「OpenAI」、「グーグル」ではなく「Google」、「クロード」ではなく「Claude」。
+一般名詞（例：人工知能、生成、投稿）は通常通り日本語で構いません。あくまで固有名詞のみが対象です。
+
+情報収集が終わったら、必ず submit_news_items ツールを使って結果を提出してください。
 `.trim();
 
-const USER_PROMPT = `${dateStr} 時点の最新情報を調べて、上記フォーマットのJSON配列を作成してください。`;
+const USER_PROMPT = `${dateStr} 時点の最新情報を調べて、上記フォーマットでニュース7件を集めてください。集め終わったら submit_news_items ツールで提出してください。`;
+
+// 「自由な文章としてJSONを書かせる」方式は、AIがまれに引用符の閉じ忘れ等で
+// 壊れたJSONを出力することがあった。そこでAPIの「ツール呼び出し」機能を使い、
+// 型（スキーマ）に沿った壊れないデータとして提出させる方式に変更している。
+const NEWS_ITEM_SCHEMA = {
+  type: "object",
+  properties: {
+    importance: { type: "integer", minimum: 1, maximum: 7 },
+    category: { type: "string" },
+    catColor: { type: "string" },
+    headline: { type: "string" },
+    dek: { type: "string" },
+    body: { type: "array", items: { type: "string" }, minItems: 2, maxItems: 4 },
+    stats: {
+      type: "array",
+      items: { type: "object", properties: { n: { type: "string" }, l: { type: "string" } }, required: ["n", "l"] },
+    },
+    why: { type: "string" },
+    chips: { type: "array", items: { type: "string" } },
+    sourceLine: { type: "string" },
+    videoId: { type: ["string", "null"] },
+    captionX: { type: "string" },
+    captionThreads: { type: "string" },
+    captionInstagram: { type: "string" },
+  },
+  required: [
+    "importance",
+    "category",
+    "catColor",
+    "headline",
+    "dek",
+    "body",
+    "why",
+    "sourceLine",
+    "captionX",
+    "captionThreads",
+    "captionInstagram",
+  ],
+};
+
+const SUBMIT_TOOL = {
+  name: "submit_news_items",
+  description: "収集・作成したニュース7件を提出する。",
+  input_schema: {
+    type: "object",
+    properties: {
+      items: { type: "array", items: NEWS_ITEM_SCHEMA, minItems: 7, maxItems: 7 },
+    },
+    required: ["items"],
+  },
+};
 
 async function callClaude() {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
@@ -65,10 +120,14 @@ async function callClaude() {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 16000,
+      max_tokens: 24000,
       system: SYSTEM_PROMPT,
       messages: [{ role: "user", content: USER_PROMPT }],
-      tools: [{ type: "web_search_20250305", name: "web_search" }],
+      // max_uses: 検索回数の上限を設け、検索だけでトークン予算を使い切ってしまうのを防ぐ
+      tools: [
+        { type: "web_search_20250305", name: "web_search", max_uses: 10 },
+        SUBMIT_TOOL,
+      ],
     }),
   });
 
@@ -78,19 +137,21 @@ async function callClaude() {
   }
 
   const data = await res.json();
-  const text = data.content
-    .filter((block) => block.type === "text")
-    .map((block) => block.text)
-    .join("\n");
 
-  const start = text.indexOf("[");
-  const end = text.lastIndexOf("]");
-  if (start === -1 || end === -1) {
+  const submitBlock = data.content.find((b) => b.type === "tool_use" && b.name === "submit_news_items");
+
+  if (!submitBlock) {
     console.error("stop_reason:", data.stop_reason);
     console.error("content block types:", data.content.map((b) => b.type).join(", "));
-    throw new Error("JSON配列が見つかりませんでした。モデルの出力:\n" + text);
+    const textFallback = data.content
+      .filter((b) => b.type === "text")
+      .map((b) => b.text)
+      .join("\n");
+    throw new Error("submit_news_itemsツールの呼び出しが見つかりませんでした。テキスト出力:\n" + textFallback);
   }
-  return JSON.parse(text.slice(start, end + 1));
+
+  // ツール呼び出しの引数は、APIが型に沿って生成するため、素のJSON.parseは不要
+  return submitBlock.input.items;
 }
 
 async function main() {
