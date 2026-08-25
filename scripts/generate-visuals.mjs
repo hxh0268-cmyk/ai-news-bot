@@ -10,7 +10,10 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-const MODEL = "gemini-3-pro-image";
+// 2026年8月時点、Nano Banana Pro（最高品質）が持続的に混雑する場合に備え、
+// Nano Banana 2（同シリーズの高速・高効率版）へ自動フォールバックする。
+const PRIMARY_MODEL = "gemini-3-pro-image";
+const FALLBACK_MODEL = "gemini-3.1-flash-image";
 const { topic, outputDir } = loadTopic();
 
 function buildPrompt(item) {
@@ -52,8 +55,8 @@ function buildPrompt(item) {
 `.trim();
 }
 
-async function generateOne(prompt) {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`;
+async function generateOne(prompt, model) {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
   const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -80,11 +83,24 @@ async function main() {
   for (let i = 0; i < top5.length; i++) {
     console.log(`[${topic.slug}] 背景ビジュアル生成中 (${i + 1}/${top5.length})...`);
     try {
-      const buf = await withRetry(() => generateOne(buildPrompt(top5[i])), {
-        retries: 5,
-        baseDelayMs: 15000, // Nano Banana Pro側の一時的な混雑（503）を乗り越えるため、待機時間を長めに取る
-        label: `背景ビジュアル生成(${i + 1})`,
-      });
+      let buf;
+      try {
+        // まずNano Banana Pro（高品質）を試す
+        buf = await withRetry(() => generateOne(buildPrompt(top5[i]), PRIMARY_MODEL), {
+          retries: 3,
+          baseDelayMs: 10000,
+          label: `背景ビジュアル生成(${i + 1})[Pro]`,
+        });
+      } catch (primaryErr) {
+        console.warn(
+          `⚠️ Nano Banana Pro(${i + 1})が持続的に混雑しているため、Nano Banana 2に切り替えます: ${primaryErr.message}`
+        );
+        buf = await withRetry(() => generateOne(buildPrompt(top5[i]), FALLBACK_MODEL), {
+          retries: 3,
+          baseDelayMs: 8000,
+          label: `背景ビジュアル生成(${i + 1})[Flash]`,
+        });
+      }
       fs.writeFileSync(path.join(bgDir, `${i + 1}.png`), buf);
     } catch (err) {
       // 1枚失敗しても全体を止めない。この場合render-cards.mjs側が
