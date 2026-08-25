@@ -1,0 +1,3 @@
+file '/home/runner/work/ai-news-bot/ai-news-bot/output/ai-news/2026-08-25/clips/1.mp4'
+file '/home/runner/work/ai-news-bot/ai-news-bot/output/ai-news/2026-08-25/clips/2.mp4'
+file '/home/runner/work/ai-news-bot/ai-news-bot/output/ai-news/2026-08-25/clips/3.mp4'
