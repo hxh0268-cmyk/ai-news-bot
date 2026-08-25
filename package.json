@@ -5,6 +5,7 @@
   "type": "module",
   "private": true,
   "dependencies": {
-    "puppeteer": "^23.0.0"
+    "puppeteer": "^23.0.0",
+    "@fal-ai/client": "^1.2.0"
   }
 }
