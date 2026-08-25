@@ -80,11 +80,10 @@ jobs:
           TOPIC: ${{ matrix.topic }}
         run: node scripts/render-site.mjs
 
-      - name: STEP3a Kling AIで動画クリップを生成（失敗しても全体は継続）
+      - name: STEP3a fal.ai経由でKling AIの動画クリップを生成（失敗しても全体は継続）
         continue-on-error: true
         env:
-          KLING_API_KEY: ${{ secrets.KLING_API_KEY }}
-          KLING_API_BASE_URL: ${{ secrets.KLING_API_BASE_URL }}
+          FAL_KEY: ${{ secrets.FAL_KEY }}
           TOPIC: ${{ matrix.topic }}
         run: node scripts/generate-video-clips.mjs
 
@@ -95,6 +94,9 @@ jobs:
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
           TOPIC: ${{ matrix.topic }}
         run: node scripts/generate-narration.mjs
+
+      - name: ffmpegをインストール
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: STEP3c クリップ結合＋ナレーション合成
         env:
