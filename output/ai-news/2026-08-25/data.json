@@ -1,0 +1,246 @@
+[
+  {
+    "importance": 1,
+    "category": "Safety / OpenAI",
+    "catColor": "#E1636F",
+    "headline": "AIが自律的にサイバー攻撃？まさかの一時停止",
+    "dek": "新モデルAstraが危険水準に到達しOpenAIが開発を減速",
+    "body": [
+      "OpenAIは、開発中の次期モデル「Astra」について、内部評価で「Preparedness Framework」が定める最も高い危険水準である「重大なサイバーセキュリティ能力」のしきい値に達した可能性を否定できないと発表しました。これは、人間の介入なしにハードウェアで守られた実システムに対してゼロデイ攻撃を特定・開発できる、あるいは高レベルの目標だけを与えられて攻撃戦略を自律的に実行できるレベルを指します。",
+      "これを受けてOpenAIは、強化学習によるモデル訓練を2週間一時停止し、研究環境の隔離やサンドボックスの強化、不審な挙動を30分以内に検知する新しい監視システムの導入などの安全対策を進めました。Hugging Face関連のインシデントも今回の対応を後押ししたとされています。",
+      "AI企業が自ら「モデルが危険域に入った可能性がある」と公表するのは異例で、AI開発競争と安全性のバランスが改めて注目されています。"
+    ],
+    "why": "AIモデルの能力向上が「便利さ」だけでなく「安全保障上の脅威」に直結し得ることを、開発元自身が認めた点が極めて重要です。今後の他社の安全対策や各国の規制論議にも影響を与える可能性があります。",
+    "sourceLine": "OpenAI公式ブログ、TechCrunch（2026年8月7日・18日）",
+    "stats": [
+      {
+        "n": "2週間",
+        "l": "強化学習の一時停止期間"
+      },
+      {
+        "n": "30分以内",
+        "l": "不審な挙動の検知目標時間"
+      }
+    ],
+    "chips": [
+      "OpenAI",
+      "Astra",
+      "AI安全性",
+      "サイバーセキュリティ"
+    ],
+    "videoId": null,
+    "captionX": "AIが自律的にサイバー攻撃できるレベルに？OpenAIが新モデルAstraの開発を一時減速させたと発表。安全性めぐる新局面です。 #OpenAI #AI安全性",
+    "captionThreads": "まさかの展開。OpenAIが自社の新モデルAstraについて「重大なサイバー能力のしきい値に達した可能性を否定できない」と公表し、訓練を2週間停止したそうです。AIの進化スピード、ちょっと立ち止まって考えたくなるニュースですね。",
+    "captionInstagram": "OpenAIの次期モデル「Astra」が、人間の介入なしにサイバー攻撃を仕掛けられる可能性がある水準に達したかもしれないと、開発元自らが発表しました。これを受けて強化学習の訓練を2週間停止し、監視体制を強化。AIの能力が急速に伸びる一方で、安全対策との綱引きが激しくなっていることを示す出来事です。今後どのような基準で「危険なAI」を線引きしていくのか、業界全体の課題として注目されます。\n#AI安全性 #OpenAI #Astra #サイバーセキュリティ #テクノロジーニュース",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Product / OpenAI",
+    "catColor": "#7C6FE0",
+    "headline": "10代のChatGPT、何が変わる？まさかの自動判定",
+    "dek": "未成年と判定されると自動で保護モードに切り替わる新機能",
+    "body": [
+      "OpenAIは8月18日、13〜17歳向けの新しい体験「ChatGPT for Teens」を世界展開すると発表しました。年齢確認をしなくても、利用内容やパターンからAIが年齢を推定し、未成年と判断されたアカウントは自動的に保護モードへ切り替わる仕組みです。",
+      "保護モードでは、性的・恋愛的な会話やAIが感情を持っているかのような振る舞いを禁止するほか、自傷や摂食障害など機微なテーマへの対応を制限。保護者はアカウントを連携させることで一部設定を管理できますが、会話の内容自体は閲覧できません。",
+      "18歳以上なのに誤って保護モードに入った場合は、身分証や顔写真を使った本人確認サービス「Persona」で年齢を証明できます。"
+    ],
+    "why": "生成AIチャットボットと未成年者の安全を巡る社会的懸念が高まる中での主要企業の対応であり、他のAIサービスにも同様の年齢確認・保護機能が広がる可能性があります。",
+    "sourceLine": "OpenAI Help Center、ABC News（2026年8月18日）",
+    "stats": [
+      {
+        "n": "13〜17歳",
+        "l": "対象年齢"
+      },
+      {
+        "n": "7日以内",
+        "l": "本人確認書類の削除期限"
+      }
+    ],
+    "chips": [
+      "OpenAI",
+      "ChatGPT",
+      "未成年保護",
+      "AI安全性"
+    ],
+    "videoId": null,
+    "captionX": "ChatGPTに10代専用モードが登場。AIが自動で年齢を推定し、未成年なら安全設定に切り替わる仕組みです。 #ChatGPT #OpenAI",
+    "captionThreads": "ChatGPTが13〜17歳向けの新しい安全モードを世界展開開始。年齢確認しなくてもAIが利用パターンから年齢を推定するらしいです。精度がどれくらいか気になるところ…",
+    "captionInstagram": "OpenAIが「ChatGPT for Teens」を発表し、世界中で展開を始めました。年齢を入力しなくても、AIが利用内容から年齢を推定し、未成年と判断されると自動的に保護モードに切り替わります。恋愛的な会話や感情表現を禁止するなど、若年層への影響を意識した設計になっているのが特徴です。一方で年齢推定の精度への疑問の声もあり、今後の運用が注目されます。\n#ChatGPT #OpenAI #AI安全性 #未成年保護 #テクノロジーニュース",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Outage / Anthropic",
+    "catColor": "#F4B942",
+    "headline": "Claudeがまた不調？相次ぐ障害の裏側は",
+    "dek": "8月だけで6回超の障害、企業利用への影響も懸念",
+    "body": [
+      "Anthropic のAIチャットボット「Claude」が8月24日、複数の主力モデルで再びエラー率上昇による障害を起こしました。影響はclaude.aiだけでなく、Claude API、Claude Code、Claude Cowinorkなど主要な利用経路全体に及びました。",
+      "Claudeの障害は8月に入ってから5日、12日、13日、16日、18日、20日、24日と繰り返し発生しており、業界メディアは「不安定さのパターンが常態化している」と指摘しています。",
+      "利用が急拡大する中でのインフラの不安定さは、企業が業務にAIを組み込む上でのリスクとしても注目されています。"
+    ],
+    "why": "多くの企業や開発者が日常業務でClaudeに依存し始めている中、繰り返す障害は生成AIの信頼性・可用性という根本的な課題を浮き彫りにしています。",
+    "sourceLine": "Cybersecurity News、Arabian Business（2026年8月24日）",
+    "stats": [
+      {
+        "n": "7回以上",
+        "l": "8月中の障害発生回数"
+      },
+      {
+        "n": "05:06 UTC",
+        "l": "8月24日の障害検知時刻"
+      }
+    ],
+    "chips": [
+      "Anthropic",
+      "Claude",
+      "障害",
+      "AIインフラ"
+    ],
+    "videoId": null,
+    "captionX": "Claudeがまた障害発生。8月だけで7回目という異例の頻度に、企業ユーザーからも懸念の声が。 #Claude #Anthropic",
+    "captionThreads": "Claude、また落ちてました…8月だけでもう7回目とか。仕事で使ってる人、代替手段どうしてるんだろう？",
+    "captionInstagram": "Anthropicの「Claude」が8月24日、複数モデルで再び障害を起こしました。今月だけで7回目という頻度で、claude.aiだけでなく開発者向けAPIやコーディングツールにも影響が広がっています。多くの企業が日常業務にAIを組み込み始めている今、こうした障害の繰り返しは信頼性への懸念材料になりそうです。便利さの裏にあるインフラの課題が見えてきたニュースです。\n#Claude #Anthropic #AI障害 #クラウドAI #テクノロジーニュース",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Product / Google",
+    "catColor": "#1F8A83",
+    "headline": "Google Assistantが消える？まさかの完全移行",
+    "dek": "9月4日からGeminiがAndroidの標準アシスタントに",
+    "body": [
+      "Google は、長年Androidスマートフォンの標準アシスタントだった「Google Assistant」を9月4日から順次廃止し、AIアシスタント「Gemini」に完全移行すると発表しました。すでにGeminiアプリの月間利用者数は10億人を突破しています。",
+      "Geminiは音声・カメラ・画面共有・自動操作など、従来のチャット型AIより幅広い操作に対応する形へと進化しており、Googleは「Gemini Spark」という常時稼働型のパーソナルAIエージェント機能も展開しています。",
+      "長年親しまれたGoogle Assistantからの切り替えに戸惑うユーザーも予想され、Googleは今後段階的に通知を行う方針です。"
+    ],
+    "why": "何億人ものAndroidユーザーが日常的に使うデフォルトAIが置き換わるという、生成AIが「一部の人のツール」から「社会インフラ」へ移行したことを象徴する出来事です。",
+    "sourceLine": "9to5Google、Keywords Everywhere（2026年8月）",
+    "stats": [
+      {
+        "n": "10億人超",
+        "l": "Geminiアプリの月間利用者数"
+      },
+      {
+        "n": "9月4日",
+        "l": "Google Assistant廃止開始日"
+      }
+    ],
+    "chips": [
+      "Google",
+      "Gemini",
+      "Android",
+      "Google Assistant"
+    ],
+    "videoId": null,
+    "captionX": "長年おなじみのGoogle Assistantが9月4日から順次廃止に。AndroidのAI標準はGeminiへ完全移行します。 #Gemini #Google",
+    "captionThreads": "ついにGoogle Assistantが役目を終える時が…9月4日からAndroidの標準アシスタントはGeminiに一本化されるそうです。時代の変化を感じますね。",
+    "captionInstagram": "Googleが、長年Androidの顔だった「Google Assistant」を9月4日から段階的に廃止し、AIアシスタント「Gemini」へ完全移行すると発表しました。Geminiのアプリはすでに月間利用者数10億人を突破しており、音声操作やカメラ、画面共有など幅広い機能を持つ次世代アシスタントへと進化しています。長年の「OK Google」に慣れ親しんだユーザーにとっては大きな変化となりそうです。\n#Google #Gemini #Android #AIアシスタント #テクノロジーニュース",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "Business / OpenAI",
+    "catColor": "#F4B942",
+    "headline": "ChatGPTがClaudeに逆転？企業利用で異変",
+    "dek": "法人カード大手のデータがOpenAI巻き返しを示唆",
+    "body": [
+      "法人向けカード・経費管理サービスのRampが公表したデータによると、OpenAIは今年5月にAnthropicに一度追い抜かれていた企業ユーザー数において、直近の第3四半期では再びAnthropicより速いペースで成長していることが分かりました。",
+      "OpenAIとAnthropicはいずれも今後のIPOを見据えているとされ、財務情報が非公開の中、こうした第三者データが両社の企業向けビジネスの勢いを測る数少ない手がかりとなっています。",
+      "企業向けAI市場では、コーディング支援や業務効率化ツールとしての採用が急拡大しており、両社のシェア争いが激しさを増しています。"
+    ],
+    "why": "生成AIの企業向け市場は今後の各社の収益源として極めて重要であり、シェアの変動は今後の資金調達や株価評価にも直結する可能性があります。",
+    "sourceLine": "TechCrunch（2026年8月20日）",
+    "stats": [
+      {
+        "n": "5月",
+        "l": "OpenAIが法人シェア首位を失った時期"
+      }
+    ],
+    "chips": [
+      "OpenAI",
+      "Anthropic",
+      "企業向けAI",
+      "Ramp"
+    ],
+    "videoId": null,
+    "captionX": "企業向けAI市場でOpenAIがAnthropicに再び追い上げ。法人カード大手Rampのデータが示す最新動向とは。 #OpenAI #Anthropic",
+    "captionThreads": "ChatGPT対Claudeの企業利用争い、5月にAnthropicに逆転されてたOpenAIが再び巻き返してるみたいです。財務非公開の中、こういう第三者データが貴重な手がかりになってますね。",
+    "captionInstagram": "法人向けカードサービスRampの最新データによると、企業ユーザー数でAnthropicに一度追い抜かれていたOpenAIが、直近の四半期で再び成長ペースを上回っていることが分かりました。両社とも将来のIPOを見据える中、財務情報が非公開のため、こうした外部データが業界の勢力図を読み解く貴重な手がかりになっています。生成AIの企業向け市場は各社の収益の柱になりつつあり、今後の競争激化が予想されます。\n#OpenAI #Anthropic #企業向けAI #ChatGPT #Claude",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 6,
+    "category": "Policy / OpenAI",
+    "catColor": "#7C6FE0",
+    "headline": "AIが権力を独占する日は来る？新チーム始動",
+    "dek": "OpenAIがガバナンス専門の新ブログ「AI Futures」開始",
+    "body": [
+      "OpenAIは8月20日、AIが社会や統治のあり方をどう変えるかを研究する新チーム「Strategic Futures」による新ブログ「AI Futures」を立ち上げました。中心的なテーマは、自律的なAIシステムが人間の協力を必要とせずに権力を行使できるようになる「権力の集中」リスクです。",
+      "初回の記事では、政治的権力は歴史的に人々の協力に依存してきたが、自動化された実力行使や機械が生み出す税収によって、その前提が崩れる可能性があると論じられています。",
+      "チームは今後、政策・経済・法律・機械学習など多分野の研究者と共同で、論文や動画、ポッドキャストなど様々な形式で成果を発信していく方針です。"
+    ],
+    "why": "AI開発の最前線企業自身が「AIによる権力集中」という長期的なリスクに正面から取り組み始めたことは、AIガバナンス論議が実務レベルに移行しつつあることを示しています。",
+    "sourceLine": "OpenAI公式ブログ（2026年8月20日）",
+    "stats": [
+      {
+        "n": "8月20日",
+        "l": "AI Futures立ち上げ日"
+      }
+    ],
+    "chips": [
+      "OpenAI",
+      "AIガバナンス",
+      "AI Futures",
+      "権力集中"
+    ],
+    "videoId": null,
+    "captionX": "OpenAIが「AIによる権力集中」リスクを研究する新チームとブログを開始。自律AIと民主主義の未来を問う内容です。 #OpenAI #AIガバナンス",
+    "captionThreads": "OpenAIが立ち上げた新ブログ「AI Futures」、テーマが「AIが権力を独占しちゃうかもしれない問題」でなかなか壮大です。技術だけじゃなく統治の話にまで踏み込んできましたね。",
+    "captionInstagram": "OpenAIが新たに「Strategic Futures」チームを発足させ、AIが社会の権力構造をどう変えるかを探る新ブログ「AI Futures」を立ち上げました。焦点は、自律的なAIが人間の協力なしに力を行使できるようになる「権力集中」のリスク。政治的権力は長らく人々の協力に支えられてきましたが、AIの進化がその前提を揺るがす可能性があると指摘しています。技術開発だけでなく、社会制度のあり方までAI企業自身が議論し始めた注目の動きです。\n#OpenAI #AIガバナンス #AI Futures #テクノロジー政策 #未来社会",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 7,
+    "category": "Model / xAI",
+    "catColor": "#E1636F",
+    "headline": "Grokの実力は本物？大手クラウドにも進出",
+    "dek": "最新モデルGrok 4.6がGoogleの企業向け基盤にも登場",
+    "body": [
+      "xAIの最新モデル「Grok 4.6」が、Googleの企業向けAI基盤「Google Enterprise Agent Platform」のモデル一覧に追加されました。50万トークンの文脈window長と、推論の深さを4段階から選べる機能を備え、長時間稼働するAIエージェントや視覚的なタスクに対応するとしています。",
+      "Grok 4.6は8月12日に発表されたばかりで、前モデルGrok 4.5からわずか35日というハイペースでの投入でした。ベンチマーク「Artificial Analysis Intelligence Index」ではClaude Opus 5に次ぐ4位のスコアを記録しています。",
+      "xAIはこのほか、常時稼働型の「AIチームメイト」を提供する新サービス「Grok Bot」もベータ公開しており、開発競争のスピードがさらに加速しています。"
+    ],
+    "why": "GoogleやAWSなど大手クラウド企業のプラットフォームに他社モデルが並ぶことは、AI業界がもはや自社製品だけで完結しない「マルチモデル時代」に入ったことを象徴しています。",
+    "sourceLine": "xAI公式発表、Releasebot（2026年8月12日・22日）",
+    "stats": [
+      {
+        "n": "35日",
+        "l": "前モデルからの投入間隔"
+      },
+      {
+        "n": "50万トークン",
+        "l": "文脈window長"
+      }
+    ],
+    "chips": [
+      "xAI",
+      "Grok",
+      "Google",
+      "AIモデル"
+    ],
+    "videoId": null,
+    "captionX": "xAIの最新モデルGrok 4.6がGoogleの企業向け基盤にも登場。前モデルからわずか35日というスピード投入です。 #xAI #Grok",
+    "captionThreads": "Grok 4.6、Googleのクラウド基盤にまで並ぶようになったんですね。前モデルから35日しか経ってないのに…開発競争、もう息切れしなさそう。",
+    "captionInstagram": "xAIの最新モデル「Grok 4.6」が、Googleの企業向けAI基盤「Google Enterprise Agent Platform」に追加されました。前モデルGrok 4.5からわずか35日というスピードでの投入で、50万トークンという長い文脈理解力と、推論の深さを選べる柔軟さが特徴です。GoogleやAWSといった大手クラウドに他社のAIモデルが並ぶ光景は、もはや珍しくなくなりつつあります。AI業界の「マルチモデル時代」を象徴する動きとして注目です。\n#xAI #Grok #Google #AIモデル #クラウドAI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
