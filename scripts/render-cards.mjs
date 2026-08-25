@@ -24,7 +24,7 @@ function cardHtml(item, index, total, bgPath) {
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     width:${W}px;height:${H}px;
-    background:#151A2E ${hasBg ? `url('${bgPath}') center/cover no-repeat` : ""};
+    background:#151A2E ${hasBg ? `url('file://${bgPath}') center/cover no-repeat` : ""};
     font-family:'Zen Kaku Gothic New', sans-serif;
     color:#3C4257;
     display:flex; flex-direction:column;
@@ -102,7 +102,7 @@ function cardHtmlX(item, index, total, bgPath) {
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     width:${XW}px;height:${XH}px;
-    background:#EAF0F2 ${hasBg ? `url('${bgPath}') center/cover no-repeat` : ""};
+    background:#EAF0F2 ${hasBg ? `url('file://${bgPath}') center/cover no-repeat` : ""};
     font-family:'Zen Kaku Gothic New', sans-serif;
     display:flex; align-items:flex-end;
     padding:40px 48px;
