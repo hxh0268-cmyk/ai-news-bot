@@ -1,0 +1,11 @@
+{
+  "_readme": "キーワードに一致した場合、記事本文中の初回の言及だけを自動でリンク化します。URLは実際にASP登録して取得したものに書き換えてください。1記事内で同じキーワードへの重複リンクは行いません（過剰リンクによるSEO評価低下・PR表記漏れリスクを避けるため）。",
+  "links": [
+    { "keyword": "HeyGen", "url": "https://www.heygen.com/?ref=【アフィリエイトIDに差し替え】", "label": "HeyGenを無料で試す" },
+    { "keyword": "Pictory", "url": "https://pictory.ai/?ref=【アフィリエイトIDに差し替え】", "label": "Pictoryを無料で試す" },
+    { "keyword": "Runway", "url": "https://runwayml.com/?ref=【アフィリエイトIDに差し替え】", "label": "Runwayの詳細を見る" },
+    { "keyword": "Vrew", "url": "https://vrew.voyagerx.com/?ref=【アフィリエイトIDに差し替え】", "label": "Vrewを無料で試す" },
+    { "keyword": "ElevenLabs", "url": "https://elevenlabs.io/?ref=【アフィリエイトIDに差し替え】", "label": "ElevenLabsを試す" },
+    { "keyword": "Kling", "url": "https://klingai.com/?ref=【アフィリエイトIDに差し替え】", "label": "Kling AIを試す" }
+  ]
+}

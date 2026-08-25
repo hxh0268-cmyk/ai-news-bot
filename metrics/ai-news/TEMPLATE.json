@@ -1,0 +1,18 @@
+{
+  "_readme": "毎週、Buffer/GA4/noteの管理画面を見て、分かる範囲の数字を手入力してください（完全自動取得には各サービスへの追加API連携が必要なため、現状は軽量な手入力方式にしています）。0のままでも動作しますが、精度が上がりません。",
+  "week": "YYYY-Www",
+  "revenueJPY": {
+    "affiliateEstimate": 0,
+    "adsense": 0,
+    "noteSales": 0,
+    "prDeals": 0
+  },
+  "engagement": {
+    "totalImpressions": 0,
+    "totalClicksToSite": 0,
+    "followersGained_X": 0,
+    "followersGained_Instagram": 0,
+    "followersGained_Threads": 0
+  },
+  "notes": ""
+}

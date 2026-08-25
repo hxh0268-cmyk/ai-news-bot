@@ -1,0 +1,13 @@
+{
+  "_readme": "各サービスの月額実費を、実際の請求額が分かってきたら書き換えてください。週次レポートではここから週割りコストを自動計算します。",
+  "monthlyCostJPY": {
+    "anthropic": 1000,
+    "geminiNanoBananaPro": 600,
+    "klingAI": 2500,
+    "elevenLabs": 500,
+    "buffer": 2400,
+    "zapier": 0,
+    "adsense": 0,
+    "note": 0
+  }
+}

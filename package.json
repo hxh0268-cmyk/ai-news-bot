@@ -1,0 +1,10 @@
+{
+  "name": "github-actions-ai-news",
+  "version": "1.0.0",
+  "description": "毎日AIニュースを収集し、SNS投稿用の画像・動画を自動生成するツール",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
