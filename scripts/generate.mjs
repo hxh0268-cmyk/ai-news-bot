@@ -65,7 +65,7 @@ async function callClaude() {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 8000,
+      max_tokens: 16000,
       system: SYSTEM_PROMPT,
       messages: [{ role: "user", content: USER_PROMPT }],
       tools: [{ type: "web_search_20250305", name: "web_search" }],
@@ -86,6 +86,8 @@ async function callClaude() {
   const start = text.indexOf("[");
   const end = text.lastIndexOf("]");
   if (start === -1 || end === -1) {
+    console.error("stop_reason:", data.stop_reason);
+    console.error("content block types:", data.content.map((b) => b.type).join(", "));
     throw new Error("JSON配列が見つかりませんでした。モデルの出力:\n" + text);
   }
   return JSON.parse(text.slice(start, end + 1));
