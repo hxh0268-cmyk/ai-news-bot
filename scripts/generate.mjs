@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
+import { withRetry } from "./retry.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!API_KEY) {
@@ -156,7 +157,8 @@ async function callClaude() {
 
 async function main() {
   console.log(`[${topic.slug}] Claude APIに本日(${dateStr})分の「${topic.displayName}」収集を依頼しています…`);
-  const items = await callClaude();
+  // 529（Anthropic側の一時的な混雑）等の一時的なエラーは自動でリトライする
+  const items = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
 
   if (!Array.isArray(items) || items.length !== 7) {
     throw new Error(`期待した形式のデータではありません（要素数: ${items?.length}）`);
