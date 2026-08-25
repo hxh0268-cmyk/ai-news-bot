@@ -1,0 +1,189 @@
+[
+  {
+    "importance": 1,
+    "category": "IPO",
+    "catColor": "#7C6FE0",
+    "headline": "Anthropicはまさか200兆円で上場？",
+    "dek": "投資家想定は2兆ドル、10月に上場観測",
+    "body": [
+      "Anthropicの投資家は、同社が10月にも2兆ドル(日本円で約300兆円)以上の評価額で新規株式公開(IPO)に踏み切ると見込んでいる。実現すれば史上最大のIPOになるという。",
+      "出資者らはAnthropicの年換算売上高が2026年末までに1000億〜1200億ドルに達すると想定しており、5月時点の470億ドル超から大幅な拡大を見込む強気の計算だ。",
+      "この規模は、6月に1兆7700億ドルの評価額で上場したSpaceXを上回る可能性がある。",
+      "ただしAnthropic自身は10月という時期や具体的な評価額、上場先の取引所などを公式には認めておらず、あくまで投資家サイドの期待値である点には注意が必要だ。"
+    ],
+    "why": "実現すれば史上最大のIPOとなり、AI企業への期待の大きさを象徴する出来事になる。OpenAIとの競争や、AI投資バブルへの懸念にも直結するため、資本市場全体への影響が大きい。",
+    "chips": [
+      "Anthropic",
+      "IPO",
+      "Claude",
+      "資金調達"
+    ],
+    "sourceLine": "Financial Times, Fortune, Quartz(2026年8月13〜24日)",
+    "videoId": null,
+    "captionX": "Anthropicが10月にも2兆ドルで上場？史上最大のIPOになるかもしれません。#Anthropic #AI",
+    "captionThreads": "Anthropicの投資家が10月IPOで2兆ドル評価を狙っているらしい。実現したらSpaceXを超える史上最大のIPO…AIバブルの行方も気になるところ。",
+    "captionInstagram": "AnthropicのIPOが10月にも実現し、評価額は2兆ドル(約300兆円)に達するかもしれないという観測が広がっています。実現すれば史上最大のIPOに。年換算売上高は2026年末までに1000億〜1200億ドルに達すると投資家は見ています。ただし公式発表はまだなく、今後の動向に注目です。 #Anthropic #Claude #IPO #AI #生成AI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "M&A",
+    "catColor": "#1F8A83",
+    "headline": "Hugging Face、まさかの1.3兆円で身売り？",
+    "dek": "非公開で買収打診、23年比ほぼ3倍の評価",
+    "body": [
+      "AIコミュニティの中心的存在であるHugging Faceが、130億ドル(約1.9兆円)以上の評価額での売却を検討していることが明らかになった。",
+      "話し合いは初期段階で、買収先はまだ特定されておらず、正式な合意にも至っていない。同社は買収候補を探るため銀行を起用しているという。",
+      "Hugging Faceが提供するオープンソースライブラリ「Transformers」は1日300万回以上ダウンロードされ、累計12億回を超える利用実績を持つ。",
+      "特定の企業やクラウド事業者に肩入れしない「中立性」がHugging Faceの強みとされてきただけに、買収によってその立場が揺らぐのではという懸念の声も上がっている。"
+    ],
+    "why": "AIモデルの共有基盤として業界を支えてきたHugging Faceの動向は、オープンソースAIエコシステム全体の中立性に直結する。買収の行方次第では、開発者コミュニティの信頼のあり方が変わる可能性がある。",
+    "chips": [
+      "Hugging Face",
+      "M&A",
+      "オープンソース",
+      "AIインフラ"
+    ],
+    "sourceLine": "TechCrunch, Business Insider(2026年8月23〜24日)",
+    "videoId": null,
+    "captionX": "Hugging Faceがまさかの1.3兆円規模で身売り検討中？AI業界の「中立地帯」はどうなる。#HuggingFace #AI",
+    "captionThreads": "オープンソースAIの拠点、Hugging Faceが130億ドルでの売却を模索してるらしい。中立性が売りだった会社だけに、買収されたらどうなるのか気になる…",
+    "captionInstagram": "AI開発者コミュニティを支えてきたHugging Faceが、130億ドル(約1.9兆円)規模の売却を検討していることが分かりました。2023年時点の評価額からほぼ3倍という水準です。ただし交渉はまだ初期段階で、買収先も未定。特定企業に偏らない「中立性」が強みだったHugging Faceだけに、買収後のあり方に注目が集まっています。 #HuggingFace #オープンソース #AI #MandA #生成AI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Funding",
+    "catColor": "#F4B942",
+    "headline": "Nvidia、Perplexityにまさか出資？",
+    "dek": "評価額300億ドル超、AI検索へ布石",
+    "body": [
+      "Nvidiaが、AI検索スタートアップPerplexityへの追加出資に向けて交渉を進めていることが分かった。実現すれば同社の評価額は300億ドルを超える見通しだ。",
+      "この評価額は、約1年前の前回調達時の200億ドルから50%以上の上昇となる。",
+      "Perplexityの年換算売上高は年初の2.5億ドル未満から7.5億ドル超へと大きく伸びており、この急成長が高評価の背景にあるとみられる。",
+      "Nvidiaはこれまで半導体供給を軸にAI業界を支えてきたが、Perplexityやオープンウェイトモデル開発企業Poolsideへの出資など、アプリケーション層への進出を強めている。"
+    ],
+    "why": "半導体大手Nvidiaが応用サービス企業への出資を拡大している点は、AI業界の主導権争いが計算資源からアプリケーション層へと広がっていることを示す。Perplexity側にとっても上場に向けた足場固めとなる。",
+    "chips": [
+      "Nvidia",
+      "Perplexity",
+      "出資",
+      "AI検索"
+    ],
+    "sourceLine": "The Information, Reuters(2026年8月24〜25日)",
+    "videoId": null,
+    "captionX": "Nvidiaがまさかの追加出資？Perplexityの評価額は300億ドル超えの見通しに。#Nvidia #Perplexity",
+    "captionThreads": "NvidiaがPerplexityにまた出資するかもって話。評価額300億ドル超えって、1年前から1.5倍以上に膨らんでる…AI業界のお金の動き、本当にすごい。",
+    "captionInstagram": "半導体大手Nvidiaが、AI検索スタートアップPerplexityへの追加出資を交渉中と報じられています。実現すれば評価額は300億ドル(約4.4兆円)を超え、約1年前から50%以上の上昇に。Perplexityの年換算売上高も年初から3倍以上に急拡大しています。Nvidiaはチップ供給にとどまらず、AIアプリ企業への出資を広げており、業界の勢力図に変化をもたらすかもしれません。 #Nvidia #Perplexity #AI検索 #出資 #生成AI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Enterprise",
+    "catColor": "#E1636F",
+    "headline": "法人シェア逆転？OpenAIがAnthropicに接近",
+    "dek": "Ramp調査で企業利用の勢力図に変化",
+    "body": [
+      "企業向けカード事業を手がけるRampの最新データによると、米国企業の利用シェアでOpenAIがAnthropicとの差を縮めつつあることが分かった。",
+      "OpenAIは今年5月にAnthropicへ法人シェア首位の座を明け渡し、その後も奪還できていない。5月時点ではAnthropicが41%、OpenAIが39%だった。",
+      "直近7月の時点では、Anthropicが約44%、OpenAIが約40%と依然としてAnthropicが優勢だが、四半期の後半にかけてOpenAIの伸びが上回っているという。",
+      "この調査は、Rampの請求書支払いや法人カードを利用する7万社以上の米国企業データに基づいている。"
+    ],
+    "why": "両社とも上場を控える中、企業顧客の獲得競争は投資家が注目する重要指標だ。法人シェアの変動は、AI企業の実力を測る数少ない外部データとして市場の関心が高い。",
+    "chips": [
+      "OpenAI",
+      "Anthropic",
+      "エンタープライズAI",
+      "競争"
+    ],
+    "sourceLine": "TechCrunch, Ramp(2026年8月20日)",
+    "videoId": null,
+    "captionX": "法人利用シェアでOpenAIがAnthropicに急接近？Ramp調査が示す最新勢力図。#OpenAI #Anthropic",
+    "captionThreads": "法人シェアの首位はAnthropicなんだけど、直近OpenAIの伸びの方が早いらしい。IPO前の両社、水面下の競争が熱い。",
+    "captionInstagram": "企業向けカードサービスRampの最新データで、米国企業のAI利用シェアにおいてOpenAIがAnthropicに再接近していることが分かりました。5月にAnthropicへ首位を譲ったOpenAIですが、7月時点でもAnthropic44%・OpenAI40%とまだ差はあるものの、直近の伸び率はOpenAIが上回っているとのこと。両社とも上場を控える中、企業顧客の獲得競争が一段と激しくなっています。 #OpenAI #Anthropic #エンタープライズAI #ChatGPT #Claude",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "Safety",
+    "catColor": "#7C6FE0",
+    "headline": "ChatGPTがまさかの「10代専用」に？",
+    "dek": "18歳未満は自動判定、保護機能が有効化",
+    "body": [
+      "OpenAIは8月18日から、13〜17歳のユーザー向けに保護機能を備えた「ChatGPT for Teens」を世界的に展開し始めた。",
+      "登録情報や年齢予測によって18歳未満と判定されたアカウントは、自動的にティーン向け体験に切り替わる仕組みだ。",
+      "ティーン向け体験では、学習を後押しするスタディモードや、ヒントを段階的に示しながら考えさせる学習支援機能などが用意されている。",
+      "一方で保護者による会話内容の閲覧はできない仕組みになっており、プライバシーと安全確保のバランスが引き続き議論を呼びそうだ。"
+    ],
+    "why": "未成年の利用増加に伴う安全性への懸念が高まる中、大手AI企業がどう対応するかは業界全体の基準となる可能性がある。年齢判定の精度や保護者との関わり方は今後も注目される論点だ。",
+    "chips": [
+      "ChatGPT",
+      "OpenAI",
+      "AI安全性",
+      "未成年保護"
+    ],
+    "sourceLine": "OpenAI, TechCrunch(2026年8月18日)",
+    "videoId": null,
+    "captionX": "ChatGPTがまさかの「10代専用モード」に。18歳未満は自動判定で保護機能オンに。#ChatGPT #OpenAI",
+    "captionThreads": "ChatGPT for Teensが始まったみたい。13〜17歳は自動でティーン仕様に切り替わるんだって。保護者は会話は見れない仕組みらしいよ。",
+    "captionInstagram": "OpenAIが8月18日から、13〜17歳向けの安全機能を備えた「ChatGPT for Teens」の展開を始めました。年齢情報や利用パターンから18歳未満と判定されると、自動的にティーン向け体験に切り替わります。学習を助けるスタディモードなどが用意される一方、保護者が会話内容を直接閲覧することはできません。未成年のAI利用をめぐる安全対策は、今後も業界の重要テーマになりそうです。 #ChatGPT #OpenAI #AI安全性 #未成年保護 #生成AI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 6,
+    "category": "Standards",
+    "catColor": "#1F8A83",
+    "headline": "AIエージェントの標準化はどうなる？",
+    "dek": "GoogleのA2AがLinux Foundation傘下に",
+    "body": [
+      "2026年8月20日、GoogleのAIエージェント連携プロトコル「A2A」が、Linux Foundationが運営する「Agentic AI Foundation(AAIF)」に正式に加わった。",
+      "これにより、AnthropicのMCP(Model Context Protocol)と同じ中立的なガバナンス体制の下で管理されることになる。",
+      "AAIFにはAWS、Anthropic、Google、Microsoft、OpenAIなど250以上の団体が参加しており、AIエージェントの基盤技術が一つの枠組みに集約されつつある。",
+      "エージェント同士やツールとの通信方法が標準化されれば、企業は特定ベンダーに縛られず複数のAIサービスを組み合わせやすくなる。"
+    ],
+    "why": "AIエージェントの相互運用性が高まれば、企業は導入しやすくなり、業界全体の成長を後押しする。主要企業がこぞって中立的な標準化団体に参加している点は、AI業界の成熟を示す動きといえる。",
+    "chips": [
+      "AIエージェント",
+      "Google",
+      "Anthropic",
+      "標準化"
+    ],
+    "sourceLine": "Linux Foundation, aiagentstore.ai(2026年8月20〜24日)",
+    "videoId": null,
+    "captionX": "GoogleのAIエージェント規格がLinux Foundation入り。業界標準化はどうなる？#AIエージェント #Google",
+    "captionThreads": "GoogleのA2AプロトコルがLinux Foundation傘下の団体に参加したみたい。AnthropicのMCPと同じ枠組みで、250以上の企業が参加してるんだって。エージェント業界、着々と標準化進んでる。",
+    "captionInstagram": "GoogleのAIエージェント連携プロトコル「A2A」が、Linux Foundationが運営する中立団体「Agentic AI Foundation」に正式加入しました。これでAnthropicのMCPと同じガバナンス体制のもとで管理されることに。AWSやMicrosoft、OpenAIなど250以上の団体がすでに参加しており、AIエージェントの基盤技術の標準化が急速に進んでいます。企業が複数のAIサービスを組み合わせやすくなる未来が近づいています。 #AIエージェント #Google #Anthropic #標準化 #生成AI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 7,
+    "category": "Robotics",
+    "catColor": "#F4B942",
+    "headline": "中国発ロボット企業、まさかの巨額調達？",
+    "dek": "XPeng、人型ロボット事業に900億円超",
+    "body": [
+      "中国の電気自動車メーカーXPengは、ヒト型ロボット事業において初めての外部資金調達を実施し、9億ドル(約1300億円)以上を調達したと発表した。",
+      "この調達により、ロボティクス事業の評価額は63億ドルを超える水準になったという。"
+    ],
+    "why": "自動車メーカーがヒト型ロボット分野に本格参入し、巨額の外部資金を集めている点は、AIと物理世界を結ぶロボティクス投資が新たな成長分野として注目されていることを示す。",
+    "chips": [
+      "XPeng",
+      "ヒト型ロボット",
+      "中国",
+      "資金調達"
+    ],
+    "sourceLine": "techstartups.com(2026年8月24日)",
+    "videoId": null,
+    "captionX": "XPengのロボット事業がまさかの900億円超調達。評価額は63億ドル超に。#XPeng #ヒト型ロボット",
+    "captionThreads": "中国のEVメーカーXPeng、ロボット部門が初の外部調達で900億円超集めたらしい。評価額も63億ドル超えってすごい伸び方。",
+    "captionInstagram": "中国の電気自動車メーカーXPengが、ヒト型ロボット事業で初めての外部資金調達を実施し、9億ドル(約1300億円)以上を確保したことが分かりました。この結果、ロボティクス事業の評価額は63億ドルを超える水準に。自動車業界からロボティクス分野への進出が加速しており、AIと物理世界を結ぶ新たな投資トレンドとして注目されています。 #XPeng #ヒト型ロボット #ロボティクス #中国 #AI",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
