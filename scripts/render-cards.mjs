@@ -24,59 +24,62 @@ function cardHtml(item, index, total, bgPath) {
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     width:${W}px;height:${H}px;
-    background:#EAF0F2 ${hasBg ? `url('${bgPath}') center/cover no-repeat` : ""};
+    background:#151A2E ${hasBg ? `url('${bgPath}') center/cover no-repeat` : ""};
     font-family:'Zen Kaku Gothic New', sans-serif;
     color:#3C4257;
     display:flex; flex-direction:column;
-    padding:70px 64px 60px;
+    padding:88px 80px 72px;
     position:relative;
     overflow:hidden;
   }
+  /* 画面全体に薄く均一なトーンをかけるだけに留め、余白・静けさを壊さないようにする */
   body::after{
     content:"";
     position:absolute; inset:0;
-    background:linear-gradient(to bottom, rgba(21,26,46,0.15) 0%, rgba(21,26,46,0.55) 55%, rgba(21,26,46,0.88) 100%);
+    background:linear-gradient(to bottom, rgba(10,12,20,0.05) 0%, rgba(10,12,20,0.35) 72%, rgba(10,12,20,0.6) 100%);
     z-index:0;
   }
-  .top, .tag, h1, .dek, .statbar, .footer{ position:relative; z-index:1; }
+  .top, .tag, h1, .dek, .statrow, .footer{ position:relative; z-index:1; }
   .top{display:flex; align-items:center; justify-content:space-between;}
-  .brand{font-family:'JetBrains Mono', monospace; font-size:20px; letter-spacing:0.12em; color:#fff; text-transform:uppercase;}
-  .counter{font-family:'JetBrains Mono', monospace; font-size:20px; color:${item.catColor}; font-weight:600;}
+  .brand{font-family:'JetBrains Mono', monospace; font-size:17px; letter-spacing:0.16em; color:rgba(255,255,255,0.55); text-transform:uppercase;}
+  .counter{font-family:'JetBrains Mono', monospace; font-size:17px; color:rgba(255,255,255,0.55); letter-spacing:0.08em;}
   .tag{
-    display:inline-block; margin-top:56px;
-    font-family:'JetBrains Mono', monospace; font-size:22px; letter-spacing:0.08em;
-    color:${item.catColor}; background:#fff;
-    padding:10px 22px; border-radius:6px; text-transform:uppercase;
-    width:fit-content;
+    display:flex; align-items:center; gap:10px;
+    margin-top:auto;
+    font-family:'JetBrains Mono', monospace; font-size:17px; letter-spacing:0.14em;
+    color:rgba(255,255,255,0.75); text-transform:uppercase;
   }
+  .tag .dot{ width:7px; height:7px; border-radius:50%; background:${item.catColor}; flex:0 0 auto; }
   h1{
-    font-family:'Shippori Mincho', serif; font-weight:800;
-    font-size:64px; line-height:1.4; color:#fff;
-    margin-top:36px;
-    text-shadow:0 2px 12px rgba(0,0,0,0.4);
+    font-family:'Shippori Mincho', serif; font-weight:500;
+    font-size:56px; line-height:1.55; color:#fff;
+    margin-top:26px;
+    letter-spacing:0.01em;
+    max-width:88%;
   }
-  .dek{font-size:30px; color:#E5EAEE; margin-top:20px;}
-  .statbar{display:flex; gap:20px; margin-top:auto;}
-  .stat{
-    background:rgba(255,255,255,0.94); border-top:6px solid ${item.catColor};
-    border-radius:10px; padding:26px 30px; flex:1;
+  .dek{font-size:24px; color:rgba(255,255,255,0.6); margin-top:22px; max-width:80%; line-height:1.7;}
+  .statrow{
+    display:flex; gap:56px;
+    margin-top:64px;
+    padding-top:32px;
+    border-top:1px solid rgba(255,255,255,0.18);
   }
-  .stat .n{font-family:'JetBrains Mono', monospace; font-size:40px; font-weight:600; color:#151A2E; display:block;}
-  .stat .l{font-size:20px; color:#6B7280; margin-top:6px; display:block;}
+  .stat .n{font-family:'JetBrains Mono', monospace; font-size:32px; font-weight:600; color:#fff; display:block;}
+  .stat .l{font-size:16px; color:rgba(255,255,255,0.5); margin-top:6px; display:block; letter-spacing:0.02em;}
   .footer{
     display:flex; justify-content:space-between; align-items:center;
-    margin-top:36px; font-family:'JetBrains Mono', monospace; font-size:18px; color:#E5EAEE;
+    margin-top:28px; font-family:'JetBrains Mono', monospace; font-size:14px; color:rgba(255,255,255,0.4);
   }
 </style></head>
 <body>
   <div class="top">
     <span class="brand">${topic.displayName} Daily</span>
-    <span class="counter">${index + 1} / ${total}</span>
+    <span class="counter">${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}</span>
   </div>
-  <span class="tag">${item.category}</span>
+  <span class="tag"><span class="dot"></span>${item.category}</span>
   <h1>${item.headline}</h1>
   <p class="dek">${item.dek}</p>
-  <div class="statbar">
+  <div class="statrow">
     ${(item.stats || [])
       .slice(0, 2)
       .map((s) => `<div class="stat"><span class="n">${s.n}</span><span class="l">${s.l}</span></div>`)
