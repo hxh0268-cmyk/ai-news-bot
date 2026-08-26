@@ -14,8 +14,8 @@ const H = 1350;
 const XW = 1200;
 const XH = 675;
 
-function cardHtml(item, index, total, bgPath) {
-  const hasBg = fs.existsSync(bgPath);
+function cardHtml(item, index, total, bgDataUri) {
+  const hasBg = Boolean(bgDataUri);
   return `<!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@ function cardHtml(item, index, total, bgPath) {
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     width:${W}px;height:${H}px;
-    background:#151A2E ${hasBg ? `url('file://${bgPath}') center/cover no-repeat` : ""};
+    background:#151A2E ${hasBg ? `url('${bgDataUri}') center/cover no-repeat` : ""};
     font-family:'Zen Kaku Gothic New', sans-serif;
     color:#3C4257;
     display:flex; flex-direction:column;
@@ -92,8 +92,8 @@ function cardHtml(item, index, total, bgPath) {
 </body></html>`;
 }
 
-function cardHtmlX(item, index, total, bgPath) {
-  const hasBg = fs.existsSync(bgPath);
+function cardHtmlX(item, index, total, bgDataUri) {
+  const hasBg = Boolean(bgDataUri);
   return `<!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +102,7 @@ function cardHtmlX(item, index, total, bgPath) {
   *{box-sizing:border-box;margin:0;padding:0;}
   body{
     width:${XW}px;height:${XH}px;
-    background:#EAF0F2 ${hasBg ? `url('file://${bgPath}') center/cover no-repeat` : ""};
+    background:#EAF0F2 ${hasBg ? `url('${bgDataUri}') center/cover no-repeat` : ""};
     font-family:'Zen Kaku Gothic New', sans-serif;
     display:flex; align-items:flex-end;
     padding:40px 48px;
@@ -142,6 +142,15 @@ function cardHtmlX(item, index, total, bgPath) {
 </body></html>`;
 }
 
+// ローカルの画像ファイルを、HTMLに直接埋め込めるbase64データURIに変換する。
+// Puppeteerでは file:// 経由の画像読み込みがブロックされることがあるため、
+// この方式で確実に画像を反映させる。
+function loadBgAsDataUri(bgPath) {
+  if (!fs.existsSync(bgPath)) return null;
+  const buf = fs.readFileSync(bgPath);
+  return `data:image/png;base64,${buf.toString("base64")}`;
+}
+
 async function main() {
   const top5 = JSON.parse(fs.readFileSync(path.join(outputDir, "top5.json"), "utf-8"));
   const cardsDir = path.join(outputDir, "cards");
@@ -156,7 +165,7 @@ async function main() {
   await page.setViewport({ width: W, height: H, deviceScaleFactor: 2 });
   for (let i = 0; i < top5.length; i++) {
     const bgPath = path.join(outputDir, "backgrounds", `${i + 1}.png`);
-    const html = cardHtml(top5[i], i, top5.length, bgPath);
+    const html = cardHtml(top5[i], i, top5.length, loadBgAsDataUri(bgPath));
     await page.setContent(html, { waitUntil: "networkidle0" });
     await page.screenshot({ path: path.join(cardsDir, `${i + 1}.png`) });
   }
@@ -166,7 +175,7 @@ async function main() {
   await page.setViewport({ width: XW, height: XH, deviceScaleFactor: 2 });
   for (let i = 0; i < top5.length; i++) {
     const bgPath = path.join(outputDir, "backgrounds", `${i + 1}.png`);
-    const html = cardHtmlX(top5[i], i, top5.length, bgPath);
+    const html = cardHtmlX(top5[i], i, top5.length, loadBgAsDataUri(bgPath));
     await page.setContent(html, { waitUntil: "networkidle0" });
     await page.screenshot({ path: path.join(cardsXDir, `${i + 1}.png`) });
   }
