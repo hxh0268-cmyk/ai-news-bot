@@ -16,41 +16,90 @@ const PRIMARY_MODEL = "gemini-3-pro-image";
 const FALLBACK_MODEL = "gemini-3.1-flash-image";
 const { topic, outputDir } = loadTopic();
 
-function buildPrompt(item) {
+// 複数の「型」を用意し、記事ごとにローテーションすることで単調さを避ける。
+// 新しい型を増やしたい場合は、この配列に追加するだけでよい。
+const ART_DIRECTIONS = [
+  {
+    name: "ヒューマニストSF（静寂×巨大構造物・夕景）",
+    body: `
+「静寂」と「圧倒的なスケールの巨大構造物」が共存する情景を描いてください。
+派手な演出やガジェットの説明的な描写ではなく、詩的で映画的な一場面を目指します。
+
+- 巨大なメガストラクチャー（例：リング状の宇宙コロニー、都市規模の宇宙建造物）を舞台にする
+- その中で、ひとり静かに佇む人物を1人だけ描く（大きな窓のそばに座っている、遠くを眺めているなど、
+  日常のささやかな一瞬を切り取る構図）
+- 背景には、遠くを行き交う宇宙船や、温かみのある街の灯りをうっすらと配置してもよい
+- トーン：夕暮れ時のような、温かみのある光（dusk, warm light）。崇高なスケール感（sublime scale）
+- 日本的な美意識、もののあわれ（mono no aware）を感じさせる、詩的で哲学的な余韻`,
+  },
+  {
+    name: "静謐な近未来メトロポリス（白基調・昼景）",
+    body: `
+穏やかで映画的な近未来都市を描いてください。攻撃的・威圧的な未来像ではなく、
+人間らしさとテクノロジーが調和した、優しい近未来像を目指します。
+
+- 白やベージュを基調とした、洗練されたミニマルな近未来建築が並ぶ都市
+- 柔らかい自然光と、うっすらとした霧・靄（かすみ）がかかった、穏やかな空気感
+- 過度な装飾を避け、エレガントで平和的な雰囲気
+- 建築物は曲線的・有機的で、冷たすぎない印象にする
+- トーン：柔らかい昼の光（soft ambient daylight）、35mmフィルムで撮ったような質感`,
+  },
+  {
+    name: "未来の居住空間（インサイド・アーキテクチャ）",
+    body: `
+外の世界の雑音を完全にシャットアウトしたような、瞑想的で洗練された未来の室内を描いてください。
+
+- 滑らかな白いコンクリート壁、継ぎ目のない一体型の照明（seamless, integrated lighting）
+- 高い位置の窓から差し込む柔らかな日光
+- 砂や自然石を思わせる素材を、ほんの少しだけ添える
+- ガジェット感・機械感を一切出さず、静謐で禅的な雰囲気にする
+- フォトリアルで高精細な質感`,
+  },
+  {
+    name: "超巨大未来建築（モノリス・メガストラクチャー）",
+    body: `
+ディストピアではなく、神聖さすら感じるような、巨大で穏やかな未来建築のモニュメントを描いてください。
+
+- 一枚岩のような（monolithic）巨大な白い未来的パビリオン。塔のようにそびえるミニマルなコンクリート構造物
+- 滑らかに湾曲した表面
+- 穏やかで広大な空、朝霧のような柔らかな光
+- 静寂で精神的（spiritual）な空気感。荘厳な建築写真のような構図
+- 高精細`,
+  },
+];
+
+// 上記の型と組み合わせて使う、語彙を豊かにするための共通キーワード辞典。
+// 新しい単語を追加したい場合はここに足していけばよい。
+const KEYWORD_PALETTE = `
+- 質感：matte white（マットな白）、sculptural（彫刻的な）、seamless concrete（継ぎ目のないコンクリート）、pleated fabric（プリーツ状の布）
+- 光：diffused gallery lighting（美術館のような拡散光）、soft ambient fog（柔らかな霧）、ethereal daylight（空気のような淡い陽光）
+- 空気感：serene（静謐な）、meditative（瞑想的な）、poetic sci-fi（詩的なSF）、timeless（時代を超越した）
+`.trim();
+
+function buildPrompt(item, direction) {
   return `
-以下のトピックの雰囲気を表す、SNS投稿用の背景ビジュアルを1枚生成してください。
+以下のニュースの内容にふさわしい、SNS投稿用の背景ビジュアルを1枚生成してください。
 
 見出し: ${item.headline}
 カテゴリ: ${item.category}
 概要: ${item.dek}
 
-【アートディレクション：ヒューマニストSF（人間中心の静かな未来）】
-「静寂」と「圧倒的なスケールの巨大構造物」が共存する情景を描いてください。
-派手な演出やガジェットの説明的な描写ではなく、詩的で映画的な一場面を目指します。
+【最初のステップ：具体的な情景を考える】
+上記のニュース内容を象徴する、具体的で独自性のある1つの情景・被写体を考えてください。
+ニュースの内容と無関係な、使い回しの一般的な構図にはしないでください
+（例：「新しい対話AIモデル」の記事なら、対話・言葉・声を象徴するモチーフを、
+「ロボット関連」の記事なら、身体性・動きを象徴するモチーフを考える、など）。
 
-■ 世界観・被写体
-- 巨大なメガストラクチャー（例：リング状の宇宙コロニー、都市規模の宇宙建造物）を舞台にする
-- その中で、ひとり静かに佇む人物を1人だけ描く（大きな窓のそばに座っている、遠くを眺めているなど、
-  日常のささやかな一瞬を切り取る構図）
-- 背景には、遠くを行き交う宇宙船や、温かみのある街の灯りをうっすらと配置してもよい
+【アートディレクション：${direction.name}】
+考えた情景を、以下の様式で描いてください。
+${direction.body}
 
-■ 雰囲気・トーン
-- 静寂（quiet, serene atmosphere）
-- 夕暮れ時のような、温かみのある光（dusk, warm light）
-- 圧倒的でありながら美しい、崇高なスケール感（sublime scale）
-
-■ 美的感覚
-- 日本的な美意識、もののあわれ（mono no aware）を感じさせる、詩的で哲学的な余韻
-- 説明過多にならず、静かな情緒を残す
-
-■ 画作り
-- 映画のようなライティング（cinematic lighting）、柔らかく自然な光の質感（soft natural glow）
-- 生々しすぎない、35mmフィルム写真のような質感（35mm film photograph style）、高精細
+■ 参考キーワード（雰囲気の調整に活用してください。すべて使う必要はありません）
+${KEYWORD_PALETTE}
 
 ■ 技術的な制約
 - 文字・ロゴ・ウォーターマーク・UIパーツは一切入れない
-- 縦長構図（人物・窓は画面中央〜上寄りに配置し、下部3割程度は見出しテキストを重ねられるよう
-  比較的落ち着いたトーンにする）
+- 縦長構図。画面下部3割程度は見出しテキストを重ねられるよう、比較的落ち着いたトーンにする
 - 人物を描く場合は、顔の判別できない小さなシルエット・後ろ姿程度に留める
 `.trim();
 }
@@ -81,12 +130,13 @@ async function main() {
 
   let failCount = 0;
   for (let i = 0; i < top5.length; i++) {
-    console.log(`[${topic.slug}] 背景ビジュアル生成中 (${i + 1}/${top5.length})...`);
+    const direction = ART_DIRECTIONS[i % ART_DIRECTIONS.length];
+    console.log(`[${topic.slug}] 背景ビジュアル生成中 (${i + 1}/${top5.length})... [型: ${direction.name}]`);
     try {
       let buf;
       try {
         // まずNano Banana Pro（高品質）を試す
-        buf = await withRetry(() => generateOne(buildPrompt(top5[i]), PRIMARY_MODEL), {
+        buf = await withRetry(() => generateOne(buildPrompt(top5[i], direction), PRIMARY_MODEL), {
           retries: 3,
           baseDelayMs: 10000,
           label: `背景ビジュアル生成(${i + 1})[Pro]`,
@@ -95,7 +145,7 @@ async function main() {
         console.warn(
           `⚠️ Nano Banana Pro(${i + 1})が持続的に混雑しているため、Nano Banana 2に切り替えます: ${primaryErr.message}`
         );
-        buf = await withRetry(() => generateOne(buildPrompt(top5[i]), FALLBACK_MODEL), {
+        buf = await withRetry(() => generateOne(buildPrompt(top5[i], direction), FALLBACK_MODEL), {
           retries: 3,
           baseDelayMs: 8000,
           label: `背景ビジュアル生成(${i + 1})[Flash]`,
