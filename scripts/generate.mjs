@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
+import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!API_KEY) {
@@ -160,16 +161,96 @@ async function callClaude() {
   return submitBlock.input.items;
 }
 
+// STEP1後半：下書き（items）を、人間らしい自然な文章に書き直す2段階目の処理。
+// Web検索は不要なため、submit_news_itemsツールを強制的に呼ばせて構造を保ったまま
+// 文体だけを変えさせる。
+// 下書きから「変えてはいけない数字」を抽出する。書き直し工程で数値がさりげなく
+// ズレてしまう事故（AIの言い換えにありがちな失敗）を防ぐためのガードレール。
+function extractProtectedNumbers(items) {
+  const nums = new Set();
+  const re = /[0-9０-９][0-9０-９.,%億万兆円ドル倍人時分秒年月日]*/g;
+  for (const item of items) {
+    for (const s of item.stats || []) {
+      (s.n.match(re) || []).forEach((m) => nums.add(m));
+    }
+    ((item.body || []).join(" ") + " " + (item.why || "")).match(re)?.forEach((m) => nums.add(m));
+  }
+  return Array.from(nums);
+}
+
+async function humanizeItems(draftItems) {
+  const protectedNumbers = extractProtectedNumbers(draftItems);
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": API_KEY,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 16000,
+      system: HUMANIZE_STYLE_GUIDE,
+      messages: [
+        {
+          role: "user",
+          content:
+            "以下は7本のニュース記事の下書きです。編集方針に沿って、body・why・captionX・captionThreads・captionInstagram の文章だけを自然な文体に書き直してください（headline・dek・importance・category・catColor・stats・chips・sourceLine・videoId は変更しないこと）。\n\n" +
+            "【絶対厳守：事実保護】\n" +
+            "以下の数値・単位は、書き直した文章の中でも一字一句そのまま残してください。言い換えたり、四捨五入したり、単位を変えたりしないでください：\n" +
+            protectedNumbers.join("、") +
+            "\n\n" +
+            "【文字数の厳守】\n" +
+            "captionX は120字以内、captionThreads は200字以内、captionInstagram は320字以内を必ず守ってください。" +
+            "「自然な言い回しを足す」ことを優先して文字数制限を超えないよう、必要なら簡潔にまとめてください。\n\n" +
+            "【避けるべきAI特有の言い回し（例）】\n" +
+            "「〜と言えるでしょう」「〜ではないでしょうか」「まさに」「〜という点も見逃せません」" +
+            "「〜することが重要です」といった、AIが多用しがちな定型句は避けてください。\n\n" +
+            "書き直したら、7件すべてを submit_news_items ツールで提出してください。\n\n" +
+            JSON.stringify(draftItems, null, 2),
+        },
+      ],
+      tools: [SUBMIT_TOOL],
+      tool_choice: { type: "tool", name: "submit_news_items" },
+    }),
+  });
+
+  if (!res.ok) throw new Error(`Claude API エラー（文章の書き直し）: ${res.status} ${await res.text()}`);
+
+  const data = await res.json();
+  const submitBlock = data.content.find((b) => b.type === "tool_use" && b.name === "submit_news_items");
+  if (!submitBlock?.input?.items) {
+    throw new Error("文章の書き直し結果が取得できませんでした: " + JSON.stringify(data).slice(0, 1000));
+  }
+  return submitBlock.input.items;
+}
+
 async function main() {
   console.log(`[${topic.slug}] Claude APIに本日(${dateStr})分の「${topic.displayName}」収集を依頼しています…`);
   // 529（Anthropic側の一時的な混雑）等の一時的なエラーは自動でリトライする
-  const items = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
+  const draftItems = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
 
-  if (!Array.isArray(items) || items.length !== 7) {
-    throw new Error(`期待した形式のデータではありません（要素数: ${items?.length}）`);
+  if (!Array.isArray(draftItems) || draftItems.length !== 7) {
+    throw new Error(`期待した形式のデータではありません（要素数: ${draftItems?.length}）`);
+  }
+
+  console.log(`[${topic.slug}] 文章を人間らしい自然な文体に書き直しています…`);
+  let items;
+  try {
+    items = await withRetry(() => humanizeItems(draftItems), {
+      retries: 2,
+      baseDelayMs: 8000,
+      label: "文章の書き直し",
+    });
+  } catch (err) {
+    // 書き直しに失敗しても、下書きのまま投稿できるようにする（品質より継続性を優先）
+    console.error(`⚠️ 文章の書き直しに失敗したため、下書きのまま使用します: ${err.message}`);
+    items = draftItems;
   }
 
   fs.mkdirSync(outputDir, { recursive: true });
+  // 「本当に自然になっているか」を人間が見比べられるよう、下書きも別途保存しておく
+  fs.writeFileSync(path.join(outputDir, "data-draft.json"), JSON.stringify(draftItems, null, 2), "utf-8");
   fs.writeFileSync(path.join(outputDir, "data.json"), JSON.stringify(items, null, 2), "utf-8");
   fs.writeFileSync(path.join(outputDir, "variant.json"), JSON.stringify({ date: dateStr, variant }, null, 2), "utf-8");
 

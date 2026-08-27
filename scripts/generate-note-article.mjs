@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
+import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!API_KEY) {
@@ -16,27 +17,50 @@ const data = JSON.parse(fs.readFileSync(path.join(outputDir, "data.json"), "utf-
 const SYSTEM_PROMPT = `
 ${topic.noteEditorRole || "あなたはnote.comで販売する有料記事を書く編集者です。"}
 
+【文体：物語調の連載エッセイ】
+単なるニュースの要約ではなく、「AIの進化を毎日追いかけている、ひとりの語り手（編集長）」の
+一人称視点による連載エッセイとして書いてください。読者は「今日は何があったか」ではなく
+「この語り手が何を感じ、何を考えたか」を追体験する感覚で読みます。
+
+- 冒頭は、その日の空気感や語り手の気づきから始める小さな情景描写・導入にする（例：「〜を見て、ふと手が止まった」）
+- ニュースを箇条書きで並べるのではなく、複数のニュースを地続きの「今日の物語」として繋げる
+- 語り手の率直な感想・違和感・驚きを織り交ぜる（ただし断定しすぎず、読者と一緒に考える姿勢を保つ）
+- 事実（何が起きたか）は一切脚色・誇張しない。物語的なのは「語り口・視点」だけで、起きていない出来事を作ってはいけない
+- 「〜です、〜ます」の丁寧語をベースにしつつ、語り手の人間味が伝わる自然な文体にする
+
 構成ルール：
-- 冒頭は無料で読める部分。読者がお金を払いたくなるような導入・概要にする
+- 冒頭は無料で読める部分。読者が続きを読みたくなるような、物語の「つかみ」にする
 - 本文中に必ず1行だけ ---PAYWALL--- という区切り文字列を入れる（これ以降が有料部分）
-- 有料部分では、深掘り解説・複数ニュースを繋げた考察・今後の展望など付加価値のある内容にする
-- 文体は「〜です、〜ます」の丁寧語だが、読み応えのある長文にする
+- 有料部分では、物語の続きとして、深掘り解説・複数ニュースを繋げた考察・今後の展望を語る
+- 有料部分の最後（まとめの前）に、「今日からできる、ひとつだけのアクション」を必ず1つ提案する。
+  これは物語の自然な締めくくりとして書くこと（唐突な箇条書き広告のようにしない）。
+  提案内容は日によって変えてよい：紹介したツールを実際に触ってみる、関連情報を少し調べてみる、
+  自分の仕事にどう関係するか1分だけ考えてみる、など。読者に行動を強制する書き方は避け、
+  「よければ、こんなことを試してみませんか」という軽い誘いのトーンにする
 - 最後に「想定価格」を提案する（1本あたり100〜300円程度が目安）
 - 企業名・サービス名・製品名などの固有名詞は、カタカナ訳をせず公式の英語表記のまま使う（例：「アンソロピック」ではなく「Anthropic」）
 
 出力形式（Markdown、これ以外の文章は含めない）：
 
-# （記事タイトル）
+# （記事タイトル。ニュース見出しの羅列ではなく、その日の物語を表すタイトルにする）
 
 （無料部分の本文）
 
 ---PAYWALL---
 
-（有料部分の本文）
+（有料部分の本文。末尾に「今日からできる、ひとつだけのアクション」を自然な文章として含める）
 
 ## まとめ
 
-（まとめ文）
+（まとめ文。物語のいったんの着地点として書く）
+
+（続けて、2〜4文程度の短い結びの文章を書く。この結びには必ず次の2つの要素を、
+自然な1つの流れとして含めること：
+①今日語った内容が、読者自身の仕事や日常のどこかに、前向きな形でつながる可能性を
+　1つだけ示す（不安を煽らず、「自分の選択肢が広がるかもしれない」というトーンにする）
+②明日もまた、AIの世界のどこかで新しい変化が起きているはずだという、
+　押しつけがましくない静かな期待を持たせる一文で締める（具体的な予告内容は書かない）
+不安・焦り・「乗り遅れる」といった煽り表現は一切使わないこと）
 
 ---
 **想定価格：（金額）円**
@@ -60,9 +84,48 @@ async function callClaude() {
   return data.content.filter((b) => b.type === "text").map((b) => b.text).join("\n");
 }
 
+// STEP1.8後半：下書きの記事を、人間らしい自然な文体に書き直す2段階目の処理。
+// ---PAYWALL---や見出し構成、想定価格・タグ案の表記はそのまま維持させる。
+async function humanizeArticle(draftArticle) {
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "x-api-key": API_KEY, "anthropic-version": "2023-06-01" },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 6000,
+      system: HUMANIZE_STYLE_GUIDE,
+      messages: [
+        {
+          role: "user",
+          content:
+            "以下はnote記事の下書きです。編集方針に沿って文体・言い回しだけを自然に書き直してください。" +
+            "見出し（#）や ---PAYWALL--- の位置、末尾の「想定価格」「タグ案」の表記形式はそのまま維持してください。\n\n" +
+            "【絶対厳守：事実保護】文章中の数値・日付・固有名詞・金額は、言い換えたり変更したりせず、下書きのまま残してください。\n\n" +
+            "【避けるべきAI特有の言い回し（例）】\n" +
+            "「〜と言えるでしょう」「〜ではないでしょうか」「まさに」「〜という点も見逃せません」「〜することが重要です」\n\n" +
+            "書き直した記事全文だけを出力し、それ以外の説明文は含めないでください。\n\n" +
+            draftArticle,
+        },
+      ],
+    }),
+  });
+  if (!res.ok) throw new Error(`Claude API エラー（文章の書き直し）: ${res.status} ${await res.text()}`);
+  const data = await res.json();
+  return data.content.filter((b) => b.type === "text").map((b) => b.text).join("\n");
+}
+
 async function main() {
   console.log(`[${topic.slug}] noteの有料記事ドラフトを作成しています…`);
-  const article = await callClaude();
+  const draftArticle = await callClaude();
+
+  console.log(`[${topic.slug}] note記事を人間らしい自然な文体に書き直しています…`);
+  let article;
+  try {
+    article = await humanizeArticle(draftArticle);
+  } catch (err) {
+    console.error(`⚠️ 文章の書き直しに失敗したため、下書きのまま使用します: ${err.message}`);
+    article = draftArticle;
+  }
 
   const header = `<!--
   noteへの掲載手順（手動・所要3分程度）:
@@ -77,6 +140,7 @@ async function main() {
 
 `;
 
+  fs.writeFileSync(path.join(outputDir, "note-article-draft.md"), draftArticle, "utf-8");
   fs.writeFileSync(path.join(outputDir, "note-article.md"), header + article, "utf-8");
   console.log(`完了: output/${topic.slug}/${dateStr}/note-article.md`);
 }
