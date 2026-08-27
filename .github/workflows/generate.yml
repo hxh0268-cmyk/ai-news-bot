@@ -118,6 +118,7 @@ jobs:
             - `output/${{ matrix.topic }}/<日付>/slideshow.mp4`：動画（上位本数のみ。生成失敗時は静止画スライドショーに自動代替）
             - `output/${{ matrix.topic }}/<日付>/note-article.md`：note販売用の記事ドラフト（手動貼り付け）
             - `output/${{ matrix.topic }}/<日付>/monetization-report.md`：**アフィリエイト・PR表記の確認レポート（必読）**
+            - `output/${{ matrix.topic }}/<日付>/data-draft.json`：文章の「書き直し前」の下書き（`data.json`の最終版と見比べて、本当に自然になっているか確認できます）
             - `docs/${{ matrix.topic }}/index.html`：広告枠付きの記事サイト
 
             内容を確認し、問題なければこのPRをMergeしてください。Mergeが「GO」判定になり、
