@@ -225,6 +225,35 @@ async function humanizeItems(draftItems) {
   return submitBlock.input.items;
 }
 
+// 「書き直し前」と「書き直し後」を左右に並べて見比べられるMarkdownを生成する。
+// GitHub上でこのファイルを開くと、表形式で横並び表示される。
+function buildHumanizeComparison(draftItems, finalItems) {
+  const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\n/g, "<br>");
+
+  const rows = draftItems
+    .map((draft, i) => {
+      const final = finalItems[i] || {};
+      return `
+### ${i + 1}. ${esc(draft.headline)}
+
+| | 書き直し前 | 書き直し後 |
+|---|---|---|
+| **本文** | ${esc((draft.body || []).join(" "))} | ${esc((final.body || []).join(" "))} |
+| **なぜ重要か** | ${esc(draft.why)} | ${esc(final.why)} |
+| **X用** | ${esc(draft.captionX)} | ${esc(final.captionX)} |
+| **Threads用** | ${esc(draft.captionThreads)} | ${esc(final.captionThreads)} |
+| **Instagram用** | ${esc(draft.captionInstagram)} | ${esc(final.captionInstagram)} |
+`;
+    })
+    .join("\n");
+
+  return `# 文章の書き直し比較（${dateStr}）
+
+「書き直し前」と「書き直し後」を見比べて、より人間らしい文章になっているか確認してください。
+数字や固有名詞が変わってしまっていないかも、あわせてチェックしてください。
+${rows}`;
+}
+
 async function main() {
   console.log(`[${topic.slug}] Claude APIに本日(${dateStr})分の「${topic.displayName}」収集を依頼しています…`);
   // 529（Anthropic側の一時的な混雑）等の一時的なエラーは自動でリトライする
@@ -252,6 +281,7 @@ async function main() {
   // 「本当に自然になっているか」を人間が見比べられるよう、下書きも別途保存しておく
   fs.writeFileSync(path.join(outputDir, "data-draft.json"), JSON.stringify(draftItems, null, 2), "utf-8");
   fs.writeFileSync(path.join(outputDir, "data.json"), JSON.stringify(items, null, 2), "utf-8");
+  fs.writeFileSync(path.join(outputDir, "humanize-comparison.md"), buildHumanizeComparison(draftItems, items), "utf-8");
   fs.writeFileSync(path.join(outputDir, "variant.json"), JSON.stringify({ date: dateStr, variant }, null, 2), "utf-8");
 
   const top5 = [...items].sort((a, b) => a.importance - b.importance).slice(0, 5);
