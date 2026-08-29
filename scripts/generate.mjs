@@ -48,6 +48,7 @@ ${variantInstruction}
 - captionX: X投稿用の文章（日本語、120字以内、ハッシュタグ2個程度含む）
 - captionThreads: Threads投稿用の文章（日本語、200字以内、少し会話的なトーン）
 - captionInstagram: Instagram投稿用の文章（日本語、300字程度、詳しめの説明＋ハッシュタグ5個程度）
+- lifeRelevanceTag: このニュースが「お金・仕事」「毎日使うアプリ・サービス」「子育て・教育」「健康・医療」「暮らし・エンタメ」のいずれかに読者の生活を具体的に変える内容なら該当するタグを、当てはまらなければ「なし」を入れる（7件中3件以上は「なし」以外にすること）
 
 正確性を最優先してください。数値や固有名詞は必ずWeb検索で確認したものだけを使い、不確かな情報は書かないでください。
 
@@ -84,6 +85,10 @@ const NEWS_ITEM_SCHEMA = {
     captionX: { type: "string" },
     captionThreads: { type: "string" },
     captionInstagram: { type: "string" },
+    lifeRelevanceTag: {
+      type: "string",
+      enum: ["お金・仕事", "毎日使うアプリ・サービス", "子育て・教育", "健康・医療", "暮らし・エンタメ", "なし"],
+    },
   },
   required: [
     "importance",
@@ -97,6 +102,7 @@ const NEWS_ITEM_SCHEMA = {
     "captionX",
     "captionThreads",
     "captionInstagram",
+    "lifeRelevanceTag",
   ],
 };
 
@@ -251,6 +257,17 @@ function buildHumanizeComparison(draftItems, finalItems) {
 
 「書き直し前」と「書き直し後」を見比べて、より人間らしい文章になっているか確認してください。
 数字や固有名詞が変わってしまっていないかも、あわせてチェックしてください。
+
+## 生活直結ルールの達成状況
+
+${(() => {
+  const tagged = finalItems.filter((it) => it.lifeRelevanceTag && it.lifeRelevanceTag !== "なし");
+  const status = tagged.length >= 3 ? "✅ 達成" : "⚠️ 未達成（3件未満）";
+  const list = finalItems
+    .map((it) => `- ${it.headline}：${it.lifeRelevanceTag || "（未設定）"}`)
+    .join("\n");
+  return `${status}（${tagged.length}/7件が該当）\n\n${list}`;
+})()}
 ${rows}`;
 }
 
