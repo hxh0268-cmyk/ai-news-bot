@@ -202,6 +202,11 @@ async function humanizeItems(draftItems) {
           role: "user",
           content:
             "以下は7本のニュース記事の下書きです。編集方針に沿って、body・why・captionX・captionThreads・captionInstagram の文章だけを自然な文体に書き直してください（headline・dek・importance・category・catColor・stats・chips・sourceLine・videoId は変更しないこと）。\n\n" +
+            "【captionX / captionThreads / captionInstagram について・厳守】\n" +
+            "この3つは文字数制限があるからといって「元の文のまま」提出することを禁止します。" +
+            "たとえ下書きの文章が既に自然に見えたとしても、必ず言葉選び・語尾・リズムのどこかを変えてください。" +
+            "文字数制限を守ることを優先していいので、「制限内に収まる範囲で、最低でも一箇所は元の文と違う書き方にする」ことを徹底してください。" +
+            "書き直した結果、captionX・captionThreads・captionInstagram のいずれかが下書きと一字一句同じだった場合は、その項目は不合格とみなします。もう一度、別の言い回しで書き直してから提出してください。\n\n" +
             "【絶対厳守：事実保護】\n" +
             "以下の数値・単位は、書き直した文章の中でも一字一句そのまま残してください。言い換えたり、四捨五入したり、単位を変えたりしないでください：\n" +
             protectedNumbers.join("、") +
@@ -229,6 +234,33 @@ async function humanizeItems(draftItems) {
     throw new Error("文章の書き直し結果が取得できませんでした: " + JSON.stringify(data).slice(0, 1000));
   }
   return submitBlock.input.items;
+}
+
+// 書き直し前後で、キャプション類が一字一句同じままになっていないかをチェックする。
+// ここで検知しても処理は止めない（品質より継続性を優先する既存方針を踏襲）が、
+// ログに残すことで「ヒューマナイズが効いていない日」に気づけるようにする。
+function logUnchangedCaptions(draftItems, finalItems) {
+  const fields = [
+    ["captionX", "X用"],
+    ["captionThreads", "Threads用"],
+    ["captionInstagram", "Instagram用"],
+    ["why", "なぜ重要か"],
+  ];
+  let unchangedCount = 0;
+  draftItems.forEach((draft, i) => {
+    const final = finalItems[i] || {};
+    for (const [key, label] of fields) {
+      if (draft[key] && final[key] && draft[key] === final[key]) {
+        unchangedCount += 1;
+        console.warn(`⚠️ 書き直し未適用の疑い: ${i + 1}件目「${draft.headline}」の${label}が下書きと完全一致しています。`);
+      }
+    }
+  });
+  if (unchangedCount === 0) {
+    console.log("✅ 書き直しチェック: 全項目で下書きから変化が確認できました。");
+  } else {
+    console.warn(`⚠️ 書き直しチェック: ${unchangedCount}件の項目が下書きと完全一致していました（要確認）。`);
+  }
 }
 
 // 「書き直し前」と「書き直し後」を左右に並べて見比べられるMarkdownを生成する。
@@ -288,6 +320,7 @@ async function main() {
       baseDelayMs: 8000,
       label: "文章の書き直し",
     });
+    logUnchangedCaptions(draftItems, items);
   } catch (err) {
     // 書き直しに失敗しても、下書きのまま投稿できるようにする（品質より継続性を優先）
     console.error(`⚠️ 文章の書き直しに失敗したため、下書きのまま使用します: ${err.message}`);
