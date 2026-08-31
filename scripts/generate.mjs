@@ -50,6 +50,12 @@ ${variantInstruction}
 - captionInstagram: Instagram投稿用の文章（日本語、300字程度、詳しめの説明＋ハッシュタグ5個程度）
 - lifeRelevanceTag: このニュースが「お金・仕事」「毎日使うアプリ・サービス」「子育て・教育」「健康・医療」「暮らし・エンタメ」のいずれかに読者の生活を具体的に変える内容なら該当するタグを、当てはまらなければ「なし」を入れる（7件中3件以上は「なし」以外にすること）
 
+【見出し(headline)の表現バリエーションについて・厳守】
+7件の見出しは、全体として言い回しのパターンにバリエーションを持たせてください。
+上記のスタイル指定（variant ${variant}）はあくまで「基本トーン」であり、7件すべてを一言一句同じ型（例：全件「まさか〜？」で始まる、全件「〜という発表」で終わる）に揃えることは禁止します。
+目安として、同じ書き出しパターンは7件中2〜3件までに留め、断定型・問いかけ型・体言止め・数字を前面に出す型など、複数の型を混在させてください。
+これは、AIが生成した見出しだと一目で分かってしまう「機械的な均一さ」を避け、人間の編集者が作った見出し一覧のような自然な多様性を持たせるためです。
+
 正確性を最優先してください。数値や固有名詞は必ずWeb検索で確認したものだけを使い、不確かな情報は書かないでください。
 
 【固有名詞の表記ルール】
@@ -263,6 +269,24 @@ function logUnchangedCaptions(draftItems, finalItems) {
   }
 }
 
+// 見出しの表現パターンが偏っていないかをチェックする（例：全件「まさか」始まり）。
+// 完全な多様性の判定は難しいため、簡易的に「同じ書き出し2文字」が何件あるかを見る。
+function logHeadlinePatternBias(items) {
+  const counts = new Map();
+  for (const item of items) {
+    const prefix = (item.headline || "").slice(0, 2);
+    counts.set(prefix, (counts.get(prefix) || 0) + 1);
+  }
+  const biased = [...counts.entries()].filter(([, count]) => count >= 4);
+  if (biased.length > 0) {
+    for (const [prefix, count] of biased) {
+      console.warn(`⚠️ 見出しの表現が偏っている可能性: 「${prefix}」始まりが7件中${count}件あります。`);
+    }
+  } else {
+    console.log("✅ 見出しチェック: 表現パターンの偏りは検知されませんでした。");
+  }
+}
+
 // 「書き直し前」と「書き直し後」を左右に並べて見比べられるMarkdownを生成する。
 // GitHub上でこのファイルを開くと、表形式で横並び表示される。
 function buildHumanizeComparison(draftItems, finalItems) {
@@ -311,6 +335,8 @@ async function main() {
   if (!Array.isArray(draftItems) || draftItems.length !== 7) {
     throw new Error(`期待した形式のデータではありません（要素数: ${draftItems?.length}）`);
   }
+
+  logHeadlinePatternBias(draftItems);
 
   console.log(`[${topic.slug}] 文章を人間らしい自然な文体に書き直しています…`);
   let items;
