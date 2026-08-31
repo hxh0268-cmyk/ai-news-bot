@@ -1,5 +1,5 @@
 // STEP2.5: 広告枠・開示表記付きサイトを生成する（話題対応版）
-// 出力: docs/<topic>/index.html, docs/<topic>/privacy.html
+// 出力: docs/<topic>/index.html, docs/<topic>/privacy.html, docs/<topic>/images/*.png
 import fs from "node:fs";
 import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
@@ -11,7 +11,6 @@ const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
 // サイトの公開URL。カスタムドメインを設定した場合はここを変更してください。
 const SITE_URL = process.env.SITE_URL || "https://hxh0268-cmyk.github.io/ai-news-bot";
 const PAGE_URL = `${SITE_URL}/${topic.slug}/`;
-const PRIVACY_URL = `${SITE_URL}/${topic.slug}/privacy.html`;
 
 function gaSnippet() {
   if (!GA_MEASUREMENT_ID) return "";
@@ -46,7 +45,6 @@ function buildPageDescription(data) {
 }
 
 // 一覧ページ全体を、簡易的なNewsArticleのItemListとして構造化データ化する。
-// 検索エンジンにニュース記事の集まりであることを伝え、リッチリザルトの対象になりやすくする。
 function buildStructuredData(data) {
   const itemListElement = data.map((item, i) => ({
     "@type": "ListItem",
@@ -67,10 +65,35 @@ function buildStructuredData(data) {
   return `<script type="application/ld+json">${JSON.stringify(json)}</script>`;
 }
 
-function renderArticle(item, index) {
+// top5.jsonはimportanceの値で昇順ソートされているため、cards/{importance}.png が
+// その記事のサムネイルとして一意に対応する。GitHub Pagesの公開範囲がdocsフォルダに
+// 限定されていても表示できるよう、該当する画像だけをdocsDir配下にコピーする。
+function copyThumbnails(data) {
+  const srcDir = path.join(outputDir, "cards");
+  const destDir = path.join(docsDir, "images");
+  if (!fs.existsSync(srcDir)) return new Set();
+
+  fs.mkdirSync(destDir, { recursive: true });
+  const copied = new Set();
+  for (const item of data) {
+    if (!item.importance || item.importance > 5) continue;
+    const srcPath = path.join(srcDir, `${item.importance}.png`);
+    if (!fs.existsSync(srcPath)) continue;
+    fs.copyFileSync(srcPath, path.join(destDir, `${item.importance}.png`));
+    copied.add(item.importance);
+  }
+  return copied;
+}
+
+function renderArticle(item, index, thumbnails) {
   const showAd = index === 2;
+  const hasThumbnail = thumbnails.has(item.importance);
+  const thumbnailHtml = hasThumbnail
+    ? `<img class="thumb" src="images/${item.importance}.png" alt="${item.headline}" loading="lazy" width="1080" height="1350">`
+    : "";
   return `
   <article class="card" style="--cat:${item.catColor}">
+    ${thumbnailHtml}
     <span class="tag">${item.category}</span>
     <h2>${item.headline}</h2>
     <p class="dek">${item.dek}</p>
@@ -81,7 +104,7 @@ function renderArticle(item, index) {
   ${showAd ? adSlot(1) : ""}`;
 }
 
-function buildHtml(data) {
+function buildHtml(data, thumbnails) {
   const disclosureLines = [
     "本サイトはアフィリエイトプログラムによる収益を得ている場合があります。",
     "本サイトはGoogle AdSense等の広告配信サービスを利用しています。",
@@ -106,8 +129,9 @@ function buildHtml(data) {
 <meta property="og:url" content="${PAGE_URL}">
 <meta property="og:site_name" content="${topic.displayName}">
 <meta property="og:locale" content="ja_JP">
+${thumbnails.size > 0 ? `<meta property="og:image" content="${PAGE_URL}images/${[...thumbnails][0]}.png">` : ""}
 
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary${thumbnails.size > 0 ? "_large_image" : ""}">
 <meta name="twitter:title" content="${pageTitle}">
 <meta name="twitter:description" content="${description}">
 
@@ -126,7 +150,8 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .wrap{max-width:680px;margin:0 auto;padding:24px;}
   .disclosure{background:#fff8e6;border:1px solid #F4B942;border-radius:6px;padding:14px 18px;font-size:13px;color:#6B5A1E;margin-bottom:28px;}
   .disclosure p{margin:4px 0;}
-  .card{background:#fff;border-radius:8px;padding:26px;margin-bottom:20px;border-top:4px solid var(--cat,#1F8A83);}
+  .card{background:#fff;border-radius:8px;padding:26px;margin-bottom:20px;border-top:4px solid var(--cat,#1F8A83);overflow:hidden;}
+  .thumb{display:block;width:calc(100% + 52px);margin:-26px -26px 20px;max-width:none;aspect-ratio:1080/1350;object-fit:cover;}
   .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cat,#1F8A83);text-transform:uppercase;}
   h2{font-family:'Shippori Mincho',serif;font-size:22px;margin:10px 0;color:var(--ink);}
   .dek{color:var(--slate-soft);font-size:14px;}
@@ -143,7 +168,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
 <header><h1>今日の${topic.displayName}</h1><p>${dateStr}</p></header>
 <main class="wrap">
   <div class="disclosure">${disclosureLines.map((l) => `<p>${l}</p>`).join("")}</div>
-  ${data.map((item, i) => renderArticle(item, i)).join("\n")}
+  ${data.map((item, i) => renderArticle(item, i, thumbnails)).join("\n")}
 </main>
 <footer>
   <p>© ${new Date(dateStr).getFullYear()} 今日の${topic.displayName}</p>
@@ -154,7 +179,6 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
 }
 
 // AdSenseの利用規約で必須とされる、プライバシーポリシー・広告に関する説明ページ。
-// サイト側の事情に合わせて文言は適宜調整してください。
 function buildPrivacyHtml() {
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -197,9 +221,10 @@ function buildPrivacyHtml() {
 function main() {
   const data = JSON.parse(fs.readFileSync(path.join(outputDir, "data.json"), "utf-8"));
   fs.mkdirSync(docsDir, { recursive: true });
-  fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data), "utf-8");
+  const thumbnails = copyThumbnails(data);
+  fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails), "utf-8");
   fs.writeFileSync(path.join(docsDir, "privacy.html"), buildPrivacyHtml(), "utf-8");
-  console.log(`生成しました: docs/${topic.slug}/index.html, docs/${topic.slug}/privacy.html`);
+  console.log(`生成しました: docs/${topic.slug}/index.html, docs/${topic.slug}/privacy.html（サムネイル${thumbnails.size}枚同梱）`);
 }
 
 main();
