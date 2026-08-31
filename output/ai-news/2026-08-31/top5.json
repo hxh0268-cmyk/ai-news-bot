@@ -1,0 +1,136 @@
+[
+  {
+    "importance": 1,
+    "category": "OpenAI",
+    "catColor": "#7C6FE0",
+    "headline": "OpenAIがCursor提供を突然停止？",
+    "dek": "SpaceX傘下Cursorへのモデル提供、11月に終了へ",
+    "body": [
+      "OpenAIが8月28日、SpaceXの完全子会社になった開発ツール「Cursor」（運営元Anysphere）へのモデル提供を、2026年11月12日で打ち切ると通知した。",
+      "表向きの理由は技術的な話じゃなく「信頼」らしい。過去のTwitter買収やxAIでの規約違反を引き合いに出し、SpaceXが規約の範囲内でちゃんと技術を使ってくれるか確信が持てない、という説明だ。",
+      "次期フロンティア推論モデル「Astra」を巡る説明責任も理由に挙がっていて、AI企業同士の主導権争いがいよいよ表面化してきた形になる。"
+    ],
+    "why": "AI企業同士の提携解消は、開発者が毎日頼っているツールの土台がある日突然崩れかねないリスクを浮き彫りにする。Cursorを仕事で使っている開発者は、そろそろ代替策を考え始めた方がよさそうだ。",
+    "chips": [
+      "OpenAI",
+      "Cursor",
+      "SpaceX",
+      "Astra"
+    ],
+    "sourceLine": "Qiita AI Daily Digest、2026年8月30日",
+    "videoId": null,
+    "captionX": "OpenAIがCursorへのモデル提供を11月に打ち切ると通知。理由は技術じゃなく「信頼」問題。AI企業間の駆け引き、いよいよ本格化⚠️ #OpenAI #Cursor",
+    "captionThreads": "OpenAIがSpaceX傘下のCursorへのモデル供給を11月で止めるって、なかなか強気な決断だよね。しかも理由が「信頼できない」からってところがリアルすぎる。AI業界の主導権争い、これからも目が離せない。",
+    "captionInstagram": "OpenAIが、SpaceX傘下となった開発ツール「Cursor」へのモデル提供を2026年11月12日で打ち切ると発表しました。理由は技術的な問題じゃなく「信頼」。過去の規約違反歴を踏まえての、なかなか異例な判断です📢 次期モデル「Astra」への説明責任も理由に挙げられていて、AI企業同士の主導権争いが一段と表に出てきた出来事になりました。開発者にとっては、決して他人事じゃないニュースです。 #OpenAI #Cursor #SpaceX #AI業界 #テック業界",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Anthropic",
+    "catColor": "#1F8A83",
+    "headline": "Anthropicの売上が半年で6倍以上に？",
+    "dek": "年換算売上650億ドル突破、IPO観測も加速",
+    "body": [
+      "Anthropicの年換算売上（ARR）が7月末時点で650億ドルを突破した、とBloombergが報じ、TechCrunchやAxiosも追認した。5月時点の約470億ドル、2025年末の約90億ドルからの伸びを見ると、勢いが尋常じゃない。",
+      "2026年4〜6月期の売上は115億ドルを超え、前年同期比で約14.6倍。調整後営業利益も初めて黒字に転じたそうだ。",
+      "同社は6月にSECへ非公開のS-1を提出済みとされ、10月の上場・評価額約2兆ドルという観測も飛び交っているが、Financial Timesはこの数字はまだ正式に確定していないと釘を刺している。"
+    ],
+    "why": "生成AI大手の急成長は市場全体の勢いを映す指標で、実際に上場すれば個人投資家の資産運用にも波及しかねない話だ。",
+    "chips": [
+      "Anthropic",
+      "IPO",
+      "Claude",
+      "生成AI市場"
+    ],
+    "sourceLine": "Bloomberg、Qiita AI Daily Digest 2026年8月30日",
+    "videoId": null,
+    "captionX": "Anthropicの年換算売上が650億ドル突破、半年前の約1.4倍に急伸。10月上場・評価額2兆ドル説も浮上中 #Anthropic #Claude",
+    "captionThreads": "Anthropicの売上、もう桁がおかしいレベルになってきた…半年で数百億ドル単位で膨らんでて、IPOの噂も現実味を帯びてる。生成AIバブルとか言われつつ、数字だけ見たら勢い止まる気配なし。",
+    "captionInstagram": "Anthropicの年換算売上（ARR）が7月末時点で650億ドルを突破したとBloombergが報道。5月の約470億ドル、昨年末の約90億ドルから、驚くほどのペースで伸びています📈 4〜6月期は前年同期比約14.6倍の売上を記録し、利益もついに黒字化。10月の上場・評価額約2兆ドルという観測も出ていますが、正式にはまだ未確定とのこと。生成AI企業の勢いをそのまま映すようなニュースです。 #Anthropic #Claude #IPO #生成AI #スタートアップ",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Google",
+    "catColor": "#F4B942",
+    "headline": "まさか大学生ならAIが1年無料に？",
+    "dek": "Gemini Drops8月版、学生向け新機能が続々",
+    "body": [
+      "Googleが8月28日、Gemini関連の最新機能をまとめた月次アップデート「Gemini Drops」8月版を公開した。目玉は学生向けの「Student Hub」新設と、対象学生への「Google AI Pro」（日本では「Google AI Plus」）1年間無料プランだ。",
+      "授業ノートや資料をAIがまとめて復習に使える「Study Notebooks」も新登場。加えて軽量・高速な新モデル「Gemini 3.7 Flash」、音声で指示するだけで複数アプリをまたいだ作業をこなす「Gemini Live」の機能拡張も同時に発表された。"
+    ],
+    "why": "教育現場でのAI活用がいよいよ本格化していて、学生は家計の負担を抑えつつ高性能なAIツールを学習に使えるようになる。子どもの教育費を気にする保護者にとっても、無視できない動きだ。",
+    "chips": [
+      "Google",
+      "Gemini",
+      "教育",
+      "Student Hub"
+    ],
+    "sourceLine": "Google公式ブログ、2026年8月28日",
+    "videoId": null,
+    "captionX": "Googleが「Gemini Drops」8月版を公開。学生向けにAI Plus1年間無料プランや学習ノート機能が登場📚 #Google #Gemini",
+    "captionThreads": "Googleが学生向けにGemini関連の無料プランや学習支援機能をどっさり追加したっぽい。授業ノートをAIがまとめてくれる機能とか、受験生や大学生には地味に助かるやつでは。",
+    "captionInstagram": "Googleが2026年8月版の「Gemini Drops」を公開し、学生向けの新機能をまとめて発表しました🎓 対象学生には「Google AI Plus」が1年間無料になるほか、授業ノートをAIが整理してくれる「Study Notebooks」も新登場。新モデル「Gemini 3.7 Flash」や音声操作の「Gemini Live」機能拡張も同時にお披露目されています。教育費の負担を抑えつつ最新AIを学習に活かせる時代が、すぐそこまで来ています。 #Google #Gemini #教育DX #学生応援 #AI学習",
+    "lifeRelevanceTag": "子育て・教育",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Anthropic",
+    "catColor": "#7C6FE0",
+    "headline": "ブラウザの中でClaudeが勝手に動く？",
+    "dek": "有料プラン向けに一般提供開始、自動操作も可能に",
+    "body": [
+      "Anthropicは8月26日、ブラウザ拡張機能「Claude in Chrome」の一般提供を始めた。有料プランのユーザーなら誰でもChromeウェブストアからインストールできる。",
+      "これでClaudeは、いちいち手動で承認しなくてもブラウザの中でテキストの読み書きやリンク操作、ページ移動、フォーム入力を自律的にこなせるようになった。社内ダッシュボードやベンダーポータルなど、既存のログイン情報を使ったアクセスも可能だ。",
+      "ただしローカルファイルや他アプリとの連携にはまだデスクトップアプリが必要で、他のChromiumブラウザやモバイル環境には対応していない。"
+    ],
+    "why": "毎日ブラウザでこなす定型作業をAIに任せられるようになり、仕事の効率が大きく変わりそうだ。とはいえ自律操作には情報漏えいなどのリスクも付きまとうので、使い方には気をつけたい。",
+    "chips": [
+      "Anthropic",
+      "Claude",
+      "Chrome",
+      "ブラウザエージェント"
+    ],
+    "sourceLine": "AI Watch (Impress Watch)、2026年8月27日",
+    "videoId": null,
+    "captionX": "「Claude in Chrome」が有料プラン向けに一般提供開始。ブラウザ内の作業をAIが自動でこなす時代に🌐 #Anthropic #Claude",
+    "captionThreads": "Claudeがブラウザの中で勝手にリンクをクリックしたりフォームを埋めたりするようになったらしい。地味だけど、毎日のルーティン作業がこれで一気に楽になりそう。",
+    "captionInstagram": "Anthropicが8月26日、ブラウザ拡張機能「Claude in Chrome」の一般提供を始めました🖥️ 有料プランなら誰でもChromeウェブストアからインストールできます。Claudeがページの読み書きやリンク操作、フォーム入力を自律的にこなしてくれるので、毎日繰り返している定型作業がぐっと楽になりそう。ただし自律操作には情報管理への注意も必要です。使い方次第で仕事の効率が大きく変わるアップデートになりそうです。 #Anthropic #Claude #Chrome拡張機能 #仕事効率化 #AIエージェント",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "OpenAI",
+    "catColor": "#E1636F",
+    "headline": "ChatGPTが勝手に仕事を進める？",
+    "dek": "Webhook対応タスクや複数アカウント連携が追加",
+    "body": [
+      "OpenAIがChatGPT Workに、GmailやSlack、GitHubの更新をきっかけに自動でタスクを実行する「Webhookトリガー型の予約タスク」を追加した。",
+      "複数のGoogleアカウントを1つの会話でまとめて扱えるようになり、仕事用とプライベート用のGmail・カレンダー・連絡先をまたいだ予定確認やメール検索ができるようになった。",
+      "サインイン済みのウェブサイト上でタスクを完了できるブラウザ機能も拡張され、パスワードマネージャー連携や重要操作前の確認機能も新たに備わっている。"
+    ],
+    "why": "メール対応やスケジュール調整といった日常業務の「待ち時間」がAIによって削られていく、働き方の効率化がまた一歩進んだ格好だ。",
+    "chips": [
+      "OpenAI",
+      "ChatGPT Work",
+      "自動化",
+      "仕事効率化"
+    ],
+    "sourceLine": "OpenAI公式リリースノート、2026年8月28日",
+    "videoId": null,
+    "captionX": "ChatGPT WorkにWebhook対応の自動タスクや複数Googleアカウント連携が追加。仕事の待ち時間、これで減るかも #ChatGPT #OpenAI",
+    "captionThreads": "ChatGPT Work、GmailやSlackの更新を合図に勝手にタスクを進めてくれるようになったって。仕事用とプライベートのGoogleアカウントも一括で扱えるし、これ地味に便利。",
+    "captionInstagram": "OpenAIがChatGPT Workに新機能を追加しました💼 GmailやSlack、GitHubの更新をきっかけに自動でタスクを実行する「Webhookトリガー型予約タスク」や、複数のGoogleアカウントを1つの会話でまとめて扱える機能が登場。サインイン済みサイトでの作業も安全に代行できるようになり、日々のメール対応やスケジュール調整がぐっと楽になりそうです。 #OpenAI #ChatGPT #ChatGPTWork #仕事効率化 #AI活用",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]

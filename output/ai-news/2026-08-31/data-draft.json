@@ -1,0 +1,175 @@
+[
+  {
+    "importance": 1,
+    "category": "OpenAI",
+    "catColor": "#7C6FE0",
+    "headline": "OpenAIがCursor提供を突然停止？",
+    "dek": "SpaceX傘下Cursorへのモデル提供、11月に終了へ",
+    "body": [
+      "OpenAIは8月28日、SpaceXの完全子会社となった開発ツール「Cursor」（運営元Anysphere）向けのモデル提供を2026年11月12日で打ち切ると通知した。",
+      "理由は技術面ではなく「信頼」だという。過去にTwitter買収やxAIでの規約違反があった実績を挙げ、SpaceXが利用規約の範囲内で技術を使うと確信できないと説明している。",
+      "次期フロンティア推論モデル「Astra」への新たな説明責任も理由の一つとされ、AI企業同士の主導権争いが激しさを増していることを示す出来事になった。"
+    ],
+    "why": "AI企業同士の提携解消は、開発者が日々使うツールの土台が突然崩れるリスクを浮き彫りにする。Cursorを業務で使う開発者は今後の代替策を検討する必要が出てきそうだ。",
+    "chips": [
+      "OpenAI",
+      "Cursor",
+      "SpaceX",
+      "Astra"
+    ],
+    "sourceLine": "Qiita AI Daily Digest、2026年8月30日",
+    "videoId": null,
+    "captionX": "OpenAIがCursorへのモデル提供を11月に打ち切ると通知。理由は「信頼」問題。AI企業間の駆け引きが激化中⚠️ #OpenAI #Cursor",
+    "captionThreads": "OpenAIがSpaceX傘下のCursorへのモデル供給を11月に止めるって発表したの、なかなか衝撃的。理由が技術じゃなくて「信頼できない」からってところがまたリアル…AI業界の主導権争い、これからも目が離せないね。",
+    "captionInstagram": "OpenAIが、SpaceX傘下となった開発ツール「Cursor」へのモデル提供を2026年11月12日で打ち切ると発表しました。理由は技術的な問題ではなく「信頼」。過去の規約違反歴を踏まえた異例の判断です📢 次期モデル「Astra」への説明責任も理由に挙げられており、AI企業同士の主導権争いが一段と激しくなっていることを示す出来事になりました。開発者にとっては他人事ではないニュースです。 #OpenAI #Cursor #SpaceX #AI業界 #テック業界",
+    "lifeRelevanceTag": "なし"
+  },
+  {
+    "importance": 2,
+    "category": "Anthropic",
+    "catColor": "#1F8A83",
+    "headline": "Anthropicの売上が半年で6倍以上に？",
+    "dek": "年換算売上650億ドル突破、IPO観測も加速",
+    "body": [
+      "Anthropicの年換算売上（ARR）が7月末時点で650億ドルを突破したとBloombergが報じ、TechCrunchやAxiosも追認した。5月時点の約470億ドル、2025年末の約90億ドルから急伸している。",
+      "2026年4〜6月期の売上は115億ドルを超え、前年同期比で約14.6倍。調整後営業利益も初めてプラスに転じたという。",
+      "同社は6月にSECへ非公開のS-1を提出済みとされ、10月の上場・評価額約2兆ドルという観測も出ているが、Financial Timesはこの数字がまだ正式に確定していないと注記している。"
+    ],
+    "why": "生成AI大手の急成長は市場全体の勢いを映す指標であり、実際に上場すれば個人投資家の資産運用にも影響が及ぶ可能性がある。",
+    "chips": [
+      "Anthropic",
+      "IPO",
+      "Claude",
+      "生成AI市場"
+    ],
+    "sourceLine": "Bloomberg、Qiita AI Daily Digest 2026年8月30日",
+    "videoId": null,
+    "captionX": "Anthropicの年換算売上が650億ドル突破、半年前の約1.4倍に急伸。10月上場・評価額2兆ドル説も浮上 #Anthropic #Claude",
+    "captionThreads": "Anthropicの売上、もう桁がすごいことになってる…半年で数百億ドル単位で伸びてて、IPOの噂も現実味を帯びてきた。生成AIバブルとか言われるけど、数字だけ見ると勢い止まらないね。",
+    "captionInstagram": "Anthropicの年換算売上（ARR）が7月末時点で650億ドルを突破したとBloombergが報道。5月の約470億ドル、昨年末の約90億ドルから驚異的なペースで成長しています📈 4〜6月期は前年同期比約14.6倍の売上を記録し、利益も初の黒字化。10月の上場・評価額約2兆ドルという観測も出ていますが、正式には未確定とのこと。生成AI企業の勢いを象徴するニュースです。 #Anthropic #Claude #IPO #生成AI #スタートアップ",
+    "lifeRelevanceTag": "なし"
+  },
+  {
+    "importance": 3,
+    "category": "Google",
+    "catColor": "#F4B942",
+    "headline": "まさか大学生ならAIが1年無料に？",
+    "dek": "Gemini Drops8月版、学生向け新機能が続々",
+    "body": [
+      "Googleは8月28日、Gemini関連の最新機能をまとめた月次アップデート「Gemini Drops」8月版を公開した。目玉は学生向けの「Student Hub」新設と、対象学生への「Google AI Pro」（日本では「Google AI Plus」）1年間無料プランだ。",
+      "授業ノートや資料をAIがまとめて復習に活用できる「Study Notebooks」も新登場。さらに軽量・高速な新モデル「Gemini 3.7 Flash」や、音声で指示するだけで複数アプリをまたいだ作業をこなす「Gemini Live」の機能拡張も同時に発表された。"
+    ],
+    "why": "教育現場でのAI活用が本格化しており、学生は家計への負担を抑えつつ高性能なAIツールを学習に活用できるようになる。子どもの教育費を考える保護者にも見逃せない動きだ。",
+    "chips": [
+      "Google",
+      "Gemini",
+      "教育",
+      "Student Hub"
+    ],
+    "sourceLine": "Google公式ブログ、2026年8月28日",
+    "videoId": null,
+    "captionX": "Googleが「Gemini Drops」8月版を公開。学生向けにAI Plus1年間無料プランや学習ノート機能が登場📚 #Google #Gemini",
+    "captionThreads": "Googleが学生向けにGemini関連の無料プランや学習支援機能をどっさり追加したみたい。授業ノートをAIがまとめてくれる機能とか、地味に受験生や大学生には嬉しいのでは…？",
+    "captionInstagram": "Googleが2026年8月版の「Gemini Drops」を公開し、学生向けの新機能を一挙発表しました🎓 対象学生には「Google AI Plus」が1年間無料になるほか、授業ノートをAIが整理してくれる「Study Notebooks」も新登場。新モデル「Gemini 3.7 Flash」や音声操作の「Gemini Live」機能拡張も同時にお披露目されています。教育費の負担を抑えながら最新AIを学習に使える時代がすぐそこまで来ています。 #Google #Gemini #教育DX #学生応援 #AI学習",
+    "lifeRelevanceTag": "子育て・教育"
+  },
+  {
+    "importance": 4,
+    "category": "Anthropic",
+    "catColor": "#7C6FE0",
+    "headline": "ブラウザの中でClaudeが勝手に動く？",
+    "dek": "有料プラン向けに一般提供開始、自動操作も可能に",
+    "body": [
+      "Anthropicは8月26日、ブラウザ拡張機能「Claude in Chrome」の一般提供を開始した。すべての有料プランユーザーがChromeウェブストアからインストールできる。",
+      "この機能により、Claudeは毎回の手動承認なしにブラウザ内でテキストの読み書きやリンク操作、ページ間の移動、フォーム入力などを自律的に行えるようになる。社内ダッシュボードやベンダーポータルなど既存のログイン情報を使ったアクセスも可能だ。",
+      "なお、ローカルファイルや他アプリとの連携には引き続きデスクトップアプリが必要で、他のChromiumブラウザやモバイル環境には未対応となっている。"
+    ],
+    "why": "毎日ブラウザで行う定型作業をAIに任せられるようになり、仕事の効率が大きく変わる可能性がある。一方で自律操作には情報漏えいなどのリスクも伴うため、使い方には注意が必要だ。",
+    "chips": [
+      "Anthropic",
+      "Claude",
+      "Chrome",
+      "ブラウザエージェント"
+    ],
+    "sourceLine": "AI Watch (Impress Watch)、2026年8月27日",
+    "videoId": null,
+    "captionX": "「Claude in Chrome」が有料プラン向けに一般提供開始。ブラウザ内の作業をAIが自動でこなす時代に🌐 #Anthropic #Claude",
+    "captionThreads": "Claudeがブラウザの中で勝手にリンクをクリックしたりフォームを埋めたりしてくれるようになったらしい。地味だけどこれ、毎日のルーティン作業がめちゃくちゃ楽になりそう。",
+    "captionInstagram": "Anthropicが8月26日、ブラウザ拡張機能「Claude in Chrome」の一般提供を開始しました🖥️ 有料プランユーザーなら誰でもChromeウェブストアからインストール可能。Claudeがページの読み書きやリンク操作、フォーム入力などを自律的にこなしてくれるので、毎日繰り返す定型作業がぐっと楽になりそうです。ただし自律操作には情報管理の注意も必要。使い方次第で仕事の効率が大きく変わるアップデートです。 #Anthropic #Claude #Chrome拡張機能 #仕事効率化 #AIエージェント",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス"
+  },
+  {
+    "importance": 5,
+    "category": "OpenAI",
+    "catColor": "#E1636F",
+    "headline": "ChatGPTが勝手に仕事を進める？",
+    "dek": "Webhook対応タスクや複数アカウント連携が追加",
+    "body": [
+      "OpenAIはChatGPT Workに、GmailやSlack、GitHubでの更新をきっかけに自動でタスクを実行する「Webhookトリガー型の予約タスク」を追加した。",
+      "複数のGoogleアカウントを1つの会話で扱えるようになり、仕事用とプライベート用のGmail・カレンダー・連絡先をまたいだ予定確認やメール検索が可能になった。",
+      "サインイン済みのウェブサイト上でタスクを完了できるブラウザ機能も拡張され、パスワードマネージャー連携や重要操作前の確認機能も新たに備わった。"
+    ],
+    "why": "メール対応やスケジュール調整といった日常業務の「待ち時間」がAIによって自動化され、働き方が効率化される具体的な一歩になる。",
+    "chips": [
+      "OpenAI",
+      "ChatGPT Work",
+      "自動化",
+      "仕事効率化"
+    ],
+    "sourceLine": "OpenAI公式リリースノート、2026年8月28日",
+    "videoId": null,
+    "captionX": "ChatGPT WorkにWebhook対応の自動タスクや複数Googleアカウント連携が追加。仕事の待ち時間が減るかも #ChatGPT #OpenAI",
+    "captionThreads": "ChatGPT Work、GmailやSlackの更新をきっかけに勝手にタスクを進めてくれるようになったって。仕事用とプライベートのGoogleアカウントも一括で扱えるようになったし、地味に便利そう。",
+    "captionInstagram": "OpenAIがChatGPT Workに新機能を追加しました💼 GmailやSlack、GitHubの更新をきっかけに自動でタスクを実行する「Webhookトリガー型予約タスク」や、複数のGoogleアカウントを1つの会話でまとめて扱える機能などが登場。サインイン済みサイトでの作業も安全に代行できるようになり、日々のメール対応やスケジュール調整がぐっと楽になりそうです。 #OpenAI #ChatGPT #ChatGPTWork #仕事効率化 #AI活用",
+    "lifeRelevanceTag": "お金・仕事"
+  },
+  {
+    "importance": 6,
+    "category": "Anthropic",
+    "catColor": "#1F8A83",
+    "headline": "Claude Codeの上限、増える？減る？",
+    "dek": "9月14日から恒久25%増でも実質17%減の謎",
+    "body": [
+      "Anthropicは8月30日、コーディング支援ツール「Claude Code」の標準週次利用上限を9月14日から恒久的に25%引き上げると発表した。",
+      "ただし5月から続いていた期間限定50%増が同時に終了するため、現在の利用者にとっては9月14日以降の利用可能枠が実質17%少なくなる。Anthropicも続く投稿でこの減少を認めている。",
+      "「増加」と「減少」が同時に成立するのは、比較の基準（分母）が異なるためだという、やや分かりにくい変更になっている。"
+    ],
+    "why": "仕事でClaude Codeを使う開発者にとっては、来月から使える作業量が実質的に減る可能性がある。料金プランやツールの使い方を見直すきっかけになりそうだ。",
+    "chips": [
+      "Anthropic",
+      "Claude Code",
+      "利用上限",
+      "開発者"
+    ],
+    "sourceLine": "XenoSpectrum、2026年8月30日",
+    "videoId": null,
+    "captionX": "Claude Codeの週次上限、9月14日から「恒久25%増」なのに現行ユーザーは実質17%減という謎の変更に注意⚠️ #Anthropic #ClaudeCode",
+    "captionThreads": "Claude Codeの利用上限、「25%増える」って発表なのに実は今使ってる人は「17%減る」ことになるらしくて、最初読んだとき二度見した。比較の基準が違うだけなんだけど、ちょっと分かりにくいよね。",
+    "captionInstagram": "Anthropicが8月30日、「Claude Code」の週次利用上限を9月14日から恒久的に25%引き上げると発表しました。でも実は、5月から続いていた期間限定50%増が同時に終わるため、現在の利用者にとっては実質17%の減少になるという、ちょっとややこしい変更です📉 仕事でClaude Codeを使っている人は、来月からの利用可能量に注意が必要かもしれません。 #Anthropic #ClaudeCode #AI開発 #エンジニア #仕事効率化",
+    "lifeRelevanceTag": "お金・仕事"
+  },
+  {
+    "importance": 7,
+    "category": "Anthropic",
+    "catColor": "#F4B942",
+    "headline": "AIがロボットを直接操る時代へ？",
+    "dek": "Anthropic、実験・製造機器向け新規格を発表",
+    "body": [
+      "Anthropicは8月27日、AIエージェントが実験装置や製造機器を安全に操作するための共通規格「Model Hardware Standard（MHS）」の研究プレビューを開始した。",
+      "AIがソフトウェアの枠を超えて物理的な機器を直接動かす際の安全性や互換性を担保する枠組みで、今後の産業用ロボットや研究機器への応用が見込まれている。"
+    ],
+    "why": "AIがデジタルの世界を超えて実世界の機器を操作する動きが本格化しつつあることを示す一歩で、製造業や研究分野の自動化に将来的な影響を与える可能性がある。",
+    "chips": [
+      "Anthropic",
+      "MHS",
+      "ロボット",
+      "製造業"
+    ],
+    "sourceLine": "Qiita プログラミング雑記、2026年8月31日",
+    "videoId": null,
+    "captionX": "Anthropicが実験・製造機器をAIが安全に操作するための新規格「MHS」を発表。AIが物理世界に進出中 #Anthropic #ロボット",
+    "captionThreads": "AnthropicがAIエージェント用に、実験装置や製造機器を安全に操作するための新しい規格を出したみたい。AIがソフトの中だけじゃなく、実際の機械を動かす時代がじわじわ近づいてるんだなって感じる。",
+    "captionInstagram": "Anthropicが8月27日、AIエージェントが実験装置や製造機器を安全に操作するための共通規格「Model Hardware Standard（MHS）」の研究プレビューを開始しました🤖 AIがソフトウェアの世界を飛び出し、物理的な機器を直接動かす際の安全性・互換性を担保する枠組みで、今後は産業用ロボットや研究機器への応用が期待されています。AIが実世界に進出する動きの象徴的な一歩と言えそうです。 #Anthropic #AI #ロボット工学 #製造業DX #テクノロジー",
+    "lifeRelevanceTag": "なし"
+  }
+]
