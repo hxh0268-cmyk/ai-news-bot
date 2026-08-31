@@ -1,0 +1,177 @@
+[
+  {
+    "importance": 1,
+    "category": "Business",
+    "catColor": "#E1636F",
+    "headline": "まさかの提携解消、Cursorはどうなる？",
+    "dek": "OpenAIがSpaceX傘下となったAIコーディング支援ツールを締め出し",
+    "body": [
+      "OpenAIは、AIコーディング支援ツール「Cursor」を運営するAnysphereがElon Musk氏率いるSpaceXに買収されたことを受け、両社の提携を打ち切ると発表しました。契約上認められた最大限の猶予として、Cursorが直接OpenAIのモデルへアクセスできる期限を11月12日に設定しています。",
+      "OpenAIは公式ブログで、「SpaceXが自社の利用規約の範囲内で技術を使うと確信できない」とし、過去にMusk氏の他企業（X/旧Twitter、xAI）が契約違反を起こした経緯を理由に挙げました。今後リリース予定の新モデル「Astra」もCursorには提供されません。",
+      "Musk氏はXで反論し、Sam Altman氏らを「信用できない」と痛烈に批判。Cursorを運営するAnysphereのCEOは、OpenAIのモデルがCursorの利用トラフィックに占める割合は約5%だとコメントしています。"
+    ],
+    "why": "Cursorは世界中のプログラマーが日常的に使う開発ツールであり、裏側で動くAIモデルの変更は仕事の生産性に直結します。またAI業界の覇権を争う企業同士の対立が、今後の技術提携やサービス選択に波及する可能性があります。",
+    "chips": [
+      "OpenAI",
+      "Cursor",
+      "SpaceX",
+      "Elon Musk"
+    ],
+    "sourceLine": "CNBC, Bloomberg, OpenAI公式（2026年8月29日）",
+    "videoId": null,
+    "captionX": "OpenAIがCursorとの提携を解消へ。SpaceXによる買収がきっかけで、11月12日にモデルアクセスが終了。裏にはMusk氏との長年の因縁が。#OpenAI #Cursor",
+    "captionThreads": "OpenAIがCursorとの提携終了を発表。SpaceXがCursorを買収したことで「契約を守ってもらえるか信用できない」というのが理由みたい。開発者への影響、地味に大きそう。",
+    "captionInstagram": "コーディング支援AIツール「Cursor」を使っている人は要チェック。運営元がSpaceXに買収されたことをきっかけに、OpenAIがモデル提供を11月12日で打ち切ると発表しました。背景にはElon Musk氏とSam Altman氏の長年の対立が。開発者への影響は今後の焦点です。 #OpenAI #Cursor #SpaceX #AI開発 #プログラミング",
+    "lifeRelevanceTag": "お金・仕事"
+  },
+  {
+    "importance": 2,
+    "category": "AI Safety",
+    "catColor": "#7C6FE0",
+    "headline": "新型AI「Astra」になぜ急ブレーキ？",
+    "dek": "サイバー攻撃能力が『危険水準』に達したとOpenAIが判断",
+    "body": [
+      "OpenAIは、開発中の次期モデル「Astra」について、一部の開発を一時停止したと発表しました。社内審査で、エージェント型のコーディング能力とサイバーセキュリティ関連の能力が大きく進歩し、懸念すべき水準に達したことが理由です。",
+      "OpenAIは、このモデルが従来は強固に守られてきた実際のシステムに対し、自律的にサイバー攻撃を特定・実行できる「重大サイバーセキュリティ基準」に達したとしています。Hugging Faceを巡る別のセキュリティ事案とも重なり、監視や安全対策の強化を急ぐ姿勢を示しました。",
+      "AIモデルが人間の指示なしに高度なハッキングを実行しうる段階に近づいていることは、社会インフラの安全性に関わる重大な変化として受け止められています。"
+    ],
+    "why": "生成AIが自律的にサイバー攻撃を実行できる水準に近づいていることは、企業や個人のデータ、インフラの安全性に直結する重大な変化です。今後のAI規制や安全対策のあり方にも影響を与える可能性があります。",
+    "chips": [
+      "OpenAI",
+      "Astra",
+      "AI安全性",
+      "サイバーセキュリティ"
+    ],
+    "sourceLine": "TechCrunch, OpenAI公式（2026年8月7日・18日）",
+    "videoId": null,
+    "captionX": "OpenAIの次期モデル「Astra」、サイバー攻撃を自律実行できる『危険水準』に到達したとして開発を一部停止。AIの進化スピードに安全対策が追いつくか。#OpenAI #AI安全性",
+    "captionThreads": "OpenAIの新モデルAstra、サイバー攻撃を自分で実行できるレベルに達したから開発を一部止めたらしい。地味だけど結構怖いニュース。",
+    "captionInstagram": "OpenAIが開発中の次期AIモデル「Astra」について、一部の開発を一時停止したと発表しました。理由は、人間の助けなしに高度なサイバー攻撃を実行できる「重大サイバーセキュリティ基準」に達したと社内審査で判明したため。AIの進化と安全性のバランスが改めて問われています。 #OpenAI #Astra #AI安全性 #サイバーセキュリティ #AIニュース",
+    "lifeRelevanceTag": "なし"
+  },
+  {
+    "importance": 3,
+    "category": "OpenAI",
+    "catColor": "#E1636F",
+    "headline": "OpenAI失速の裏に何が起きていた？",
+    "dek": "Altman氏「後れを取った」、Anthropicが逆転の勢い",
+    "body": [
+      "米TIME誌のインタビューでOpenAIのSam Altman CEOは、この1年で「会社として明らかにいくつかの判断ミスがあった」と認めました。特に製品の方向性と事前学習の研究面で、目指していた水準に届かなかったと語っています。",
+      "この間、OpenAIはAIコーディング分野で先行したAnthropicにビジネス上の主導権を奪われ、報告ベースの年換算売上高と非公開市場での企業価値で初めて逆転を許したとされています。Anthropicは「Claude Code」を市場を定義する製品へと育て上げました。",
+      "取材時にはOpenAIのオフィス前で「AI開発競争を止めろ」と訴える抗議者の姿もあり、急成長する業界への社会的な懸念も浮き彫りになっています。"
+    ],
+    "why": "生成AI業界の勢力図の変化は、今後どの企業に投資や優秀な人材が集まるかを左右し、私たちが日常的に使うAIサービスの競争環境や進化のスピードにも影響します。",
+    "chips": [
+      "OpenAI",
+      "Anthropic",
+      "Sam Altman",
+      "Astra"
+    ],
+    "sourceLine": "TIME（2026年8月26日）",
+    "videoId": null,
+    "captionX": "OpenAIのAltman氏がTIMEの取材で「判断ミスがあった」と告白。AnthropicがAIコーディング分野で逆転しつつある実態も明らかに。#OpenAI #Anthropic",
+    "captionThreads": "OpenAIのSam Altmanが珍しく弱音?「製品の方向性と研究で後れを取った」と認めたインタビューが話題。裏でAnthropicがじわじわ差をつけてるらしい。",
+    "captionInstagram": "TIME誌のインタビューでOpenAIのSam Altman CEOが、この1年の「判断ミス」を率直に認めました。AIコーディング分野で先行したAnthropicが売上高や企業価値で初めて逆転しつつあるとの分析も。生成AI業界の勢力図が静かに変わりつつあります。 #OpenAI #Anthropic #SamAltman #AI業界 #ChatGPT",
+    "lifeRelevanceTag": "なし"
+  },
+  {
+    "importance": 4,
+    "category": "Product",
+    "catColor": "#1F8A83",
+    "headline": "ChatGPTに10代専用の安全モード新設",
+    "dek": "年齢を自動判定し、緊急時は保護者へ通知する仕組みも",
+    "body": [
+      "OpenAIは8月18日から、18歳未満とみられるアカウントに自動的に「ChatGPT for Teens」を適用する運用をグローバルで開始しました。恋愛的な会話や自傷・摂食障害に関する内容などに、より厳しい制限がかかります。",
+      "年齢の判定は生年月日の申告だけでなく、話題の傾向や利用時間帯などの行動シグナルから推定する仕組みです。誤って未成年判定された成人は、本人確認サービス「Persona」を通じて年齢を確認すれば制限を解除できます。",
+      "保護者アカウントと連携している場合、自傷リスクを示唆する会話が検知されると、社員が内容を確認した上で1時間以内の通知を目指す体制も導入されました。ただし、こうした仕組みの実効性については専門家から懸念の声も上がっています。"
+    ],
+    "why": "子どもがAIチャットとどう関わるかは家庭の安全に直結する問題です。年齢の自動判定や保護者通知の仕組みがどこまで正確に機能するかは、これからChatGPTを使う多くの家庭にとって実利的な関心事です。",
+    "chips": [
+      "ChatGPT",
+      "OpenAI",
+      "子育て",
+      "AI安全"
+    ],
+    "sourceLine": "OpenAI Help Center, Proton, NBC News（2026年8月）",
+    "videoId": null,
+    "captionX": "ChatGPTが未成年アカウントを自動判定し、専用の安全モードを適用する運用を開始。自傷リスク時は保護者に1時間以内の通知も。#ChatGPT #子育て",
+    "captionThreads": "ChatGPTで10代向けの安全モードが自動的に始まるようになったみたい。年齢判定はAIが会話内容とかから推測するんだって。保護者としては気になるポイント。",
+    "captionInstagram": "OpenAIが「ChatGPT for Teens」の運用をグローバルで開始しました。18歳未満とみられるアカウントには自動で安全機能が適用され、恋愛的な会話や自傷関連の話題に制限がかかります。誤判定された大人は本人確認で解除可能。保護者連携時は緊急時に通知される仕組みも導入されました。お子さんがChatGPTを使っているご家庭は要チェックです。 #ChatGPT #OpenAI #子育て #AI安全 #ペアレンタルコントロール",
+    "lifeRelevanceTag": "子育て・教育"
+  },
+  {
+    "importance": 5,
+    "category": "Product",
+    "catColor": "#7C6FE0",
+    "headline": "ChatGPT内の広告、欧州でも本格展開へ",
+    "dek": "無料・Goプラン利用者の会話下に「Sponsored」表示",
+    "body": [
+      "OpenAIは8月24日、ChatGPT内の広告表示をヨーロッパ地域にも拡大したと発表しました。無料プランと月額制の「ChatGPT Go」プランを利用するログイン済みの成人ユーザーが対象で、Plus・Pro・Business・Enterpriseなどの有料プラン利用者や18歳未満と判定されたアカウントには表示されません。",
+      "広告はキーワードではなく、その時の会話の文脈に合わせて表示される仕組みで、回答本文とは視覚的に分離された「Sponsored」ラベル付きで示されます。日本ではすでに6月から広告配信が始まっており、欧州は後発の拡大となります。",
+      "OpenAIによると、こうした文脈連動型の広告はクリック率が既存フォーマットの2〜3倍高い水準を維持しているとされ、無料ユーザーへのマネタイズ強化が加速しています。"
+    ],
+    "why": "無料でChatGPTを使っている多くの人にとって、これまで広告のなかった会話画面に企業のスポンサー表示が入るようになるという、日々の使用感に直結する変化です。",
+    "chips": [
+      "ChatGPT",
+      "OpenAI",
+      "広告",
+      "ChatGPT Ads"
+    ],
+    "sourceLine": "OpenAI Newsroom（2026年8月24日）",
+    "videoId": null,
+    "captionX": "ChatGPTの無料・Goプランに表示される会話連動型広告が欧州にも拡大。日本ではすでに6月から導入済み。無料勢の画面、変わります。#ChatGPT #ChatGPTAds",
+    "captionThreads": "ChatGPT使ってる人、無料プランだと画面に広告出てくるようになったの知ってました？日本は6月からもう始まってて、今回は欧州に拡大したみたい。",
+    "captionInstagram": "OpenAIがChatGPT内の広告表示を欧州にも拡大しました。無料プランと「ChatGPT Go」を使うログイン済み成人ユーザーが対象で、回答の下に「Sponsored」ラベル付きの広告が表示されます。日本では6月から先行導入済み。有料プランや未成年アカウントには表示されません。無料でChatGPTを使っている方は画面の変化に気づくかもしれません。 #ChatGPT #OpenAI #ChatGPTAds #広告 #生成AI",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス"
+  },
+  {
+    "importance": 6,
+    "category": "Google",
+    "catColor": "#F4B942",
+    "headline": "Google AI Plusが学生に1年間無料",
+    "dek": "Gemini Liveも音声だけでタスク自動処理へ進化",
+    "body": [
+      "Googleは8月28日、月次アップデート「Gemini Drops」の8月版を公開しました。目玉の一つが、対象の学生向けに有料プラン「Google AI Plus」（米国では上位の「Google AI Pro」）を1年間無料で提供する施策と、新設の「学生ハブ」「学習ノート」機能です。",
+      "音声アシスタント「Gemini Live」も強化され、自律型AIエージェント「Gemini Spark」との統合や、1日の予定をまとめる「Daily Brief」、Gmail操作の自動化などが追加されました。Googleによると、Geminiアプリのユーザーの63%が音声で話しかけて利用しているといいます。",
+      "このほか新モデル「Gemini 3.7 Flash」やアプリ連携の拡充、自動運転車Waymo車内でのGemini利用など、合計8つの新機能・サービスが今回まとめて発表されました。"
+    ],
+    "why": "学生は本来有料の高性能AIツールを無償で使えるようになり、レポート作成や学習効率が上がります。また音声だけで日常タスクをAIに任せられる範囲が広がり、スマホの使い方そのものが変わる可能性があります。",
+    "chips": [
+      "Google",
+      "Gemini",
+      "Gemini Live",
+      "学生"
+    ],
+    "sourceLine": "Google, jetstream.blog（2026年8月28日）",
+    "videoId": null,
+    "captionX": "Googleが学生向けに有料AIプラン「Google AI Plus」を1年間無料提供へ。Gemini Liveも音声だけでタスク自動処理が可能に進化。#Google #Gemini",
+    "captionThreads": "Googleの8月のGemini Drops発表、学生は有料プランが1年間無料になるらしい。学習ノートとかも新登場でこれは使わない手はない。",
+    "captionInstagram": "Googleが月次アップデート「Gemini Drops」8月版を発表しました。対象の学生には有料プラン「Google AI Plus」を1年間無料提供するほか、「学生ハブ」「学習ノート」といった新機能も登場。音声アシスタント「Gemini Live」もGmail操作の自動化など進化し、ユーザーの63%が音声で利用しているとのことです。学生の方は要チェックの内容です。 #Google #Gemini #GeminiLive #学生 #AI学習",
+    "lifeRelevanceTag": "子育て・教育"
+  },
+  {
+    "importance": 7,
+    "category": "Pricing",
+    "catColor": "#1F8A83",
+    "headline": "AI利用料が2割減、GPT-5.6値下げ",
+    "dek": "開発者やビジネスプラン向けに3か月間の特別価格",
+    "body": [
+      "OpenAIは、AIモデル「GPT-5.6 Sol」のAPIおよびクレジット料金を、今後3か月間にわたり20%以上値下げすると発表しました。API利用者に加え、対象となる「ChatGPT Work」やCodexのプランでも新価格が適用されます。",
+      "一方でPro、Plus、Businessといった通常のサブスクリプション利用料金には変更がなく、今回の値下げは主に開発者やAPIを通じて大量にAIを使う企業向けの措置です。",
+      "AnthropicもClaude Sonnet 5を大幅な割引価格で提供するなど、フロンティアAIモデルの価格競争が激しくなっており、今回の値下げもその流れの一つと見られています。"
+    ],
+    "why": "個人事業主や企業がAI開発・業務利用のコストを抑えられるようになり、AIを使った業務効率化のハードルが下がります。特に日々コーディングや大量のAPI呼び出しを行う開発者にとっては直接的なコスト削減になります。",
+    "chips": [
+      "OpenAI",
+      "GPT-5.6",
+      "料金",
+      "ChatGPT Work"
+    ],
+    "sourceLine": "OpenAI Release Notes（2026年8月）",
+    "videoId": null,
+    "captionX": "OpenAIがGPT-5.6 SolのAPI・クレジット価格を3か月間20%以上値下げ。開発者やChatGPT Work利用者はコスト削減のチャンス。#OpenAI #GPT5",
+    "captionThreads": "GPT-5.6 SolのAPI料金、3か月間だけど2割以上安くなるみたい。開発者的には地味に嬉しいニュース。",
+    "captionInstagram": "OpenAIがAIモデル「GPT-5.6 Sol」のAPIおよびクレジット料金を、3か月間限定で20%以上値下げすると発表しました。対象はAPI利用者と「ChatGPT Work」「Codex」の一部プランで、通常のサブスクリプション料金は変わりません。AnthropicのClaude Sonnet 5割引と並び、AI価格競争がさらに激化しています。 #OpenAI #GPT56 #AI料金 #ChatGPTWork #生成AI",
+    "lifeRelevanceTag": "お金・仕事"
+  }
+]
