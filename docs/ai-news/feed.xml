@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>今日のAIニュース</title>
+  <link>https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/</link>
+  <description>AIニュースの日刊まとめ</description>
+  <language>ja</language>
+  
+  <item>
+    <title>今日のAIニュース - 2026-08-31</title>
+    <link>https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/archive/2026-08-31.html</link>
+    <guid>https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/archive/2026-08-31.html</guid>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <description>声だけで秘書に？Gemini Liveが大幅進化ほか、7件のニュースをまとめました。</description>
+  </item>
+</channel>
+</rss>
