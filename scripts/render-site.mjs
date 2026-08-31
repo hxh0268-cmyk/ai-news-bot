@@ -110,6 +110,7 @@ function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase) {
   <article class="card" id="${anchorId}" style="--cat:${item.catColor}">
     ${thumbnailHtml(item, thumbnails, imgBasePath)}
     <span class="tag">${item.category}</span>
+    <p class="read-time">${readingTime(item)}で読める</p>
     <h2>${item.headline}</h2>
     <p class="dek">${item.dek}</p>
     ${(item.body || []).map((p) => `<p>${p}</p>`).join("\n")}
@@ -119,9 +120,16 @@ function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase) {
   </article>`;
 }
 
+function readingTime(item) {
+  const charCount = [(item.body || []).join(""), item.why || ""].join("").length;
+  return `約${Math.max(1, Math.ceil(charCount / 500))}分`;
+}
+
 // ページ冒頭の目次。長いページの見通しを良くし、直帰率の改善を狙う。
 function buildToc(data) {
-  const items = data.map((item, i) => `<li><a href="#article-${i + 1}">${item.headline}</a></li>`).join("");
+  const items = data
+    .map((item, i) => `<li><a href="#article-${i + 1}"><span class="toc-dot" style="background:${item.catColor}"></span>${item.headline}</a></li>`)
+    .join("");
   return `<nav class="toc" aria-label="目次"><h2>目次</h2><ol>${items}</ol></nav>`;
 }
 
@@ -210,6 +218,8 @@ function buildHtml(data, thumbnails, mode) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#151A2E">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23151A2E'/><text x='50%25' y='54%25' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='%231F8A83' font-family='monospace' font-weight='bold'>AI</text></svg>">
 <title>${pageTitle}</title>
 <meta name="description" content="${description}">
 <link rel="canonical" href="${canonicalUrl}">
@@ -226,6 +236,7 @@ ${firstThumbImportance ? `<meta property="og:image" content="${TOPIC_URL}/images
 <meta name="twitter:card" content="summary${firstThumbImportance ? "_large_image" : ""}">
 <meta name="twitter:title" content="${pageTitle}">
 <meta name="twitter:description" content="${description}">
+${firstThumbImportance ? `<meta name="twitter:image" content="${TOPIC_URL}/images/${dateStr}/${firstThumbImportance}.png">` : ""}
 
 ${buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canonicalUrl)}
 
@@ -248,7 +259,8 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .toc h2{font-family:'Shippori Mincho',serif;font-size:16px;margin:0 0 10px;color:var(--ink);}
   .toc ol{margin:0;padding-left:20px;}
   .toc li{margin:6px 0;font-size:14px;}
-  .toc a{color:var(--slate);}
+  .toc a{color:var(--slate);display:flex;align-items:center;gap:8px;}
+  .toc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0;}
   .card{background:#fff;border-radius:8px;padding:26px;margin-bottom:20px;border-top:4px solid var(--cat,#1F8A83);overflow:hidden;scroll-margin-top:16px;}
   .thumb{display:block;width:calc(100% + 52px);margin:-26px -26px 20px;max-width:none;aspect-ratio:1080/1350;object-fit:cover;}
   .thumb-placeholder{display:flex;align-items:flex-end;padding:20px;color:rgba(255,255,255,0.85);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;}
@@ -261,6 +273,18 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .share-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
   .share-btn{font-size:12px;padding:6px 12px;border-radius:20px;border:1px solid #DCE6E8;color:var(--slate);text-decoration:none;}
   .share-btn:hover{background:#DCE6E8;}
+  .read-time{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--slate-soft);margin-top:6px;}
+  .rss-bar{background:#fff;border:1px solid #DCE6E8;border-radius:6px;padding:10px 16px;margin-bottom:20px;font-size:13px;display:flex;align-items:center;justify-content:space-between;}
+  .rss-bar a{color:#1F8A83;font-weight:700;text-decoration:none;}
+  .rss-bar span{color:var(--slate-soft);}
+  .header-meta{font-size:13px;color:rgba(234,240,242,0.7);margin:4px 0 0;}
+  .header-nav{margin-top:14px;display:flex;gap:16px;}
+  .header-nav a{color:rgba(234,240,242,0.75);font-size:13px;text-decoration:none;border-bottom:1px solid rgba(234,240,242,0.3);padding-bottom:1px;}
+  .header-nav a:hover{color:var(--paper);}
+  .back-top{display:block;text-align:center;margin:8px 0 24px;font-size:13px;color:var(--slate-soft);text-decoration:none;padding:10px;}
+  .back-top:hover{color:var(--slate);}
+  .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
+  .skip-link:focus{position:fixed;top:8px;left:8px;width:auto;height:auto;padding:8px 16px;background:var(--ink);color:var(--paper);border-radius:4px;z-index:9999;font-size:14px;}
   a{color:#1F8A83;}
   .ad-slot{margin:24px 0;text-align:center;}
   footer{max-width:680px;margin:40px auto 0;padding:24px;font-size:12px;color:var(--slate-soft);border-top:1px solid #DCE6E8;}
@@ -268,12 +292,24 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
 </style>
 </head>
 <body>
-<header><h1><a href="${latestLink}">今日の${topic.displayName}</a></h1><p>${dateStr}</p></header>
-<main class="wrap">
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+<header>
+  <div style="max-width:680px;margin:0 auto;padding:0 24px;">
+    <h1 style="font-family:'Shippori Mincho',serif;font-size:28px;margin:0 0 4px;"><a href="${latestLink}" style="color:inherit;text-decoration:none;">今日の${topic.displayName}</a></h1>
+    <p class="header-meta">${dateStr} ・ ${data.length}本</p>
+    <nav class="header-nav" aria-label="サイトナビゲーション">
+      <a href="${archiveIndexLink}">過去記事</a>
+      <a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSS購読</a>
+    </nav>
+  </div>
+</header>
+<main id="main-content" class="wrap">
   ${archiveNotice}
   <div class="disclosure">${disclosureLines.map((l) => `<p>${l}</p>`).join("")}</div>
+  <div class="rss-bar"><span>毎朝自動更新</span><a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSで購読する</a></div>
   ${buildToc(data)}
   ${buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase)}
+  <a href="#main-content" class="back-top">先頭に戻る</a>
 </main>
 <footer>
   <p>© ${new Date(dateStr).getFullYear()} 今日の${topic.displayName}</p>
@@ -417,11 +453,16 @@ function buildFeedXml(manifest) {
 }
 
 function buildSitemapXml(manifest) {
-  const urls = [PAGE_URL, ARCHIVE_INDEX_URL, ...manifest.map((e) => archiveUrlFor(e.date))];
-  const entries = urls.map((u) => `  <url><loc>${u}</loc></url>`).join("\n");
+  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL]
+    .map((u) => `  <url><loc>${u}</loc><lastmod>${dateStr}</lastmod></url>`)
+    .join("\n");
+  const archiveEntries = manifest
+    .map((e) => `  <url><loc>${archiveUrlFor(e.date)}</loc><lastmod>${e.date}</lastmod></url>`)
+    .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${entries}
+${staticEntries}
+${archiveEntries}
 </urlset>`;
 }
 
