@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>今日のAIニュース</title>
+  <link>https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/</link>
+  <description>AIニュースの日刊まとめ</description>
+  <language>ja</language>
+  
+  <item>
+    <title>今日のAIニュース - 2026-09-01</title>
+    <link>https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/archive/2026-09-01.html</link>
+    <guid>https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/archive/2026-09-01.html</guid>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <description>AppleがCEO交代、Ternus新体制発足ほか、7件のニュースをまとめました。</description>
+  </item>
+</channel>
+</rss>
