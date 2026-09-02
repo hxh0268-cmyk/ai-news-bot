@@ -1,5 +1,6 @@
 // 全スクリプト共通：どの「話題」で動いているかを判定し、関連ファイルパスをまとめて返す。
 // 環境変数 TOPIC が未指定の場合は "ai-news"（既存の挙動）にフォールバックする。
+// CONTENT_DATE が設定されている場合はその日付を使う（日付またぎバグ対策）。
 
 import fs from "node:fs";
 import path from "node:path";
@@ -25,7 +26,10 @@ export function loadTopic() {
   const sponsorPath = path.join(root, "config", "sponsor-today", `${slug}.json`);
   const sponsor = fs.existsSync(sponsorPath) ? JSON.parse(fs.readFileSync(sponsorPath, "utf-8")) : null;
 
-  const today = new Date().toISOString().slice(0, 10);
+  // CONTENT_DATE が設定されていればそれを使う。なければ実行時刻のUTC日付。
+  // ワークフロー開始時に一度だけ計算した日付をすべてのステップに渡すことで、
+  // 深夜のステップ間で日付が変わる日付またぎバグを防ぐ。
+  const today = process.env.CONTENT_DATE || new Date().toISOString().slice(0, 10);
   const outputDir = path.join(root, "output", slug, today);
   const docsDir = path.join(root, "docs", slug);
 
