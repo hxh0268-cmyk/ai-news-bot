@@ -45,32 +45,44 @@ jobs:
 
       - run: npm install
 
+      # 日付をジョブ開始時に一度だけ確定させる。
+      # 深夜帯に複数ステップをまたいで実行すると new Date() の評価タイミングによって
+      # ステップごとに日付が変わり、後続スクリプトが前のステップが書いたファイルを
+      # 見つけられなくなる（ENOENT）。CONTENT_DATE を全ステップに渡すことで防ぐ。
+      - id: date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
       - name: STEP1 ニュース7本を収集・重要度5本を選定
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/generate.mjs
 
       - name: STEP1.5 アフィリエイトリンク挿入・PR表記処理
         env:
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/monetize.mjs
 
       - name: STEP1.8 note販売用の記事ドラフトを生成
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/generate-note-article.mjs
 
       - name: STEP2a Nano Banana Proで背景ビジュアルを生成
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/generate-visuals.mjs
 
       - name: STEP2 5枚の画像カードを生成
         env:
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/render-cards.mjs
 
       - name: STEP2.5 広告枠付きサイトを生成
@@ -78,6 +90,7 @@ jobs:
           ADSENSE_CLIENT_ID: ${{ secrets.ADSENSE_CLIENT_ID }}
           GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/render-site.mjs
 
       - name: STEP3a fal.ai経由でKling AIの動画クリップを生成（失敗しても全体は継続）
@@ -85,6 +98,7 @@ jobs:
         env:
           FAL_KEY: ${{ secrets.FAL_KEY }}
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/generate-video-clips.mjs
 
       - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
@@ -93,6 +107,7 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: node scripts/generate-narration.mjs
 
       - name: ffmpegをインストール
@@ -101,6 +116,7 @@ jobs:
       - name: STEP3c クリップ結合＋ナレーション合成
         env:
           TOPIC: ${{ matrix.topic }}
+          CONTENT_DATE: ${{ steps.date.outputs.date }}
         run: bash scripts/build-video.sh
 
       - name: 生成物をPull Requestとして提出（★Human Check★）
@@ -108,8 +124,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "[${{ matrix.topic }}] 本日分のコンテンツを自動生成"
-          branch: "content/${{ matrix.topic }}/${{ github.run_number }}"
-          title: "【要確認・GO判定】${{ matrix.topic }} (${{ github.run_id }})"
+          branch: "content/${{ matrix.topic }}/${{ steps.date.outputs.date }}"
+          title: "【要確認・GO判定】${{ matrix.topic }} (${{ steps.date.outputs.date }})"
           body: |
             話題「${{ matrix.topic }}」の本日分の投稿案です。
 
