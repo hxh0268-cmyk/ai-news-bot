@@ -9,10 +9,20 @@ const { topic, outputDir, dateStr } = loadTopic();
 const W = 1080;
 const H = 1350;
 
-// X（旧Twitter）向けの横長サイズ。縦長のまま貼るとタイムライン上でトリミングされ
-// 見出しが切れることがあるため、横長専用レイアウトを別途書き出す。
 const XW = 1200;
 const XH = 675;
+
+// 縦長カード（Instagram/Threads）のフォントサイズ設定
+const FONT_MAX  = 56;
+const FONT_MIN  = 36;
+const FONT_STEP = 4;
+const MAX_LINES = 2;
+
+// X横長カードのフォントサイズ設定
+const X_FONT_MAX  = 38;
+const X_FONT_MIN  = 24;
+const X_FONT_STEP = 4;
+const X_MAX_LINES = 2;
 
 function cardHtml(item, index, total, bgDataUri) {
   const hasBg = Boolean(bgDataUri);
@@ -32,7 +42,6 @@ function cardHtml(item, index, total, bgDataUri) {
     position:relative;
     overflow:hidden;
   }
-  /* 画面全体に薄く均一なトーンをかけるだけに留め、余白・静けさを壊さないようにする */
   body::after{
     content:"";
     position:absolute; inset:0;
@@ -52,10 +61,11 @@ function cardHtml(item, index, total, bgDataUri) {
   .tag .dot{ width:7px; height:7px; border-radius:50%; background:${item.catColor}; flex:0 0 auto; }
   h1{
     font-family:'Shippori Mincho', serif; font-weight:500;
-    font-size:56px; line-height:1.55; color:#fff;
+    font-size:${FONT_MAX}px; line-height:1.55; color:#fff;
     margin-top:26px;
     letter-spacing:0.01em;
     max-width:88%;
+    word-break:break-all;
   }
   .dek{font-size:24px; color:rgba(255,255,255,0.6); margin-top:22px; max-width:80%; line-height:1.7;}
   .statrow{
@@ -77,7 +87,7 @@ function cardHtml(item, index, total, bgDataUri) {
     <span class="counter">${String(index + 1).padStart(2, "0")} / ${String(total).padStart(2, "0")}</span>
   </div>
   <span class="tag"><span class="dot"></span>${item.category}</span>
-  <h1>${item.headline}</h1>
+  <h1 id="headline">${item.headline}</h1>
   <p class="dek">${item.dek}</p>
   <div class="statrow">
     ${(item.stats || [])
@@ -125,8 +135,9 @@ function cardHtmlX(item, index, total, bgDataUri) {
   }
   h1{
     font-family:'Shippori Mincho', serif; font-weight:800;
-    font-size:38px; line-height:1.35; color:#fff;
+    font-size:${X_FONT_MAX}px; line-height:1.35; color:#fff;
     text-shadow:0 2px 10px rgba(0,0,0,0.4);
+    word-break:break-all;
   }
   .foot{
     margin-top:14px; display:flex; justify-content:space-between;
@@ -136,10 +147,42 @@ function cardHtmlX(item, index, total, bgDataUri) {
 <body>
   <div class="inner">
     <span class="tag">${item.category}</span>
-    <h1>${item.headline}</h1>
+    <h1 id="headline">${item.headline}</h1>
     <div class="foot"><span>${topic.displayName} Daily</span><span>${index + 1}/${total} ・ ${dateStr}</span></div>
   </div>
 </body></html>`;
+}
+
+// 見出し(h1#headline)の行数が maxLines を超えていたらフォントサイズを段階的に縮小し、
+// 最低サイズまで縮めても収まらない場合は末尾を「…」で省略する。
+// Puppeteer の page.evaluate() 内で動かすため、引数はすべてシリアライズ可能な値のみ。
+async function shrinkToFit(page, fontMax, fontMin, fontStep, maxLines) {
+  await page.evaluate((fontMax, fontMin, fontStep, maxLines) => {
+    const h1 = document.getElementById("headline");
+    if (!h1) return;
+
+    // lineHeight は CSS で数値指定しているが、computed では px 値が返る
+    let size = fontMax;
+    h1.style.fontSize = size + "px";
+    const lineH = parseFloat(getComputedStyle(h1).lineHeight);
+
+    // フォントサイズを FONT_STEP ずつ下げながら行数を確認
+    while (size > fontMin) {
+      if (Math.round(h1.scrollHeight / lineH) <= maxLines) break;
+      size -= fontStep;
+      h1.style.fontSize = size + "px";
+    }
+
+    // 最低サイズでも溢れる場合は末尾を省略
+    if (Math.round(h1.scrollHeight / lineH) > maxLines) {
+      let text = h1.textContent;
+      while (h1.scrollHeight > lineH * maxLines && text.length > 1) {
+        text = text.slice(0, -1);
+        h1.textContent = text;
+      }
+      h1.textContent = text.trimEnd() + "…"; // …
+    }
+  }, fontMax, fontMin, fontStep, maxLines);
 }
 
 // ローカルの画像ファイルを、HTMLに直接埋め込めるbase64データURIに変換する。
@@ -167,6 +210,7 @@ async function main() {
     const bgPath = path.join(outputDir, "backgrounds", `${i + 1}.png`);
     const html = cardHtml(top5[i], i, top5.length, loadBgAsDataUri(bgPath));
     await page.setContent(html, { waitUntil: "networkidle0" });
+    await shrinkToFit(page, FONT_MAX, FONT_MIN, FONT_STEP, MAX_LINES);
     await page.screenshot({ path: path.join(cardsDir, `${i + 1}.png`) });
   }
   console.log(`[${topic.slug}] 5枚の縦長カード（Instagram/Threads向け）を生成しました。`);
@@ -177,6 +221,7 @@ async function main() {
     const bgPath = path.join(outputDir, "backgrounds", `${i + 1}.png`);
     const html = cardHtmlX(top5[i], i, top5.length, loadBgAsDataUri(bgPath));
     await page.setContent(html, { waitUntil: "networkidle0" });
+    await shrinkToFit(page, X_FONT_MAX, X_FONT_MIN, X_FONT_STEP, X_MAX_LINES);
     await page.screenshot({ path: path.join(cardsXDir, `${i + 1}.png`) });
   }
   console.log(`[${topic.slug}] 5枚の横長カード（X向け）を生成しました。`);
