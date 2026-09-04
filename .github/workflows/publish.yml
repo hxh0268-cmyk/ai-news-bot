@@ -1,19 +1,41 @@
 name: Daily Content - Publish After Approval
 
-# ブランチ名 "content/<topic>/<run_number>" のPull RequestがMergeされたときだけ動く。
-# ブランチ名から話題(topic)を自動的に読み取るため、話題を追加してもこのファイルの編集は不要。
+# ブランチ名 "content/<topic>/<日付>" のPull RequestがMergeされたときに動く。
+# ブランチ名から話題(topic)と対象日付(CONTENT_DATE)を自動的に読み取るため、
+# 話題を追加してもこのファイル自体の編集は不要。
+#
+# 日付をまたいでこのジョブが実行される（例: 再実行が翌日になった場合）と、
+# CONTENT_DATE を渡さないと publish.mjs 側が「実行時点の日付」にフォールバックし、
+# 存在しない output/<topic>/<今日の日付>/ を探しに行って ENOENT になる
+# （generate.yml 側で対策済みだった日付またぎバグと同種）。
+# そのため、ブランチ名の日付セグメントを CONTENT_DATE として明示的に渡す。
+#
+# workflow_dispatch は、上記のように日付をまたいで送信が失敗した場合などに
+# 手動で対象日付を指定して復旧させるための入口。
 
 on:
   pull_request:
     types: [closed]
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "話題(topic)のslug（例: ai-news）"
+        required: true
+        default: "ai-news"
+      date:
+        description: "対象日付 CONTENT_DATE（例: 2026-09-03）"
+        required: true
 
 permissions:
   contents: write
 
 jobs:
   publish:
-    # ★killスイッチ: KILL_SWITCH が "true" の間は、PRがMergeされても投稿処理は起動しません。
-    if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'content/') && vars.KILL_SWITCH != 'true'
+    # ★killスイッチ: KILL_SWITCH が "true" の間は投稿処理は起動しません。
+    if: >
+      vars.KILL_SWITCH != 'true' &&
+      (github.event_name == 'workflow_dispatch' ||
+        (github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'content/')))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,19 +46,27 @@ jobs:
         with:
           node-version: "20"
 
-      - name: ブランチ名から話題(topic)を取り出す
+      - name: 話題(topic)・対象日付(CONTENT_DATE)を決定する
         id: parse
         run: |
-          REF="${{ github.event.pull_request.head.ref }}"
-          # "content/<topic>/<run_number>" の <topic> 部分を取り出す
-          TOPIC=$(echo "$REF" | cut -d'/' -f2)
-          echo "検出した話題: $TOPIC"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TOPIC="${{ github.event.inputs.topic }}"
+            CONTENT_DATE="${{ github.event.inputs.date }}"
+          else
+            REF="${{ github.event.pull_request.head.ref }}"
+            # "content/<topic>/<日付>" の各部分を取り出す
+            TOPIC=$(echo "$REF" | cut -d'/' -f2)
+            CONTENT_DATE=$(echo "$REF" | cut -d'/' -f3)
+          fi
+          echo "検出した話題: $TOPIC / 対象日付: $CONTENT_DATE"
           echo "topic=$TOPIC" >> "$GITHUB_OUTPUT"
+          echo "date=$CONTENT_DATE" >> "$GITHUB_OUTPUT"
 
       - name: STEP4 Zapier webhookへ送信
         env:
           ZAPIER_WEBHOOKS_JSON: ${{ secrets.ZAPIER_WEBHOOKS_JSON }}
           TOPIC: ${{ steps.parse.outputs.topic }}
+          CONTENT_DATE: ${{ steps.parse.outputs.date }}
         run: node scripts/publish.mjs
 
       - name: ledger（重複投稿防止の記録）をmainにコミット
