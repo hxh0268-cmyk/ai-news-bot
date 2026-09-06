@@ -85,3 +85,23 @@ jobs:
           else
             echo "SLACK_WEBHOOK_URL が未設定のため通知はスキップされました。"
           fi
+
+  # publishジョブ本体のif条件（vars.KILL_SWITCH != 'true' と他条件のAND）はそのまま維持し、
+  # 通知だけを別ジョブとして切り出す。条件は publish ジョブと同じイベント条件を保ったまま
+  # KILL_SWITCH の比較だけを反転させている。
+  notify-kill-switch:
+    if: >
+      vars.KILL_SWITCH == 'true' &&
+      (github.event_name == 'workflow_dispatch' ||
+        (github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'content/')))
+    runs-on: ubuntu-latest
+    steps:
+      - name: KILL_SWITCH作動をSlack通知
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🛑 KILL_SWITCHが有効なため、Daily Content - Publish After Approval はスキップされました: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }

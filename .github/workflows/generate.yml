@@ -120,6 +120,7 @@ jobs:
         run: bash scripts/build-video.sh
 
       - name: 生成物をPull Requestとして提出（★Human Check★）
+        id: create-pr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -143,13 +144,39 @@ jobs:
             output/${{ matrix.topic }}/**
             docs/${{ matrix.topic }}/**
 
-      - name: 失敗時にSlack通知（設定していればのみ動作）
+      - name: PR作成をSlack通知
+        if: steps.create-pr.outputs.pull-request-number != ''
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "📝 [${{ matrix.topic }}] 本日分のコンテンツPRを作成しました: ${{ steps.create-pr.outputs.pull-request-url }}"
+            }
+
+      - name: 失敗時にSlack通知
         if: failure()
-        run: |
-          if [ -n "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
-            curl -s -X POST -H 'Content-type: application/json' \
-              --data "{\"text\":\"⚠️ [${{ matrix.topic }}] 本日のコンテンツ生成が失敗しました。GitHub Actionsのログを確認してください: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
-              "${{ secrets.SLACK_WEBHOOK_URL }}"
-          else
-            echo "SLACK_WEBHOOK_URL が未設定のため通知はスキップされました。"
-          fi
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🚨 [${{ matrix.topic }}] 本日のコンテンツ生成が失敗しました。GitHub Actionsのログを確認してください: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }
+
+  notify-kill-switch:
+    needs: discover-topics
+    if: ${{ vars.KILL_SWITCH == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: KILL_SWITCH作動をSlack通知
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🛑 KILL_SWITCHが有効なため、Daily Content - Generate & Request Check はスキップされました: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }
