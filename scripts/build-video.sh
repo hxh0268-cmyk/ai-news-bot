@@ -9,7 +9,12 @@ set -euo pipefail
 shopt -s nullglob
 
 TOPIC="${TOPIC:-ai-news}"
-DATE_STR=$(date -u +%Y-%m-%d)
+# CONTENT_DATE が渡されていればそれを優先する（渡されていない場合のみ実行時刻にフォールバック）。
+# ワークフロー開始時に確定させた日付を使わず実行時刻で計算すると、ジョブがこのステップに
+# 到達するまでの間に日付が変わった場合、前のステップが書き出したディレクトリ
+# （output/<topic>/<CONTENT_DATE>/）とは異なる日付のディレクトリを参照してしまい、
+# カード画像等が「見つからない」まま動画生成がスキップされる不具合があった。
+DATE_STR="${CONTENT_DATE:-$(date -u +%Y-%m-%d)}"
 DIR="output/${TOPIC}/${DATE_STR}"
 CLIPS="${DIR}/clips"
 CARDS="${DIR}/cards"
