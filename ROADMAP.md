@@ -3,7 +3,7 @@
 
 > Human Checkは実質1回（PRのMerge）＋note投稿のみ手動3分
 > 所要時間の目安：初回セットアップ全体で4〜6時間（大半は「審査待ち」の待機時間）
-> 月額費用の目安：**約4,800〜9,700円/月**
+> 月額費用の目安：**約2,600〜6,000円/月**
 
 ---
 
@@ -13,19 +13,20 @@
 ①GitHub Actionsが毎日決まった時刻に自動起動
 ②Claude APIが最新AIニュース7本を収集・重要度で並べ替え
 ③アフィリエイトリンクを自動挿入／PR表記を自動付与（該当日のみ）
-④Nano Banana Proが上位5本の背景ビジュアルを生成
+④Nano Banana 2 Liteが5本の背景ビジュアルを生成
 ⑤5枚の画像カード（背景＋見出し・数値）を合成
-⑥Kling AIが上位3本を動画クリップ化
-⑦ElevenLabsがナレーション音声を生成、動画に合成
-⑧広告枠付きの記事サイト（GitHub Pages）を生成
-⑨note販売用の記事ドラフトを生成
-⑩Pull Requestを自動作成
-⑪あなたが内容を確認し「Merge」　★Human Check（メイン）★
-⑫Zapier→Bufferを経由してX・Threads・Instagramへ自動投稿
-⑬あなたがnote-article.mdをnoteに貼り付け・価格設定・公開　★手動（3分）★
+⑥ElevenLabsがナレーション音声を生成、5枚の画像によるスライドショー動画に合成
+⑦広告枠付きの記事サイト（GitHub Pages）を生成
+⑧note販売用の記事ドラフトを生成
+⑨Pull Requestを自動作成
+⑩あなたが内容を確認し「Merge」　★Human Check（メイン）★
+⑪Zapier→Bufferを経由してX・Threads・Instagramへ自動投稿
+⑫あなたがnote-article.mdをnoteに貼り付け・価格設定・公開　★手動（3分）★
 ```
 
-準備するアカウントは **Anthropic／Google AI Studio（Gemini）／Kling AI／ElevenLabs／GitHub／Buffer／Zapier** の7つです。上から順に作っていきます。
+準備するアカウントは **Anthropic／Google AI Studio（Gemini）／ElevenLabs／GitHub／Buffer／Zapier** の6つです。上から順に作っていきます。
+
+> 2026-09時点の更新：コスト最適化のため、Kling AI（動画クリップ生成）は廃止しました。動画は5枚のカード画像による静止画スライドショー＋ナレーションのみで構成されます（下記フェーズ4は廃止済みです）。
 
 ---
 
@@ -52,9 +53,9 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 
 ---
 
-## フェーズ3：Nano Banana Pro（Google Gemini API）のキーを取得する
+## フェーズ3：Nano Banana 2 Lite（Google Gemini API）のキーを取得する
 
-**費用：従量課金、月300〜1,000円程度／所要時間：10分**
+**費用：従量課金、月100〜300円程度／所要時間：10分**
 
 1. https://aistudio.google.com/ にGoogleアカウントでログイン
 2. 「Get API key」→「Create API key」
@@ -63,14 +64,9 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 
 ---
 
-## フェーズ4：Kling AIのキーを取得する
+## フェーズ4：（廃止）
 
-**費用：従量課金、上位3本のみ動画化で月2,000〜3,000円程度／所要時間：15分**
-
-1. 公式サイト（https://klingai.com/）、またはfal.ai・PiAPIなどのアグリゲーターでアカウント作成
-   - 初めての場合は**アグリゲーター経由が簡単**です（認証がAPIキー1本で完結し、公式の複雑なJWT署名認証が不要）
-2. APIキーを発行
-3. 利用するサービスの「APIベースURL」も控えておく
+コスト最適化のため、Kling AIによる動画クリップ生成は廃止しました。このフェーズの作業は不要です。動画は5枚のカード画像による静止画スライドショー＋ナレーションのみで生成されます（フェーズ番号は既存のドキュメント参照との整合のため欠番のまま残しています）。
 
 ---
 
@@ -105,8 +101,6 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 |---|---|
 | `ANTHROPIC_API_KEY` | フェーズ2で取得 |
 | `GEMINI_API_KEY` | フェーズ3で取得 |
-| `KLING_API_KEY` | フェーズ4で取得 |
-| `KLING_API_BASE_URL` | フェーズ4で確認したベースURL |
 | `ELEVENLABS_API_KEY` | フェーズ5で取得 |
 | `ELEVENLABS_VOICE_ID` | フェーズ5で確認したVoice ID |
 | `GA_MEASUREMENT_ID` | Google Analytics 4の測定ID（任意・効果測定用） |
@@ -182,7 +176,7 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 2. 完了後、「Pull requests」タブでPRを開く
 3. 以下を確認：
    - `output/ai-news/<日付>/cards/1〜5.png`（画像）
-   - `output/ai-news/<日付>/slideshow.mp4`（動画・上位3本＋ナレーション）
+   - `output/ai-news/<日付>/slideshow.mp4`（動画・5枚のカード画像によるスライドショー＋ナレーション）
    - `output/ai-news/<日付>/note-article.md`（note記事案）
    - `output/ai-news/<日付>/monetization-report.md`（アフィリエイト・PR表記の確認）
 4. 問題なければ「Merge」　★これがメインのHuman Check★
@@ -230,13 +224,12 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 | 項目 | 費用目安 |
 |---|---|
 | Claude API | 500〜2,000円 |
-| Nano Banana Pro（Gemini API） | 300〜1,000円 |
-| Kling AI（動画生成、上位3本のみ） | 2,000〜3,000円 |
+| Nano Banana 2 Lite（Gemini API） | 100〜300円 |
 | ElevenLabs（ナレーション） | 0〜1,000円 |
 | Buffer（3チャンネル） | 2,000〜2,700円 |
 | Zapier | 0円（無料プラン） |
 | GitHub／GitHub Pages／AdSense／ASP登録／note | 0円 |
-| **合計目安** | **約4,800〜9,700円/月** |
+| **合計目安** | **約2,600〜6,000円/月** |
 
 **収益源**：X/Threads/Instagram経由のPR案件、記事サイトの広告収益・アフィリエイト報酬、note有料記事販売の3系統。
 
@@ -245,7 +238,6 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 ## つまずきやすいポイント
 
 - **`.github`フォルダがアップロードできない** → GitHub Desktopアプリの利用を検討
-- **Kling AIの認証エラー** → 公式は複雑なJWT認証。初めてならfal.ai等のアグリゲーター利用を推奨
 - **Zapierのマッピングで迷う** → 一度Webhookをテスト送信すると、データ項目がドロップダウンに表示されて選びやすくなります
 - **Instagram/Threads連携エラー** → ビジネス/クリエイターアカウントになっているか再確認
 - **PRが作成されない** → Actionsタブのログを確認し、共有いただければ一緒に確認します
@@ -254,7 +246,7 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 
 ## フェーズ15：新しい話題を追加したくなったら
 
-**費用：話題数に応じて増加（フェーズ2〜5・9の費用が話題数倍になる）／所要時間：30分**
+**費用：話題数に応じて増加（フェーズ2・3・5・9の費用が話題数倍になる）／所要時間：30分**
 
 このプログラムは「話題ごとの設定ファイルを追加するだけ」で新しいテーマを並行運用できる構造になっています。
 

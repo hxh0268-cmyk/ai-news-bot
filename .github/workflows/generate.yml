@@ -56,7 +56,6 @@ jobs:
           content_date: ${{ steps.date.outputs.date }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          fal_key: ${{ secrets.FAL_KEY }}
           elevenlabs_api_key: ${{ secrets.ELEVENLABS_API_KEY }}
           elevenlabs_voice_id: ${{ secrets.ELEVENLABS_VOICE_ID }}
           adsense_client_id: ${{ secrets.ADSENSE_CLIENT_ID }}
@@ -75,7 +74,7 @@ jobs:
 
             - `output/${{ matrix.topic }}/<日付>/cards/1〜5.png`：Instagram/Threads向け画像（縦長）
             - `output/${{ matrix.topic }}/<日付>/cards-x/1〜5.png`：X向け画像（横長）
-            - `output/${{ matrix.topic }}/<日付>/slideshow.mp4`：動画（上位本数のみ。生成失敗時は静止画スライドショーに自動代替）
+            - `output/${{ matrix.topic }}/<日付>/slideshow.mp4`：動画（5枚のカード画像による静止画スライドショー＋ナレーション）
             - `output/${{ matrix.topic }}/<日付>/note-article.md`：note販売用の記事ドラフト（手動貼り付け）
             - `output/${{ matrix.topic }}/<日付>/monetization-report.md`：**アフィリエイト・PR表記の確認レポート（必読）**
             - `output/${{ matrix.topic }}/<日付>/humanize-comparison.md`：**文章の「書き直し前・後」を表形式で見比べられる比較ファイル（まずこれを見てください）**

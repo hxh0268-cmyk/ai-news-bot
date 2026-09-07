@@ -1,7 +1,7 @@
 name: "コンテンツ一式生成 (STEP1〜STEP3c)"
 description: >
   ニュース収集(STEP1)からカード画像・note記事・背景ビジュアル・サイト・
-  動画クリップ・ナレーション・動画結合(STEP3c)までを一括で行う。
+  ナレーション・動画結合(STEP3c、静止画スライドショー)までを一括で行う。
   generate.yml（日次自動生成）と regenerate-content.yml（手動の丸ごと再生成）の
   両方から呼び出される共通処理。ここではPRの作成やコミットは行わない
   （呼び出し元がそれぞれの方法で生成物を確定させる）。
@@ -20,8 +20,6 @@ inputs:
   anthropic_api_key:
     required: true
   gemini_api_key:
-    required: true
-  fal_key:
     required: true
   elevenlabs_api_key:
     required: true
@@ -93,15 +91,6 @@ runs:
         CONTENT_DATE: ${{ inputs.content_date }}
       run: node scripts/render-site.mjs
 
-    - name: STEP3a fal.ai経由でKling AIの動画クリップを生成（失敗しても全体は継続）
-      continue-on-error: true
-      shell: bash
-      env:
-        FAL_KEY: ${{ inputs.fal_key }}
-        TOPIC: ${{ inputs.topic }}
-        CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/generate-video-clips.mjs
-
     - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
       continue-on-error: true
       shell: bash
@@ -116,7 +105,7 @@ runs:
       shell: bash
       run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
-    - name: STEP3c クリップ結合＋ナレーション合成
+    - name: STEP3c 静止画スライドショー生成＋ナレーション合成
       shell: bash
       env:
         TOPIC: ${{ inputs.topic }}
