@@ -143,6 +143,7 @@ jobs:
           add-paths: |
             output/${{ matrix.topic }}/**
             docs/${{ matrix.topic }}/**
+            docs/robots.txt
 
       - name: PR作成をSlack通知
         if: steps.create-pr.outputs.pull-request-number != ''
