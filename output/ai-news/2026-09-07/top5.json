@@ -1,0 +1,187 @@
+[
+  {
+    "importance": 1,
+    "category": "OpenAI",
+    "catColor": "#7C6FE0",
+    "headline": "GPT-6 Astra始動、PC操作代行と判明",
+    "dek": "既存プランのまま利用可、数日中に全プランへ拡大",
+    "body": [
+      "OpenAIが9月3日（米国時間）、新モデル「GPT-6 Astra」を発表した。目玉は、人の代わりにPC画面を操作してブラウザを動かし、フォーム入力や資料作成までこなしてくれる力がグンと上がったこと。同社いわく「世界で最も賢く、人の意図に一番忠実なモデル」とのこと。ただこのモデル、8月にサイバー攻撃への転用リスクが指摘されて開発・公開を一部見送っていた経緯もあり、攻撃に転用されかねない高度な処理には制限をかけたうえでの提供となる。",
+      "展開はまず一部組織向けからスタートし、数日中にChatGPTのPlus、Pro、Business、Enterpriseの各プランに広がる予定。ありがたいことに既存プランの範囲内で使えて、追加料金は0円。開発者向けにはAPIとAmazon Bedrock経由でも提供される。",
+      "性能はというと、PC操作の速度・正確さともに前モデルを上回った。ベンチマーク「OSWorld 2.0」ではスコアが上がっているのに所要時間は約47%も縮んでいて、精度と効率を同時に伸ばしてきたことがよく分かる結果になっている。"
+    ],
+    "why": "自律的にPCを操作してくれるAIが、追加料金なしで数日中にはユーザーの手元へ届く。資料作成や事務仕事の自動化が一気に現実味を帯びる一方、サイバー攻撃に転用できるほどの能力の高さゆえ、安全面の監視から目が離せない。",
+    "sourceLine": "CNET Japan、2026年9月3日",
+    "chips": [
+      "OpenAI",
+      "GPT-6 Astra",
+      "AIエージェント",
+      "自動化"
+    ],
+    "videoId": null,
+    "stats": [
+      {
+        "n": "追加料金0円",
+        "l": "既存プラン内で利用可能"
+      },
+      {
+        "n": "約47%短縮",
+        "l": "同等タスクの処理時間短縮(OSWorld 2.0)"
+      }
+    ],
+    "captionX": "OpenAIが新モデル「GPT-6 Astra」を発表。PC画面を自分で操作して資料作成や入力までこなしてくれる。追加料金なしで数日中に順次提供へ。#OpenAI #GPT6",
+    "captionThreads": "OpenAIの新モデル「GPT-6 Astra」、来ましたね。すごいのはPC操作を勝手に代わってくれるところ。フォーム入力や資料作成もお任せ可能に。しかも追加料金なし、これは嬉しい誤算です。",
+    "captionInstagram": "OpenAIが9月3日に発表した新モデル「GPT-6 Astra」。一番のポイントはPC画面を見ながらマウスやキーボードを操作してくれること。ウェブフォームの入力や資料作成、スケジュール整理まで任せられるかもしれません。ChatGPTのPlus・Pro・Business・Enterpriseプランなら、追加料金なしで数日中に使えるようになる見込みです。仕事の効率化を考えている人は、ここは押さえておきたいところ。 #OpenAI #GPT6Astra #生成AI #AIエージェント #仕事効率化",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Legal",
+    "catColor": "#E1636F",
+    "headline": "Sony・WarnerがAnthropicを提訴という発表",
+    "dek": "数万曲規模の歌詞・楽曲を無断学習と主張",
+    "body": [
+      "Sony MusicとWarner Musicの音楽出版部門が、著作権付き楽曲を「Claude」の学習に無断で使ったとして、Anthropicを米カリフォルニア州の連邦裁判所に提訴した。訴状は先週金曜に提出され、The Beatles、Taylor Swift、Michael Jacksonなど数百組のアーティストの歌詞・楽譜を海賊版から取得していたと主張している。",
+      "訴状によれば、AnthropicはLibrary GenesisやPirate Library Mirrorといった海賊版サイトから歌詞・楽譜を集めたのに加え、MusixmatchやLyricFindといったライセンス契約済みの歌詞サイトまでスクレイピングしていたという。",
+      "出版社側の主張はさらに踏み込む。Anthropicはこれらの歌詞をClaudeに学習させ、著作権者の正規楽曲と競合しかねない「新しい」AI生成歌詞を大量に作る訓練にまで使ったというのだ。損害賠償は侵害が認められた楽曲1曲あたり最大15万ドル、加えて差し止め命令も求めている。"
+    ],
+    "why": "学習データを巡る著作権訴訟が、いよいよ音楽分野にも本格上陸した。この訴訟の行方次第で、AI企業が使えるデータの範囲やサービスのコスト構造まで揺さぶられる可能性がある。",
+    "sourceLine": "Al Jazeera、2026年8月29日",
+    "chips": [
+      "Anthropic",
+      "Claude",
+      "著作権",
+      "音楽業界"
+    ],
+    "videoId": null,
+    "stats": [
+      {
+        "n": "最大15万ドル",
+        "l": "侵害1曲あたりの請求可能賠償額"
+      },
+      {
+        "n": "数万曲規模",
+        "l": "訴状が対象とする楽曲数"
+      }
+    ],
+    "captionX": "Sony MusicとWarner MusicがAnthropicを提訴。楽曲・歌詞を無断学習に使ったとして、数万曲規模の被害を主張しています。#Anthropic #著作権",
+    "captionThreads": "音楽業界とAI企業の火種、また一つ増えました。Sony MusicとWarner MusicがAnthropicを提訴。海賊版サイトから歌詞や楽曲を集めてClaudeの学習に使ったという訴えです。この手の対立、まだまだ続きそうな気配。",
+    "captionInstagram": "Sony Music PublishingとWarner Chappell Musicが、著作権侵害でAnthropicを提訴しました。The BeatlesやTaylor Swiftなど数万曲規模の歌詞・楽曲データを、海賊版サイトなどから無断で取得しClaudeの学習に使ったというのが主張の中身です。1曲あたり最大15万ドルの損害賠償を求めており、AI業界と著作権者の対立はまた一段広がった格好です。 #Anthropic #Claude #著作権 #音楽業界 #AI訴訟",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Google",
+    "catColor": "#1F8A83",
+    "headline": "Gmail・Docsに音声AI導入と発表",
+    "dek": "声で検索・執筆、今週から順次提供開始",
+    "body": [
+      "米グーグルが9月3日（現地時間）、Google WorkspaceのGmail、Google Docs、Google Keepに音声でAIとリアルタイムに会話できる新機能を投入したと発表した。",
+      "「Gmail Live」は、話しかけるだけで受信トレイから必要な情報を探し出してくれる機能。「フライトの搭乗口はどこ？」でも「今週、子どもの学校で必要な準備は？」でも、受信トレイの中身から該当情報をピックアップして答えてくれる。",
+      "「Docs Live」は音声で指示しながら文書の初稿を組み立てられる機能で、Googleは「思考パートナー兼共同執筆者」と呼んでいる。「Keep Live」は、まとまっていない考えをそのまま口に出すだけでメモやリストに整理してくれる。",
+      "これらは今週から順次展開される予定。GmailとKeepの音声対話機能はGoogle AI Plus、AI Pro、AI Ultraの登録者が、Docsの音声対話機能はAI Pro、AI Ultraの登録者が利用できる。現時点では英語のみの提供で、日本語対応の時期はまだ見えていない。"
+    ],
+    "why": "毎日のメールや文書作成が「話しかけるだけ」で片づく時代が近づいてきた。子どもの学校の予定確認など、家庭の細かい情報整理が楽になる部分こそ生活実感に直結する。",
+    "sourceLine": "ケータイWatch、2026年9月3日",
+    "chips": [
+      "Google",
+      "Gmail",
+      "Gemini",
+      "音声AI"
+    ],
+    "videoId": null,
+    "stats": [
+      {
+        "n": "3機能同時追加",
+        "l": "Gmail・Docs・Keepに音声AI"
+      },
+      {
+        "n": "英語のみ",
+        "l": "現時点の対応言語、日本語は未定"
+      }
+    ],
+    "captionX": "GmailやGoogleドキュメントが声で使えるように。「今週子どもの学校の準備は？」と話しかけるだけでメールを検索してくれるそうです。#Google #Gemini",
+    "captionThreads": "Gmailに新顔「Gmail Live」登場。検索窓に打ち込まなくても、声で「今週子どもの学校の準備は？」と聞くだけで答えてくれるらしい。DocsやKeepも音声対応に。地味だけど毎日じわじわ効いてきそうな機能です。",
+    "captionInstagram": "Googleが9月3日、Gmail・Googleドキュメント・Google Keepに音声AI機能を追加しました。「Gmail Live」は話しかけるだけで受信トレイから必要な情報を見つけてくれる機能で、「今週子どもの学校で必要な準備は？」なんて質問にも応えてくれます。「Docs Live」は声でアイデアを話すだけで文書の下書きを組み立ててくれる仕組み。まずは英語のみで、Google AI Plus/Pro/Ultraの登録者向けに順次展開中。日本語対応はもう少し先になりそうです。 #Google #Gmail #GoogleDocs #Gemini #音声AI",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Consumer Electronics",
+    "catColor": "#F4B942",
+    "headline": "シャープ「NIAH」、家電操作AI始動",
+    "dek": "9月30日開始、スマホで家電に話しかけ操作",
+    "body": [
+      "シャープが白物家電などに対応するAIエージェント「NIAH（ニア）」を9月30日から提供開始する。猫っぽいキャラクターがスマホ越しにユーザーの指示を受け取り、家電の操作から使い方の提案、おすすめ情報の案内までこなしてくれる。",
+      "製品によってはすでに別のAIエージェントを積んでいるものもあるが、そういう場合もNIAHが窓口になって連携してくれる仕組みだ。複数の家電をまたいで一つの窓口から操作できる点が肝になっている。"
+    ],
+    "why": "家電ごとに操作方法やアプリを覚え直す手間がなくなり、スマホ一台で家事の負担が軽くなるかもしれない。暮らしにそのまま効いてくる、分かりやすいAI活用例だ。",
+    "sourceLine": "Impress Watch、2026年9月2日",
+    "chips": [
+      "シャープ",
+      "AIエージェント",
+      "家電",
+      "スマートホーム"
+    ],
+    "videoId": null,
+    "stats": [
+      {
+        "n": "9月30日",
+        "l": "サービス提供開始日"
+      },
+      {
+        "n": "複数家電対応",
+        "l": "白物家電などを横断的に操作"
+      }
+    ],
+    "captionX": "シャープが家電操作AIエージェント「NIAH」を9月30日に開始。スマホに話しかけるだけで複数の家電をまとめて操作できるように。#シャープ #AI家電",
+    "captionThreads": "シャープの新AIエージェント「NIAH」、9月30日スタートだそうです。猫っぽいキャラが窓口になって、スマホから話しかければ家電を操作してくれたりコツを教えてくれたり。家事が地味に楽になりそう。",
+    "captionInstagram": "シャープが白物家電向けのAIエージェント「NIAH(ニア)」を9月30日から提供開始します。猫のようなキャラクターが窓口となって、スマホ越しに話しかけるだけで複数の家電を操作できたり、使い方やおすすめ設定を提案してくれたりする仕組みです。すでに個別のAIを積んでいる家電があっても、NIAHがまとめて連携してくれるとのこと。毎日の家事の細かい手間がじわっと減りそうな新サービスです。 #シャープ #NIAH #AI家電 #スマートホーム #暮らしの工夫",
+    "lifeRelevanceTag": "暮らし・エンタメ",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "Google",
+    "catColor": "#1F8A83",
+    "headline": "Google、画像編集AI「Pics」投入",
+    "dek": "資料の画像をその場でAI編集、9月1日開始",
+    "body": [
+      "米Googleが9月1日（現地時間）、AI採用の画像生成・編集ツール「Google Pics」を発表した。Google Workspaceのツールとして、今後数週間かけて「Google AI Pro」「Google AI Ultra」の加入者と、大半のWorkspaceビジネス顧客に順次届けていく。",
+      "同社の画像生成AIモデル「Nano Banana」を土台にしていて、生成した画像から特定の物体だけを切り出して編集したり、指定した部分にコメントを付けて修正を指示したりできる。画像内の文字をデザインやフォントはそのままに変更・翻訳する機能も入っている。",
+      "Google DocsとSlidesでは9月1日からPicsの機能がひと足先に使えるようになった。文書やプレゼン資料の画像を選んで、その場でAI編集ができる。Google Driveとの連携も今後数週間で広がっていく予定だ。"
+    ],
+    "why": "SNS投稿用の画像やチラシ作りといった日常的な編集作業が、アプリを閉じずその場で完結する時代になる。デザインの専門知識がなくても資料の見栄えを底上げしやすくなる。",
+    "sourceLine": "ITmedia NEWS、2026年9月1日",
+    "chips": [
+      "Google",
+      "画像生成AI",
+      "Nano Banana",
+      "Workspace"
+    ],
+    "videoId": null,
+    "stats": [
+      {
+        "n": "Nano Banana",
+        "l": "基盤となる画像生成AIモデル"
+      },
+      {
+        "n": "9月1日",
+        "l": "Docs/Slidesでの提供開始日"
+      }
+    ],
+    "captionX": "Googleが画像生成・編集ツール「Pics」を発表。ドキュメントやスライドに貼った画像をそのままAI編集できるように。#Google #画像生成AI",
+    "captionThreads": "Googleの新ツール「Google Pics」、これはじわじわ便利そう。ドキュメントやスライドの画像を、貼ったままAIで編集できちゃう。ポスターやSNS用画像もサクッと作れる予感です。",
+    "captionInstagram": "Googleが9月1日、AI画像生成・編集ツール「Google Pics」を発表しました。ベースは画像生成モデル「Nano Banana」で、特定の被写体だけを切り出して編集したり、画像内の文字をデザインそのままに書き換え・翻訳したりできるのが売りです。GoogleドキュメントやスライドではもうPics機能が使えて、ポスター作りやSNS投稿用画像の準備がぐっと軽くなりそう。Google AI Pro/UltraやWorkspaceの対象プランユーザーから順次利用できます。 #Google #GooglePics #画像生成AI #NanoBanana #Workspace",
+    "lifeRelevanceTag": "暮らし・エンタメ",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
