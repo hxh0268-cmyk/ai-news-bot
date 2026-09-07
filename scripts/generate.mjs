@@ -7,6 +7,13 @@ import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
+import {
+  loadRecentHeadlines,
+  buildExclusionSection,
+  parseManualKeywords,
+  buildManualExclusionSection,
+  DEFAULT_RECENT_DAYS,
+} from "./recent-headlines.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!API_KEY) {
@@ -15,7 +22,18 @@ if (!API_KEY) {
 }
 
 const MODEL = "claude-sonnet-5";
-const { topic, dateStr, outputDir } = loadTopic();
+const { topic, dateStr, outputDir, root } = loadTopic();
+
+// 話題重複回避：直近数日でマージ済みの過去分から見出しを集め、
+// プロンプトに「除外リスト」として渡す（過去分が無ければ空文字列になるだけ）。
+const recentHeadlines = loadRecentHeadlines({ root, topicSlug: topic.slug, dateStr });
+const manualExcludeKeywords = parseManualKeywords(process.env.EXCLUDE_HEADLINES);
+const exclusionSection =
+  buildExclusionSection(recentHeadlines, DEFAULT_RECENT_DAYS) + buildManualExclusionSection(manualExcludeKeywords);
+console.log(
+  `[${topic.slug}] 重複回避: 直近${DEFAULT_RECENT_DAYS}日分から${recentHeadlines.length}件の既出見出し、` +
+    `手動指定${manualExcludeKeywords.length}件を除外リストに追加しました。`
+);
 
 // 簡易A/Bテスト：日替わりで見出しの作り方を変え、将来的に反応の違いを比較できるようにする。
 // 本格的な効果測定（GA4等）が揃うまでの暫定的な仕組み。
@@ -31,6 +49,7 @@ ${topic.systemPrompt}
 
 【本日の見出しスタイル指定（A/Bテスト中・variant ${variant}）】
 ${variantInstruction}
+${exclusionSection}
 
 以下の項目を持つニュース7件を集めてください：
 

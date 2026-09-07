@@ -1,6 +1,7 @@
 {
   "slug": "ai-news",
   "displayName": "AIニュース",
+  "description": "生成AI・LLM関連の最新ニュースを毎日ダイジェスト配信",
   "videoCount": 3,
   "narrationCount": 3,
   "categoryColors": ["#F4B942", "#7C6FE0", "#1F8A83", "#E1636F"],
