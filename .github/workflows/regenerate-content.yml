@@ -34,6 +34,26 @@ jobs:
         with:
           ref: ${{ github.event.inputs.branch }}
 
+      # 対象ブランチがComposite Action(.github/actions/generate-content)追加前に
+      # 作成されたものだと、ローカルActionの実体がワークスペース上に存在せず
+      # 「Can't find 'action.yml'」で失敗する。ローカルActionはcheckoutされた
+      # ワークスペース上のファイルをそのまま参照するため、対象ブランチの内容とは
+      # 独立して、常に最新mainのComposite Actionをこのパスにだけ反映させる。
+      # 対象ブランチは、パイプラインのコード（scripts/・config/）や
+      # Composite Action（.github/actions/generate-content）が追加・修正される
+      # 前に作成されたものである可能性がある。checkoutしたワークスペース上の
+      # ファイルがそのまま使われるため、古いブランチのままだと機能追加・バグ修正が
+      # 反映されない状態で再生成してしまう（実際に、重複回避機能が実装される前の
+      # ブランチをexclude_headlines付きで再生成したところ、除外指定が一切効かない
+      # 不具合が発生した）。
+      # 「丸ごと再生成」は常に最新のパイプラインで作り直すことが目的のため、
+      # 対象ブランチのoutput/・docs/（＝これから上書きする生成物）以外の
+      # パイプライン本体は常に最新mainの内容で上書きする。
+      - name: 最新mainのパイプラインコードをワークスペースに反映
+        run: |
+          git fetch origin main
+          git checkout origin/main -- scripts config .github/actions/generate-content
+
       - name: ブランチ名からtopicと対象日付(CONTENT_DATE)を取り出す
         id: parse
         run: |
