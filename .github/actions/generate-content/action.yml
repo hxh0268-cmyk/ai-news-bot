@@ -1,0 +1,124 @@
+name: "コンテンツ一式生成 (STEP1〜STEP3c)"
+description: >
+  ニュース収集(STEP1)からカード画像・note記事・背景ビジュアル・サイト・
+  動画クリップ・ナレーション・動画結合(STEP3c)までを一括で行う。
+  generate.yml（日次自動生成）と regenerate-content.yml（手動の丸ごと再生成）の
+  両方から呼び出される共通処理。ここではPRの作成やコミットは行わない
+  （呼び出し元がそれぞれの方法で生成物を確定させる）。
+
+inputs:
+  topic:
+    description: "話題(topic)のslug（例: ai-news）"
+    required: true
+  content_date:
+    description: "対象日付 CONTENT_DATE（例: 2026-09-06）"
+    required: true
+  exclude_headlines:
+    description: "手動で除外したい見出しのキーワード（カンマ区切り、任意）"
+    required: false
+    default: ""
+  anthropic_api_key:
+    required: true
+  gemini_api_key:
+    required: true
+  fal_key:
+    required: true
+  elevenlabs_api_key:
+    required: true
+  elevenlabs_voice_id:
+    required: true
+  adsense_client_id:
+    required: false
+    default: ""
+  ga_measurement_id:
+    required: false
+    default: ""
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "20"
+
+    - name: npm install
+      shell: bash
+      run: npm install
+
+    - name: STEP1 ニュース7本を収集・重要度5本を選定
+      shell: bash
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+        EXCLUDE_HEADLINES: ${{ inputs.exclude_headlines }}
+      run: node scripts/generate.mjs
+
+    - name: STEP1.5 アフィリエイトリンク挿入・PR表記処理
+      shell: bash
+      env:
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/monetize.mjs
+
+    - name: STEP1.8 note販売用の記事ドラフトを生成
+      shell: bash
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/generate-note-article.mjs
+
+    - name: STEP2a Nano Banana Proで背景ビジュアルを生成
+      shell: bash
+      env:
+        GEMINI_API_KEY: ${{ inputs.gemini_api_key }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/generate-visuals.mjs
+
+    - name: STEP2 5枚の画像カードを生成
+      shell: bash
+      env:
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/render-cards.mjs
+
+    - name: STEP2.5 広告枠付きサイトを生成
+      shell: bash
+      env:
+        ADSENSE_CLIENT_ID: ${{ inputs.adsense_client_id }}
+        GA_MEASUREMENT_ID: ${{ inputs.ga_measurement_id }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/render-site.mjs
+
+    - name: STEP3a fal.ai経由でKling AIの動画クリップを生成（失敗しても全体は継続）
+      continue-on-error: true
+      shell: bash
+      env:
+        FAL_KEY: ${{ inputs.fal_key }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/generate-video-clips.mjs
+
+    - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
+      continue-on-error: true
+      shell: bash
+      env:
+        ELEVENLABS_API_KEY: ${{ inputs.elevenlabs_api_key }}
+        ELEVENLABS_VOICE_ID: ${{ inputs.elevenlabs_voice_id }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: node scripts/generate-narration.mjs
+
+    - name: ffmpegをインストール
+      shell: bash
+      run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+    - name: STEP3c クリップ結合＋ナレーション合成
+      shell: bash
+      env:
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: bash scripts/build-video.sh

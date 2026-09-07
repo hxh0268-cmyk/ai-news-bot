@@ -77,3 +77,24 @@ export function buildExclusionSection(items, days = DEFAULT_RECENT_DAYS) {
 
 ${lines}`;
 }
+
+// カンマ区切りの文字列（workflow_dispatch入力 EXCLUDE_HEADLINES 等）を
+// キーワード配列にパースする。空文字・未設定・空白のみの要素は取り除く。
+export function parseManualKeywords(raw) {
+  return String(raw || "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+// regenerate-content.yml（手動の丸ごと再生成）で、人間が明示的に指定した
+// 除外キーワード用のセクション。loadRecentHeadlines()による自動検出とは
+// 独立した仕組みのため、プロンプト上も別セクションとして分けている。
+export function buildManualExclusionSection(keywords) {
+  if (keywords.length === 0) return "";
+
+  return `
+
+【追加の除外指定（手動指定）】
+今回は特に以下のキーワードに関連するニュースは避けてください：${keywords.join("、")}`;
+}
