@@ -1,4 +1,4 @@
-// STEP2a: Nano Banana Proで背景ビジュアルを生成する（話題対応版）
+// STEP2a: Nano Banana 2 Liteで背景ビジュアルを生成する（話題対応版）
 import fs from "node:fs";
 import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
@@ -10,9 +10,12 @@ if (!API_KEY) {
   process.exit(1);
 }
 
-// 2026年8月時点、Nano Banana Pro（最高品質）が持続的に混雑する場合に備え、
-// Nano Banana 2（同シリーズの高速・高効率版）へ自動フォールバックする。
-const PRIMARY_MODEL = "gemini-3-pro-image";
+// コスト最適化のため、背景画像は低コストなNano Banana 2 Lite（$0.03台/枚）を
+// 標準とし、混雑等で失敗した場合のみNano Banana 2（$0.07台/枚）に
+// フォールバックする。以前使用していたNano Banana Pro（$0.13台/枚）は
+// 用途（SNS投稿カードの背景、CSSのcoverでトリミング表示）に対して
+// オーバースペックなため使用をやめた。
+const PRIMARY_MODEL = "gemini-3.1-flash-lite-image";
 const FALLBACK_MODEL = "gemini-3.1-flash-image";
 const { topic, outputDir } = loadTopic();
 
@@ -135,15 +138,15 @@ async function main() {
     try {
       let buf;
       try {
-        // まずNano Banana Pro（高品質）を試す
+        // まずNano Banana 2 Lite（低コスト）を試す
         buf = await withRetry(() => generateOne(buildPrompt(top5[i], direction), PRIMARY_MODEL), {
           retries: 3,
           baseDelayMs: 10000,
-          label: `背景ビジュアル生成(${i + 1})[Pro]`,
+          label: `背景ビジュアル生成(${i + 1})[Lite]`,
         });
       } catch (primaryErr) {
         console.warn(
-          `⚠️ Nano Banana Pro(${i + 1})が持続的に混雑しているため、Nano Banana 2に切り替えます: ${primaryErr.message}`
+          `⚠️ Nano Banana 2 Lite(${i + 1})が持続的に混雑しているため、Nano Banana 2に切り替えます: ${primaryErr.message}`
         );
         buf = await withRetry(() => generateOne(buildPrompt(top5[i], direction), FALLBACK_MODEL), {
           retries: 3,
