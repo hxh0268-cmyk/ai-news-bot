@@ -73,6 +73,7 @@ jobs:
           topic: ${{ steps.parse.outputs.topic }}
           content_date: ${{ steps.parse.outputs.date }}
           exclude_headlines: ${{ github.event.inputs.exclude_headlines }}
+          github_token: ${{ github.token }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           elevenlabs_api_key: ${{ secrets.ELEVENLABS_API_KEY }}
