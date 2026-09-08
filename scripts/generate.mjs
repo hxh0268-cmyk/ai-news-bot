@@ -9,6 +9,7 @@ import { withRetry } from "./retry.mjs";
 import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
 import {
   loadRecentHeadlines,
+  loadOpenPrHeadlines,
   buildExclusionSection,
   parseManualKeywords,
   buildManualExclusionSection,
@@ -24,15 +25,18 @@ if (!API_KEY) {
 const MODEL = "claude-sonnet-5";
 const { topic, dateStr, outputDir, root } = loadTopic();
 
-// 話題重複回避：直近数日でマージ済みの過去分から見出しを集め、
-// プロンプトに「除外リスト」として渡す（過去分が無ければ空文字列になるだけ）。
+// 話題重複回避：直近数日でマージ済みの過去分に加え、現在オープン中の
+// （＝レビュー待ちの）content/<topic>/* ブランチからも見出しを集め、
+// プロンプトに「除外リスト」として渡す（何も無ければ空文字列になるだけ）。
 const recentHeadlines = loadRecentHeadlines({ root, topicSlug: topic.slug, dateStr });
+const openPrHeadlines = loadOpenPrHeadlines({ topicSlug: topic.slug });
 const manualExcludeKeywords = parseManualKeywords(process.env.EXCLUDE_HEADLINES);
 const exclusionSection =
-  buildExclusionSection(recentHeadlines, DEFAULT_RECENT_DAYS) + buildManualExclusionSection(manualExcludeKeywords);
+  buildExclusionSection([...recentHeadlines, ...openPrHeadlines], DEFAULT_RECENT_DAYS) +
+  buildManualExclusionSection(manualExcludeKeywords);
 console.log(
   `[${topic.slug}] 重複回避: 直近${DEFAULT_RECENT_DAYS}日分から${recentHeadlines.length}件の既出見出し、` +
-    `手動指定${manualExcludeKeywords.length}件を除外リストに追加しました。`
+    `オープン中のPRから${openPrHeadlines.length}件、手動指定${manualExcludeKeywords.length}件を除外リストに追加しました。`
 );
 
 // 簡易A/Bテスト：日替わりで見出しの作り方を変え、将来的に反応の違いを比較できるようにする。
@@ -42,7 +46,7 @@ const variant = dayOfYear % 2 === 0 ? "A" : "B";
 const variantInstruction =
   variant === "A"
     ? "見出し(headline)は「〜という発表」「〜が判明」のような断定・事実提示型の文体にする。"
-    : "見出し(headline)は「〜はどうなる？」「まさか〜」のような、読者の好奇心を刺激する問いかけ・驚き型の文体にする。";
+    : "見出し(headline)は「〜はどうなる？」「〜に何が」「〜、その先は」のような、読者の好奇心を刺激する問いかけ・驚き型の文体にする（「まさか」「衝撃」に頼らず、他の言い回しでも驚きは表現できる）。";
 
 const SYSTEM_PROMPT = `
 ${topic.systemPrompt}
@@ -72,8 +76,12 @@ ${exclusionSection}
 【見出し(headline)の表現バリエーションについて・厳守】
 7件の見出しは、全体として言い回しのパターンにバリエーションを持たせてください。
 上記のスタイル指定（variant ${variant}）はあくまで「基本トーン」であり、7件すべてを一言一句同じ型（例：全件「まさか〜？」で始まる、全件「〜という発表」で終わる）に揃えることは禁止します。
-目安として、同じ書き出しパターンは7件中2〜3件までに留め、断定型・問いかけ型・体言止め・数字を前面に出す型など、複数の型を混在させてください。
+目安として、同じ書き出しパターンは7件中2〜3件までに留め、断定型・問いかけ型・体言止め・数字を前面に出す型・比較型（「A社 vs B社」等）など、複数の型を混在させてください。
 これは、AIが生成した見出しだと一目で分かってしまう「機械的な均一さ」を避け、人間の編集者が作った見出し一覧のような自然な多様性を持たせるためです。
+
+【煽り文句の多用を避ける・複数日をまたいだ偏りにも注意】
+「まさか」「衝撃」のような煽り文句を、ニュースの中身に関わらず毎回・毎日のデフォルトとして使うことは避けてください。本当に意外性の強いニュースにのみ、7件中1件程度を目安に控えめに使い、それ以外は事実提示型・数字訴求型（具体的な数値を前面に出す）・疑問形・比較型など、ニュースの性質に合った表現を選んでください。
+上記の【重複回避】リストが存在する場合は、そこに列挙されている直近の見出しの文面も参考にしてください。もし「まさか」「衝撃」等の同じ煽り文句が複数日にわたって連続して使われている様子が見て取れたら、今日は意図的に別のパターンを選び、連続を断ち切ってください。
 
 正確性を最優先してください。数値や固有名詞は必ずWeb検索で確認したものだけを使い、不確かな情報は書かないでください。
 

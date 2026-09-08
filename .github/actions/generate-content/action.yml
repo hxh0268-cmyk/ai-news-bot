@@ -17,6 +17,9 @@ inputs:
     description: "手動で除外したい見出しのキーワード（カンマ区切り、任意）"
     required: false
     default: ""
+  github_token:
+    description: "話題重複回避でオープン中のPRを検索するためのGitHubトークン（通常はgithub.tokenでよい）"
+    required: true
   anthropic_api_key:
     required: true
   gemini_api_key:
@@ -50,6 +53,9 @@ runs:
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
         EXCLUDE_HEADLINES: ${{ inputs.exclude_headlines }}
+        # gh CLIの認証用。GITHUB_REPOSITORYはActionsのランナーが自動的に
+        # 全ステップへ設定するため、ここで明示的に渡す必要はない。
+        GH_TOKEN: ${{ inputs.github_token }}
       run: node scripts/generate.mjs
 
     - name: STEP1.5 アフィリエイトリンク挿入・PR表記処理
