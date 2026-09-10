@@ -99,16 +99,41 @@ jobs:
               "text": "📝 [${{ matrix.topic }}] 本日分のコンテンツPRを作成しました: ${{ steps.create-pr.outputs.pull-request-url }}"
             }
 
+      # Composite Action内の各ステップは run-and-capture-error.sh 経由で実行されており、
+      # 失敗したステップの出力から要点(Error:行、無ければ末尾の非空行)を
+      # .step-error.log に残している。ここでそれを読み出し、失敗Slack通知に含める。
+      # PR作成ステップ自体が失敗した場合など、このファイルが無いケースにも対応する。
+      - name: 失敗原因の手がかりを抽出
+        id: error-snippet
+        if: failure()
+        run: |
+          if [ -f .step-error.log ]; then
+            SNIPPET=$(cat .step-error.log)
+          else
+            SNIPPET="(詳細を取得できませんでした。GitHub Actionsのログを直接確認してください)"
+          fi
+          {
+            echo "snippet<<STEP_ERROR_SNIPPET_EOF"
+            echo "$SNIPPET"
+            echo "STEP_ERROR_SNIPPET_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      # エラーメッセージには引用符や改行が含まれうるため、slackapi/slack-github-actionの
+      # YAMLリテラル埋め込みではなくjqでJSONを組み立ててからcurlで送信し、
+      # ペイロードが壊れたり値がシェルとして解釈されたりしないようにしている。
       - name: 失敗時にSlack通知
         if: failure()
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload: |
-            {
-              "text": "🚨 [${{ matrix.topic }}] 本日のコンテンツ生成が失敗しました。GitHub Actionsのログを確認してください: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          TOPIC: ${{ matrix.topic }}
+          ERROR_SNIPPET: ${{ steps.error-snippet.outputs.snippet }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT="🚨 [${TOPIC}] 本日のコンテンツ生成が失敗しました。
+          原因の手がかり: ${ERROR_SNIPPET}
+          ログ: ${RUN_URL}"
+          PAYLOAD=$(jq -n --arg text "$TEXT" '{text: $text}')
+          curl -sf -X POST -H "Content-Type: application/json" --data "$PAYLOAD" "$SLACK_WEBHOOK_URL"
 
   notify-kill-switch:
     needs: discover-topics
