@@ -56,14 +56,14 @@ runs:
         # gh CLIの認証用。GITHUB_REPOSITORYはActionsのランナーが自動的に
         # 全ステップへ設定するため、ここで明示的に渡す必要はない。
         GH_TOKEN: ${{ inputs.github_token }}
-      run: node scripts/generate.mjs
+      run: bash scripts/run-and-capture-error.sh node scripts/generate.mjs
 
     - name: STEP1.5 アフィリエイトリンク挿入・PR表記処理
       shell: bash
       env:
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/monetize.mjs
+      run: bash scripts/run-and-capture-error.sh node scripts/monetize.mjs
 
     - name: STEP1.8 note販売用の記事ドラフトを生成
       shell: bash
@@ -71,7 +71,7 @@ runs:
         ANTHROPIC_API_KEY: ${{ inputs.anthropic_api_key }}
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/generate-note-article.mjs
+      run: bash scripts/run-and-capture-error.sh node scripts/generate-note-article.mjs
 
     - name: STEP2a Nano Banana Proで背景ビジュアルを生成
       shell: bash
@@ -79,14 +79,14 @@ runs:
         GEMINI_API_KEY: ${{ inputs.gemini_api_key }}
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/generate-visuals.mjs
+      run: bash scripts/run-and-capture-error.sh node scripts/generate-visuals.mjs
 
     - name: STEP2 5枚の画像カードを生成
       shell: bash
       env:
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/render-cards.mjs
+      run: bash scripts/run-and-capture-error.sh node scripts/render-cards.mjs
 
     - name: STEP2.5 広告枠付きサイトを生成
       shell: bash
@@ -95,7 +95,7 @@ runs:
         GA_MEASUREMENT_ID: ${{ inputs.ga_measurement_id }}
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/render-site.mjs
+      run: bash scripts/run-and-capture-error.sh node scripts/render-site.mjs
 
     - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
       continue-on-error: true
@@ -116,4 +116,4 @@ runs:
       env:
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
-      run: bash scripts/build-video.sh
+      run: bash scripts/run-and-capture-error.sh bash scripts/build-video.sh
