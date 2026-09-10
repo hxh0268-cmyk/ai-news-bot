@@ -155,6 +155,11 @@ const SUBMIT_TOOL = {
 };
 
 async function callClaude() {
+  // 正常時でも(Web検索込みで)3〜5分程度かかることが実測で分かっているため、
+  // それより十分長い8分でタイムアウトさせる。これが無いと、Node.js(undici)の
+  // fetchが持つデフォルトのタイムアウト(概ね5分)が正常な応答時間の上限付近で
+  // 先に発動してしまい、"fetch failed"として誤って失敗扱いになることがある
+  // （2026-09-09の障害調査で判明）。
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -173,6 +178,7 @@ async function callClaude() {
         SUBMIT_TOOL,
       ],
     }),
+    signal: AbortSignal.timeout(480000),
   });
 
   if (!res.ok) {
