@@ -1,0 +1,93 @@
+name: Daily Content - Recovery Check
+
+# generate.yml（日次自動生成）のSTEP1がAPI側の一時的な不調等で
+# 3回リトライ後も失敗すると、その日は完全にPRが作られないまま
+# スキップされてしまう（失敗の記録もSlack通知以外どこにも残らない）。
+# このワークフローは、generate.ymlの主cron（0 22 * * *、実際の起動は
+# UTC 23:43〜00:20頃にずれ込むことが多い）から数時間後に1度だけ、
+# 「直近のgenerate.yml実行が失敗のままになっていないか」を確認し、
+# 失敗していれば1回だけ自動的に再トリガーする。
+#
+# 日付文字列を独自に計算して「今日の分があるか」を判定するのではなく、
+# 「generate.ymlの直近1件の実行結果(conclusion)」だけを見て判定する。
+# 理由: cronの起動時刻がUTC日付境界をまたいでずれることがあり、
+# 独自に日付を計算すると「今日」の定義がずれるリスクがある。
+# 直近実行が失敗している場合、その実行はPR・ブランチを一切作成して
+# いない（STEP1で例外が発生し、後続のPR作成ステップに到達する前に
+# 停止するため）ことが保証されているため、再トリガーしても
+# 既存のcontent/<topic>/<日付>ブランチと衝突・重複する心配がない。
+#
+# リトライ回数の上限: このワークフロー自体が1日1回しか実行されない
+# ため、カウンター等の状態管理を持たなくても「1日最大1回の自動
+# リトライ」が構造的に保証される。
+#
+# ★KILL_SWITCHの影響を受ける: 意図的に運用を止めている最中に
+#   誤って再トリガーしてしまわないよう、generate.ymlと同じ
+#   vars.KILL_SWITCH チェックを行う。
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  actions: write
+
+jobs:
+  check-and-recover:
+    if: ${{ vars.KILL_SWITCH != 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 直近のgenerate.yml実行結果を確認
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          CONCLUSION=$(gh run list --repo "${{ github.repository }}" --workflow=generate.yml -L 1 --json conclusion --jq '.[0].conclusion')
+          echo "直近のgenerate.yml実行結果: $CONCLUSION"
+          echo "conclusion=$CONCLUSION" >> "$GITHUB_OUTPUT"
+
+      - name: 失敗していれば再トリガー
+        if: steps.check.outputs.conclusion == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run generate.yml --repo "${{ github.repository }}"
+
+      - name: 自動リカバリ実行をSlack通知
+        if: steps.check.outputs.conclusion == 'failure'
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🔁 直近のgenerate.yml実行が失敗していたため、自動リカバリとして再実行をトリガーしました: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/generate.yml"
+            }
+
+      - name: 失敗時にSlack通知
+        if: failure()
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🚨 recovery-check自体の実行に失敗しました。GitHub Actionsのログを確認してください: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }
+
+  # check-and-recoverジョブのif条件(KILL_SWITCH != 'true')はそのまま維持し、
+  # 通知だけを別ジョブとして切り出す。他のワークフロー(generate.yml等)の
+  # notify-kill-switchジョブと同じパターン。
+  notify-kill-switch:
+    if: ${{ vars.KILL_SWITCH == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: KILL_SWITCH作動をSlack通知
+        uses: slackapi/slack-github-action@v2.0.0
+        with:
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            {
+              "text": "🛑 KILL_SWITCHが有効なため、Daily Content - Recovery Check はスキップされました: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }
