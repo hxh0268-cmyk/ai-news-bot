@@ -172,7 +172,7 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 
 **費用：無料（各APIの通常利用分のみ）／所要時間：10分＋生成待機**
 
-1. 「Actions」タブ →「Daily AI News - Generate & Request Check」→「Run workflow」
+1. 「Actions」タブ →「Daily Content - Generate & Request Check」→「Run workflow」
 2. 完了後、「Pull requests」タブでPRを開く
 3. 以下を確認：
    - `output/ai-news/<日付>/cards/1〜5.png`（画像）
@@ -180,7 +180,7 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
    - `output/ai-news/<日付>/note-article.md`（note記事案）
    - `output/ai-news/<日付>/monetization-report.md`（アフィリエイト・PR表記の確認）
 4. 問題なければ「Merge」　★これがメインのHuman Check★
-5. 自動的に「Publish After Approval」が起動 →Zapier→Bufferへ送信→SNS投稿
+5. 自動的に「Daily Content - Publish After Approval」が起動 →Zapier→Bufferへ送信→SNS投稿
 6. 実際にX/Threads/Instagramで投稿を確認
 
 ---

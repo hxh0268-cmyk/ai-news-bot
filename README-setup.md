@@ -85,11 +85,11 @@ Instagram・Threadsを自動投稿するには、**個人アカウントでは�
 
 ## STEP5：動作確認
 
-1. GitHubの「Actions」タブ →「Daily AI News - Generate & Request Check」→「Run workflow」で手動実行
+1. GitHubの「Actions」タブ →「Daily Content - Generate & Request Check」→「Run workflow」で手動実行
 2. 数分後、「Pull requests」タブに本日分のPRが作成されます
 3. `output/ai-news/<日付>/cards/` の画像5枚、`slideshow.mp4`、`top5.json` の内容を確認
 4. 問題なければPRを **Merge**
-5. Mergeをきっかけに「Publish After Approval」ワークフローが自動起動し、Zapier→Bufferへ送信されます
+5. Mergeをきっかけに「Daily Content - Publish After Approval」ワークフローが自動起動し、Zapier→Bufferへ送信されます
 6. Bufferの管理画面、または実際のX/Threads/Instagramで投稿を確認してください
 
 ---
@@ -107,6 +107,7 @@ Instagram・Threadsを自動投稿するには、**個人アカウントでは�
 - **動画の長さ・切り替え効果** → `scripts/build-video.sh`
 - **実行時刻** → `.github/workflows/generate.yml` の `cron` の値（UTC基準）
 - **媒体ごとの投稿内容の出し分け** → `scripts/publish.mjs` のペイロード内容、およびZapier側のマッピング
+- **見出しの重複回避** → `scripts/recent-headlines.mjs`（直近5日分のマージ済みコンテンツに加え、現在オープン中の（レビュー待ちの）PRの見出しも参照し、除外リストとしてSTEP1のプロンプトに渡します）
 
 ---
 
@@ -121,6 +122,8 @@ Instagram・Threadsを自動投稿するには、**個人アカウントでは�
 `docs/<話題スラッグ>/index.html`（例: `docs/ai-news/index.html`。GitHub Pagesで公開する記事全文サイト）に広告枠を用意しています。Google AdSenseの審査に通ったら、発行された `ca-pub-XXXXXXXXXX` を GitHub Secrets の `ADSENSE_CLIENT_ID` に登録してください。未設定の間は広告枠の位置がプレースホルダー表示されます。
 
 > AdSense審査には、独自ドメイン推奨・一定量のコンテンツ・プライバシーポリシーの設置などの条件があります。GitHub Pagesの `github.io` ドメインでも審査自体は可能ですが、独自ドメインの方が有利とされています。
+
+`privacy.html`には、運営者情報（連絡先フォーム含む）・記事がAI生成コンテンツである旨の明記・免責事項（誤りがあった場合の訂正方針含む）・広告配信/アクセス解析それぞれのCookie利用目的とオプトアウト方法へのリンクを記載済みです。内容は `scripts/render-site.mjs` の `buildPrivacyHtml()` で管理しているため、運営者情報や連絡先を変更したい場合はこの関数を編集し、再生成（`node scripts/render-site.mjs`、または次回の日次実行）してください。
 
 **GitHub Pagesの有効化手順**：
 1. リポジトリの `Settings → Pages`
@@ -145,7 +148,12 @@ GitHub Secretsに `GA_MEASUREMENT_ID`（Google Analytics 4の測定ID）を登�
 Instagram/Threads向け（縦長）とX向け（横長）を自動で分けて生成します。
 
 ### 障害通知
-GitHub Secretsに `SLACK_WEBHOOK_URL` を登録すると、生成・投稿処理が失敗した際にSlackへ通知が届きます（未設定でも動作しますが通知は届きません）。
+GitHub Secretsに `SLACK_WEBHOOK_URL` を登録すると、以下4種類のタイミングでSlackへ通知が届きます（未設定でも動作しますが通知は届きません）。
+
+- 🚨 生成・投稿処理が失敗した場合（原因の手がかりとなるエラーメッセージの一部を含みます）
+- 📝 本日分のコンテンツPRが作成された場合
+- 🛑 `KILL_SWITCH` が有効なため処理がスキップされた場合
+- 🔁 recovery-check（後述）により自動リカバリ（再トリガー）が行われた場合
 
 ### 外部APIの障害耐性
 Nano Banana 2 Lite・ElevenLabsの呼び出しは自動でリトライされ、それでも失敗した場合は品質を落として自動的に投稿を継続します（背景ビジュアル→単色背景、ナレーション→無音）。動画は常に5枚のカード画像による静止画スライドショーとして生成されます。
@@ -161,11 +169,19 @@ Nano Banana 2 Lite・ElevenLabsの呼び出しは自動でリトライされ、�
 ### 意思決定ログ
 `DECISIONS.md` に、これまでの設計判断とその理由を記録しています。新しい判断をしたら、同じ形式で追記していくことをおすすめします。
 
+## 障害対応・メンテナンス用ワークフロー
+
+### 自動リカバリ（recovery-check.yml）
+日次生成（`generate.yml`）のSTEP1（ニュース収集）が3回リトライ後も失敗し、その日のPRが1件も作成されないまま完全にスキップされてしまった場合に備え、毎日 **03:00 UTC** に「直近のgenerate.yml実行が失敗のままになっていないか」を自動確認し、失敗していれば1回だけgenerate.ymlを自動的に再トリガーするワークフローです。`KILL_SWITCH` が有効な間はこちらも動作しません。特別な設定は不要で、リポジトリに最初から組み込まれています。
+
+### 手動での丸ごと再生成（regenerate-content.yml）
+すでに作成済みのPR（`content/<話題>/<日付>` ブランチ）の内容を、除外したい見出しのキーワードを指定した上で丸ごと作り直したい場合に使うワークフローです。「Actions」タブ →「Regenerate Content (手動・既存ブランチ丸ごと再生成)」→「Run workflow」から、対象のブランチ名と、除外したいキーワード（カンマ区切り、任意）を指定して実行すると、そのブランチ上でコンテンツ一式を再生成し、同じブランチ・同じPRに上書きコミットされます。
+
 ## トラブルシューティング
 
 - **PRに画像が出てこない** → Actionsのログで `render-cards.mjs` のエラーを確認（Puppeteerのインストール失敗が多いケースです）
 - **動画が生成されない** → `ffmpeg` はubuntu-latestに標準搭載されていますが、念のためActionsログを確認してください
-- **Merge後にSNS投稿されない** → GitHubの「Publish After Approval」ワークフローのログを確認。Zapier側のタスク履歴（Zap History）も合わせて確認してください
+- **Merge後にSNS投稿されない** → GitHubの「Daily Content - Publish After Approval」ワークフローのログを確認。Zapier側のタスク履歴（Zap History）も合わせて確認してください
 - **画像が表示されない（Zapier/Buffer側）** → リポジトリがPublicになっているか、`output/<話題>/<日付>/` のパスが正しいか確認してください
 
 ## 新しい話題を追加する方法
