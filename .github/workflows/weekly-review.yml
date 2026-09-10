@@ -2,8 +2,11 @@ name: Weekly Review - P/L & Content Analysis
 
 on:
   schedule:
-    # 毎週月曜 22:00 UTC（日本時間 火曜7:00）。実行のたびに直近7日分を集計する。
-    - cron: "0 22 * * 1"
+    # 毎週月曜 22:47 UTC（日本時間 火曜7:47）。実行のたびに直近7日分を集計する。
+    # 従来はgenerate.ymlと同じ「毎時0分」だったため、月曜だけ両者が同じ混雑した
+    # タイミングで競合していた。generate.ymlの新しい実行時刻(22:17)から余裕を
+    # 見て30分後にずらし、重複を避けている（2026-09-10のcron遅延調査を参照）。
+    - cron: "47 22 * * 1"
   workflow_dispatch: {}
 
 permissions:
