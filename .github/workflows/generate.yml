@@ -2,7 +2,10 @@ name: Daily Content - Generate & Request Check
 
 on:
   schedule:
-    - cron: "0 22 * * *"
+    # 毎時0分はGitHub Actions全体でスケジュール実行が最も混雑する瞬間で、
+    # 遅延の主因になっているため、意図的にキリの良くない分（22:17）にずらしている
+    # （2026-09-10の調査で、直近の実行遅延がほぼ一定して103〜128分だったことを確認）。
+    - cron: "17 22 * * *"
   workflow_dispatch: {}
 
 permissions:
