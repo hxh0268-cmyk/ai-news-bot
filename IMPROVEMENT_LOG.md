@@ -39,3 +39,7 @@
 ## 2026-09-11(追記2)
 
 - GitHub Pages上の実サイトで、カード画像の表示不具合を確認・修正した。原因は3点: ①`.brand`(トピック名)・`.stat .n`(統計値)・`.footer`(出典欄)がfont-family:'JetBrains Mono'（日本語グリフを持たない等幅フォント）のみを指定しており、日本語部分が豆腐文字(□)化していた ②出典欄の日付切り捨てロジック`(item.sourceLine || "").split("（")[0]`が、実際に生成されるsourceLineの区切り文字（全角スラッシュ「／」・読点「、」）と一致せず、日付部分が切り捨てられずそのまま出力されていた ③見出し(h1)の`word-break:break-all`により、カタカナ語（例:「サイト」）が意味を無視して途中で改行されていた。対応として、①は該当3箇所のfont-familyに'Zen Kaku Gothic New'（本文で既に使用中の日本語フォント）をフォールバックとして追加、②はsourceLineの末尾の日付表記（丸括弧内・読点区切りの両パターン）を正規表現で除去する`formatSourceLabel()`関数に置き換え、③は`word-break:normal; overflow-wrap:break-word;`に変更（既存のshrinkToFit()による自動縮小・省略処理はそのまま維持されるため、枠内に収まる保証は変わらない）。9/11分の実データで修正後のHTML出力を検証し、いずれも意図通りになることを確認済み
+
+## 2026-09-11(追記3)
+
+- 追記2の修正後、regenerate-content.ymlで9/11分を実際に再生成して画像を確認したところ、`.tag`(カテゴリラベル)にも同じ原因（JetBrains Monoに日本語フォールバックなし）による豆腐文字が新たに見つかった（例: `category`が"Health / Merck・Moderna"のように中黒「・」を含むケース）。同じ修正パターン（'Zen Kaku Gothic New'をフォールバックとして追加）をcardHtml・cardHtmlX両方の`.tag`に適用した。あわせてrender-cards.mjs内の全font-family宣言を洗い出し、`.counter`（ページ番号、常に半角数字と" / "のみで日本語が入らない箇所）を除き、AI生成コンテンツが入りうる箇所にはすべて日本語フォールバックが入っていることを確認した

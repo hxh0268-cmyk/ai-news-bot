@@ -68,7 +68,7 @@ function cardHtml(item, index, total, bgDataUri) {
   .tag{
     display:flex; align-items:center; gap:10px;
     margin-top:auto;
-    font-family:'JetBrains Mono', monospace; font-size:17px; letter-spacing:0.14em;
+    font-family:'JetBrains Mono', 'Zen Kaku Gothic New', monospace; font-size:17px; letter-spacing:0.14em;
     color:rgba(255,255,255,0.75); text-transform:uppercase;
   }
   .tag .dot{ width:7px; height:7px; border-radius:50%; background:${item.catColor}; flex:0 0 auto; }
@@ -141,7 +141,7 @@ function cardHtmlX(item, index, total, bgDataUri) {
   .inner{ position:relative; z-index:1; width:100%; }
   .tag{
     display:inline-block;
-    font-family:'JetBrains Mono', monospace; font-size:15px; letter-spacing:0.08em;
+    font-family:'JetBrains Mono', 'Zen Kaku Gothic New', monospace; font-size:15px; letter-spacing:0.08em;
     color:${item.catColor}; background:#fff;
     padding:5px 14px; border-radius:5px; text-transform:uppercase;
     margin-bottom:14px;
