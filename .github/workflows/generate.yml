@@ -6,7 +6,12 @@ on:
     # 遅延の主因になっているため、意図的にキリの良くない分（22:17）にずらしている
     # （2026-09-10の調査で、直近の実行遅延がほぼ一定して103〜128分だったことを確認）。
     - cron: "17 22 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      topics:
+        description: "再生成対象のトピックをカンマ区切りで指定（省略時は全トピックが対象。recovery-check.ymlが失敗したトピックのみを再トリガーする際に使用）"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -16,6 +21,9 @@ jobs:
   # config/topics/ 内のJSONファイルを自動検出し、話題の一覧をマトリクスとして出力する。
   # 新しい話題を増やしたいときは、config/topics/に設定ファイルを1つ追加するだけでよく、
   # このワークフロー自体を編集する必要はない。
+  # workflow_dispatchの`topics`入力（カンマ区切り）が指定された場合は、自動検出結果を
+  # 使わずそちらを優先する（recovery-check.ymlが特定トピックのみ再トリガーするために使用）。
+  # 通常のcron実行・入力無しの手動実行では従来通り全トピックが対象になる。
   discover-topics:
     runs-on: ubuntu-latest
     outputs:
@@ -23,9 +31,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: list
+        env:
+          TOPICS_INPUT: ${{ github.event.inputs.topics }}
         run: |
-          TOPICS=$(ls config/topics/*.json | xargs -n1 basename | sed 's/\.json$//' | jq -R . | jq -s -c .)
-          echo "検出した話題: $TOPICS"
+          if [ -n "$TOPICS_INPUT" ]; then
+            TOPICS=$(echo "$TOPICS_INPUT" | tr ',' '\n' | sed '/^$/d' | jq -R . | jq -s -c .)
+            echo "topics入力が指定されたため、これを対象にします: $TOPICS"
+          else
+            TOPICS=$(ls config/topics/*.json | xargs -n1 basename | sed 's/\.json$//' | jq -R . | jq -s -c .)
+            echo "検出した話題: $TOPICS"
+          fi
           echo "topics=$TOPICS" >> "$GITHUB_OUTPUT"
 
   generate:

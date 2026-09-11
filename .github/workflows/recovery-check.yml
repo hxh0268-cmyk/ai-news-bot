@@ -1,26 +1,40 @@
 name: Daily Content - Recovery Check
 
 # generate.yml（日次自動生成）のSTEP1がAPI側の一時的な不調等で
-# 3回リトライ後も失敗すると、その日は完全にPRが作られないまま
+# 3回リトライ後も失敗すると、そのトピックの分はPRが作られないまま
 # スキップされてしまう（失敗の記録もSlack通知以外どこにも残らない）。
 # このワークフローは、generate.ymlの主cron（17 22 * * *、GitHub Actions
 # 全体の混雑を避けるため毎時0分を避けた設定。実際の起動はcronの遅延調査
 # [2026-09-10]の時点で概ね1〜2時間程度ずれ込むことが多い）から数時間後に1度だけ、
-# 「直近のgenerate.yml実行が失敗のままになっていないか」を確認し、
-# 失敗していれば1回だけ自動的に再トリガーする。
+# 「直近のgenerate.yml実行のうち、どのトピックが失敗のままになっているか」を
+# トピック単位で確認し、失敗しているトピックだけをピンポイントで自動的に再トリガーする。
 #
 # 日付文字列を独自に計算して「今日の分があるか」を判定するのではなく、
-# 「generate.ymlの直近1件の実行結果(conclusion)」だけを見て判定する。
+# 「generate.ymlの直近1件の実行結果(各ジョブのconclusion)」だけを見て判定する。
 # 理由: cronの起動時刻がUTC日付境界をまたいでずれることがあり、
 # 独自に日付を計算すると「今日」の定義がずれるリスクがある。
-# 直近実行が失敗している場合、その実行はPR・ブランチを一切作成して
-# いない（STEP1で例外が発生し、後続のPR作成ステップに到達する前に
-# 停止するため）ことが保証されているため、再トリガーしても
-# 既存のcontent/<topic>/<日付>ブランチと衝突・重複する心配がない。
+#
+# トピック単位の判定方法[2026-09-11見直し]：
+# generate.ymlはmatrix（topicごと）でジョブを分けて実行しており、GitHub Actionsは
+# 各ジョブのconclusionを "generate (<topic>)" という名前で個別に記録している。
+# discover-topicsジョブ自体が失敗した場合はトピック一覧が特定できないため、
+# 従来通り全トピックを対象に再トリガーする。discover-topicsが成功していれば、
+# "generate (<topic>)" のうちconclusionがfailureのものだけを抽出し、
+# generate.ymlのworkflow_dispatch `topics` 入力でそのトピックだけを再トリガーする。
+# これにより、1つのトピックが失敗しても、既に成功した他のトピックを
+# 巻き込んで再生成してしまうことを防ぐ（複数トピック運用時の安全策）。
+# 1トピックのみの運用時は、失敗トピックが1つ（＝そのトピックだけ）になるため、
+# 従来の「トピック指定なしで全体を再実行」と実質的に同じ結果になり、後方互換。
+#
+# 追加の安全策：失敗と判定したトピックについて、再トリガー前に
+# 「そのトピックのオープンPRが既に存在しないか」を確認する。STEP1で例外が
+# 発生した場合はPR作成前に停止するため通常は存在しないはずだが、万一
+# PR作成後のステップ（Slack通知等）だけが失敗していた場合に備えた保険。
+# 既にオープンPRがあるトピックは再トリガーをスキップし、Slackで注意喚起する。
 #
 # リトライ回数の上限: このワークフロー自体が1日1回しか実行されない
 # ため、カウンター等の状態管理を持たなくても「1日最大1回の自動
-# リトライ」が構造的に保証される。
+# リトライ」が構造的に保証される（トピックごとに見ても同様）。
 #
 # ★KILL_SWITCHの影響を受ける: 意図的に運用を止めている最中に
 #   誤って再トリガーしてしまわないよう、generate.ymlと同じ
@@ -33,37 +47,107 @@ on:
 
 permissions:
   actions: write
+  pull-requests: read
 
 jobs:
   check-and-recover:
     if: ${{ vars.KILL_SWITCH != 'true' }}
     runs-on: ubuntu-latest
     steps:
-      - name: 直近のgenerate.yml実行結果を確認
+      - name: 直近のgenerate.yml実行を、トピック単位で確認
         id: check
         env:
           GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
         run: |
-          CONCLUSION=$(gh run list --repo "${{ github.repository }}" --workflow=generate.yml -L 1 --json conclusion --jq '.[0].conclusion')
-          echo "直近のgenerate.yml実行結果: $CONCLUSION"
-          echo "conclusion=$CONCLUSION" >> "$GITHUB_OUTPUT"
+          RUN_ID=$(gh run list --repo "$REPO" --workflow=generate.yml -L 1 --json databaseId --jq '.[0].databaseId')
+          echo "直近のgenerate.yml run ID: $RUN_ID"
 
-      - name: 失敗していれば再トリガー
-        if: steps.check.outputs.conclusion == 'failure'
+          JOBS_JSON=$(gh run view "$RUN_ID" --repo "$REPO" --json jobs)
+          DISCOVER_CONCLUSION=$(echo "$JOBS_JSON" | jq -r '.jobs[] | select(.name=="discover-topics") | .conclusion')
+          echo "discover-topicsジョブの結果: $DISCOVER_CONCLUSION"
+
+          if [ "$DISCOVER_CONCLUSION" != "success" ]; then
+            echo "discover-topics自体が失敗またはトピック一覧を特定できないため、全トピックを対象に再トリガーします。"
+            echo "retry_mode=all" >> "$GITHUB_OUTPUT"
+            echo "topics_arg=" >> "$GITHUB_OUTPUT"
+            echo "skipped_topics=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          FAILED_TOPICS=$(echo "$JOBS_JSON" | jq -r '[.jobs[] | select(.name | test("^generate \\(.+\\)$")) | select(.conclusion=="failure") | .name | capture("^generate \\((?<t>.+)\\)$").t] | join(",")')
+          echo "失敗したトピック: ${FAILED_TOPICS:-（なし）}"
+
+          if [ -z "$FAILED_TOPICS" ]; then
+            echo "retry_mode=none" >> "$GITHUB_OUTPUT"
+            echo "topics_arg=" >> "$GITHUB_OUTPUT"
+            echo "skipped_topics=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # 安全策：失敗と判定したトピックの中に、既にオープンPRがあるものが
+          # 無いか確認する（PR作成後のステップだけが失敗していた場合の保険）。
+          OPEN_BRANCHES=$(gh pr list --repo "$REPO" --state open --json headRefName --jq '.[].headRefName')
+
+          RETRY_TOPICS=""
+          SKIPPED_TOPICS=""
+          IFS=',' read -ra TOPIC_ARR <<< "$FAILED_TOPICS"
+          for topic in "${TOPIC_ARR[@]}"; do
+            if echo "$OPEN_BRANCHES" | grep -q "^content/${topic}/"; then
+              echo "「${topic}」は失敗と判定されましたが、既にオープンPRが存在するため再トリガーをスキップします。"
+              SKIPPED_TOPICS="${SKIPPED_TOPICS:+$SKIPPED_TOPICS,}${topic}"
+            else
+              RETRY_TOPICS="${RETRY_TOPICS:+$RETRY_TOPICS,}${topic}"
+            fi
+          done
+
+          if [ -n "$RETRY_TOPICS" ]; then
+            echo "retry_mode=partial" >> "$GITHUB_OUTPUT"
+          else
+            echo "retry_mode=none" >> "$GITHUB_OUTPUT"
+          fi
+          echo "topics_arg=$RETRY_TOPICS" >> "$GITHUB_OUTPUT"
+          echo "skipped_topics=$SKIPPED_TOPICS" >> "$GITHUB_OUTPUT"
+
+      - name: 全トピックを対象に再トリガー
+        if: steps.check.outputs.retry_mode == 'all'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run generate.yml --repo "${{ github.repository }}"
 
+      - name: 失敗したトピックのみ再トリガー
+        if: steps.check.outputs.retry_mode == 'partial'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run generate.yml --repo "${{ github.repository }}" -f topics="${{ steps.check.outputs.topics_arg }}"
+
       - name: 自動リカバリ実行をSlack通知
-        if: steps.check.outputs.conclusion == 'failure'
-        uses: slackapi/slack-github-action@v2.0.0
-        with:
-          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
-          webhook-type: incoming-webhook
-          payload: |
-            {
-              "text": "🔁 直近のgenerate.yml実行が失敗していたため、自動リカバリとして再実行をトリガーしました: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/generate.yml"
-            }
+        if: steps.check.outputs.retry_mode == 'all' || steps.check.outputs.retry_mode == 'partial'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          RETRY_MODE: ${{ steps.check.outputs.retry_mode }}
+          TOPICS_ARG: ${{ steps.check.outputs.topics_arg }}
+          WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/workflows/generate.yml
+        run: |
+          if [ "$RETRY_MODE" == "all" ]; then
+            SCOPE_TEXT="トピック一覧を特定できなかったため全トピック"
+          else
+            SCOPE_TEXT="失敗していたトピック（${TOPICS_ARG}）のみ"
+          fi
+          TEXT="🔁 直近のgenerate.yml実行が失敗していたため、自動リカバリとして${SCOPE_TEXT}の再実行をトリガーしました: ${WORKFLOW_URL}"
+          PAYLOAD=$(jq -n --arg text "$TEXT" '{text: $text}')
+          curl -sf -X POST -H "Content-Type: application/json" --data "$PAYLOAD" "$SLACK_WEBHOOK_URL"
+
+      - name: スキップしたトピックをSlack通知
+        if: steps.check.outputs.skipped_topics != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SKIPPED_TOPICS: ${{ steps.check.outputs.skipped_topics }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          TEXT="⚠️ recovery-check: トピック（${SKIPPED_TOPICS}）はgenerate.yml実行が失敗と判定されましたが、既にオープンPRが存在するため自動リカバリをスキップしました。PR作成後のステップ（Slack通知等）だけが失敗した可能性があります。念のため内容をご確認ください: ${RUN_URL}"
+          PAYLOAD=$(jq -n --arg text "$TEXT" '{text: $text}')
+          curl -sf -X POST -H "Content-Type: application/json" --data "$PAYLOAD" "$SLACK_WEBHOOK_URL"
 
       - name: 失敗時にSlack通知
         if: failure()
