@@ -24,6 +24,19 @@ const X_FONT_MIN  = 24;
 const X_FONT_STEP = 4;
 const X_MAX_LINES = 2;
 
+// sourceLineから、末尾の日付表記（「、2026年9月3日」「（2026年9月）」等）を取り除き、
+// 媒体名部分だけを取り出す。実際の生成結果は「、YYYY年M月D日」で終わるものと、
+// 「（...YYYY年...）」で終わるもの（範囲表記「〜」・区切り「・」・「上旬」等の
+// 表現ゆれを含む）の2パターンが主で、かつ媒体名側にも「（サブ媒体名）」のような
+// 丸括弧が使われることがあるため、単純な最初の「（」での分割では対応できない
+// （末尾のみを対象にすることで、媒体名側の括弧は誤って消さないようにしている）。
+function formatSourceLabel(sourceLine) {
+  return (sourceLine || "")
+    .replace(/[（(][^（）()]*\d{4}年[^（）()]*[）)]\s*$/, "")
+    .replace(/、\s*\d{4}年[^、]*$/, "")
+    .trim();
+}
+
 function cardHtml(item, index, total, bgDataUri) {
   const hasBg = Boolean(bgDataUri);
   return `<!DOCTYPE html>
@@ -50,7 +63,7 @@ function cardHtml(item, index, total, bgDataUri) {
   }
   .top, .tag, h1, .dek, .statrow, .footer{ position:relative; z-index:1; }
   .top{display:flex; align-items:center; justify-content:space-between;}
-  .brand{font-family:'JetBrains Mono', monospace; font-size:17px; letter-spacing:0.16em; color:rgba(255,255,255,0.55); text-transform:uppercase;}
+  .brand{font-family:'JetBrains Mono', 'Zen Kaku Gothic New', monospace; font-size:17px; letter-spacing:0.16em; color:rgba(255,255,255,0.55); text-transform:uppercase;}
   .counter{font-family:'JetBrains Mono', monospace; font-size:17px; color:rgba(255,255,255,0.55); letter-spacing:0.08em;}
   .tag{
     display:flex; align-items:center; gap:10px;
@@ -65,7 +78,7 @@ function cardHtml(item, index, total, bgDataUri) {
     margin-top:26px;
     letter-spacing:0.01em;
     max-width:88%;
-    word-break:break-all;
+    word-break:normal; overflow-wrap:break-word;
   }
   .dek{font-size:24px; color:rgba(255,255,255,0.6); margin-top:22px; max-width:80%; line-height:1.7;}
   .statrow{
@@ -74,11 +87,11 @@ function cardHtml(item, index, total, bgDataUri) {
     padding-top:32px;
     border-top:1px solid rgba(255,255,255,0.18);
   }
-  .stat .n{font-family:'JetBrains Mono', monospace; font-size:32px; font-weight:600; color:#fff; display:block;}
+  .stat .n{font-family:'JetBrains Mono', 'Zen Kaku Gothic New', monospace; font-size:32px; font-weight:600; color:#fff; display:block;}
   .stat .l{font-size:16px; color:rgba(255,255,255,0.5); margin-top:6px; display:block; letter-spacing:0.02em;}
   .footer{
     display:flex; justify-content:space-between; align-items:center;
-    margin-top:28px; font-family:'JetBrains Mono', monospace; font-size:14px; color:rgba(255,255,255,0.4);
+    margin-top:28px; font-family:'JetBrains Mono', 'Zen Kaku Gothic New', monospace; font-size:14px; color:rgba(255,255,255,0.4);
   }
 </style></head>
 <body>
@@ -97,7 +110,7 @@ function cardHtml(item, index, total, bgDataUri) {
   </div>
   <div class="footer">
     <span>${dateStr}</span>
-    <span>出典：${(item.sourceLine || "").split("（")[0]}</span>
+    <span>出典：${formatSourceLabel(item.sourceLine)}</span>
   </div>
 </body></html>`;
 }
@@ -137,11 +150,11 @@ function cardHtmlX(item, index, total, bgDataUri) {
     font-family:'Shippori Mincho', serif; font-weight:800;
     font-size:${X_FONT_MAX}px; line-height:1.35; color:#fff;
     text-shadow:0 2px 10px rgba(0,0,0,0.4);
-    word-break:break-all;
+    word-break:normal; overflow-wrap:break-word;
   }
   .foot{
     margin-top:14px; display:flex; justify-content:space-between;
-    font-family:'JetBrains Mono', monospace; font-size:13px; color:#D7DEE4;
+    font-family:'JetBrains Mono', 'Zen Kaku Gothic New', monospace; font-size:13px; color:#D7DEE4;
   }
 </style></head>
 <body>
