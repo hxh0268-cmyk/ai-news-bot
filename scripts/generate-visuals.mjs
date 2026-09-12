@@ -100,8 +100,14 @@ ${direction.body}
 ■ 参考キーワード（雰囲気の調整に活用してください。すべて使う必要はありません）
 ${KEYWORD_PALETTE}
 
-■ 技術的な制約
-- 文字・ロゴ・ウォーターマーク・UIパーツは一切入れない
+■ 技術的な制約（厳守）
+- 文字・ロゴ・ウォーターマーク・UIパーツは一切入れない。看板・案内板・モニター・スクリーン・
+  ディスプレイ・計器パネル・機体表面のマーキングなど、「文字が書かれていそうな面」自体を
+  画面に含めない（そうした要素があると、読めない意味不明な疑似文字が生成されてしまうことが
+  あるため、面そのものを作らないようにする）
+- No text, no letters, no words, no writing, no typography, no logos, no watermarks,
+  no UI elements, no signage, no screens or monitors with any markings. Pure abstract
+  architectural/atmospheric scene only.
 - 縦長構図。画面下部3割程度は見出しテキストを重ねられるよう、比較的落ち着いたトーンにする
 - 人物を描く場合は、顔の判別できない小さなシルエット・後ろ姿程度に留める
 `.trim();
