@@ -223,6 +223,7 @@ async function main() {
     const bgPath = path.join(outputDir, "backgrounds", `${i + 1}.png`);
     const html = cardHtml(top5[i], i, top5.length, loadBgAsDataUri(bgPath));
     await page.setContent(html, { waitUntil: "networkidle0" });
+    await page.evaluate(() => document.fonts.ready); // Webフォントの適用完了を待つ（文字化け対策）
     await shrinkToFit(page, FONT_MAX, FONT_MIN, FONT_STEP, MAX_LINES);
     await page.screenshot({ path: path.join(cardsDir, `${i + 1}.png`) });
   }
@@ -234,6 +235,7 @@ async function main() {
     const bgPath = path.join(outputDir, "backgrounds", `${i + 1}.png`);
     const html = cardHtmlX(top5[i], i, top5.length, loadBgAsDataUri(bgPath));
     await page.setContent(html, { waitUntil: "networkidle0" });
+    await page.evaluate(() => document.fonts.ready); // Webフォントの適用完了を待つ（文字化け対策）
     await shrinkToFit(page, X_FONT_MAX, X_FONT_MIN, X_FONT_STEP, X_MAX_LINES);
     await page.screenshot({ path: path.join(cardsXDir, `${i + 1}.png`) });
   }
