@@ -67,7 +67,7 @@ function escAttr(s) {
 // その記事のサムネイルとして一意に対応する。日付別フォルダにコピーすることで、
 // 過去のアーカイブページの画像を後日の実行で上書きしてしまう事故を防ぐ。
 function copyThumbnails(data) {
-  const srcDir = path.join(outputDir, "cards");
+  const srcDir = path.join(outputDir, "cards-x");
   if (!fs.existsSync(srcDir)) return new Set();
 
   fs.mkdirSync(imagesDateDir, { recursive: true });
@@ -86,7 +86,7 @@ function copyThumbnails(data) {
 // カテゴリカラーを使ったグラデーションのプレースホルダーを表示する。
 function thumbnailHtml(item, thumbnails, imgBasePath) {
   if (thumbnails.has(item.importance)) {
-    return `<img class="thumb" src="${imgBasePath}images/${dateStr}/${item.importance}.png" alt="${escAttr(item.headline)}" loading="lazy" width="1080" height="1350">`;
+    return `<img class="thumb" src="${imgBasePath}images/${dateStr}/${item.importance}.png" alt="${escAttr(item.headline)}" loading="lazy" width="1200" height="675">`;
   }
   return `<div class="thumb thumb-placeholder" style="background:linear-gradient(160deg,${item.catColor} 0%,var(--ink) 100%)" role="img" aria-label="${escAttr(item.headline)}"><span>${escAttr(item.category)}</span></div>`;
 }
@@ -262,7 +262,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .toc a{color:var(--slate);display:flex;align-items:center;gap:8px;}
   .toc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0;}
   .card{background:#fff;border-radius:8px;padding:26px;margin-bottom:20px;border-top:4px solid var(--cat,#1F8A83);overflow:hidden;scroll-margin-top:16px;}
-  .thumb{display:block;width:100%;border-radius:6px;margin-bottom:20px;aspect-ratio:1080/1350;object-fit:cover;}
+  .thumb{display:block;width:100%;border-radius:6px;margin-bottom:20px;aspect-ratio:1200/675;object-fit:cover;}
   .thumb-placeholder{display:flex;align-items:flex-end;padding:24px;color:rgba(255,255,255,0.85);font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:0.06em;text-transform:uppercase;border-radius:6px;}
   .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cat,#1F8A83);text-transform:uppercase;}
   h2{font-family:'Shippori Mincho',serif;font-size:22px;margin:10px 0;color:var(--ink);}
