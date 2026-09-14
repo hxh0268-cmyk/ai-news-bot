@@ -48,8 +48,10 @@ ${topic.monetizationArticleRole || "あなたはAI活用による副業・業務
 料金プラン等の事実関係は公式情報のみを根拠にしてください。
 
 【記事の構成・厳守】
-以下の6セクション構成で、合計1,000〜1,500字程度（目安。本文の充実を優先し、
-セクションを埋めるためだけの水増しはしないこと）で書いてください。
+以下の6セクション構成で、合計1,000〜1,500字程度で書いてください。1,500字は
+上限の目安であり、大きく超えないこと（超えそうな場合は料金プランの説明を
+簡潔にするなどして調整する）。本文の充実を優先し、セクションを埋めるためだけの
+水増しはしないこと。
 
 1. 何のツール/手法か（1〜2文の簡潔な紹介）
 2. 実際に使ってみた具体的な作業内容（仮想的な業務シナリオでも構わないが、
@@ -71,6 +73,13 @@ ${topic.monetizationArticleRole || "あなたはAI活用による副業・業務
   該当箇所が無ければこの表記は不要。
 - 断定的すぎる主張には「〜な場合が多い」「〜という声もある」など、幅を持たせた
   表現を使う
+
+【出力形式・厳守】
+- 各項目は指定された型（配列は配列、オブジェクトはオブジェクト）でそのまま提出すること。
+  配列の項目を1つの文字列にまとめて提出してはいけない
+- Web検索結果を参照・引用する際も、<cite>のような特殊なマークアップタグや
+  出典番号の注釈記号を本文中に一切含めないこと。参照した事実は、タグを使わず
+  普通の日本語の文章として書き直してから記載する
 
 ${HUMANIZE_STYLE_GUIDE}
 
@@ -171,7 +180,43 @@ async function callClaude() {
       .join("\n");
     throw new Error("submit_monetization_articleツールの呼び出しが見つかりませんでした。テキスト出力:\n" + textFallback);
   }
+
+  // ツール呼び出しの構造検証。実測で、web検索の引用マークアップ生成と
+  // ツール入力の生成が競合し、配列であるべき項目が文字列（しかも
+  // <parameter name="...">のような壊れたタグ混じり）になって返ってくる
+  // ケースが確認された。ここで検知した場合は例外を投げてwithRetryに
+  // 再試行させる（そのまま使うと構造が壊れた記事が公開されてしまうため）。
+  validateArticleShape(submitBlock.input);
   return submitBlock.input;
+}
+
+function validateArticleShape(article) {
+  const problems = [];
+  if (typeof article.toolName !== "string" || !article.toolName) problems.push("toolNameが文字列ではありません");
+  if (!Array.isArray(article.hypotheticalWorkflow)) problems.push("hypotheticalWorkflowが配列ではありません");
+  if (typeof article.beforeAfter !== "object" || article.beforeAfter === null || Array.isArray(article.beforeAfter)) {
+    problems.push("beforeAfterがオブジェクトではありません");
+  }
+  if (!Array.isArray(article.recommendedFor)) problems.push("recommendedForが配列ではありません");
+  if (!Array.isArray(article.pricingPlans)) problems.push("pricingPlansが配列ではありません");
+  if (!Array.isArray(article.caveats)) problems.push("caveatsが配列ではありません");
+  if (JSON.stringify(article).includes("<parameter")) problems.push("壊れたツール呼び出し構文(<parameter ...>)が混入しています");
+  if (problems.length > 0) {
+    throw new Error(`submit_monetization_articleの出力構造が不正です: ${problems.join(" / ")}`);
+  }
+}
+
+// Web検索結果を直接引用した際にClaudeが挿入することがある<cite index="...">タグを
+// 取り除き、中のテキストだけを残す（本文にマークアップがそのまま漏れるのを防ぐ）。
+function stripCitationTags(value) {
+  if (typeof value === "string") {
+    return value.replace(/<cite[^>]*>/g, "").replace(/<\/cite>/g, "");
+  }
+  if (Array.isArray(value)) return value.map(stripCitationTags);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, stripCitationTags(v)]));
+  }
+  return value;
 }
 
 // 断定的な収益保証表現が紛れ込んでいないかの簡易チェック（ここで検知しても処理は
@@ -217,7 +262,8 @@ async function main() {
   }
 
   console.log(`[${topic.slug}] Claude APIにAIマネタイズ副業記事(${dateStr})の生成を依頼しています…`);
-  const article = await withRetry(() => callClaude(), { retries: 2, baseDelayMs: 15000, label: "マネタイズ記事生成" });
+  const rawArticle = await withRetry(() => callClaude(), { retries: 2, baseDelayMs: 15000, label: "マネタイズ記事生成" });
+  const article = stripCitationTags(rawArticle);
 
   // 文字数集計・安全チェックより先に生の結果を保存しておく。集計処理側で
   // 想定外の形（配列のはずが単一値等）が来て例外になっても、生成結果自体は
