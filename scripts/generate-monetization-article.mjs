@@ -213,6 +213,9 @@ function validateArticleShape(article) {
   if (!Array.isArray(article.caveats)) problems.push("caveatsが配列ではありません");
   if (JSON.stringify(article).includes("<parameter")) problems.push("壊れたツール呼び出し構文(<parameter ...>)が混入しています");
   if (problems.length > 0) {
+    // 原因調査のため、壊れた生データをログに残す（withRetryが再試行するため
+    // 処理自体は止まらないが、繰り返し発生する場合の分析に使う）。
+    console.error("壊れた出力の生データ:", JSON.stringify(article, null, 2).slice(0, 3000));
     throw new Error(`submit_monetization_articleの出力構造が不正です: ${problems.join(" / ")}`);
   }
 }
@@ -288,7 +291,9 @@ async function main() {
   }
 
   console.log(`[${topic.slug}] Claude APIにAIマネタイズ副業記事(${dateStr})の生成を依頼しています…`);
-  const rawArticle = await withRetry(() => callClaude(), { retries: 2, baseDelayMs: 15000, label: "マネタイズ記事生成" });
+  // retries: 3（計4回試行）。実測で、ツール呼び出しの構造が壊れる不具合が
+  // 2回連続で発生したケースがあったため、既存の2回から引き上げている。
+  const rawArticle = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "マネタイズ記事生成" });
   const article = stripCitationTags(rawArticle);
 
   // 文字数集計・安全チェックより先に生の結果を保存しておく。集計処理側で
