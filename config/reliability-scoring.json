@@ -1,0 +1,17 @@
+{
+  "weights": {
+    "officialPrimarySource": 30,
+    "majorTrustedPublication": 20,
+    "multipleIndependentSources": 20,
+    "concreteEvidence": 10,
+    "anonymousOnlyClaim": -30,
+    "noTraceableSource": -30,
+    "highRiskUnqualifiedClaim": -20,
+    "sensationalUnverifiable": -10
+  },
+  "baseScore": 50,
+  "thresholds": {
+    "AUTO_PUBLISH_MIN_RELIABILITY": 75,
+    "HIGH_RISK_MIN_RELIABILITY": 85
+  }
+}

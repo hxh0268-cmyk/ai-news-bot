@@ -1,0 +1,32 @@
+{
+  "_comment": "Section 10.1 の統合判定テーブル。行=Commercial Scoreの区分、列=Reliability Scoreの区分。highRiskCategoriesに該当するカテゴリは常にHIGH_RISK_MIN_RELIABILITY列を使用する。",
+  "commercialBands": [
+    { "min": 80, "max": 100, "label": "80-100" },
+    { "min": 70, "max": 79, "label": "70-79" },
+    { "min": 60, "max": 69, "label": "60-69" },
+    { "min": 0, "max": 59, "label": "0-59" }
+  ],
+  "reliabilityColumns": ["HIGH_RISK_MIN", "AUTO_PUBLISH_MIN", "BELOW_AUTO_PUBLISH_MIN"],
+  "matrix": {
+    "80-100": {
+      "HIGH_RISK_MIN": "FULL_DISTRIBUTION",
+      "AUTO_PUBLISH_MIN": "WEB_AND_X",
+      "BELOW_AUTO_PUBLISH_MIN": "HUMAN_REVIEW_REQUIRED"
+    },
+    "70-79": {
+      "HIGH_RISK_MIN": "WEB_AND_X",
+      "AUTO_PUBLISH_MIN": "WEB_AND_X",
+      "BELOW_AUTO_PUBLISH_MIN": "HUMAN_REVIEW_REQUIRED"
+    },
+    "60-69": {
+      "HIGH_RISK_MIN": "WEB_ONLY_CANDIDATE",
+      "AUTO_PUBLISH_MIN": "WEB_ONLY_CANDIDATE",
+      "BELOW_AUTO_PUBLISH_MIN": "REJECT"
+    },
+    "0-59": {
+      "HIGH_RISK_MIN": "REJECT",
+      "AUTO_PUBLISH_MIN": "REJECT",
+      "BELOW_AUTO_PUBLISH_MIN": "REJECT"
+    }
+  }
+}

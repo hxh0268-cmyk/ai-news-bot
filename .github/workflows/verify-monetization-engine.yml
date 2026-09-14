@@ -1,0 +1,53 @@
+name: "【検証専用】収益化エンジン 実API検証"
+
+# 収益化エンジン(scripts/monetization/)の classify-news → score-commercial
+# → score-reliability → distribution-decision の一連の流れを、実際の
+# ANTHROPIC_API_KEYを使って1回限り手動検証するためのワークフロー。
+#
+# - workflow_dispatchのみ。定期実行トリガーは付けない。
+# - 本番の日次生成フロー(generate.yml)には一切接続しない。
+# - 既存のoutput/<topic>/<date>/data.json(実際に生成済みのニュースデータ)を
+#   入力として使い、scripts/monetization/run-shadow-mode.mjsを直接実行する。
+# - 結果は monetization-engine-report.json / .md としてジョブログに出力するのみで、
+#   コミットやPR作成は行わない。
+
+on:
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "検証対象のtopic slug"
+        required: true
+        default: "ai-news"
+      content_date:
+        description: "検証対象の日付(output/<topic>/<content_date>/data.jsonを使用)"
+        required: true
+        default: "2026-09-14"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: npm install
+        run: npm install
+
+      - name: 収益化エンジン実行(classify-news → score-commercial → score-reliability → distribution-decision)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ inputs.topic }}
+          CONTENT_DATE: ${{ inputs.content_date }}
+        run: node scripts/monetization/run-shadow-mode.mjs
+
+      - name: 検証結果レポートをログに出力(JSON)
+        run: cat "output/${{ inputs.topic }}/${{ inputs.content_date }}/monetization-engine-report.json"
+
+      - name: 検証結果レポートをログに出力(Markdown)
+        run: cat "output/${{ inputs.topic }}/${{ inputs.content_date }}/monetization-engine-report.md"
+
+      - name: 構造化ログをログに出力(JSONL)
+        run: cat "output/${{ inputs.topic }}/${{ inputs.content_date }}/monetization-engine-shadow.log.jsonl"

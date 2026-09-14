@@ -1,0 +1,17 @@
+{
+  "_comment": "Section 13.1 Model Tier Strategy。コスト変動時はここだけ書き換えればよい。既存のgenerate.mjs等のメイン生成パイプラインで使用しているモデル(claude-sonnet-5)はmid tierとして流用している。",
+  "tiers": {
+    "lightest": {
+      "model": "claude-haiku-4-5-20251001",
+      "usedFor": ["dedup-classification", "commercial-scoring", "reliability-scoring"]
+    },
+    "mid": {
+      "model": "claude-sonnet-5",
+      "usedFor": ["web-breaking-generation", "x-post-generation"]
+    },
+    "high": {
+      "model": "claude-opus-5",
+      "usedFor": ["web-explainer-generation"]
+    }
+  }
+}
