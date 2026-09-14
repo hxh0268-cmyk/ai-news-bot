@@ -1,0 +1,68 @@
+name: "【検証専用】AIマネタイズ副業記事 実API検証"
+
+# scripts/generate-monetization-article.mjs（試験導入・小規模テスト段階）を、
+# 実際のANTHROPIC_API_KEYを使って複数回試験生成するためのワークフロー。
+#
+# - pushトリガーのみ。このブランチ限定。定期実行(schedule)は付けない。
+#   (workflow_dispatchはワークフローファイルがデフォルトブランチ(main)に
+#   存在しないとCLI/APIから起動できないため、収益化エンジン検証の時と同様に
+#   pushトリガーで起動する。mainには一切触れない。)
+# - 本番の日次生成フロー(generate.yml)には一切接続しない。data.json・
+#   top5.jsonへの書き込みも行わないため、カード画像・動画生成には影響しない。
+# - FORCE_MONETIZATION_ARTICLE=trueで曜日条件(火・金)を無視して強制生成し、
+#   3つの異なる日付(CONTENT_DATE)に対して1回ずつ試験生成する。
+#   既存の3日分のニュースデータ(output/ai-news/<date>/data.json)は読まないため、
+#   日付はあくまで出力先ディレクトリの分離のためだけに使う。
+
+on:
+  push:
+    branches:
+      - verify/monetization-article-real-api
+    paths:
+      - ".github/workflows/verify-monetization-article.yml"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: npm install
+        run: npm install
+
+      - name: 試験生成 1/3 (2026-09-12想定)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ai-news
+          CONTENT_DATE: "2026-09-12"
+          FORCE_MONETIZATION_ARTICLE: "true"
+        run: node scripts/generate-monetization-article.mjs
+
+      - name: 試験生成 2/3 (2026-09-13想定)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ai-news
+          CONTENT_DATE: "2026-09-13"
+          FORCE_MONETIZATION_ARTICLE: "true"
+        run: node scripts/generate-monetization-article.mjs
+
+      - name: 試験生成 3/3 (2026-09-14想定)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ai-news
+          CONTENT_DATE: "2026-09-14"
+          FORCE_MONETIZATION_ARTICLE: "true"
+        run: node scripts/generate-monetization-article.mjs
+
+      - name: 結果をログに出力 1/3
+        run: cat "output/ai-news/2026-09-12/monetization-article.json"
+
+      - name: 結果をログに出力 2/3
+        run: cat "output/ai-news/2026-09-13/monetization-article.json"
+
+      - name: 結果をログに出力 3/3
+        run: cat "output/ai-news/2026-09-14/monetization-article.json"
