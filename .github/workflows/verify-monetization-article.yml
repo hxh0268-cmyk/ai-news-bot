@@ -18,8 +18,6 @@ on:
   push:
     branches:
       - verify/monetization-article-real-api
-    paths:
-      - ".github/workflows/verify-monetization-article.yml"
 
 jobs:
   verify:
