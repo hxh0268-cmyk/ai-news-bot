@@ -262,7 +262,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .toc a{color:var(--slate);display:flex;align-items:center;gap:8px;}
   .toc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0;}
   .card{background:#fff;border-radius:8px;padding:26px;margin-bottom:20px;border-top:4px solid var(--cat,#1F8A83);overflow:hidden;scroll-margin-top:16px;}
-  .thumb{display:block;width:100%;border-radius:6px;margin-bottom:20px;aspect-ratio:1200/675;object-fit:cover;}
+  .thumb{display:block;width:100%;height:auto;border-radius:6px;margin-bottom:20px;aspect-ratio:1200/675;object-fit:cover;}
   .thumb-placeholder{display:flex;align-items:flex-end;padding:24px;color:rgba(255,255,255,0.85);font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:0.06em;text-transform:uppercase;border-radius:6px;}
   .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cat,#1F8A83);text-transform:uppercase;}
   h2{font-family:'Shippori Mincho',serif;font-size:22px;margin:10px 0;color:var(--ink);}
