@@ -4,7 +4,11 @@ name: "【検証専用】収益化エンジン 実API検証"
 # → score-reliability → distribution-decision の一連の流れを、実際の
 # ANTHROPIC_API_KEYを使って1回限り手動検証するためのワークフロー。
 #
-# - workflow_dispatchのみ。定期実行トリガーは付けない。
+# - workflow_dispatchに加えてpushトリガーも持つ。
+#   (GitHubの仕様上、workflow_dispatchはワークフローファイルがデフォルト
+#   ブランチ(main)に存在しないとCLI/APIから起動できないため、
+#   このブランチ限定のpushトリガーで検証を起動する。mainには一切触れない。)
+# - 定期実行(schedule)トリガーは付けない。
 # - 本番の日次生成フロー(generate.yml)には一切接続しない。
 # - 既存のoutput/<topic>/<date>/data.json(実際に生成済みのニュースデータ)を
 #   入力として使い、scripts/monetization/run-shadow-mode.mjsを直接実行する。
@@ -12,6 +16,11 @@ name: "【検証専用】収益化エンジン 実API検証"
 #   コミットやPR作成は行わない。
 
 on:
+  push:
+    branches:
+      - verify/monetization-engine-real-api
+    paths:
+      - ".github/workflows/verify-monetization-engine.yml"
   workflow_dispatch:
     inputs:
       topic:
@@ -26,6 +35,9 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    env:
+      VERIFY_TOPIC: ${{ github.event.inputs.topic || 'ai-news' }}
+      VERIFY_CONTENT_DATE: ${{ github.event.inputs.content_date || '2026-09-14' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,15 +51,15 @@ jobs:
       - name: 収益化エンジン実行(classify-news → score-commercial → score-reliability → distribution-decision)
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          TOPIC: ${{ inputs.topic }}
-          CONTENT_DATE: ${{ inputs.content_date }}
+          TOPIC: ${{ env.VERIFY_TOPIC }}
+          CONTENT_DATE: ${{ env.VERIFY_CONTENT_DATE }}
         run: node scripts/monetization/run-shadow-mode.mjs
 
       - name: 検証結果レポートをログに出力(JSON)
-        run: cat "output/${{ inputs.topic }}/${{ inputs.content_date }}/monetization-engine-report.json"
+        run: cat "output/${{ env.VERIFY_TOPIC }}/${{ env.VERIFY_CONTENT_DATE }}/monetization-engine-report.json"
 
       - name: 検証結果レポートをログに出力(Markdown)
-        run: cat "output/${{ inputs.topic }}/${{ inputs.content_date }}/monetization-engine-report.md"
+        run: cat "output/${{ env.VERIFY_TOPIC }}/${{ env.VERIFY_CONTENT_DATE }}/monetization-engine-report.md"
 
       - name: 構造化ログをログに出力(JSONL)
-        run: cat "output/${{ inputs.topic }}/${{ inputs.content_date }}/monetization-engine-shadow.log.jsonl"
+        run: cat "output/${{ env.VERIFY_TOPIC }}/${{ env.VERIFY_CONTENT_DATE }}/monetization-engine-shadow.log.jsonl"
