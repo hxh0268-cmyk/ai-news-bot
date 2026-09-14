@@ -16,6 +16,7 @@ import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
+import { loadRecentMonetizationTools, buildMonetizationToolExclusionSection } from "./recent-monetization-tools.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!API_KEY) {
@@ -24,7 +25,16 @@ if (!API_KEY) {
 }
 
 const MODEL = "claude-sonnet-5";
-const { topic, dateStr, outputDir } = loadTopic();
+const { topic, dateStr, outputDir, root } = loadTopic();
+
+// 重複回避：直近の「AIマネタイズ副業」記事で取り上げたツールを除外リストとして
+// プロンプトに渡す（generate.mjsのloadRecentHeadlines/buildExclusionSectionと
+// 同じ考え方）。
+const recentTools = loadRecentMonetizationTools({ root, topicSlug: topic.slug, dateStr });
+const toolExclusionSection = buildMonetizationToolExclusionSection(recentTools);
+console.log(
+  `[${topic.slug}] 重複回避: 直近${recentTools.length}回で取り上げたツールを除外リストに追加しました。`
+);
 
 // 頻度の目安（1日7本のニュースのうち1〜2本、という当初の目安を、独立生成である
 // 本スクリプトでは「週7日のうち1〜2日」に読み替えた運用ルール。火・金に生成する。
@@ -46,6 +56,7 @@ ${topic.monetizationArticleRole || "あなたはAI活用による副業・業務
 レビュー記事を書いてください。既に広く知られた話題の焼き直しではなく、具体的な1つのツール／
 サービス／手法に絞り込んでください。選定にあたっては必ずWeb検索で公式サイトの最新情報を確認し、
 料金プラン等の事実関係は公式情報のみを根拠にしてください。
+${toolExclusionSection}
 
 【記事の構成・厳守】
 以下の6セクション構成で、合計1,000〜1,500字程度で書いてください。1,500字は
