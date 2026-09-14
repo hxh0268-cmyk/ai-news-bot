@@ -233,9 +233,24 @@ function stripCitationTags(value) {
 // 断定的な収益保証表現が紛れ込んでいないかの簡易チェック（ここで検知しても処理は
 // 止めない。既存のlogHeadlinePatternBias等と同じく、ログで気づけるようにするだけ）。
 const BANNED_PHRASES = ["必ず稼げる", "確実に稼げる", "月収.*万円確実", "誰でも稼げる", "絶対に儲かる"];
+// 「確実に稼げるとは限らない」のような、断定を打ち消す文脈での一致を
+// 誤検知しないためのガード（直後NEGATION_WINDOW文字以内に否定表現が
+// あれば違反とみなさない）。
+const NEGATION_WINDOW = 15;
+const NEGATION_MARKERS = ["とは限ら", "わけではな", "ではない", "限らない", "保証するものではな", "とは言い切れな"];
 function logSafetyCheck(article) {
   const text = JSON.stringify(article);
-  const hits = BANNED_PHRASES.filter((p) => new RegExp(p).test(text));
+  const hits = [];
+  for (const phrase of BANNED_PHRASES) {
+    const re = new RegExp(phrase, "g");
+    let match;
+    while ((match = re.exec(text)) !== null) {
+      const after = text.slice(match.index + match[0].length, match.index + match[0].length + NEGATION_WINDOW);
+      if (!NEGATION_MARKERS.some((marker) => after.includes(marker))) {
+        hits.push(match[0]);
+      }
+    }
+  }
   if (hits.length > 0) {
     console.warn(`⚠️ 安全ルール違反の疑いのある表現が含まれています: ${hits.join(", ")}`);
   } else {
