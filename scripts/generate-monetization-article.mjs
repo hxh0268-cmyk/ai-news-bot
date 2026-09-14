@@ -187,16 +187,23 @@ function logSafetyCheck(article) {
   }
 }
 
+// APIが（スキーマ指定にもかかわらず）配列以外の値を返すケースへの防御。
+// 単一オブジェクト/文字列で返ってきた場合はラップし、null/undefinedは空配列にする。
+function toArray(v) {
+  if (Array.isArray(v)) return v;
+  return v ? [v] : [];
+}
+
 function countCharacters(article) {
   const parts = [
     article.oneLinerIntro,
-    ...(article.hypotheticalWorkflow || []),
+    ...toArray(article.hypotheticalWorkflow),
     article.beforeAfter?.before,
     article.beforeAfter?.after,
     article.beforeAfter?.note,
-    ...(article.recommendedFor || []),
-    ...(article.pricingPlans || []).map((p) => `${p.planName}${p.price}${p.description || ""}`),
-    ...(article.caveats || []),
+    ...toArray(article.recommendedFor),
+    ...toArray(article.pricingPlans).map((p) => `${p.planName || ""}${p.price || ""}${p.description || ""}`),
+    ...toArray(article.caveats),
   ];
   return parts.filter(Boolean).join("").length;
 }
@@ -212,6 +219,16 @@ async function main() {
   console.log(`[${topic.slug}] Claude APIにAIマネタイズ副業記事(${dateStr})の生成を依頼しています…`);
   const article = await withRetry(() => callClaude(), { retries: 2, baseDelayMs: 15000, label: "マネタイズ記事生成" });
 
+  // 文字数集計・安全チェックより先に生の結果を保存しておく。集計処理側で
+  // 想定外の形（配列のはずが単一値等）が来て例外になっても、生成結果自体は
+  // 失わずに確認できるようにするため。
+  fs.mkdirSync(outputDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(outputDir, "monetization-article-raw.json"),
+    JSON.stringify(article, null, 2),
+    "utf-8"
+  );
+
   const charCount = countCharacters(article);
   console.log(`文字数目安: ${charCount}字（目標1,000〜1,500字）`);
   if (charCount < 1000 || charCount > 1500) {
@@ -219,7 +236,6 @@ async function main() {
   }
   logSafetyCheck(article);
 
-  fs.mkdirSync(outputDir, { recursive: true });
   fs.writeFileSync(
     path.join(outputDir, "monetization-article.json"),
     JSON.stringify({ dateStr, category: "ai-monetization", charCount, ...article }, null, 2),
