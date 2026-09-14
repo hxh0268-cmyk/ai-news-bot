@@ -6,6 +6,7 @@
 //   docs/<topic>/archive/manifest.json … アーカイブの管理台帳
 //   docs/<topic>/images/<date>/*.png   … サムネイル画像（日付別フォルダで過去分と衝突しない）
 //   docs/<topic>/privacy.html          … プライバシーポリシー
+//   docs/<topic>/contact.html          … お問い合わせ
 //   docs/<topic>/feed.xml              … RSSフィード
 //   docs/<topic>/sitemap.xml           … サイトマップ
 //   docs/robots.txt                    … クローラー向け設定（docs直下＝サイトルート想定）
@@ -194,6 +195,7 @@ function buildHtml(data, thumbnails, mode) {
   const isArchive = mode === "archive";
   const imgBasePath = isArchive ? "../" : "";
   const privacyLink = isArchive ? "../privacy.html" : "privacy.html";
+  const contactLink = isArchive ? "../contact.html" : "contact.html";
   const archiveIndexLink = isArchive ? "./" : "archive/";
   const latestLink = isArchive ? "../" : "";
   const canonicalUrl = isArchive ? archiveUrlFor(dateStr) : PAGE_URL;
@@ -317,6 +319,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
     <a href="${archiveIndexLink}">過去記事一覧</a>
     <a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSフィード</a>
     <a href="${privacyLink}">プライバシーポリシー・広告について</a>
+    <a href="${contactLink}">お問い合わせ</a>
   </p>
 </footer>
 </body>
@@ -372,11 +375,45 @@ function buildPrivacyHtml() {
   <p>本サイトの記事は情報提供のみを目的としたものであり、投資・法律・医療等に関する専門的な助言を構成するものではありません。本サイトの情報に基づいて行った判断・行動により生じた損害について、運営者は責任を負いかねます。</p>
 
   <h2>お問い合わせ</h2>
-  <p>本サイトの内容に関するお問い合わせは、以下のお問い合わせフォームよりお願いいたします。</p>
-  <p><a href="https://forms.gle/P95xYBGizW9zwor46" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a></p>
+  <p>本サイトの内容に関するお問い合わせは、<a href="contact.html">お問い合わせページ</a>のフォームよりお願いいたします。</p>
   <p>技術的な内容（不具合報告等）については、リポジトリのIssueからのご連絡も受け付けています。</p>
 
-  <p><a href="index.html">トップページに戻る</a></p>
+  <p><a href="index.html">トップページに戻る</a> ｜ <a href="contact.html">お問い合わせ</a></p>
+</main>
+</body>
+</html>`;
+}
+
+// AdSense申請要件として必須の、独立したお問い合わせページ。
+// 実際の連絡手段はGoogleフォームへの外部リンクとする（フォーム自体は本サイトの
+// コード管理外のため、ここではURLを埋め込むのみ）。
+function buildContactHtml() {
+  const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdOz729ABGqwIyddP_yu05ZhSas4dDwsiAvPOHzyEKVZyFczQ/viewform";
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ - 今日の${topic.displayName}</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#EAF0F2;color:#3C4257;font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
+  .wrap{max-width:680px;margin:0 auto;padding:40px 24px;}
+  h1{font-size:22px;color:#151A2E;}
+  a{color:#1F8A83;}
+  .contact-btn{display:inline-block;margin:20px 0;padding:14px 28px;background:#1F8A83;color:#fff;border-radius:6px;text-decoration:none;font-weight:700;}
+  .contact-btn:hover{background:#176b65;}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>お問い合わせ</h1>
+  <p>本サイトに関するお問い合わせは、以下のフォームよりお願いいたします。</p>
+  <p><a class="contact-btn" href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォームを開く</a></p>
+  <p>技術的な内容（不具合報告等）については、リポジトリのIssueからのご連絡も受け付けています。</p>
+
+  <p><a href="privacy.html">プライバシーポリシー・広告について</a> ｜ <a href="index.html">トップページに戻る</a></p>
 </main>
 </body>
 </html>`;
@@ -502,6 +539,7 @@ function main() {
   // 最新版
   fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails, "latest"), "utf-8");
   fs.writeFileSync(path.join(docsDir, "privacy.html"), buildPrivacyHtml(), "utf-8");
+  fs.writeFileSync(path.join(docsDir, "contact.html"), buildContactHtml(), "utf-8");
 
   // 日付ごとの永久保存版
   fs.mkdirSync(archiveDir, { recursive: true });
