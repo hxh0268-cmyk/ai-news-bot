@@ -4,6 +4,9 @@
   "description": "毎日AIニュースを収集し、SNS投稿用の画像・動画を自動生成するツール",
   "type": "module",
   "private": true,
+  "scripts": {
+    "test": "node --test scripts/monetization/__tests__/"
+  },
   "dependencies": {
     "puppeteer": "^23.0.0"
   }

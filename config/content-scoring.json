@@ -1,0 +1,20 @@
+{
+  "commercialScoreWeights": {
+    "practicalUtility": 18,
+    "socialVirality": 12,
+    "freshness": 8,
+    "searchDemand": 10,
+    "originality": 8,
+    "notePotential": 10,
+    "affiliatePotential": 12,
+    "productizationPotential": 10,
+    "b2bValue": 7,
+    "futureValue": 5
+  },
+  "distributionThresholds": {
+    "FULL_DISTRIBUTION": 80,
+    "WEB_AND_X": 70,
+    "WEB_ONLY_CANDIDATE": 60,
+    "REJECT": 0
+  }
+}

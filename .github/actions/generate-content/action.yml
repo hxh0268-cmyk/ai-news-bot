@@ -58,6 +58,11 @@ runs:
         GH_TOKEN: ${{ inputs.github_token }}
       run: bash scripts/run-and-capture-error.sh node scripts/generate.mjs
 
+    # STEP1.6（収益化エンジン診断・Shadow Mode）は、意図的にまだここに
+    # 組み込んでいない。scripts/monetization/run-shadow-mode.mjsとしてコードは
+    # mainに存在するが、Shadow Modeとしての有効化は別途の明示的な承認後に行う
+    # （MONETIZATION_ENGINE.md参照）。
+
     - name: STEP1.5 アフィリエイトリンク挿入・PR表記処理
       shell: bash
       env:

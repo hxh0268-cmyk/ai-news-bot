@@ -1,0 +1,39 @@
+{
+  "categories": [
+    { "slug": "ai-news", "label": "AI速報", "targetRatio": 0.20 },
+    { "slug": "ai-tools", "label": "AIツール", "targetRatio": 0.15 },
+    { "slug": "ai-work", "label": "AI仕事術", "targetRatio": 0.25 },
+    { "slug": "ai-automation", "label": "AI自動化", "targetRatio": 0.15 },
+    { "slug": "ai-monetization", "label": "AI副業・収益化", "targetRatio": 0.10 },
+    { "slug": "ai-comparison", "label": "比較・ランキング", "targetRatio": 0.05 },
+    { "slug": "ai-business", "label": "中小企業DX", "targetRatio": 0.05 },
+    { "slug": "ai-future", "label": "将来技術", "targetRatio": 0.05 }
+  ],
+  "categoryAliases": {
+    "ai-agents": "ai-automation",
+    "ai-howto": "ai-work"
+  },
+  "contentTypes": ["breaking", "explainer", "how-to", "comparison", "commercial"],
+  "sourceTypeHierarchy": [
+    "PRIMARY_OFFICIAL",
+    "PRIMARY_COMPANY",
+    "GOVERNMENT",
+    "REGULATOR",
+    "MAJOR_MEDIA",
+    "INDUSTRY_MEDIA",
+    "SECONDARY_MEDIA",
+    "SOCIAL_VERIFIED",
+    "SOCIAL_UNVERIFIED",
+    "UNKNOWN"
+  ],
+  "highRiskCategories": [
+    "medical",
+    "legal",
+    "investment",
+    "cybersecurity-incident",
+    "personal-safety",
+    "regulation"
+  ],
+  "evergreenPotentialLevels": ["HIGH", "MEDIUM", "LOW"],
+  "xPostStyles": ["BREAKING", "EXPLAINER", "HOW_TO", "COMPARISON", "INSIGHT"]
+}

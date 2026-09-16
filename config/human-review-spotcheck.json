@@ -1,0 +1,10 @@
+{
+  "_comment": "Section 26 Initial Rollout Human Spot-Check。rolloutStartDateからの経過日数でどのフェーズかを判定する。",
+  "rolloutStartDate": null,
+  "phases": [
+    { "name": "week1-2", "maxDays": 14, "sampleRatio": 1.0, "appliesTo": ["FULL_DISTRIBUTION", "WEB_AND_X"] },
+    { "name": "week3-4", "maxDays": 28, "sampleRatio": 0.3, "appliesTo": ["FULL_DISTRIBUTION", "WEB_AND_X"] },
+    { "name": "week5-plus", "maxDays": null, "sampleRatio": 0.1, "appliesTo": ["FULL_DISTRIBUTION", "WEB_AND_X"] }
+  ],
+  "highRiskSampleRatio": 1.0
+}
