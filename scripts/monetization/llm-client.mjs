@@ -7,8 +7,12 @@
 // フェース・リトライ方針（scripts/retry.mjsのwithRetryをそのまま利用）を踏襲した
 // 薄いラッパーをここに新設する。既存のgenerate.mjs等は変更しない。
 import { withRetry } from "../retry.mjs";
+import { buildMockResponse } from "../mock-response.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
+// MOCK_MODE=true の間は実際のAnthropic API呼び出しを一切行わず、
+// tool.input_schemaの形だけを満たすダミーレスポンスを返す（APIキー不要）。
+const MOCK_MODE = process.env.MOCK_MODE === "true";
 
 /**
  * 構造化出力（tool-use）を強制してClaude APIを呼び出す。
@@ -21,6 +25,10 @@ const API_KEY = process.env.ANTHROPIC_API_KEY;
  * @param {number} [opts.maxTokens]
  */
 export async function callStructured({ model, system, userPrompt, tool, label = "monetization-engine呼び出し", maxTokens = 4000 }) {
+  if (MOCK_MODE) {
+    return buildMockResponse(tool.input_schema);
+  }
+
   if (!API_KEY) {
     throw new Error("ANTHROPIC_API_KEYが設定されていません。");
   }

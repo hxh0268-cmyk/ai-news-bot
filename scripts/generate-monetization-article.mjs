@@ -17,9 +17,13 @@ import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
 import { loadRecentMonetizationTools, buildMonetizationToolExclusionSection } from "./recent-monetization-tools.mjs";
+import { buildMockResponse } from "./mock-response.mjs";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
-if (!API_KEY) {
+// MOCK_MODE=true の間は実際のAnthropic API呼び出しを一切行わないため、
+// APIキー未設定でも起動できる。
+const MOCK_MODE = process.env.MOCK_MODE === "true";
+if (!API_KEY && !MOCK_MODE) {
   console.error("ANTHROPIC_API_KEYが設定されていません。GitHub Secretsに登録してください。");
   process.exit(1);
 }
@@ -152,6 +156,10 @@ const SUBMIT_TOOL = {
 };
 
 async function callClaude() {
+  if (MOCK_MODE) {
+    return buildMockResponse(ARTICLE_SCHEMA);
+  }
+
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
