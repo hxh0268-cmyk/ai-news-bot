@@ -1,0 +1,56 @@
+[
+  {
+    "importance": 1,
+    "category": "Business AI",
+    "catColor": "#7C6FE0",
+    "headline": "Claude、中小企業向け業務を43種自動化",
+    "dek": "経理・請求書対応など日々の実務をAIが代行",
+    "body": [
+      "Anthropicが9月15日、「Claude for Small Business」を大きくアップデートした。目玉は43種類の業務ワークフローと、Shopify、Salesforce、Zoom、Xero、Gusto、Square、Stripe、Zapierなど27種類の業務ソフトとの新連携だ。",
+      "自動化された作業は必ず「人間の承認」を挟んでから実行される。経理の締め処理、請求書の督促、契約書のチェック、マーケ施策の立案まで、専任担当がいない会社でも回せるようになる。",
+      "秋には無料ワークショップを全米で開くツアーも予定している。個人事業主や数十人規模の会社でも、大企業並みの効率化に手が届く値段で使える環境が整いつつある。"
+    ],
+    "why": "中小企業はこれまで人手やコストの壁でAI導入が後回しにされがちだった。バックオフィス業務を丸ごと任せられるとなれば、少人数の会社でも大企業並みの効率化が現実味を帯びる。日本の中小企業やフリーランスの働き方にも波及しそうな動きだ。",
+    "chips": [
+      "Anthropic",
+      "Claude",
+      "中小企業",
+      "業務自動化"
+    ],
+    "sourceLine": "Anthropic公式発表ほか、2026年9月15日",
+    "videoId": null,
+    "captionX": "Claudeが中小企業の実務を43種も自動化。経理・請求書・契約書チェックまでAI任せに。フリーランスの働き方まで変わりそうな予感 #Anthropic #AI活用",
+    "captionThreads": "中小企業向けClaude、かなり大幅刷新。43種類の業務を自動化して経理から契約書チェックまでこなすらしい。人の承認は必須だけど、小さい会社ほど効いてきそう。",
+    "captionInstagram": "Anthropicが「Claude for Small Business」を刷新、43種類の業務自動化と27件の業務ソフト連携を追加しました📊 経理の締め処理や請求書の督促、契約書チェックまで、人の承認を経てAIが代行してくれます。少人数の会社やフリーランスでも大企業並みの効率化に手が届く時代が近づいてきました。#Anthropic #Claude #中小企業 #業務効率化 #AI活用",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Google",
+    "catColor": "#F4B942",
+    "headline": "会話止めず裏で作業、Gemini新音声AI公開",
+    "dek": "低コスト設計で日常アプリへの搭載が加速へ",
+    "body": [
+      "Googleが9月15日、リアルタイム音声対話モデル「Gemini 3.8 Live」と、より深い推論を行う「Gemini 3.8 Live Extended Thinking」を発表した。会話を続けながら裏でツールやAPIを動かせて、97の言語も会話中に自動検知・切り替えできる。",
+      "一般ユーザー向けには「検索Live」や「Gemini Live」経由で同日から順次提供され、Googleドキュメント、Gmail、Keepといった普段使いのサービスにも展開されていく。開発者はGemini APIやGoogle AI Studioから触れる。",
+      "第三者機関の音声品質評価でも上位に入っており、コスト効率と自然な会話を両立させたモデルとして、カスタマーサポートや音声アシスタントへの搭載が今後広がりそうだ。"
+    ],
+    "why": "音声AIが「考えながら話す」ようになれば、電話予約やカスタマーサポート、スマホの音声操作といった日常サービスの応答が待たされずスムーズになる可能性がある。低コスト設計なので、無料サービスへの搭載も進みやすい。",
+    "chips": [
+      "Google",
+      "Gemini",
+      "音声AI",
+      "Gemini Live"
+    ],
+    "sourceLine": "Google公式ブログ、ITmedia NEWS 2026年9月15日〜16日",
+    "videoId": null,
+    "captionX": "Googleが新音声AI「Gemini 3.8 Live」公開。会話を止めずに裏でタスクをこなせて97言語対応。スマホの音声アシスタント、変わるかも #Google #Gemini",
+    "captionThreads": "Geminiの新音声モデル、話しながら裏で作業できるらしい。97言語対応でコストも抑えめ。検索やGmailにも広がっていくみたいだから、気づいたら使ってる人続出しそう。",
+    "captionInstagram": "Googleが9月15日、リアルタイム音声AI「Gemini 3.8 Live」と、より賢い「Extended Thinking」版を発表しました🎙️ 会話を続けながら裏で予約やタスク実行ができて、97言語も自動で切り替わります。検索やGmail、Keepにも順次展開予定で、普段使うアプリの「声のAI」がぐっと自然になりそうです。#Google #Gemini #音声AI #スマホアプリ #AI活用",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]

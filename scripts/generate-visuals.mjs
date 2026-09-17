@@ -108,7 +108,8 @@ ${KEYWORD_PALETTE}
 - No text, no letters, no words, no writing, no typography, no logos, no watermarks,
   no UI elements, no signage, no screens or monitors with any markings. Pure abstract
   architectural/atmospheric scene only.
-- 縦長構図。画面下部3割程度は見出しテキストを重ねられるよう、比較的落ち着いたトーンにする
+- 縦長構図。画面下部3割程度は、主要な被写体や建築のディテールを避け、単色に近い
+  滑らかな壁面・床面・空間などの、視覚的に静かでコントラストの低い余白にする
 - 人物を描く場合は、顔の判別できない小さなシルエット・後ろ姿程度に留める
 `.trim();
 }
