@@ -23,6 +23,7 @@ const SITE_URL = process.env.SITE_URL || "https://hxh0268-cmyk.github.io/ai-news
 const TOPIC_URL = `${SITE_URL}/${topic.slug}`;
 const PAGE_URL = `${TOPIC_URL}/`;
 const ARCHIVE_INDEX_URL = `${TOPIC_URL}/archive/`;
+const ABOUT_URL = `${TOPIC_URL}/about.html`;
 const archiveUrlFor = (date) => `${TOPIC_URL}/archive/${date}.html`;
 
 const archiveDir = path.join(docsDir, "archive");
@@ -211,6 +212,7 @@ function buildHtml(data, thumbnails, mode) {
   const imgBasePath = isArchive ? "../" : "";
   const privacyLink = isArchive ? "../privacy.html" : "privacy.html";
   const contactLink = isArchive ? "../contact.html" : "contact.html";
+  const aboutLink = isArchive ? "../about.html" : "about.html";
   const archiveIndexLink = isArchive ? "./" : "archive/";
   const latestLink = isArchive ? "../" : "";
   const canonicalUrl = isArchive ? archiveUrlFor(dateStr) : PAGE_URL;
@@ -335,10 +337,68 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   <p>
     <a href="${archiveIndexLink}">過去記事一覧</a>
     <a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSフィード</a>
+    <a href="${aboutLink}">運営方針・AIについて</a>
     <a href="${privacyLink}">プライバシーポリシー・広告について</a>
     <a href="${contactLink}">お問い合わせ</a>
   </p>
 </footer>
+</body>
+</html>`;
+}
+
+// 「このサイトは何か・どう作られているか」を説明する独立ページ。
+// privacy.htmlのAI開示は簡潔な法的必須事項のみに留め、詳しい制作プロセスはこちらに集約する。
+// noindexにせず検索エンジンにインデックスさせることで、透明性そのものを信頼構築・SEOの材料にする。
+function buildAboutHtml() {
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>運営方針・AIについて - 今日の${topic.displayName}</title>
+<meta name="description" content="今日の${topic.displayName}がどのように作られているか、AIの活用方法や出典の扱いについて説明しています。">
+<link rel="canonical" href="${ABOUT_URL}">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#EAF0F2;color:#3C4257;font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
+  .wrap{max-width:680px;margin:0 auto;padding:40px 24px;}
+  h1{font-size:22px;color:#151A2E;}
+  h2{font-size:16px;color:#151A2E;margin-top:32px;}
+  a{color:#1F8A83;}
+  ul{padding-left:20px;}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>運営方針・AIについて</h1>
+  <p>「今日の${topic.displayName}」は、生成AIを使って毎日自動更新しているニュースまとめサイトです。ここでは、どのような仕組みでコンテンツを作っているか、出典をどう扱っているかをまとめています。</p>
+
+  <h2>このサイトの目的</h2>
+  <p>国内外のAI関連ニュースの中から、その日の重要なトピックを厳選し、専門知識がない方にも分かりやすい形で毎朝お届けすることを目的としています。</p>
+
+  <h2>コンテンツができるまで</h2>
+  <p>毎日決まった時刻に、以下の流れで自動的に記事を作成しています。</p>
+  <ul>
+    <li>AI（Claude／Anthropic社）が、その日のAI関連ニュースをWeb検索で収集します</li>
+    <li>集めたニュースの中から重要度の高いものを選び、要約記事の下書きを作成します</li>
+    <li>文体を整える工程を経て、記事として仕上げます</li>
+    <li>生成された記事はいったん確認用のPull Requestとして提出され、<strong>運営者が内容（見出しの妥当性・情報の正確性・出典の有無など）を確認したうえで承認した記事のみ</strong>がサイトに公開されます</li>
+  </ul>
+  <p>つまり、記事の文章自体はAIが作成していますが、公開前には人間による確認を経ています。ただし、確認は見出し・カテゴリの偏り・出典の有無といった観点が中心であり、記事内容の一言一句をファクトチェックしているわけではない点はご了承ください。</p>
+
+  <h2>出典の扱いについて</h2>
+  <p>本サイトの記事はニュースの要約であり、一次情報ではありません。各記事の末尾に出典となった媒体名・日付を明記しており、元記事のURLを確認できた場合はリンクも掲載しています（URLが確認できなかった媒体は出典として掲載していません）。正確な内容は、必ずリンク先の元記事をご確認ください。</p>
+  <p>出典として選ぶ媒体は、通信社・全国紙・公式発表・大手専門メディアなど、信頼性の高いものを優先するようにしています。</p>
+
+  <h2>誤りに気づいたら</h2>
+  <p>AIによる自動生成という性質上、誤りや不正確な内容を含む可能性があります。お気づきの点がございましたら、<a href="contact.html">お問い合わせページ</a>からご連絡ください。内容を確認のうえ、必要に応じて訂正いたします。</p>
+
+  <h2>運営者情報</h2>
+  <p>本サイトの運営者：BAL（ペンネーム）</p>
+
+  <p>広告・アフィリエイト・Cookie等の取り扱いについては<a href="privacy.html">プライバシーポリシー・広告について</a>のページをご覧ください。</p>
+  <p><a href="index.html">トップページに戻る</a> ｜ <a href="contact.html">お問い合わせ</a></p>
+</main>
 </body>
 </html>`;
 }
@@ -384,7 +444,7 @@ function buildPrivacyHtml() {
   <p>本サイトは、氏名・住所・電話番号・メールアドレスなど、ユーザーを個人として特定できる情報を直接収集することはありません。上記の広告配信・アクセス解析の各サービスがCookie等を通じて取得する情報も、匿名化された利用状況データにとどまります。</p>
 
   <h2>AI生成コンテンツについて</h2>
-  <p>本サイトの記事は、生成AI（Claude等）を用いて自動生成しています。国内外のニュース記事等の情報源をもとに、その内容を要約・分析した上で作成しており、記事そのものが一次情報ではありません。一次情報については、各記事末尾に記載の出典表記をあわせてご確認ください。</p>
+  <p>本サイトの記事は、生成AI（Claude等）を用いて自動生成しています。国内外のニュース記事等の情報源をもとに、その内容を要約・分析した上で作成しており、記事そのものが一次情報ではありません。一次情報については、各記事末尾に記載の出典表記をあわせてご確認ください。制作プロセスの詳細は<a href="about.html">運営方針・AIについて</a>のページで説明しています。</p>
 
   <h2>免責事項・訂正について</h2>
   <p>本サイトの記事はAIによって生成しているという性質上、誤り・不正確な内容を含む可能性があります。内容の正確性・完全性を保証するものではありません。</p>
@@ -526,7 +586,7 @@ function buildFeedXml(manifest) {
 }
 
 function buildSitemapXml(manifest) {
-  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL]
+  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL, ABOUT_URL]
     .map((u) => `  <url><loc>${u}</loc><lastmod>${dateStr}</lastmod></url>`)
     .join("\n");
   const archiveEntries = manifest
@@ -555,6 +615,7 @@ function main() {
 
   // 最新版
   fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails, "latest"), "utf-8");
+  fs.writeFileSync(path.join(docsDir, "about.html"), buildAboutHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "privacy.html"), buildPrivacyHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "contact.html"), buildContactHtml(), "utf-8");
 
@@ -572,7 +633,7 @@ function main() {
   fs.writeFileSync(path.join(docsDir, "..", "robots.txt"), buildRobotsTxt(), "utf-8");
 
   console.log(
-    `生成しました: docs/${topic.slug}/index.html, archive/${dateStr}.html, archive/index.html, feed.xml, sitemap.xml, robots.txt（サムネイル${thumbnails.size}枚同梱）`
+    `生成しました: docs/${topic.slug}/index.html, about.html, archive/${dateStr}.html, archive/index.html, feed.xml, sitemap.xml, robots.txt（サムネイル${thumbnails.size}枚同梱）`
   );
 }
 
