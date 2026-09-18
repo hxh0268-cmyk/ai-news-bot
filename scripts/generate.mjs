@@ -67,6 +67,7 @@ ${exclusionSection}
 - why: なぜ重要かの説明（日本語、2〜3文）
 - chips: 関連キーワード（配列）
 - sourceLine: 出典（媒体名、日付）
+- sources: 出典の実URL一覧（配列。各要素は { name: sourceLineに書いた媒体名と同じ表記, url: web_search結果から得た実際の記事URL }。sourceLineに書いた媒体名の数だけ用意し、1件も省略しないこと。確実なURLが取得できない媒体は候補から外し、sourceLine自体もその媒体名を含めないこと）
 - videoId: 関連する公式YouTube動画のIDが確実に分かる場合のみ。分からなければ null
 - captionX: X投稿用の文章（日本語、120字以内、ハッシュタグ2個程度含む）
 - captionThreads: Threads投稿用の文章（日本語、200字以内、少し会話的なトーン）
@@ -87,6 +88,12 @@ ${exclusionSection}
 7件全体が、Google・OpenAI・Anthropicの3社の話題ばかりに偏らないようにしてください。Microsoft、Meta、NVIDIA、Amazonなど他の主要プレイヤーや、国内企業（例: SoftBank、NTT、Sony、楽天など）、政府・規制動向、大学・研究機関の発表なども積極的に候補として検討し、7件のうち少なくとも2〜3件は上記3社以外の話題になるよう意識してください（該当する重要ニュースが本当に見当たらない日まで、無理に数合わせをする必要はありません）。
 
 正確性を最優先してください。数値や固有名詞は必ずWeb検索で確認したものだけを使い、不確かな情報は書かないでください。
+
+【出典URLについて・厳守】
+sources.url には、web_searchの検索結果に実際に表示されたURLをそのままコピーして使ってください。
+推測でURLを組み立てたり、記事個別のURLが分からないからといってサイトのトップページで代用したり、
+存在しないURLを創作したりすることは禁止します。確実なURLが確認できない媒体は、sources・sourceLine
+の両方から除外してください（無理に数を揃える必要はありません）。
 
 【固有名詞の表記ルール】
 企業名・サービス名・製品名・アプリ名などの固有名詞は、カタカナ訳をせず、必ず公式の英語表記（アルファベット）のまま使ってください。
@@ -117,6 +124,14 @@ const NEWS_ITEM_SCHEMA = {
     why: { type: "string" },
     chips: { type: "array", items: { type: "string" } },
     sourceLine: { type: "string" },
+    sources: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: { name: { type: "string" }, url: { type: "string" } },
+        required: ["name", "url"],
+      },
+    },
     videoId: { type: ["string", "null"] },
     captionX: { type: "string" },
     captionThreads: { type: "string" },
@@ -135,6 +150,7 @@ const NEWS_ITEM_SCHEMA = {
     "body",
     "why",
     "sourceLine",
+    "sources",
     "captionX",
     "captionThreads",
     "captionInstagram",
@@ -243,7 +259,7 @@ async function humanizeItems(draftItems) {
         {
           role: "user",
           content:
-            "以下は7本のニュース記事の下書きです。編集方針に沿って、body・why・captionX・captionThreads・captionInstagram の文章だけを自然な文体に書き直してください（headline・dek・importance・category・catColor・stats・chips・sourceLine・videoId は変更しないこと）。\n\n" +
+            "以下は7本のニュース記事の下書きです。編集方針に沿って、body・why・captionX・captionThreads・captionInstagram の文章だけを自然な文体に書き直してください（headline・dek・importance・category・catColor・stats・chips・sourceLine・sources・videoId は変更しないこと）。\n\n" +
             "【captionX / captionThreads / captionInstagram について・厳守】\n" +
             "この3つは文字数制限があるからといって「元の文のまま」提出することを禁止します。" +
             "たとえ下書きの文章が既に自然に見えたとしても、必ず言葉選び・語尾・リズムのどこかを変えてください。" +
