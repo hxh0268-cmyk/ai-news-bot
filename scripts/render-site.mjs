@@ -64,6 +64,21 @@ function escAttr(s) {
   return String(s ?? "").replace(/"/g, "&quot;");
 }
 
+// sourceLine（例:「CNN, AP通信 (2026年9月17日)」）に含まれる各媒体名を、
+// item.sourcesにある対応URLがあればリンクに置き換える。
+// 旧アーカイブ記事などsourcesが無いデータはこれまで通りプレーンテキスト表示にフォールバックする。
+function linkedSourceLine(item) {
+  const line = item.sourceLine || "";
+  if (!Array.isArray(item.sources) || item.sources.length === 0) return line;
+  let result = line;
+  for (const s of item.sources) {
+    if (!s || !s.name || !s.url || !result.includes(s.name)) continue;
+    const link = `<a href="${escAttr(s.url)}" target="_blank" rel="noopener noreferrer">${s.name}</a>`;
+    result = result.split(s.name).join(link);
+  }
+  return result;
+}
+
 // top5.jsonはimportanceの値で昇順ソートされているため、cards/{importance}.png が
 // その記事のサムネイルとして一意に対応する。日付別フォルダにコピーすることで、
 // 過去のアーカイブページの画像を後日の実行で上書きしてしまう事故を防ぐ。
@@ -116,7 +131,7 @@ function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase) {
     <p class="dek">${item.dek}</p>
     ${(item.body || []).map((p) => `<p>${p}</p>`).join("\n")}
     <div class="why"><h3>なぜ重要か</h3><p>${item.why}</p></div>
-    <div class="source-line">出典：${item.sourceLine}</div>
+    <div class="source-line">出典：${linkedSourceLine(item)}</div>
     ${shareButtonsHtml(item, permalink)}
   </article>`;
 }
@@ -272,6 +287,8 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .why{background:var(--ink);color:#fff;border-radius:6px;padding:16px 18px;margin-top:16px;font-size:14px;}
   .why h3{display:block;color:#F4B942;font-size:11px;margin:0 0 6px;font-weight:700;font-family:'Zen Kaku Gothic New',sans-serif;}
   .source-line{font-size:12px;color:var(--slate-soft);margin-top:16px;font-family:'JetBrains Mono',monospace;}
+  .source-line a{color:var(--slate-soft);text-decoration:underline;text-underline-offset:2px;}
+  .source-line a:hover{color:var(--ink);}
   .share-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
   .share-btn{font-size:12px;padding:6px 12px;border-radius:20px;border:1px solid #DCE6E8;color:var(--slate);text-decoration:none;}
   .share-btn:hover{background:#DCE6E8;}
