@@ -1,0 +1,236 @@
+[
+  {
+    "importance": 1,
+    "category": "Recruiting",
+    "catColor": "#E1636F",
+    "headline": "オンライン面接に潜むAI応募者、企業が看破",
+    "dek": "声と口の動きのずれから発覚、採用面接に新たな脅威",
+    "body": [
+      "9月10日、都内企業の中途採用オンライン面接に「AIとみられる応募者」が現れたというXの投稿が話題になった。面接官がAI使用を疑って聞くと、応募者は「使っていません」と否定。ただ声と口の動きが微妙にずれていたり、応募先企業名をきちんと読めなかったりと、なりすましを疑わせる不自然さがあったという。",
+      "実はAIを使った選考対策、もう珍しい話じゃない。Gartnerの調査によれば求職者の39%が応募プロセスで何らかのAIを使っており、6%は面接で他人になりすました経験があると答えている。同社は2028年までに、世界の応募者プロフィールの4分の1が偽物になると見込んでいる。",
+      "生成AIにその場で回答を考えさせる、声を変える、映像の顔を別人にすり替える――手口はどんどん多様化していて、企業側も本人確認を強めたり、「なぜそう考えたのか」を掘り下げる構造化面接を取り入れたりと、これまでとは違うリテラシーが求められる局面に来ている。"
+    ],
+    "why": "生成AIの精度が上がったことで、就職・転職面接の「なりすまし」はもう理屈上の話じゃなく現実に起きている。求職者にとっても企業にとっても、今すぐ使える見抜き方や対策を知っておいて損はない。",
+    "sourceLine": "ITmedia ビジネスオンライン、FNNプライムオンライン（2026年9月18日）",
+    "sources": [
+      {
+        "name": "ITmedia ビジネスオンライン",
+        "url": "https://www.itmedia.co.jp/business/articles/2609/18/news021.html"
+      },
+      {
+        "name": "FNNプライムオンライン",
+        "url": "https://news.yahoo.co.jp/articles/a81d97b3f764e2b8fd34f3c353dc89a3a07d6382"
+      }
+    ],
+    "chips": [
+      "採用AI",
+      "なりすまし",
+      "オンライン面接",
+      "Gartner"
+    ],
+    "stats": [
+      {
+        "n": "39%",
+        "l": "応募プロセスでAIを利用した求職者の割合(Gartner)"
+      },
+      {
+        "n": "25%",
+        "l": "2028年までに偽プロフィールになると予測される応募者の割合"
+      }
+    ],
+    "videoId": null,
+    "captionX": "オンライン面接に「AIなりすまし」が出現？声と口のズレで企業側が見抜いた事例が話題です。転職活動中の方は要注意。 #AI面接 #採用",
+    "captionThreads": "「面接にAIが来た」というニュース、他人事じゃないかも。声と口の動きが合わない、社名を読み間違えるといった違和感から発覚したそうです。求職者も企業も、これからは目を光らせる必要がありそう。",
+    "captionInstagram": "オンライン面接に現れたのは、なんとAI応募者かもしれない――。都内企業の中途採用面接で、声と口の動きが噛み合わない、企業名をうまく読めないといった違和感から、なりすましが疑われた事例が話題になっています。Gartnerの調査によると、求職者の39%が応募プロセスでAIを使い、6%はなりすましに関与した経験があるとのこと。2028年までには世界の応募者プロフィールの4分の1が偽物になるという予測も出ています。企業側には構造化面接などの新しい対策が、求職者側にも正しいAI活用の知識が求められる時代になってきました。 #AI面接 #採用活動 #転職 #なりすまし #生成AI",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "AI Policy",
+    "catColor": "#7C6FE0",
+    "headline": "AI大手の自主規制構想に「カルテル」批判",
+    "dek": "Cohere CEOがOpenAIなど3社の標準化構想を痛烈非難",
+    "body": [
+      "OpenAI、Anthropic、Google傘下DeepMindの幹部たちが、金融業界の自主規制団体FINRAをモデルにしたAI業界向け標準化団体の設立を、7月からひそかに協議していたことが明らかになった。発案者はDeepMindのデミス・ハサビス氏とされている。",
+      "この動きに、Cohereの共同創業者兼CEOアイダン・ゴメス氏が噛みついた。9月13日に公開したエッセイでこの構想を「カルテル」と痛烈に批判し、「最も重要な技術のルールを、一握りの商業的に結びついた企業が書くべきではない」と主張したのだ。",
+      "米政府側にも懐疑的な声はある。財務長官はAI企業への責任保護要請を拒否しており、FTC委員長も独禁法の適用除外を求める声には「深く疑ってかかるべきだ」とコメントしている。"
+    ],
+    "why": "AIの安全基準を「誰が決めるのか」は、これからの規制や競争環境、そして新興AI企業が市場に食い込めるかどうかを左右する大事な論点。巨大企業だけでルールが固まってしまえば、私たちの選択肢や価格競争の幅が狭くなりかねない。",
+    "sourceLine": "The Globe and Mail、Cohere公式ブログ（2026年9月）",
+    "sources": [
+      {
+        "name": "The Globe and Mail",
+        "url": "https://www.theglobeandmail.com/business/technology/article-cohere-ceo-aidan-gomez-criticizes-calls-for-ai-slowdown/"
+      },
+      {
+        "name": "Cohere公式ブログ",
+        "url": "https://cohere.com/blog/who-gets-to-define-the-rules-for-ai"
+      }
+    ],
+    "chips": [
+      "Cohere",
+      "OpenAI",
+      "Anthropic",
+      "AI規制",
+      "カルテル"
+    ],
+    "stats": [
+      {
+        "n": "3社",
+        "l": "標準化団体構想を協議しているAI大手"
+      },
+      {
+        "n": "7月から",
+        "l": "非公開協議が続いているとされる期間"
+      }
+    ],
+    "videoId": null,
+    "captionX": "AI大手3社の「自主規制団体」構想に、Cohere CEOが真っ向から「カルテルだ」と反論。ルールを誰が決めるのかが焦点に。 #AI規制 #Cohere",
+    "captionThreads": "OpenAI・Anthropic・Googleが水面下で進めていたAI標準化団体の構想に、Cohereのトップが待ったをかけました。安全対策の名を借りた囲い込みなのか、本当に必要なルール作りなのか。議論はまだ続きそう。",
+    "captionInstagram": "AI業界の「自主規制」を巡って、大きな対立が表に出てきました。OpenAI、Anthropic、Google傘下DeepMindの幹部らが、金融のFINRAを参考にした業界標準化団体の設立を7月からひそかに協議していたことが判明したのです。これに対しCohereの共同創業者兼CEOアイダン・ゴメス氏は「カルテルだ」と痛烈に批判、一部の企業だけでルールを決めるべきではないと主張しました。米政府内からも独禁法の適用除外への懸念が上がっています。AIの安全基準を誰が決めるのか――これは私たちが使うAIサービスの選択肢にも直結する話です。 #AI規制 #Cohere #OpenAI #Anthropic #テクノロジー政策",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Data Privacy",
+    "catColor": "#F4B942",
+    "headline": "RIZAP社員、私用AIに顧客情報を誤送信という発表",
+    "dek": "疾患情報など要配慮個人情報が外部生成AIに流出",
+    "body": [
+      "RIZAPグループは9月3日、子会社RIZAPの社員が私的に使っている外部の生成AIサービスに、顧客の氏名や疾患などの個人情報・要配慮個人情報を誤ってアップロードしていたと発表し、謝罪した。誤送信されたのは特定保健指導管理システムに登録されていた対象者データの一部で、氏名や生年月日、保険証記号番号、住所、疾患情報などが含まれていたという。",
+      "業務委託元からはもっと具体的な数字も出てきている。全国土木建築国民健康保険組合は対象データが1万9996人分あったと発表し、IHIグループ健康保険組合も210人が対象だったと明らかにした。",
+      "AI運営事業者に確認したところ、個人を特定できる情報を含むファイルはモデルの学習には使われていないとの回答だったそうだが、事業者側の役職員が閲覧できてしまう状態だった可能性については、まだ確認中とのことだ。"
+    ],
+    "why": "生成AIを個人的に業務で使う「シャドーAI」による情報漏えいは、業種を問わずどこの職場でも起こりうる話。仕事で生成AIを使う際は、顧客情報や機密データの扱いに気をつけたいという教訓になる。",
+    "sourceLine": "ITmedia NEWS、Yahoo!ニュース エキスパート（2026年9月）",
+    "sources": [
+      {
+        "name": "ITmedia NEWS",
+        "url": "https://www.itmedia.co.jp/news/article/2609/04/2000001161/"
+      },
+      {
+        "name": "Yahoo!ニュース エキスパート",
+        "url": "https://news.yahoo.co.jp/expert/articles/9e9e1f838f45cee12f012a3f9fb2a45a87c89cc7"
+      }
+    ],
+    "chips": [
+      "個人情報漏えい",
+      "シャドーAI",
+      "生成AI",
+      "RIZAP"
+    ],
+    "stats": [
+      {
+        "n": "210人",
+        "l": "IHIグループ健康保険組合が対象と公表した人数"
+      },
+      {
+        "n": "約2万人",
+        "l": "全国土木建築国民健康保険組合が公表した対象データ数"
+      }
+    ],
+    "videoId": null,
+    "captionX": "RIZAP社員が私用の生成AIに顧客の疾患情報などを誤って送っていたと謝罪。「シャドーAI」の怖さが改めて浮き彫りに。 #個人情報 #生成AI",
+    "captionThreads": "仕事を早く片付けようとした結果、顧客の疾患情報まで外部AIに渡ってしまった…というRIZAPの件。悪気がなくても起きるのがシャドーAIの厄介なところ。自分の職場は大丈夫か、気になった人も多いはず。",
+    "captionInstagram": "RIZAPグループは、子会社の社員が個人利用している外部の生成AIサービスに、顧客の氏名や疾患情報などの個人情報を誤ってアップロードしていたと発表し、謝罪しました。業務委託元の健康保険組合からは、約2万人分・210人分という具体的な対象者数も公表されています。AI事業者側は「モデルの学習には使われていない」と回答しているものの、閲覧された可能性については現在も調査中とのこと。生成AIは仕事を効率化してくれる便利な道具ですが、私的なツールに機密情報を入力すると思わぬ漏えいにつながります。自分の職場のAI利用ルール、この機会に見直してみてもいいかもしれません。 #個人情報保護 #生成AI #シャドーAI #情報漏えい #働き方",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "AI Infrastructure",
+    "catColor": "#1F8A83",
+    "headline": "Google・NVIDIAら電力連合を結成という発表",
+    "dek": "データセンター電力不足解消へ、Anthropicも参加する新連合",
+    "body": [
+      "電力網ソフトウェア企業Emerald AIは9月17日、Google、NVIDIAと手を組み、データセンター向けの電力確保を目指す新連合「AI Energy Management Alliance（AEMA）」を立ち上げたと発表した。Anthropicのほか、AES、コンステレーション、ナショナル・グリッドといった大手電力会社も名を連ねている。",
+      "AEMAが狙うのは、データセンターに不要不急の処理を一時止めてもらったり、稼働を別拠点に振り分けたりする「デマンドレスポンス」。これによって電力網に新たに接続できるデータセンター容量を、最大100ギガワット分増やすことを目指すという。",
+      "Emerald AIは直近、Energize CapitalとDCVCが主導するシリーズAで1億5000万ドルを調達したばかりで、この資金は技術の展開拡大に充てる計画だ。"
+    ],
+    "why": "AI開発の急拡大でデータセンターの電力需要が逼迫する中、新しい発電所を建てずに電力網を効率よく使えれば、電気料金の急上昇を抑える一助になる。大手3社が足並みをそろえたところに、業界の本気度がにじむ。",
+    "sourceLine": "TechCrunch（2026年9月17日）",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/"
+      }
+    ],
+    "chips": [
+      "データセンター",
+      "電力",
+      "Emerald AI",
+      "Google",
+      "NVIDIA",
+      "Anthropic"
+    ],
+    "stats": [
+      {
+        "n": "100GW",
+        "l": "実現を目指す追加接続容量"
+      },
+      {
+        "n": "1.5億ドル",
+        "l": "Emerald AIが調達したシリーズA資金"
+      }
+    ],
+    "videoId": null,
+    "captionX": "Google・NVIDIA・Anthropicが電力網スタートアップと組み、データセンター向け電力を最大100GW分確保する新連合を結成。 #データセンター #電力",
+    "captionThreads": "AIブームで電力が足りない問題に、大手3社がついに本腰を入れて動き出しました。新しい発電所を作るのではなく、使い方を賢く調整して容量を増やそうという発想だそうです。電気代への波及効果にも注目したい。",
+    "captionInstagram": "AIの急拡大で心配されている「電力不足」問題に、Google・NVIDIA・Anthropicが動きました。電力網ソフトウェア企業のEmerald AIと組み、データセンターの不要な処理を一時停止・分散させることで電力網への負荷を抑える新連合「AEMA」を結成したのです。目指すのは最大100ギガワット分の新規データセンター接続。Emerald AIは直近1.5億ドルの資金調達も終えています。新しい発電所を次々建てるのではなく賢く使う方向にシフトすることで、将来の電気料金の急上昇を抑える効果も期待されています。 #データセンター #電力問題 #Google #NVIDIA #Anthropic",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "Global Policy",
+    "catColor": "#7C6FE0",
+    "headline": "インド、半導体育成に2兆円投資を表明",
+    "dek": "Applied MaterialsやLam Researchが巨額投資を発表",
+    "body": [
+      "モディ首相は9月17日、半導体産業育成策「インド半導体ミッション」の第2弾を発表し、投資規模を第1弾の80億ドルから135億ドル(約2兆円)へと大きく引き上げると表明した。設計、製造装置・材料、ファブ、先端パッケージング、研究開発、人材育成の6分野を重点分野に据えている。",
+      "米Applied Materialsは今後10年間で50億ドルを投じ、インドに研究拠点「India Vision 2035」を新設すると発表。米Lam Researchも約100億ルピーをかけて、インド初となる半導体部材（シリコンインゴット）製造工場を建てる方針を示した。",
+      "現時点で12件の半導体製造プロジェクトが承認され、うち3件はすでに商用生産に入っている。モディ首相はこの日、新たに2拠点での商用生産開始も発表した。"
+    ],
+    "why": "半導体はAIチップの供給網を支える土台。インドが巨額投資で存在感を強めれば、今後のAIハードウェアの供給や価格に長い目で影響を与える可能性がある。",
+    "sourceLine": "BusinessToday、ThePrint（2026年9月17日）",
+    "sources": [
+      {
+        "name": "BusinessToday",
+        "url": "https://www.businesstoday.in/technology/news/story/semicon-india-2026-pm-modi-highlights-13-5-billion-semiconductor-mission-12-chip-projects-approved-556095-2026-09-17"
+      },
+      {
+        "name": "ThePrint",
+        "url": "https://theprint.in/tech/5-pillars-12-yrs-13-5-bn-outlay-modi-launches-2nd-phase-of-chip-mission-at-semicon-india/3045265/"
+      }
+    ],
+    "chips": [
+      "半導体",
+      "インド",
+      "Applied Materials",
+      "Lam Research"
+    ],
+    "stats": [
+      {
+        "n": "135億ドル",
+        "l": "インド半導体ミッション第2弾の投資規模"
+      },
+      {
+        "n": "50億ドル",
+        "l": "Applied Materialsの新規投資額"
+      }
+    ],
+    "videoId": null,
+    "captionX": "インドが半導体育成に約2兆円を投資すると表明。Applied MaterialsやLam Researchも巨額投資を打ち出しました。 #半導体 #インド",
+    "captionThreads": "AIチップを支える半導体産業で、インドが本気の投資拡大に踏み出しました。第1弾の80億ドルから135億ドルへ大幅増額。米大手部品メーカーも続々と巨額投資を表明していて、供給網の勢力図が変わりそうです。",
+    "captionInstagram": "AI開発を裏で支える「半導体」の世界で、大きな動きがありました。インドのモディ首相は9月17日、半導体産業育成策の第2弾を発表し、投資規模を第1弾の80億ドルから135億ドル（約2兆円）へと大幅に拡大すると表明。これに合わせて米Applied Materialsが50億ドル、Lam Researchも約100億ルピーの投資を発表するなど、世界の半導体大手が続々とインドへの投資を打ち出しています。すでに12件のプロジェクトが承認され、3件は商用生産も始まりました。AIチップの供給網が今後どう変わっていくのか、目が離せません。 #半導体 #インド #AIチップ #Applied Materials #LamResearch",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
