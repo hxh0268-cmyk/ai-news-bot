@@ -17,7 +17,7 @@ const NARRATION_COUNT = topic.narrationCount ?? 3;
 function buildScript(items) {
   const intro = `今日の${topic.displayName}、注目の${items.length}本をお届けします。`;
   const body = items.map((item, i) => `${i + 1}本目。${item.headline}。${item.why}`).join(" ");
-  const outro = "続きや出典は、投稿内のリンクからご覧ください。";
+  const outro = "続きや出典は、記事本文でご確認ください。";
   return `${intro} ${body} ${outro}`;
 }
 
