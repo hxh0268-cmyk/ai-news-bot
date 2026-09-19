@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>運営方針・AIについて - 今日のAIニュース</title>
+<meta name="description" content="今日のAIニュースがどのように作られているか、AIの活用方法や出典の扱いについて説明しています。">
+<link rel="canonical" href="https://hxh0268-cmyk.github.io/ai-news-bot/ai-news/about.html">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  body{margin:0;background:#EAF0F2;color:#3C4257;font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
+  .wrap{max-width:680px;margin:0 auto;padding:40px 24px;}
+  h1{font-size:22px;color:#151A2E;}
+  h2{font-size:16px;color:#151A2E;margin-top:32px;}
+  a{color:#1F8A83;}
+  ul{padding-left:20px;}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>運営方針・AIについて</h1>
+  <p>「今日のAIニュース」は、生成AIを使って毎日自動更新しているニュースまとめサイトです。ここでは、どのような仕組みでコンテンツを作っているか、出典をどう扱っているかをまとめています。</p>
+
+  <h2>このサイトの目的</h2>
+  <p>国内外のAI関連ニュースの中から、その日の重要なトピックを厳選し、専門知識がない方にも分かりやすい形で毎朝お届けすることを目的としています。</p>
+
+  <h2>コンテンツができるまで</h2>
+  <p>毎日決まった時刻に、以下の流れで自動的に記事を作成しています。</p>
+  <ul>
+    <li>AI（Claude／Anthropic社）が、その日のAI関連ニュースをWeb検索で収集します</li>
+    <li>集めたニュースの中から重要度の高いものを選び、要約記事の下書きを作成します</li>
+    <li>文体を整える工程を経て、記事として仕上げます</li>
+    <li>生成された記事はいったん確認用のPull Requestとして提出され、<strong>運営者が内容（見出しの妥当性・情報の正確性・出典の有無など）を確認したうえで承認した記事のみ</strong>がサイトに公開されます</li>
+  </ul>
+  <p>つまり、記事の文章自体はAIが作成していますが、公開前には人間による確認を経ています。ただし、確認は見出し・カテゴリの偏り・出典の有無といった観点が中心であり、記事内容の一言一句をファクトチェックしているわけではない点はご了承ください。</p>
+
+  <h2>出典の扱いについて</h2>
+  <p>本サイトの記事はニュースの要約であり、一次情報ではありません。各記事の末尾に出典となった媒体名・日付を明記しており、元記事のURLを確認できた場合はリンクも掲載しています（URLが確認できなかった媒体は出典として掲載していません）。正確な内容は、必ずリンク先の元記事をご確認ください。</p>
+  <p>出典として選ぶ媒体は、通信社・全国紙・公式発表・大手専門メディアなど、信頼性の高いものを優先するようにしています。</p>
+
+  <h2>誤りに気づいたら</h2>
+  <p>AIによる自動生成という性質上、誤りや不正確な内容を含む可能性があります。お気づきの点がございましたら、<a href="contact.html">お問い合わせページ</a>からご連絡ください。内容を確認のうえ、必要に応じて訂正いたします。</p>
+
+  <h2>運営者情報</h2>
+  <p>本サイトの運営者：BAL（ペンネーム）</p>
+
+  <p>広告・アフィリエイト・Cookie等の取り扱いについては<a href="privacy.html">プライバシーポリシー・広告について</a>のページをご覧ください。</p>
+  <p><a href="index.html">トップページに戻る</a> ｜ <a href="contact.html">お問い合わせ</a></p>
+</main>
+</body>
+</html>
