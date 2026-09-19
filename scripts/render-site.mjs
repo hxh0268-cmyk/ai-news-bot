@@ -29,6 +29,7 @@ const archiveUrlFor = (date) => `${TOPIC_URL}/archive/${date}.html`;
 const archiveDir = path.join(docsDir, "archive");
 const manifestPath = path.join(archiveDir, "manifest.json");
 const imagesDateDir = path.join(docsDir, "images", dateStr);
+const audioDateDir = path.join(docsDir, "audio", dateStr);
 
 function gaSnippet() {
   if (!GA_MEASUREMENT_ID) return "";
@@ -78,6 +79,17 @@ function linkedSourceLine(item) {
     result = result.split(s.name).join(link);
   }
   return result;
+}
+
+// ElevenLabsで生成したナレーション音声(output/<topic>/<date>/narration.mp3)をdocsにコピーする。
+// 動画（SNS投稿用）向けに生成されているものを流用し、サイト上でも聴けるようにする。
+// ELEVENLABS_API_KEY等が未設定の日はファイル自体が存在しないため、その場合は何もしない。
+function copyNarration() {
+  const srcPath = path.join(outputDir, "narration.mp3");
+  if (!fs.existsSync(srcPath)) return false;
+  fs.mkdirSync(audioDateDir, { recursive: true });
+  fs.copyFileSync(srcPath, path.join(audioDateDir, "narration.mp3"));
+  return true;
 }
 
 // top5.jsonはimportanceの値で昇順ソートされているため、cards/{importance}.png が
@@ -207,9 +219,10 @@ function buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canon
 // 最新版（docs/<topic>/index.html）とアーカイブ版（docs/<topic>/archive/<date>.html）を
 // 同じテンプレートから生成する。画像パス・リンク先が階層の違いで変わるため、
 // mode（"latest" / "archive"）に応じて相対パスを出し分ける。
-function buildHtml(data, thumbnails, mode) {
+function buildHtml(data, thumbnails, mode, hasNarration) {
   const isArchive = mode === "archive";
   const imgBasePath = isArchive ? "../" : "";
+  const audioBasePath = isArchive ? "../" : "";
   const privacyLink = isArchive ? "../privacy.html" : "privacy.html";
   const contactLink = isArchive ? "../contact.html" : "contact.html";
   const aboutLink = isArchive ? "../about.html" : "about.html";
@@ -230,6 +243,13 @@ function buildHtml(data, thumbnails, mode) {
 
   const archiveNotice = isArchive
     ? `<p class="archive-notice">これは${dateStr}時点のアーカイブページです。<a href="${latestLink}">最新のニュースはこちら</a></p>`
+    : "";
+
+  const narrationPlayer = hasNarration
+    ? `<div class="narration-player">
+    <p class="narration-label">🔊 ${isArchive ? `${dateStr}分` : "本日分"}のまとめを音声で聴く</p>
+    <audio controls preload="none" src="${audioBasePath}audio/${dateStr}/narration.mp3">お使いのブラウザは音声再生に対応していません。</audio>
+  </div>`
     : "";
 
   return `<!DOCTYPE html>
@@ -298,6 +318,9 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .rss-bar{background:#fff;border:1px solid #DCE6E8;border-radius:6px;padding:10px 16px;margin-bottom:20px;font-size:13px;display:flex;align-items:center;justify-content:space-between;}
   .rss-bar a{color:#1F8A83;font-weight:700;text-decoration:none;}
   .rss-bar span{color:var(--slate-soft);}
+  .narration-player{background:#fff;border:1px solid #DCE6E8;border-radius:6px;padding:14px 16px;margin-bottom:20px;}
+  .narration-label{margin:0 0 8px;font-size:13px;color:var(--slate);font-weight:700;}
+  .narration-player audio{width:100%;display:block;}
   .header-meta{font-size:13px;color:rgba(234,240,242,0.7);margin:4px 0 0;}
   .header-nav{margin-top:14px;display:flex;gap:16px;}
   .header-nav a{color:rgba(234,240,242,0.75);font-size:13px;text-decoration:none;border-bottom:1px solid rgba(234,240,242,0.3);padding-bottom:1px;}
@@ -328,6 +351,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   ${archiveNotice}
   <div class="disclosure">${disclosureLines.map((l) => `<p>${l}</p>`).join("")}</div>
   <div class="rss-bar"><span>毎朝自動更新</span><a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSで購読する</a></div>
+  ${narrationPlayer}
   ${buildToc(data)}
   ${buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase)}
   <a href="#main-content" class="back-top">先頭に戻る</a>
@@ -612,16 +636,17 @@ function main() {
   fs.mkdirSync(docsDir, { recursive: true });
 
   const thumbnails = copyThumbnails(data);
+  const hasNarration = copyNarration();
 
   // 最新版
-  fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails, "latest"), "utf-8");
+  fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails, "latest", hasNarration), "utf-8");
   fs.writeFileSync(path.join(docsDir, "about.html"), buildAboutHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "privacy.html"), buildPrivacyHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "contact.html"), buildContactHtml(), "utf-8");
 
   // 日付ごとの永久保存版
   fs.mkdirSync(archiveDir, { recursive: true });
-  fs.writeFileSync(path.join(archiveDir, `${dateStr}.html`), buildHtml(data, thumbnails, "archive"), "utf-8");
+  fs.writeFileSync(path.join(archiveDir, `${dateStr}.html`), buildHtml(data, thumbnails, "archive", hasNarration), "utf-8");
 
   // アーカイブ台帳の更新と、そこから生成する各種一覧ページ
   const manifest = updateManifest(data);
@@ -633,7 +658,7 @@ function main() {
   fs.writeFileSync(path.join(docsDir, "..", "robots.txt"), buildRobotsTxt(), "utf-8");
 
   console.log(
-    `生成しました: docs/${topic.slug}/index.html, about.html, archive/${dateStr}.html, archive/index.html, feed.xml, sitemap.xml, robots.txt（サムネイル${thumbnails.size}枚同梱）`
+    `生成しました: docs/${topic.slug}/index.html, about.html, archive/${dateStr}.html, archive/index.html, feed.xml, sitemap.xml, robots.txt（サムネイル${thumbnails.size}枚同梱、ナレーション音声${hasNarration ? "あり" : "なし"}）`
   );
 }
 
