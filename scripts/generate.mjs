@@ -4,6 +4,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { fetch as undiciFetch, Agent } from "undici";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
@@ -177,13 +178,24 @@ const SUBMIT_TOOL = {
   },
 };
 
+// Node標準のfetch（内蔵undici）は、レスポンスヘッダー受信について
+// デフォルトで約300秒(5分)のタイムアウトを持っており、これは下記の
+// AbortSignal.timeout(480000)（8分）とは別物・かつそれより先に発動する。
+// Web検索込みの生成は3〜5分程度かかることがあり、5分をわずかに超えた
+// リクエストがこのundici既定タイムアウトに引っかかり、UND_ERR_HEADERS_TIMEOUTで
+// "fetch failed"として失敗する事故が発生した（2026-09-19の障害調査で判明。
+// 2026-09-09時点ではAbortSignal.timeout(480000)を追加していたが、これは
+// undici既定のheadersTimeoutより後に発動するため、5分超8分未満の応答時間では
+// 無力だった）。
+// Node組み込みのfetchにdispatcherを渡す方式は、Node内蔵undiciと
+// npmでインストールしたundiciのバージョン差異により動かないことがあるため、
+// undiciパッケージ自身のfetch・Agentを揃えて使うことで確実に延長する。
+const CLAUDE_FETCH_AGENT = new Agent({ headersTimeout: 500000, bodyTimeout: 500000 });
+
 async function callClaude() {
   // 正常時でも(Web検索込みで)3〜5分程度かかることが実測で分かっているため、
-  // それより十分長い8分でタイムアウトさせる。これが無いと、Node.js(undici)の
-  // fetchが持つデフォルトのタイムアウト(概ね5分)が正常な応答時間の上限付近で
-  // 先に発動してしまい、"fetch failed"として誤って失敗扱いになることがある
-  // （2026-09-09の障害調査で判明）。
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
+  // それより十分長い8分でタイムアウトさせる。
+  const res = await undiciFetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -201,6 +213,7 @@ async function callClaude() {
         SUBMIT_TOOL,
       ],
     }),
+    dispatcher: CLAUDE_FETCH_AGENT,
     signal: AbortSignal.timeout(480000),
   });
 

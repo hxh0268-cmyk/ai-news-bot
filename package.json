@@ -9,6 +9,7 @@
     "test:mock": "MOCK_MODE=true FORCE_MONETIZATION_ARTICLE=true TOPIC=ai-news CONTENT_DATE=2026-09-03 node scripts/monetization/run-shadow-mode.mjs && MOCK_MODE=true FORCE_MONETIZATION_ARTICLE=true TOPIC=ai-news CONTENT_DATE=2026-09-03 node scripts/generate-monetization-article.mjs"
   },
   "dependencies": {
-    "puppeteer": "^23.0.0"
+    "puppeteer": "^23.0.0",
+    "undici": "^8.10.2"
   }
 }
