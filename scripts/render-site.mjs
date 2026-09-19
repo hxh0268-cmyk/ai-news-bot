@@ -28,8 +28,21 @@ const archiveUrlFor = (date) => `${TOPIC_URL}/archive/${date}.html`;
 
 const archiveDir = path.join(docsDir, "archive");
 const manifestPath = path.join(archiveDir, "manifest.json");
+const tagsIndexPath = path.join(archiveDir, "tags-index.json");
+const tagArchiveDir = path.join(archiveDir, "tag");
 const imagesDateDir = path.join(docsDir, "images", dateStr);
 const audioDateDir = path.join(docsDir, "audio", dateStr);
+
+// カテゴリ名（例:"AI Policy"）をURLに使えるslugに変換する（例:"ai-policy"）。
+// 日本語等が混じる場合も含め、記号・空白は全てハイフンに正規化する。
+function slugifyCategory(category) {
+  const base = String(category || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+  return base || "uncategorized";
+}
 
 function gaSnippet() {
   if (!GA_MEASUREMENT_ID) return "";
@@ -138,7 +151,7 @@ function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase) {
   return `
   <article class="card" id="${anchorId}" style="--cat:${item.catColor}">
     ${thumbnailHtml(item, thumbnails, imgBasePath)}
-    <span class="tag">${item.category}</span>
+    <a class="tag" href="${TOPIC_URL}/archive/tag/${slugifyCategory(item.category)}.html">${item.category}</a>
     <p class="read-time">${readingTime(item)}で読める</p>
     <h2>${item.headline}</h2>
     <p class="dek">${item.dek}</p>
@@ -227,6 +240,7 @@ function buildHtml(data, thumbnails, mode, hasNarration) {
   const contactLink = isArchive ? "../contact.html" : "contact.html";
   const aboutLink = isArchive ? "../about.html" : "about.html";
   const archiveIndexLink = isArchive ? "./" : "archive/";
+  const tagIndexLink = isArchive ? "tag/" : "archive/tag/";
   const latestLink = isArchive ? "../" : "";
   const canonicalUrl = isArchive ? archiveUrlFor(dateStr) : PAGE_URL;
   const permalinkBase = archiveUrlFor(dateStr);
@@ -303,7 +317,8 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .card{background:#fff;border-radius:8px;padding:26px;margin-bottom:20px;border-top:4px solid var(--cat,#1F8A83);overflow:hidden;scroll-margin-top:16px;}
   .thumb{display:block;width:100%;height:auto;border-radius:6px;margin-bottom:20px;aspect-ratio:1200/675;object-fit:cover;}
   .thumb-placeholder{display:flex;align-items:flex-end;padding:24px;color:rgba(255,255,255,0.85);font-family:'JetBrains Mono',monospace;font-size:24px;letter-spacing:0.06em;text-transform:uppercase;border-radius:6px;}
-  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cat,#1F8A83);text-transform:uppercase;}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cat,#1F8A83);text-transform:uppercase;text-decoration:none;border-bottom:1px dotted currentColor;}
+  .tag:hover{text-decoration:none;opacity:0.75;}
   h2{font-family:'Shippori Mincho',serif;font-size:22px;margin:10px 0;color:var(--ink);}
   .dek{color:var(--slate-soft);font-size:14px;}
   .why{background:var(--ink);color:#fff;border-radius:6px;padding:16px 18px;margin-top:16px;font-size:14px;}
@@ -360,6 +375,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   <p>© ${new Date(dateStr).getFullYear()} 今日の${topic.displayName}</p>
   <p>
     <a href="${archiveIndexLink}">過去記事一覧</a>
+    <a href="${tagIndexLink}">カテゴリ一覧</a>
     <a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSフィード</a>
     <a href="${aboutLink}">運営方針・AIについて</a>
     <a href="${privacyLink}">プライバシーポリシー・広告について</a>
@@ -544,6 +560,123 @@ function updateManifest(data) {
   return manifest;
 }
 
+// タグ別アーカイブの元データ（tags-index.json）を読み込み、当日分を追加/更新して書き戻す。
+// manifest.jsonと同じ「当日分を一旦除去してから追加」方式で、再実行時の重複を防ぐ。
+// anchorIdはrenderArticle()と同じ「配列内の並び順（i+1）」で採番し、実際のHTML内のid属性と一致させる。
+function updateTagsIndex(data) {
+  let entries = [];
+  if (fs.existsSync(tagsIndexPath)) {
+    try {
+      entries = JSON.parse(fs.readFileSync(tagsIndexPath, "utf-8"));
+    } catch {
+      entries = [];
+    }
+  }
+  entries = entries.filter((e) => e.date !== dateStr);
+  data.forEach((item, i) => {
+    entries.push({
+      date: dateStr,
+      anchorId: `article-${i + 1}`,
+      headline: item.headline,
+      dek: item.dek,
+      category: item.category,
+      catColor: item.catColor,
+    });
+  });
+  entries.sort((a, b) => (a.date < b.date ? 1 : -1)); // 新しい日付が先頭
+  fs.mkdirSync(archiveDir, { recursive: true });
+  fs.writeFileSync(tagsIndexPath, JSON.stringify(entries, null, 2), "utf-8");
+  return entries;
+}
+
+// カテゴリ別の過去記事一覧ページ（docs/<topic>/archive/tag/<slug>.html）。
+function buildTagArchiveHtml(category, entries) {
+  const slug = slugifyCategory(category);
+  const rows = entries
+    .map(
+      (e) =>
+        `<li><a href="${archiveUrlFor(e.date)}#${e.anchorId}">${e.headline}</a><span class="meta">${e.date} ・ ${e.dek || ""}</span></li>`
+    )
+    .join("");
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${category} の記事一覧 - 今日の${topic.displayName}</title>
+<meta name="description" content="今日の${topic.displayName}の「${category}」カテゴリの過去記事一覧。">
+<link rel="canonical" href="${TOPIC_URL}/archive/tag/${slug}.html">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
+  body{margin:0;background:var(--paper);color:var(--slate);font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
+  header{background:var(--ink);color:var(--paper);padding:40px 24px;}
+  header h1{font-family:'Shippori Mincho',serif;font-size:24px;margin:0;}
+  header h1 a{color:inherit;text-decoration:none;}
+  .wrap{max-width:680px;margin:0 auto;padding:24px;}
+  .back{font-size:13px;margin-bottom:16px;display:inline-block;}
+  ul{list-style:none;margin:0;padding:0;}
+  li{background:#fff;border-radius:8px;padding:16px 20px;margin-bottom:10px;display:flex;flex-direction:column;gap:4px;}
+  li a{font-size:15px;color:var(--ink);text-decoration:none;font-weight:700;}
+  .meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--slate-soft);}
+</style>
+</head>
+<body>
+<header><h1><a href="../../">今日の${topic.displayName}</a></h1></header>
+<main class="wrap">
+  <a class="back" href="./">← カテゴリ一覧に戻る</a>
+  <h2>${category}（${entries.length}件）</h2>
+  <ul>${rows}</ul>
+</main>
+</body>
+</html>`;
+}
+
+// カテゴリ一覧ページ（docs/<topic>/archive/tag/index.html）。
+function buildTagsIndexHtml(entries) {
+  const byCategory = new Map();
+  for (const e of entries) {
+    if (!byCategory.has(e.category)) byCategory.set(e.category, { count: 0, catColor: e.catColor });
+    byCategory.get(e.category).count += 1;
+  }
+  const rows = [...byCategory.entries()]
+    .sort((a, b) => b[1].count - a[1].count)
+    .map(
+      ([category, info]) =>
+        `<li><a href="${slugifyCategory(category)}.html" style="--cat:${info.catColor}">${category}<span class="count">${info.count}件</span></a></li>`
+    )
+    .join("");
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カテゴリ一覧 - 今日の${topic.displayName}</title>
+<meta name="description" content="今日の${topic.displayName}のカテゴリ別記事一覧。">
+<link rel="canonical" href="${TOPIC_URL}/archive/tag/">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
+  body{margin:0;background:var(--paper);color:var(--slate);font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
+  header{background:var(--ink);color:var(--paper);padding:40px 24px;}
+  header h1{font-family:'Shippori Mincho',serif;font-size:24px;margin:0;}
+  header h1 a{color:inherit;text-decoration:none;}
+  .wrap{max-width:680px;margin:0 auto;padding:24px;}
+  ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;}
+  li a{background:#fff;border-radius:20px;padding:8px 16px;font-size:13px;color:var(--ink);text-decoration:none;border-left:4px solid var(--cat,#1F8A83);display:flex;align-items:center;gap:8px;}
+  .count{font-family:'JetBrains Mono',monospace;color:var(--slate-soft);font-size:11px;}
+</style>
+</head>
+<body>
+<header><h1><a href="../../">今日の${topic.displayName}</a></h1></header>
+<main class="wrap">
+  <h2>カテゴリ一覧</h2>
+  <ul>${rows}</ul>
+</main>
+</body>
+</html>`;
+}
+
 // 過去記事一覧（バックナンバー）ページ。
 function buildArchiveIndexHtml(manifest) {
   const rows = manifest
@@ -609,17 +742,21 @@ function buildFeedXml(manifest) {
 </rss>`;
 }
 
-function buildSitemapXml(manifest) {
-  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL, ABOUT_URL]
+function buildSitemapXml(manifest, tagCategories) {
+  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL, ABOUT_URL, `${TOPIC_URL}/archive/tag/`]
     .map((u) => `  <url><loc>${u}</loc><lastmod>${dateStr}</lastmod></url>`)
     .join("\n");
   const archiveEntries = manifest
     .map((e) => `  <url><loc>${archiveUrlFor(e.date)}</loc><lastmod>${e.date}</lastmod></url>`)
     .join("\n");
+  const tagEntries = (tagCategories || [])
+    .map((c) => `  <url><loc>${TOPIC_URL}/archive/tag/${slugifyCategory(c)}.html</loc><lastmod>${dateStr}</lastmod></url>`)
+    .join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${staticEntries}
 ${archiveEntries}
+${tagEntries}
 </urlset>`;
 }
 
@@ -652,7 +789,22 @@ function main() {
   const manifest = updateManifest(data);
   fs.writeFileSync(path.join(archiveDir, "index.html"), buildArchiveIndexHtml(manifest), "utf-8");
   fs.writeFileSync(path.join(docsDir, "feed.xml"), buildFeedXml(manifest), "utf-8");
-  fs.writeFileSync(path.join(docsDir, "sitemap.xml"), buildSitemapXml(manifest), "utf-8");
+
+  // カテゴリ別アーカイブ（タグページ）の更新
+  const tagEntries = updateTagsIndex(data);
+  fs.mkdirSync(tagArchiveDir, { recursive: true });
+  const categories = [...new Set(tagEntries.map((e) => e.category))];
+  for (const category of categories) {
+    const entriesForCategory = tagEntries.filter((e) => e.category === category);
+    fs.writeFileSync(
+      path.join(tagArchiveDir, `${slugifyCategory(category)}.html`),
+      buildTagArchiveHtml(category, entriesForCategory),
+      "utf-8"
+    );
+  }
+  fs.writeFileSync(path.join(tagArchiveDir, "index.html"), buildTagsIndexHtml(tagEntries), "utf-8");
+
+  fs.writeFileSync(path.join(docsDir, "sitemap.xml"), buildSitemapXml(manifest, categories), "utf-8");
 
   // robots.txtはサイト全体のルート（docs直下）に1つだけ置く
   fs.writeFileSync(path.join(docsDir, "..", "robots.txt"), buildRobotsTxt(), "utf-8");

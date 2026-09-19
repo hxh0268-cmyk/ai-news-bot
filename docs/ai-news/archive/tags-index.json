@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-7",
+    "headline": "顧客対応AI「GeN」、契約社数が2.7倍に",
+    "dek": "カラクリが成果報酬型プランを新設、自己解決率も上昇",
+    "category": "Business AI",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-6",
+    "headline": "声を失った患者、AIメガネで意思疎通が可能に",
+    "dek": "沖縄の病院で実証、二文字入力でAIが候補を先読み",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-5",
+    "headline": "インド、半導体育成に2兆円投資を表明",
+    "dek": "Applied MaterialsやLam Researchが巨額投資を発表",
+    "category": "Global Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-4",
+    "headline": "Google・NVIDIAら電力連合を結成という発表",
+    "dek": "データセンター電力不足解消へ、Anthropicも参加する新連合",
+    "category": "AI Infrastructure",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-3",
+    "headline": "RIZAP社員、私用AIに顧客情報を誤送信という発表",
+    "dek": "疾患情報など要配慮個人情報が外部生成AIに流出",
+    "category": "Data Privacy",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-2",
+    "headline": "AI大手の自主規制構想に「カルテル」批判",
+    "dek": "Cohere CEOがOpenAIなど3社の標準化構想を痛烈非難",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-19",
+    "anchorId": "article-1",
+    "headline": "オンライン面接に潜むAI応募者、企業が看破",
+    "dek": "声と口の動きのずれから発覚、採用面接に新たな脅威",
+    "category": "Recruiting",
+    "catColor": "#E1636F"
+  }
+]
