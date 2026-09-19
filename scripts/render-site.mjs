@@ -365,6 +365,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
     <p class="header-meta">${dateStr} ・ ${data.length}本</p>
     <nav class="header-nav" aria-label="サイトナビゲーション">
       <a href="${archiveIndexLink}">過去記事</a>
+      <a href="${isArchive ? "../search.html" : "search.html"}">検索</a>
       <a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSS購読</a>
     </nav>
   </div>
@@ -721,6 +722,102 @@ function buildArchiveIndexHtml(manifest) {
 </html>`;
 }
 
+// サイト内検索ページ（docs/<topic>/search.html）。
+// サーバーを持たない静的サイトのため、archive/tags-index.json（タグアーカイブ機能で
+// 既に蓄積している「日付・見出し・要約・カテゴリ」のインデックス）をブラウザ側でfetchし、
+// JavaScriptで単純な部分一致フィルタをかけるだけの簡易実装にしている。
+// 新しいインデックスファイルは作らず、既存のtags-index.jsonをそのまま流用する。
+function buildSearchHtml() {
+  return `<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>検索 - 今日の${topic.displayName}</title>
+<meta name="description" content="今日の${topic.displayName}の記事をキーワードで検索できます。">
+<link rel="canonical" href="${TOPIC_URL}/search.html">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
+  body{margin:0;background:var(--paper);color:var(--slate);font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
+  header{background:var(--ink);color:var(--paper);padding:40px 24px;}
+  header h1{font-family:'Shippori Mincho',serif;font-size:24px;margin:0;}
+  header h1 a{color:inherit;text-decoration:none;}
+  .wrap{max-width:680px;margin:0 auto;padding:24px;}
+  input[type="search"]{width:100%;padding:14px 16px;font-size:16px;border:1px solid #DCE6E8;border-radius:8px;box-sizing:border-box;font-family:inherit;}
+  ul{list-style:none;margin:20px 0 0;padding:0;}
+  li{background:#fff;border-radius:8px;padding:16px 20px;margin-bottom:10px;display:flex;flex-direction:column;gap:4px;border-left:4px solid var(--cat,#1F8A83);}
+  li a{font-size:15px;color:var(--ink);text-decoration:none;font-weight:700;}
+  .meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--slate-soft);}
+  .status{font-size:13px;color:var(--slate-soft);margin-top:12px;}
+</style>
+</head>
+<body>
+<header><h1><a href="./">今日の${topic.displayName}</a></h1></header>
+<main class="wrap">
+  <h2>記事を検索</h2>
+  <input type="search" id="search-input" placeholder="キーワードを入力（例: OpenAI, 医療, 規制）" autofocus>
+  <p class="status" id="search-status">キーワードを入力してください。</p>
+  <ul id="search-results"></ul>
+</main>
+<script>
+(function () {
+  var input = document.getElementById('search-input');
+  var status = document.getElementById('search-status');
+  var results = document.getElementById('search-results');
+  var data = null;
+
+  function escapeHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function render(query) {
+    if (!data) {
+      status.textContent = '記事データを読み込み中です…';
+      return;
+    }
+    var q = query.trim().toLowerCase();
+    if (!q) {
+      results.innerHTML = '';
+      status.textContent = 'キーワードを入力してください。';
+      return;
+    }
+    var matches = data.filter(function (item) {
+      return (
+        (item.headline || '').toLowerCase().indexOf(q) !== -1 ||
+        (item.dek || '').toLowerCase().indexOf(q) !== -1 ||
+        (item.category || '').toLowerCase().indexOf(q) !== -1
+      );
+    }).slice(0, 40);
+    status.textContent = matches.length + '件見つかりました。';
+    results.innerHTML = matches.map(function (m) {
+      var url = 'archive/' + m.date + '.html#' + m.anchorId;
+      return '<li style="--cat:' + escapeHtml(m.catColor || '#1F8A83') + '">' +
+        '<a href="' + url + '">' + escapeHtml(m.headline) + '</a>' +
+        '<span class="meta">' + escapeHtml(m.date) + ' ・ ' + escapeHtml(m.category) + '</span>' +
+        '</li>';
+    }).join('');
+  }
+
+  fetch('archive/tags-index.json')
+    .then(function (res) { return res.json(); })
+    .then(function (json) {
+      data = json;
+      render(input.value);
+    })
+    .catch(function () {
+      status.textContent = '検索データの読み込みに失敗しました。時間をおいて再度お試しください。';
+    });
+
+  input.addEventListener('input', function () { render(input.value); });
+})();
+</script>
+</body>
+</html>`;
+}
+
 function buildFeedXml(manifest) {
   const items = manifest
     .slice(0, 30)
@@ -750,7 +847,7 @@ function buildFeedXml(manifest) {
 }
 
 function buildSitemapXml(manifest, tagCategories) {
-  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL, ABOUT_URL, `${TOPIC_URL}/archive/tag/`]
+  const staticEntries = [PAGE_URL, ARCHIVE_INDEX_URL, ABOUT_URL, `${TOPIC_URL}/archive/tag/`, `${TOPIC_URL}/search.html`]
     .map((u) => `  <url><loc>${u}</loc><lastmod>${dateStr}</lastmod></url>`)
     .join("\n");
   const archiveEntries = manifest
@@ -787,6 +884,7 @@ function main() {
   fs.writeFileSync(path.join(docsDir, "about.html"), buildAboutHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "privacy.html"), buildPrivacyHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "contact.html"), buildContactHtml(), "utf-8");
+  fs.writeFileSync(path.join(docsDir, "search.html"), buildSearchHtml(), "utf-8");
 
   // 日付ごとの永久保存版
   fs.mkdirSync(archiveDir, { recursive: true });
