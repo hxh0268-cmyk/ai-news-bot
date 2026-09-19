@@ -194,6 +194,11 @@ function buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase) {
 // 記事一覧をNewsArticleのItemListとして構造化データ化し、画像・URL・著者情報も付与する。
 // あわせてBreadcrumbList（サイト > アーカイブ > 当日ページ）も出力し、検索結果での見え方を改善する。
 function buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canonicalUrl) {
+  // publisher.logoは実在の画像URLが必要（Googleのリッチリザルト要件）だが、
+  // 現状サイト専用のロゴ画像を用意していないため、logoは省略している。
+  // publisher自体（name/url）は付けておくことで、完全なNewsArticle rich result要件には
+  // 一歩及ばないものの、発行者情報としての妥当性は満たす。
+  const publisher = { "@type": "Organization", name: topic.displayName, url: PAGE_URL };
   const itemListElement = data.map((item, i) => {
     const hasThumb = thumbnails.has(item.importance);
     return {
@@ -204,9 +209,11 @@ function buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canon
         headline: item.headline,
         description: item.dek,
         datePublished: dateStr,
+        dateModified: dateStr,
         url: `${permalinkBase}#article-${i + 1}`,
         ...(hasThumb ? { image: `${TOPIC_URL}/images/${dateStr}/${item.importance}.png` } : {}),
         author: { "@type": "Organization", name: topic.displayName },
+        publisher,
       },
     };
   });
