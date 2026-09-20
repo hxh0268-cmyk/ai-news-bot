@@ -93,15 +93,6 @@ runs:
         CONTENT_DATE: ${{ inputs.content_date }}
       run: bash scripts/run-and-capture-error.sh node scripts/render-cards.mjs
 
-    - name: STEP2.5 広告枠付きサイトを生成
-      shell: bash
-      env:
-        ADSENSE_CLIENT_ID: ${{ inputs.adsense_client_id }}
-        GA_MEASUREMENT_ID: ${{ inputs.ga_measurement_id }}
-        TOPIC: ${{ inputs.topic }}
-        CONTENT_DATE: ${{ inputs.content_date }}
-      run: bash scripts/run-and-capture-error.sh node scripts/render-site.mjs
-
     - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
       continue-on-error: true
       shell: bash
@@ -111,6 +102,15 @@ runs:
         TOPIC: ${{ inputs.topic }}
         CONTENT_DATE: ${{ inputs.content_date }}
       run: node scripts/generate-narration.mjs
+
+    - name: STEP2.5 広告枠付きサイトを生成
+      shell: bash
+      env:
+        ADSENSE_CLIENT_ID: ${{ inputs.adsense_client_id }}
+        GA_MEASUREMENT_ID: ${{ inputs.ga_measurement_id }}
+        TOPIC: ${{ inputs.topic }}
+        CONTENT_DATE: ${{ inputs.content_date }}
+      run: bash scripts/run-and-capture-error.sh node scripts/render-site.mjs
 
     - name: ffmpegをインストール
       shell: bash
