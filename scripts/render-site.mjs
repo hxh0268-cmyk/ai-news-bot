@@ -145,7 +145,26 @@ function shareButtonsHtml(item, permalink) {
     </div>`;
 }
 
-function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase) {
+// 同じカテゴリの過去記事（自分自身は除く）を優先し、最大3件、新しい順に表示する。
+// 同カテゴリだけで3件に満たない場合は、カテゴリを問わず直近の他記事で埋める
+// （運用開始直後などデータが少ない期間でも、関連記事欄が空にならないようにするため）。
+// tags-index.jsonは既にカテゴリ別アーカイブ機能で日付・見出し・カテゴリを蓄積しており、
+// 新しいインデックスは作らずそのまま流用する。
+function relatedArticlesHtml(item, currentAnchorId, tagEntries) {
+  if (!Array.isArray(tagEntries) || tagEntries.length === 0) return "";
+  const isSelf = (e) => e.date === dateStr && e.anchorId === currentAnchorId;
+  const sameCategory = tagEntries.filter((e) => e.category === item.category && !isSelf(e));
+  const usedKeys = new Set(sameCategory.map((e) => `${e.date}#${e.anchorId}`));
+  const fallback = tagEntries.filter((e) => !isSelf(e) && !usedKeys.has(`${e.date}#${e.anchorId}`));
+  const related = [...sameCategory, ...fallback].slice(0, 3); // tagEntriesは既に日付降順でソート済み
+  if (related.length === 0) return "";
+  const links = related
+    .map((e) => `<li><a href="${archiveUrlFor(e.date)}#${e.anchorId}">${e.headline}</a></li>`)
+    .join("");
+  return `<div class="related"><h4>関連記事</h4><ul>${links}</ul></div>`;
+}
+
+function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase, tagEntries) {
   const anchorId = `article-${index + 1}`;
   const permalink = `${permalinkBase}#${anchorId}`;
   return `
@@ -158,6 +177,7 @@ function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase) {
     ${(item.body || []).map((p) => `<p>${p}</p>`).join("\n")}
     <div class="why"><h3>なぜ重要か</h3><p>${item.why}</p></div>
     <div class="source-line">出典：${linkedSourceLine(item)}</div>
+    ${relatedArticlesHtml(item, anchorId, tagEntries)}
     ${shareButtonsHtml(item, permalink)}
   </article>`;
 }
@@ -176,12 +196,12 @@ function buildToc(data) {
 }
 
 // 記事一覧＋広告枠を組み立てる。7記事に対して広告を3箇所（2本目・4本目・6本目の後）に分散配置。
-function buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase) {
+function buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase, tagEntries) {
   const adAfterIndex = new Set([1, 3, 5]);
   let adCounter = 0;
   return data
     .map((item, i) => {
-      const article = renderArticle(item, i, thumbnails, imgBasePath, permalinkBase);
+      const article = renderArticle(item, i, thumbnails, imgBasePath, permalinkBase, tagEntries);
       if (adAfterIndex.has(i)) {
         adCounter += 1;
         return `${article}\n  ${adSlot(adCounter)}`;
@@ -239,7 +259,7 @@ function buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canon
 // 最新版（docs/<topic>/index.html）とアーカイブ版（docs/<topic>/archive/<date>.html）を
 // 同じテンプレートから生成する。画像パス・リンク先が階層の違いで変わるため、
 // mode（"latest" / "archive"）に応じて相対パスを出し分ける。
-function buildHtml(data, thumbnails, mode, hasNarration) {
+function buildHtml(data, thumbnails, mode, hasNarration, tagEntries) {
   const isArchive = mode === "archive";
   const imgBasePath = isArchive ? "../" : "";
   const audioBasePath = isArchive ? "../" : "";
@@ -331,6 +351,11 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .why{background:var(--ink);color:#fff;border-radius:6px;padding:16px 18px;margin-top:16px;font-size:14px;}
   .why h3{display:block;color:#F4B942;font-size:11px;margin:0 0 6px;font-weight:700;font-family:'Zen Kaku Gothic New',sans-serif;}
   .source-line{font-size:12px;color:var(--slate-soft);margin-top:16px;font-family:'JetBrains Mono',monospace;}
+  .related{background:#fff;border-radius:6px;padding:14px 18px;margin-top:16px;}
+  .related h4{margin:0 0 8px;font-size:12px;color:var(--slate-soft);font-weight:700;}
+  .related ul{list-style:none;margin:0;padding:0;}
+  .related li{margin-bottom:6px;}
+  .related a{font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px dotted currentColor;}
   .source-line a{color:var(--slate-soft);text-decoration:underline;text-underline-offset:2px;}
   .source-line a:hover{color:var(--ink);}
   .share-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
@@ -376,7 +401,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   <div class="rss-bar"><span>毎朝自動更新</span><a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSで購読する</a></div>
   ${narrationPlayer}
   ${buildToc(data)}
-  ${buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase)}
+  ${buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase, tagEntries)}
   <a href="#main-content" class="back-top">先頭に戻る</a>
 </main>
 <footer>
@@ -562,7 +587,7 @@ function updateManifest(data) {
     topHeadline: data[0]?.headline || "",
     count: data.length,
   });
-  manifest.sort((a, b) => (a.date < b.date ? 1 : -1)); // 新しい日付が先頭
+  manifest.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0)); // 新しい日付が先頭（同日内は安定ソート）
   fs.mkdirSync(archiveDir, { recursive: true });
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2), "utf-8");
   return manifest;
@@ -591,7 +616,7 @@ function updateTagsIndex(data) {
       catColor: item.catColor,
     });
   });
-  entries.sort((a, b) => (a.date < b.date ? 1 : -1)); // 新しい日付が先頭
+  entries.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0)); // 新しい日付が先頭（同日内は安定ソート）
   fs.mkdirSync(archiveDir, { recursive: true });
   fs.writeFileSync(tagsIndexPath, JSON.stringify(entries, null, 2), "utf-8");
   return entries;
@@ -879,8 +904,12 @@ function main() {
   const thumbnails = copyThumbnails(data);
   const hasNarration = copyNarration();
 
+  // カテゴリ別アーカイブ（タグページ）・関連記事表示の元になるインデックスを、
+  // 記事本体のHTML生成より先に確定させておく（当日分の記事同士も関連記事の対象にするため）。
+  const tagEntries = updateTagsIndex(data);
+
   // 最新版
-  fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails, "latest", hasNarration), "utf-8");
+  fs.writeFileSync(path.join(docsDir, "index.html"), buildHtml(data, thumbnails, "latest", hasNarration, tagEntries), "utf-8");
   fs.writeFileSync(path.join(docsDir, "about.html"), buildAboutHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "privacy.html"), buildPrivacyHtml(), "utf-8");
   fs.writeFileSync(path.join(docsDir, "contact.html"), buildContactHtml(), "utf-8");
@@ -888,7 +917,7 @@ function main() {
 
   // 日付ごとの永久保存版
   fs.mkdirSync(archiveDir, { recursive: true });
-  fs.writeFileSync(path.join(archiveDir, `${dateStr}.html`), buildHtml(data, thumbnails, "archive", hasNarration), "utf-8");
+  fs.writeFileSync(path.join(archiveDir, `${dateStr}.html`), buildHtml(data, thumbnails, "archive", hasNarration, tagEntries), "utf-8");
 
   // アーカイブ台帳の更新と、そこから生成する各種一覧ページ
   const manifest = updateManifest(data);
@@ -896,7 +925,6 @@ function main() {
   fs.writeFileSync(path.join(docsDir, "feed.xml"), buildFeedXml(manifest), "utf-8");
 
   // カテゴリ別アーカイブ（タグページ）の更新
-  const tagEntries = updateTagsIndex(data);
   fs.mkdirSync(tagArchiveDir, { recursive: true });
   const categories = [...new Set(tagEntries.map((e) => e.category))];
   for (const category of categories) {
