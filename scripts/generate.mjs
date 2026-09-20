@@ -49,6 +49,19 @@ const variantInstruction =
     ? "見出し(headline)は「〜という発表」「〜が判明」のような断定・事実提示型の文体にする。"
     : "見出し(headline)は「〜はどうなる？」「〜に何が」「〜、その先は」のような、読者の好奇心を刺激する問いかけ・驚き型の文体にする（「まさか」「衝撃」に頼らず、他の言い回しでも驚きは表現できる）。";
 
+const CATEGORY_OPTIONS = [
+  "AI Policy",
+  "AI Safety",
+  "Business",
+  "Consumer Apps",
+  "Health Tech",
+  "Work & Labor",
+  "Infrastructure",
+  "Media & Culture",
+  "Research",
+  "Security & Privacy",
+];
+
 const SYSTEM_PROMPT = `
 ${topic.systemPrompt}
 
@@ -59,7 +72,10 @@ ${exclusionSection}
 以下の項目を持つニュース7件を集めてください：
 
 - importance: 1〜7の整数（1が最重要。7件で重複なく順位をつける）
-- category: カテゴリ名（英語、例: Speed / OpenAI）
+- category: 以下の固定リストから最も当てはまるものを1つだけ選ぶこと（自由記述は禁止）。関連記事機能・カテゴリ別アーカイブ機能が、日をまたいでカテゴリ名が一致することを前提に動作しているため、リストにない新しいカテゴリ名を作らないでください：
+  ${CATEGORY_OPTIONS.join(" / ")}
+  （AI Policy=規制・政府・国際的な政策動向、AI Safety=安全性・リスク・誤情報・ハルシネーション、Business=企業動向・提携・資金調達・市場、Consumer Apps=一般消費者向けアプリ・サービス、Health Tech=医療・ヘルスケア領域でのAI活用、Work & Labor=雇用・採用・働き方への影響、Infrastructure=半導体・データセンター・電力・計算資源、Media & Culture=メディア・著作権・エンタメ・教育、Research=新モデル・研究成果・技術的ブレークスルー、Security & Privacy=情報漏洩・個人情報・サイバーセキュリティ）
+  どれにも当てはまらない場合のみ、最も近いものを選んでください（新規カテゴリの作成は不可）
 - catColor: ${(topic.categoryColors || ["#F4B942", "#7C6FE0", "#1F8A83", "#E1636F"]).join(" か ")} のいずれか
 - headline: 見出し（日本語、20〜28字程度、画像内に収まる長さ）
 - dek: 見出し下の一行説明（日本語、30字程度）
@@ -120,7 +136,7 @@ const NEWS_ITEM_SCHEMA = {
   type: "object",
   properties: {
     importance: { type: "integer", minimum: 1, maximum: 7 },
-    category: { type: "string" },
+    category: { type: "string", enum: CATEGORY_OPTIONS },
     catColor: { type: "string" },
     headline: { type: "string" },
     dek: { type: "string" },
