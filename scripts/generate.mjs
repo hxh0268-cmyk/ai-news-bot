@@ -204,7 +204,7 @@ async function callClaude() {
     },
     body: JSON.stringify({
       model: MODEL,
-      max_tokens: 24000,
+      max_tokens: 32000,
       system: SYSTEM_PROMPT,
       messages: [{ role: "user", content: USER_PROMPT }],
       // max_uses: 検索回数の上限を設け、検索だけでトークン予算を使い切ってしまうのを防ぐ
