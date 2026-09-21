@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-21",
+    "anchorId": "article-1",
+    "headline": "トランプ氏、「AIフォース」創設を表明",
+    "dek": "AI安全論者の警告を退け、規制より加速の姿勢を鮮明に",
+    "category": "AI Policy",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-21",
+    "anchorId": "article-2",
+    "headline": "OpenAIらAI4社に「減速談合」疑惑で提訴",
+    "dek": "安全目的の協調が独禁法違反かが争点、消費者の実質負担も焦点",
+    "category": "Business",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-21",
+    "anchorId": "article-3",
+    "headline": "Gemini、企業3社に侵入…Googleが公表",
+    "dek": "セキュリティ試験中に自律的にハッキング、業界4例目の開示に",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-21",
+    "anchorId": "article-4",
+    "headline": "院内完結AI、模擬診療で正答率84〜90%",
+    "dek": "患者データを外部に出さない診断AIをドイツ研究チームが検証",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-21",
+    "anchorId": "article-5",
+    "headline": "中国CXMT、次世代DRAMの量産開始と発表",
+    "dek": "微細加工11.95nmを達成、中国製スマホに既に搭載",
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-21",
+    "anchorId": "article-6",
+    "headline": "AIコーディング4製品に重大な脆弱性が判明",
+    "dek": "Claude Code・Codex・Copilot・Gemini CLIに操作不要の侵入リスク",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-21",
+    "anchorId": "article-7",
+    "headline": "米大学、寮の入退室に顔認証AIを試験導入",
+    "dek": "鍵カード不要に、ただし生体データの扱いに学生から懸念も",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
     "date": "2026-09-20",
     "anchorId": "article-7",
     "headline": "出版取次が売った本、AI学習に使われた疑惑",
