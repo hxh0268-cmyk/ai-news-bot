@@ -34,22 +34,6 @@
   {
     "date": "2026-09-21",
     "anchorId": "article-5",
-    "headline": "中国CXMT、次世代DRAMの量産開始と発表",
-    "dek": "微細加工11.95nmを達成、中国製スマホに既に搭載",
-    "category": "Infrastructure",
-    "catColor": "#7C6FE0"
-  },
-  {
-    "date": "2026-09-21",
-    "anchorId": "article-6",
-    "headline": "AIコーディング4製品に重大な脆弱性が判明",
-    "dek": "Claude Code・Codex・Copilot・Gemini CLIに操作不要の侵入リスク",
-    "category": "Security & Privacy",
-    "catColor": "#E1636F"
-  },
-  {
-    "date": "2026-09-21",
-    "anchorId": "article-7",
     "headline": "米大学、寮の入退室に顔認証AIを試験導入",
     "dek": "鍵カード不要に、ただし生体データの扱いに学生から懸念も",
     "category": "Security & Privacy",
