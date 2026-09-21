@@ -1,6 +1,7 @@
 // STEP2a: Nano Banana 2 Liteで背景ビジュアルを生成する（話題対応版）
 import fs from "node:fs";
 import path from "node:path";
+import { fetch as undiciFetch, Agent } from "undici";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 
@@ -114,15 +115,24 @@ ${KEYWORD_PALETTE}
 `.trim();
 }
 
+// scripts/generate.mjs（STEP1）で発生したUND_ERR_HEADERS_TIMEOUT障害（2026-09-19）を踏まえた
+// 予防対応。Node標準fetch（内蔵undici）はレスポンスヘッダー受信について約300秒(5分)の
+// 既定タイムアウトを持つが、このファイルは元々タイムアウト制御自体が無かったため、
+// 画像生成が長引いた場合にこの既定値に引っかかる可能性があった。
+// undiciパッケージ自身のfetch・Agentを使い、明示的なタイムアウトを設定する。
+const VISUALS_FETCH_AGENT = new Agent({ headersTimeout: 200000, bodyTimeout: 200000 });
+
 async function generateOne(prompt, model) {
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
-  const res = await fetch(url, {
+  const res = await undiciFetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       contents: [{ parts: [{ text: prompt }] }],
       generationConfig: { imageConfig: { aspectRatio: "3:4" } },
     }),
+    dispatcher: VISUALS_FETCH_AGENT,
+    signal: AbortSignal.timeout(180000),
   });
   if (!res.ok) throw new Error(`Gemini API エラー: ${res.status} ${await res.text()}`);
   const data = await res.json();
