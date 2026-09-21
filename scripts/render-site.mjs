@@ -293,6 +293,18 @@ function buildHtml(data, thumbnails, mode, hasNarration, tagEntries) {
   </div>`
     : "";
 
+  // メール購読フォーム（Buttondown埋め込み）。サーバーを持たない静的サイトのため、
+  // フォームの送信先はButtondownの公開APIエンドポイントに直接POSTする方式。
+  const newsletterSignup = `<div class="newsletter-signup">
+    <p class="newsletter-label">📧 メールで更新を受け取る</p>
+    <form action="https://buttondown.com/api/emails/embed-subscribe/026" method="post" class="embeddable-buttondown-form">
+      <label for="bd-email" class="sr-only">メールアドレス</label>
+      <input type="email" name="email" id="bd-email" placeholder="メールアドレス" required>
+      <input type="submit" value="登録する">
+    </form>
+    <p class="newsletter-powered"><a href="https://buttondown.com/refer/026" target="_blank" rel="noopener noreferrer">Powered by Buttondown</a></p>
+  </div>`;
+
   return `<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -368,6 +380,15 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .narration-player{background:#fff;border:1px solid #DCE6E8;border-radius:6px;padding:14px 16px;margin-bottom:20px;}
   .narration-label{margin:0 0 8px;font-size:13px;color:var(--slate);font-weight:700;}
   .narration-player audio{width:100%;display:block;}
+  .newsletter-signup{background:#fff;border:1px solid #DCE6E8;border-radius:6px;padding:18px 20px;margin-top:20px;text-align:center;}
+  .newsletter-label{margin:0 0 12px;font-size:14px;color:var(--ink);font-weight:700;}
+  .embeddable-buttondown-form{display:flex;gap:8px;max-width:400px;margin:0 auto;flex-wrap:wrap;justify-content:center;}
+  .embeddable-buttondown-form input[type="email"]{flex:1;min-width:180px;padding:10px 12px;border:1px solid #DCE6E8;border-radius:6px;font-size:14px;font-family:inherit;}
+  .embeddable-buttondown-form input[type="submit"]{padding:10px 18px;border:none;border-radius:6px;background:#1F8A83;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;}
+  .embeddable-buttondown-form input[type="submit"]:hover{background:#176b66;}
+  .newsletter-powered{margin:10px 0 0;font-size:11px;}
+  .newsletter-powered a{color:var(--slate-soft);}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   .header-meta{font-size:13px;color:rgba(234,240,242,0.7);margin:4px 0 0;}
   .header-nav{margin-top:14px;display:flex;gap:16px;}
   .header-nav a{color:rgba(234,240,242,0.75);font-size:13px;text-decoration:none;border-bottom:1px solid rgba(234,240,242,0.3);padding-bottom:1px;}
@@ -402,6 +423,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   ${narrationPlayer}
   ${buildToc(data)}
   ${buildArticlesWithAds(data, thumbnails, imgBasePath, permalinkBase, tagEntries)}
+  ${newsletterSignup}
   <a href="#main-content" class="back-top">先頭に戻る</a>
 </main>
 <footer>
@@ -465,6 +487,9 @@ function buildAboutHtml() {
 
   <h2>誤りに気づいたら</h2>
   <p>AIによる自動生成という性質上、誤りや不正確な内容を含む可能性があります。お気づきの点がございましたら、<a href="contact.html">お問い合わせページ</a>からご連絡ください。内容を確認のうえ、必要に応じて訂正いたします。</p>
+
+  <h2>メール購読について</h2>
+  <p>サイトのトップページ末尾から、メールアドレスを登録するとニュースレターに登録できます（配信サービスはButtondownを利用しています）。いつでも配信停止できます。</p>
 
   <h2>運営者情報</h2>
   <p>本サイトの運営者：BAL（ペンネーム）</p>
