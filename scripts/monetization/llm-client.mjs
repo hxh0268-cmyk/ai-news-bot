@@ -8,11 +8,18 @@
 // 薄いラッパーをここに新設する。既存のgenerate.mjs等は変更しない。
 import { withRetry } from "../retry.mjs";
 import { buildMockResponse } from "../mock-response.mjs";
+import { fetch as undiciFetch, Agent } from "undici";
 
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 // MOCK_MODE=true の間は実際のAnthropic API呼び出しを一切行わず、
 // tool.input_schemaの形だけを満たすダミーレスポンスを返す（APIキー不要）。
 const MOCK_MODE = process.env.MOCK_MODE === "true";
+
+// scripts/generate.mjs（STEP1）で発生したUND_ERR_HEADERS_TIMEOUT障害（2026-09-19）を踏まえた
+// 予防対応。この呼び出しは既存のAbortSignal.timeout(120000)がundici既定の
+// headersTimeout（約300秒）より短く、当時と全く同じ競合は起きない設計だったが、
+// 念のため他のAPI呼び出し箇所と統一し、明示的なタイムアウトを設定しておく。
+const MONETIZATION_FETCH_AGENT = new Agent({ headersTimeout: 150000, bodyTimeout: 150000 });
 
 /**
  * 構造化出力（tool-use）を強制してClaude APIを呼び出す。
@@ -35,7 +42,7 @@ export async function callStructured({ model, system, userPrompt, tool, label = 
 
   return withRetry(
     async () => {
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
+      const res = await undiciFetch("https://api.anthropic.com/v1/messages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,6 +57,7 @@ export async function callStructured({ model, system, userPrompt, tool, label = 
           tools: [tool],
           tool_choice: { type: "tool", name: tool.name },
         }),
+        dispatcher: MONETIZATION_FETCH_AGENT,
         // 軽量Tierでの分類・スコアリング呼び出しが多数走ることを想定し、
         // STEP1本体(8分)より短いタイムアウトで早期に失敗を検知する。
         signal: AbortSignal.timeout(120000),

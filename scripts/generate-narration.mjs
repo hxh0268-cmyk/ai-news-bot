@@ -1,6 +1,7 @@
 // STEP3b: ElevenLabsでナレーション音声を生成する（話題対応版）
 import fs from "node:fs";
 import path from "node:path";
+import { fetch as undiciFetch, Agent } from "undici";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 
@@ -13,6 +14,11 @@ if (!API_KEY || !VOICE_ID) {
 
 const { topic, outputDir } = loadTopic();
 const NARRATION_COUNT = topic.narrationCount ?? 3;
+
+// scripts/generate.mjs（STEP1）で発生したUND_ERR_HEADERS_TIMEOUT障害（2026-09-19）を踏まえた
+// 予防対応。このファイルは元々タイムアウト制御自体が無かったため、
+// undiciパッケージ自身のfetch・Agentを使い、明示的なタイムアウトを設定する。
+const NARRATION_FETCH_AGENT = new Agent({ headersTimeout: 150000, bodyTimeout: 150000 });
 
 function buildScript(items) {
   const intro = `今日の${topic.displayName}、注目の${items.length}本をお届けします。`;
@@ -28,7 +34,7 @@ async function main() {
   try {
     const buf = await withRetry(
       async () => {
-        const res = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
+        const res = await undiciFetch(`https://api.elevenlabs.io/v1/text-to-speech/${VOICE_ID}`, {
           method: "POST",
           headers: { "xi-api-key": API_KEY, "Content-Type": "application/json", Accept: "audio/mpeg" },
           body: JSON.stringify({
@@ -36,6 +42,8 @@ async function main() {
             model_id: "eleven_multilingual_v2",
             voice_settings: { stability: 0.5, similarity_boost: 0.75 },
           }),
+          dispatcher: NARRATION_FETCH_AGENT,
+          signal: AbortSignal.timeout(120000),
         });
         if (!res.ok) throw new Error(`ElevenLabs API エラー: ${res.status} ${await res.text()}`);
         return Buffer.from(await res.arrayBuffer());
