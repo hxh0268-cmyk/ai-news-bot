@@ -211,8 +211,10 @@ async function main() {
   const top5 = JSON.parse(fs.readFileSync(path.join(outputDir, "top5.json"), "utf-8"));
   const cardsDir = path.join(outputDir, "cards");
   const cardsXDir = path.join(outputDir, "cards-x");
+  const cardsXWebDir = path.join(outputDir, "cards-x-web");
   fs.mkdirSync(cardsDir, { recursive: true });
   fs.mkdirSync(cardsXDir, { recursive: true });
+  fs.mkdirSync(cardsXWebDir, { recursive: true });
 
   const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
   const page = await browser.newPage();
@@ -238,6 +240,12 @@ async function main() {
     await page.evaluate(() => document.fonts.ready); // Webフォントの適用完了を待つ（文字化け対策）
     await shrinkToFit(page, X_FONT_MAX, X_FONT_MIN, X_FONT_STEP, X_MAX_LINES);
     await page.screenshot({ path: path.join(cardsXDir, `${i + 1}.png`) });
+    // サイト（ai-news-bot本体）のサムネイル表示専用に、同じ画面をWebPでも書き出す。
+    // cards-x（PNG）はZapier経由でBufferに渡りX/Threads/Instagramへの投稿に使われているため、
+    // そちらのフォーマット・挙動には一切影響を与えず、サイト表示専用の軽量版を別途用意する方式にした。
+    // PNG（無圧縮に近い、2400x1350pxで1枚2〜2.5MB程度）に対し、WebPなら同等の見た目で
+    // 大幅に軽量化できる見込み。
+    await page.screenshot({ path: path.join(cardsXWebDir, `${i + 1}.webp`), type: "webp", quality: 82 });
   }
   console.log(`[${topic.slug}] 5枚の横長カード（X向け）を生成しました。`);
 

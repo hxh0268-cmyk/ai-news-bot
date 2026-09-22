@@ -105,20 +105,22 @@ function copyNarration() {
   return true;
 }
 
-// top5.jsonはimportanceの値で昇順ソートされているため、cards/{importance}.png が
+// top5.jsonはimportanceの値で昇順ソートされているため、cards-x-web/{importance}.webp が
 // その記事のサムネイルとして一意に対応する。日付別フォルダにコピーすることで、
 // 過去のアーカイブページの画像を後日の実行で上書きしてしまう事故を防ぐ。
+// cards-x-web（WebP）は、サイト表示専用に用意された軽量版。SNS投稿に使われるcards-x（PNG）とは
+// 別ファイルなので、投稿パイプラインには一切影響しない。
 function copyThumbnails(data) {
-  const srcDir = path.join(outputDir, "cards-x");
+  const srcDir = path.join(outputDir, "cards-x-web");
   if (!fs.existsSync(srcDir)) return new Set();
 
   fs.mkdirSync(imagesDateDir, { recursive: true });
   const copied = new Set();
   for (const item of data) {
     if (!item.importance || item.importance > 5) continue;
-    const srcPath = path.join(srcDir, `${item.importance}.png`);
+    const srcPath = path.join(srcDir, `${item.importance}.webp`);
     if (!fs.existsSync(srcPath)) continue;
-    fs.copyFileSync(srcPath, path.join(imagesDateDir, `${item.importance}.png`));
+    fs.copyFileSync(srcPath, path.join(imagesDateDir, `${item.importance}.webp`));
     copied.add(item.importance);
   }
   return copied;
@@ -128,7 +130,7 @@ function copyThumbnails(data) {
 // カテゴリカラーを使ったグラデーションのプレースホルダーを表示する。
 function thumbnailHtml(item, thumbnails, imgBasePath) {
   if (thumbnails.has(item.importance)) {
-    return `<img class="thumb" src="${imgBasePath}images/${dateStr}/${item.importance}.png" alt="${escAttr(item.headline)}" loading="lazy" width="1200" height="675">`;
+    return `<img class="thumb" src="${imgBasePath}images/${dateStr}/${item.importance}.webp" alt="${escAttr(item.headline)}" loading="lazy" width="1200" height="675">`;
   }
   return `<div class="thumb thumb-placeholder" style="background:linear-gradient(160deg,${item.catColor} 0%,var(--ink) 100%)" role="img" aria-label="${escAttr(item.headline)}"><span>${escAttr(item.category)}</span></div>`;
 }
@@ -231,7 +233,7 @@ function buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canon
         datePublished: dateStr,
         dateModified: dateStr,
         url: `${permalinkBase}#article-${i + 1}`,
-        ...(hasThumb ? { image: `${TOPIC_URL}/images/${dateStr}/${item.importance}.png` } : {}),
+        ...(hasThumb ? { image: `${TOPIC_URL}/images/${dateStr}/${item.importance}.webp` } : {}),
         author: { "@type": "Organization", name: topic.displayName },
         publisher,
       },
@@ -323,12 +325,12 @@ function buildHtml(data, thumbnails, mode, hasNarration, tagEntries) {
 <meta property="og:url" content="${canonicalUrl}">
 <meta property="og:site_name" content="${topic.displayName}">
 <meta property="og:locale" content="ja_JP">
-${firstThumbImportance ? `<meta property="og:image" content="${TOPIC_URL}/images/${dateStr}/${firstThumbImportance}.png">` : ""}
+${firstThumbImportance ? `<meta property="og:image" content="${TOPIC_URL}/images/${dateStr}/${firstThumbImportance}.webp">` : ""}
 
 <meta name="twitter:card" content="summary${firstThumbImportance ? "_large_image" : ""}">
 <meta name="twitter:title" content="${pageTitle}">
 <meta name="twitter:description" content="${description}">
-${firstThumbImportance ? `<meta name="twitter:image" content="${TOPIC_URL}/images/${dateStr}/${firstThumbImportance}.png">` : ""}
+${firstThumbImportance ? `<meta name="twitter:image" content="${TOPIC_URL}/images/${dateStr}/${firstThumbImportance}.webp">` : ""}
 
 ${buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canonicalUrl)}
 
