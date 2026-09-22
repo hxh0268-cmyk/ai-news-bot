@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-22",
+    "anchorId": "article-1",
+    "headline": "ソフトバンク、OpenAI向けに1.7兆円起債へ",
+    "dek": "OpenAI追加出資の原資、ジャンク債で調達へ",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-22",
+    "anchorId": "article-2",
+    "headline": "トヨタ、年1兆円投資で工場ロボ40万台刷新",
+    "dek": "AI搭載ロボが匠の技を学習、28年から順次導入",
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-22",
+    "anchorId": "article-3",
+    "headline": "医師ほどAIに慎重、その理由とは",
+    "dek": "日常利用は3倍でも、拡大には7割超が懸念",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-22",
+    "anchorId": "article-4",
+    "headline": "防衛装備の頭脳に国産AI、三菱重工が本格始動",
+    "dek": "PFNに100億円出資、自律型システムを共同開発",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-22",
+    "anchorId": "article-5",
+    "headline": "画面のないAIメガネ、日本の日常に浸透するか",
+    "dek": "6.5万円、ChatGPT・Geminiで翻訳や議事録も",
+    "category": "Consumer Apps",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-22",
+    "anchorId": "article-6",
+    "headline": "AIに書かせた文章、自分の言葉と言えるか",
+    "dek": "大学生10人の実験、AI使用組は内容を覚えず",
+    "category": "Media & Culture",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-22",
+    "anchorId": "article-7",
+    "headline": "OpenAIの秘密モデル、数学者超えの主張",
+    "dek": "難問「ナビエ・ストークス」証明も物議に",
+    "category": "Research",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-09-21",
     "anchorId": "article-1",
     "headline": "トランプ氏、「AIフォース」創設を表明",
