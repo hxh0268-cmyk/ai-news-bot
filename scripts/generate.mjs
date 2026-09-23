@@ -77,7 +77,7 @@ ${exclusionSection}
   （AI Policy=規制・政府・国際的な政策動向、AI Safety=安全性・リスク・誤情報・ハルシネーション、Business=企業動向・提携・資金調達・市場、Consumer Apps=一般消費者向けアプリ・サービス、Health Tech=医療・ヘルスケア領域でのAI活用、Work & Labor=雇用・採用・働き方への影響、Infrastructure=半導体・データセンター・電力・計算資源、Media & Culture=メディア・著作権・エンタメ・教育、Research=新モデル・研究成果・技術的ブレークスルー、Security & Privacy=情報漏洩・個人情報・サイバーセキュリティ）
   どれにも当てはまらない場合のみ、最も近いものを選んでください（新規カテゴリの作成は不可）
 - catColor: ${(topic.categoryColors || ["#F4B942", "#7C6FE0", "#1F8A83", "#E1636F"]).join(" か ")} のいずれか
-- headline: 見出し（日本語、20〜28字程度、画像内に収まる長さ）
+- headline: 見出し（日本語、20〜28字程度、画像内に収まる長さ）。発言・提言・発表内容など特定のフレーズを見出し内で引用する場合は、必ず「」で囲むこと（開き「と閉じ」の両方を書き忘れないよう、書き終えたら見出し全体を読み返して確認する）。例：「AI国際標準「米国主導で」とOpenAIが提言」（「米国主導で」の部分を引用符で囲む）
 - dek: 見出し下の一行説明（日本語、30字程度）
 - body: 本文の段落（2〜4個の配列）
 - stats: 数値と説明ラベルの組（配列）
@@ -378,6 +378,40 @@ function logHeadlinePatternBias(items) {
   }
 }
 
+// 見出し内の括弧・引用符の対応が崩れていないかをチェックする（例：括弧が片方だけ抜けて
+// 対応が崩れる不具合）。なお2026-09-23に実際発生した不具合（「AI国際標準、米国主導でと
+// OpenAIが提言」）は開き「・閉じ」の両方が丸ごと欠落しており、個数自体は0対0で一致して
+// しまうため、この機械チェックだけでは検知できなかった。根本対策はプロンプト側の指示
+// （headline項目の説明を参照）で行っており、このチェックは「片方だけ欠落」等の
+// 別パターンに対する補助的な安全網という位置づけ。
+// ここで検知しても処理は止めない（品質より継続性を優先する既存方針を踏襲）が、
+// 警告が出た場合はPRレビュー時に該当見出しを重点的に確認すること。
+function logHeadlineBracketMismatch(items) {
+  const pairs = [
+    ["「", "」"],
+    ["『", "』"],
+    ["（", "）"],
+    ["(", ")"],
+  ];
+  let mismatchCount = 0;
+  items.forEach((item, i) => {
+    const headline = item.headline || "";
+    for (const [open, close] of pairs) {
+      const openCount = (headline.match(new RegExp(open.replace(/[()]/g, "\\$&"), "g")) || []).length;
+      const closeCount = (headline.match(new RegExp(close.replace(/[()]/g, "\\$&"), "g")) || []).length;
+      if (openCount !== closeCount) {
+        mismatchCount += 1;
+        console.warn(
+          `⚠️ 見出しの括弧対応が崩れている疑い: ${i + 1}件目「${headline}」（${open}が${openCount}個、${close}が${closeCount}個）`
+        );
+      }
+    }
+  });
+  if (mismatchCount === 0) {
+    console.log("✅ 見出しチェック: 括弧・引用符の対応崩れは検知されませんでした。");
+  }
+}
+
 // 「書き直し前」と「書き直し後」を左右に並べて見比べられるMarkdownを生成する。
 // GitHub上でこのファイルを開くと、表形式で横並び表示される。
 function buildHumanizeComparison(draftItems, finalItems) {
@@ -428,6 +462,7 @@ async function main() {
   }
 
   logHeadlinePatternBias(draftItems);
+  logHeadlineBracketMismatch(draftItems);
 
   console.log(`[${topic.slug}] 文章を人間らしい自然な文体に書き直しています…`);
   let items;
