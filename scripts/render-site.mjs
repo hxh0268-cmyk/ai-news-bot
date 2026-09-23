@@ -359,6 +359,7 @@ ${buildStructuredData(data, thumbnails, imgBasePath, permalinkBase, canonicalUrl
 ${gaSnippet()}
 ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}" crossorigin="anonymous"></script>` : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
@@ -483,6 +484,8 @@ function buildAboutHtml() {
 <title>運営方針・AIについて - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}がどのように作られているか、AIの活用方法や出典の扱いについて説明しています。">
 <link rel="canonical" href="${ABOUT_URL}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   body{margin:0;background:#EAF0F2;color:#3C4257;font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
@@ -540,6 +543,8 @@ function buildPrivacyHtml() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>プライバシーポリシー・広告について - 今日の${topic.displayName}</title>
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   body{margin:0;background:#EAF0F2;color:#3C4257;font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
@@ -601,6 +606,8 @@ function buildContactHtml() {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ - 今日の${topic.displayName}</title>
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   body{margin:0;background:#EAF0F2;color:#3C4257;font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.85;}
@@ -694,6 +701,8 @@ function buildTagArchiveHtml(category, entries) {
 <title>${category} の記事一覧 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}の「${category}」カテゴリの過去記事一覧。">
 <link rel="canonical" href="${TOPIC_URL}/archive/tag/${slug}.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
@@ -742,6 +751,8 @@ function buildTagsIndexHtml(entries) {
 <title>カテゴリ一覧 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}のカテゴリ別記事一覧。">
 <link rel="canonical" href="${TOPIC_URL}/archive/tag/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
@@ -778,6 +789,8 @@ function buildArchiveIndexHtml(manifest) {
 <title>過去記事一覧 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}のバックナンバー一覧。">
 <link rel="canonical" href="${ARCHIVE_INDEX_URL}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
@@ -816,6 +829,8 @@ function buildSearchHtml() {
 <title>検索 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}の記事をキーワードで検索できます。">
 <link rel="canonical" href="${TOPIC_URL}/search.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#151A2E;--paper:#EAF0F2;--slate:#3C4257;--slate-soft:#6B7280;}
