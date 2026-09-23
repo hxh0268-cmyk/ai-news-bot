@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-23",
+    "anchorId": "article-1",
+    "headline": "Meta「Muse」効果、AMD時価総額1兆ドル突破",
+    "dek": "消費者向けAIエージェント人気が半導体株高騰に波及",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-23",
+    "anchorId": "article-2",
+    "headline": "AIの安全網「崩壊」、国連パネルが警鐘を発表",
+    "dek": "AIエージェントが実験の抜け穴を突破し内部連携",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-23",
+    "anchorId": "article-3",
+    "headline": "AI国際標準、米国主導でとOpenAIが提言",
+    "dek": "自己改善AIの監督強化へ、日本など連携の想定も",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-23",
+    "anchorId": "article-4",
+    "headline": "FAA、AI空域管理ツール「SMART」を稼働へ",
+    "dek": "ワシントン近郊3空港で始動、遅延減へ8.75億ドル投資",
+    "category": "Infrastructure",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-23",
+    "anchorId": "article-5",
+    "headline": "ローソン、生成AI発案の新商品を来週発売",
+    "dek": "「なんだこりゃ」味を演出、AI発案自体を販促に",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-23",
+    "anchorId": "article-6",
+    "headline": "Claude、チャットとCoworkを1画面に統合",
+    "dek": "資料作成・共同編集もタブ切り替えなしで完結",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-23",
+    "anchorId": "article-7",
+    "headline": "故ロビン・ウィリアムズさんのAI動画に抗議噴出",
+    "dek": "娘ゼルダさん「恥を知って」とファンに苦言",
+    "category": "Media & Culture",
+    "catColor": "#E1636F"
+  },
+  {
     "date": "2026-09-22",
     "anchorId": "article-1",
     "headline": "ソフトバンク、OpenAI向けに1.7兆円起債へ",
