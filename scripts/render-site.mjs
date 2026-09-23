@@ -166,6 +166,26 @@ function relatedArticlesHtml(item, currentAnchorId, tagEntries) {
   return `<div class="related"><h4>関連記事</h4><ul>${links}</ul></div>`;
 }
 
+// 数値ハイライト（stats）を横並びの簡易カードで表示する。
+// stats・chipsはgenerate.mjsで元々毎日生成されていたが、サイト側で一度も
+// 表示されていなかった（2026-09-21の棚卸しで判明）ため、追加課金なしで使える
+// 素材として今回表示するようにした。
+function statsHtml(item) {
+  if (!Array.isArray(item.stats) || item.stats.length === 0) return "";
+  const cells = item.stats
+    .map((s) => `<div class="stat"><span class="stat-n">${escAttr(s.n)}</span><span class="stat-l">${escAttr(s.l)}</span></div>`)
+    .join("");
+  return `<div class="stats-row">${cells}</div>`;
+}
+
+// 関連キーワード（chips）を小さなタグ群として表示する。カテゴリタグ（.tag、
+// 単一・記事全体の分類）とは視覚的に区別し、記事末尾に複数のキーワードとして出す。
+function chipsHtml(item) {
+  if (!Array.isArray(item.chips) || item.chips.length === 0) return "";
+  const tags = item.chips.map((c) => `<span class="chip">${escAttr(c)}</span>`).join("");
+  return `<div class="chips-row">${tags}</div>`;
+}
+
 function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase, tagEntries) {
   const anchorId = `article-${index + 1}`;
   const permalink = `${permalinkBase}#${anchorId}`;
@@ -176,9 +196,11 @@ function renderArticle(item, index, thumbnails, imgBasePath, permalinkBase, tagE
     <p class="read-time">${readingTime(item)}で読める</p>
     <h2>${item.headline}</h2>
     <p class="dek">${item.dek}</p>
+    ${statsHtml(item)}
     ${(item.body || []).map((p) => `<p>${p}</p>`).join("\n")}
     <div class="why"><h3>なぜ重要か</h3><p>${item.why}</p></div>
     <div class="source-line">出典：${linkedSourceLine(item)}</div>
+    ${chipsHtml(item)}
     ${relatedArticlesHtml(item, anchorId, tagEntries)}
     ${shareButtonsHtml(item, permalink)}
   </article>`;
@@ -365,6 +387,12 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
   .why{background:var(--ink);color:#fff;border-radius:6px;padding:16px 18px;margin-top:16px;font-size:14px;}
   .why h3{display:block;color:#F4B942;font-size:11px;margin:0 0 6px;font-weight:700;font-family:'Zen Kaku Gothic New',sans-serif;}
   .source-line{font-size:12px;color:var(--slate-soft);margin-top:16px;font-family:'JetBrains Mono',monospace;}
+  .stats-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+  .stat{background:var(--paper);border-radius:6px;padding:10px 14px;flex:1;min-width:120px;border-left:3px solid var(--cat,#1F8A83);}
+  .stat-n{display:block;font-size:20px;font-weight:700;color:var(--ink);font-family:'JetBrains Mono',monospace;}
+  .stat-l{display:block;font-size:11px;color:var(--slate-soft);margin-top:2px;}
+  .chips-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;}
+  .chip{font-size:11px;color:var(--slate-soft);background:var(--paper);border-radius:12px;padding:3px 10px;}
   .related{background:#fff;border-radius:6px;padding:14px 18px;margin-top:16px;}
   .related h4{margin:0 0 8px;font-size:12px;color:var(--slate-soft);font-weight:700;}
   .related ul{list-style:none;margin:0;padding:0;}
