@@ -1,9 +1,10 @@
-name: 【一時】見出し修正に伴うアセット再生成（STEP2〜STEP3c）
+name: 【一時】見出し修正に伴うアセット再生成（STEP2.5のみ・やり直し）
 
-# 2026-09-23分の見出し誤字修正（PR #98）に伴う一時的な再生成ワークフロー。
-# STEP1（ニュース収集）は実行せず、既に修正済みのoutput/ai-news/2026-09-23/data.json・
-# top5.jsonを使って、カード画像・ナレーション音声・スライドショー動画・サイトHTMLだけを
-# 作り直す。完了後、このワークフローファイルは削除する。
+# 前回の実行(f028093)で、cards/narration/videoは正しく再生成・コミットされたが、
+# git-auto-commit-actionのfile_patternが複数行YAML文字列として正しく渡らず、
+# docs/ai-news/**側だけが欠落してコミットされていなかった（render-site.mjs自体は
+# ランナー上で正しく実行され新しい見出しを反映していたが、その結果が永続化されなかった）。
+# file_patternを1行にまとめ、render-site.mjsのみ再実行してdocs/を正しくコミットする。
 
 on:
   workflow_dispatch: {}
@@ -24,20 +25,6 @@ jobs:
       - name: npm install
         run: npm install
 
-      - name: STEP2 5枚の画像カードを生成
-        env:
-          TOPIC: ai-news
-          CONTENT_DATE: "2026-09-23"
-        run: node scripts/render-cards.mjs
-
-      - name: STEP3b ElevenLabsでナレーション音声を生成
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          ELEVENLABS_VOICE_ID: ${{ secrets.ELEVENLABS_VOICE_ID }}
-          TOPIC: ai-news
-          CONTENT_DATE: "2026-09-23"
-        run: node scripts/generate-narration.mjs
-
       - name: STEP2.5 広告枠付きサイトを生成
         env:
           ADSENSE_CLIENT_ID: ${{ secrets.ADSENSE_CLIENT_ID }}
@@ -46,19 +33,8 @@ jobs:
           CONTENT_DATE: "2026-09-23"
         run: node scripts/render-site.mjs
 
-      - name: ffmpegをインストール
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
-
-      - name: STEP3c 静止画スライドショー生成＋ナレーション合成
-        env:
-          TOPIC: ai-news
-          CONTENT_DATE: "2026-09-23"
-        run: bash scripts/build-video.sh
-
       - name: 再生成結果をこのブランチに直接コミット・push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "[ai-news] 見出し誤字修正に伴うアセット再生成（cards/narration/video/site）"
-          file_pattern: |
-            output/ai-news/2026-09-23/**
-            docs/ai-news/**
+          commit_message: "[ai-news] docs/を再生成（見出し修正のfile_pattern漏れの修正）"
+          file_pattern: "docs/ai-news/**"
