@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-24",
+    "anchorId": "article-1",
+    "headline": "米中AI大手、国連安保理に勢ぞろい",
+    "dek": "OpenAI・Anthropic・DeepSeekが同じ議場に立つ異例の会合",
+    "category": "AI Policy",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-24",
+    "anchorId": "article-2",
+    "headline": "ChatGPTの新モデル、値段は半分に",
+    "dek": "OpenAIがGPT-6 Sol・Lunaを投入、API価格を大幅値下げ",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-24",
+    "anchorId": "article-3",
+    "headline": "OpenAI vs Anthropic、90分差の値下げ合戦",
+    "dek": "Claude Opus 5.5がGPT-6発表の直前に登場、価格競争が過熱",
+    "category": "Business",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-24",
+    "anchorId": "article-4",
+    "headline": "半導体を持たないLG、AI覇権にどう挑むか",
+    "dek": "冷却・電力技術でMicrosoftと戦略提携、データセンター需要を狙う",
+    "category": "Infrastructure",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-24",
+    "anchorId": "article-5",
+    "headline": "Verizon、AI研修を無料開放へ",
+    "dek": "105億円規模、求職者・中小企業向けに無料AIスキル講座",
+    "category": "Work & Labor",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-24",
+    "anchorId": "article-6",
+    "headline": "仏Mistral、広告AI企業を電撃買収",
+    "dek": "Pimento買収で「Vibe」強化、3億円規模の資金調達直後に",
+    "category": "Business",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-24",
+    "anchorId": "article-7",
+    "headline": "AI女優、まさかの広東語連発",
+    "dek": "生放送インタビュー中に言語が突然切り替わる珍事",
+    "category": "Media & Culture",
+    "catColor": "#E1636F"
+  },
+  {
     "date": "2026-09-23",
     "anchorId": "article-1",
     "headline": "Meta「Muse」効果、AMD時価総額1兆ドル突破",
