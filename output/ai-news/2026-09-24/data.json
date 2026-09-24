@@ -1,0 +1,267 @@
+[
+  {
+    "importance": 1,
+    "category": "AI Policy",
+    "catColor": "#F4B942",
+    "headline": "米中AI大手、国連安保理に勢ぞろい",
+    "dek": "OpenAI・Anthropic・DeepSeekが同じ議場に立つ異例の会合",
+    "body": [
+      "国連安全保障理事会が9月23日（現地時間）、「人工知能と国際安全保障」をテーマに会合を開いた。顔ぶれがすごい。OpenAIのサム・アルトマンCEO、Anthropicのダリオ・アモデイCEO、Hugging FaceのクレモンドランガCEO、それに国連AI諮問機関の共同議長ヨシュア・ベンジオ教授まで揃った。",
+      "今回とりわけ目を引いたのは中国勢の存在だ。DeepSeekやMoonshot（Kimiの開発元）といった中国の有力AI企業からも講演者が招かれている。DeepSeek創業者の梁文峰氏は欠席予定と伝えられているが、直前で気が変わる可能性もまだ残っている。",
+      "武力紛争やテロ対策と同じ土俵でAIが議題に上るのは、安保理としても異例中の異例。人工知能のリスクが外交の最前線に正式に入り込みつつある、その象徴のような一日になった。"
+    ],
+    "why": "米国と中国を代表するAI企業が同じ国際会議で肩を並べて発言するのは今回が初めて。AIの安全性を巡る議論は、もはや一国の産業政策の話ではなく、地政学レベルの安全保障課題として扱われ始めている。日本は安保理常任理事国ではないけれど、AIガバナンスの主導権争いは日本企業の海外展開やAI規制の方向性にも、じわじわ効いてくるはずだ。",
+    "sourceLine": "SBS News、The Deep Dive（2026年9月23日）",
+    "sources": [
+      {
+        "name": "SBS News",
+        "url": "https://news.sbs.co.kr/english/article.do?news_id=N1008767243"
+      },
+      {
+        "name": "The Deep Dive",
+        "url": "https://thedeepdive.ca/un-security-council-brings-deepseek-sam-altman-to-talk-about-ai-risks/"
+      }
+    ],
+    "videoId": null,
+    "captionX": "OpenAI・Anthropic・DeepSeekが国連安保理に集結。AIリスクがついに外交の最前線議題に。#AI政策 #国連安保理",
+    "captionThreads": "国連安保理でAIと国際安全保障が議題に。米中の代表的AI企業トップが同じ場に呼ばれるのは初めてらしい。地政学とAI、ここまで結びつくとは思わなかった。",
+    "captionInstagram": "国連安全保障理事会が「AIと国際安全保障」をテーマに会合を開きました。OpenAIのサム・アルトマン氏やAnthropicのダリオ・アモデイ氏に加え、中国のDeepSeek・Moonshotの代表まで招かれるという異例の顔ぶれ。AIの安全性議論が一国の産業政策を超えて、外交・安全保障の枠組みに組み込まれ始めています。\n#AI #国連 #AIポリシー #DeepSeek #OpenAI",
+    "chips": [
+      "国連安保理",
+      "OpenAI",
+      "DeepSeek",
+      "AI政策",
+      "国際安全保障"
+    ],
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0",
+    "headline": "ChatGPTの新モデル、値段は半分に",
+    "dek": "OpenAIがGPT-6 Sol・Lunaを投入、API価格を大幅値下げ",
+    "body": [
+      "OpenAIが新モデル「GPT-6 Sol」と「GPT-6 Luna」を発表した。Solは100万トークンあたり入力2ドル・出力10ドル、Lunaは入力0.10ドル・出力0.50ドル。前世代のGPT-5.6シリーズと比べて半額以下という大胆な価格設定だ。しかも期間限定のセールではなく、恒久的な値下げだという。",
+      "提供先はOpenAIのAPIだけでなく、ChatGPT WorkやCodexでもPlus・Pro・Business・Enterprise・Edu向けに始まっている。無料・Goプランのユーザーも、デスクトップアプリ経由でLunaが使える。キャッシュ処理と推論の効率化でコストを削減し、その分をユーザーに還元した形だ。",
+      "精度面での改善もアピールしている。実際のChatGPT会話でユーザーが指摘した誤りを基にした内部評価では、Solの事実誤りはGPT-5.6 Sol比でおよそ半分になったそうだ。"
+    ],
+    "why": "身近なチャットAIの利用コストが恒久的に半減するというのは、企業の業務利用だけの話じゃない。個人が仕事や学習でAIを日常的に使うハードルが、また一段下がる。同じ日にAnthropicもClaude Opus 5.5をぶつけてきたし、主要AI企業間の値下げ競争はこれからも続く。日本の中小企業や個人事業主にとっても、AIツールを安く業務に組み込める環境が整ってきている。",
+    "sourceLine": "VentureBeat、OpenAI公式ブログ（2026年9月22日）",
+    "sources": [
+      {
+        "name": "VentureBeat",
+        "url": "https://venturebeat.com/technology/openai-releases-gpt-6-sol-and-luna-models-slashing-api-costs-50-or-more"
+      },
+      {
+        "name": "OpenAI公式ブログ",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      }
+    ],
+    "videoId": null,
+    "captionX": "OpenAIがGPT-6 Sol・Lunaを発表、API価格は前世代の半額以下。AI利用コストの値下げ競争、止まらない。#ChatGPT #OpenAI",
+    "captionThreads": "GPT-6のSolとLuna、値段が前より半分以下になったってなかなかすごい。しかも恒久値下げらしい。Anthropicとの価格勝負、この先どうなるんだろう。",
+    "captionInstagram": "OpenAIが新モデル「GPT-6 Sol」「GPT-6 Luna」を発表しました。API利用料金は前世代の半額以下に恒久値下げされ、ChatGPTの各プランでも順次使えるようになります。同じ日にAnthropicもClaude Opus 5.5をぶつけてくるなど、AI業界の価格競争が本格化。日常的にAIを使う私たちにとっても、選べる幅とコスパが広がりそうです。\n#ChatGPT #OpenAI #GPT6 #生成AI #AIツール",
+    "chips": [
+      "OpenAI",
+      "GPT-6",
+      "ChatGPT",
+      "API価格",
+      "生成AI"
+    ],
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Business",
+    "catColor": "#E1636F",
+    "headline": "OpenAI vs Anthropic、90分差の値下げ合戦",
+    "dek": "Claude Opus 5.5がGPT-6発表の直前に登場、価格競争が過熱",
+    "body": [
+      "Anthropicは9月22日、最新フラッグシップモデル「Claude Opus 5.5」を一般提供した。価格は100万トークンあたり入力4ドル・出力20ドル。ところがその発表からわずか90分後、OpenAIがGPT-6 SolとLunaを発表し、Solの価格をOpus 5.5のちょうど半額に設定してきた。",
+      "偶然にしてはできすぎている。コーディングや業務自動化向けの高性能モデルを巡る競争は、性能勝負だけでなく価格勝負にまで広がっているということだ。ただし専門メディアは、両モデルの実力を比べたベンチマークはまだ出そろっていないとして、価格だけで優劣を決めつけるのは早いと釘を刺している。"
+    ],
+    "why": "生成AIの覇権争いが、モデル性能の比較から「同じ性能ならどれだけ安く使えるか」という消費者・企業目線のコスト勝負へ軸足を移している、その象徴のような出来事だ。日本企業にとっても、業務システムに組み込むAIモデルを選ぶ基準は、性能一辺倒からコスパ重視へシフトしていきそうだ。",
+    "sourceLine": "Yahoo Finance、The New Stack（2026年9月22日）",
+    "sources": [
+      {
+        "name": "Yahoo Finance",
+        "url": "https://finance.yahoo.com/technology/ai/articles/openai-cuts-gpt-6-sol-111351382.html"
+      },
+      {
+        "name": "The New Stack",
+        "url": "https://thenewstack.io/openai-gpt-6-sol-luna-release/"
+      }
+    ],
+    "videoId": null,
+    "captionX": "Anthropicの新モデル発表から90分後、OpenAIがちょうど半額の新モデルをぶつけてきた。値下げ合戦、過熱中。#Claude #OpenAI",
+    "captionThreads": "AnthropicがClaude Opus 5.5を出した90分後に、OpenAIがぴったり半額のGPT-6を発表するというタイミングの妙。もう完全に価格戦争。",
+    "captionInstagram": "9月22日、AnthropicがClaude Opus 5.5を発表したわずか約90分後、OpenAIがそのちょうど半額となるGPT-6 Sol・Lunaを投入しました。生成AI業界の競争軸が、性能比較から「どれだけ安く使えるか」というコスト勝負へ移りつつあることを象徴する一幕です。\n#Claude #OpenAI #Anthropic #生成AI #AI競争",
+    "chips": [
+      "Anthropic",
+      "OpenAI",
+      "Claude Opus 5.5",
+      "価格競争",
+      "生成AI"
+    ],
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Infrastructure",
+    "catColor": "#1F8A83",
+    "headline": "半導体を持たないLG、AI覇権にどう挑むか",
+    "dek": "冷却・電力技術でMicrosoftと戦略提携、データセンター需要を狙う",
+    "body": [
+      "韓国LGグループの具光謨会長がMicrosoft本社でサティア・ナデラCEOと会談し、戦略的パートナーシップを結んだと発表した。狙いはMicrosoftの世界的なデータセンター拡張に合わせ、LGの冷却・電力・IT設備を供給する機会を探ることだ。",
+      "背景にあるのは急増するAI向け電力需要。米国のデータセンターの電力消費量は今後数年で倍増する見通しとされ、高性能サーバーが増えるほど冷却・電力設備の重要性は増していく。LGは半導体事業こそ持っていないが、独自の冷却・バッテリー・IT技術でこの市場を攻めていく構えだ。",
+      "製造・物流分野の「フィジカルAI」でもMicrosoftの高性能クラウドを使ってモデル開発を進めるほか、全社の事務職にMicrosoftのAIツールを導入する計画も明らかにした。"
+    ],
+    "why": "半導体を持たない総合電機メーカーが、AIデータセンターの「裏方」である冷却・電力技術で存在感を高めようとしている。これはAIブームの恩恵がチップ企業だけでなく、空調や電力インフラの企業にも広がっている証拠だ。日本でも冷却技術や電力インフラを手掛けるメーカーにとって、同じようなAIデータセンター需要の取り込みは今後の成長機会になりうる。",
+    "sourceLine": "中央日報日本語版（Yahoo!ニュース）、KED Global（2026年9月22日）",
+    "sources": [
+      {
+        "name": "中央日報日本語版（Yahoo!ニュース）",
+        "url": "https://news.yahoo.co.jp/articles/a79ef2cb4946cef991eccb03e3f0551906d56d13"
+      },
+      {
+        "name": "KED Global",
+        "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202609220004"
+      }
+    ],
+    "videoId": null,
+    "captionX": "半導体を持たないLGが、冷却・電力技術でMicrosoftと「AI同盟」。データセンター需要を狙う一手。#LG #Microsoft #AIインフラ",
+    "captionThreads": "LGって半導体持ってないのに、AIデータセンター向けの冷却・電力技術でMicrosoftと組むんですね。AIブームの恩恵、思わぬところにも広がってる。",
+    "captionInstagram": "韓国LGグループがMicrosoftと戦略的パートナーシップを結びました。半導体事業を持たないLGは、AIデータセンターに欠かせない冷却・電力・IT設備の供給で存在感を高めようとしています。AI需要の急拡大で電力消費が倍増する見通しの中、「裏方」インフラを担う企業にも大きなビジネスチャンスが生まれています。\n#LG #Microsoft #AIインフラ #データセンター #電力",
+    "chips": [
+      "LG",
+      "Microsoft",
+      "データセンター",
+      "冷却技術",
+      "AIインフラ"
+    ],
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "Work & Labor",
+    "catColor": "#F4B942",
+    "headline": "Verizon、AI研修を無料開放へ",
+    "dek": "105億円規模、求職者・中小企業向けに無料AIスキル講座",
+    "body": [
+      "米通信大手Verizonが、求職者や中小企業、離職者、教育者向けに無料でAIスキルを学べる新プログラム「Verizon AI Skills for America」を始める。投じる額は総額7000万ドル（約105億円）。既存の離職者向け再教育基金2000万ドルに、新たに5000万ドルを積み増した形だ。",
+      "中身はIBM・Google・Microsoft・Anthropic・OpenAI・Courseraといった各社のオンライン講座を集めた単一ポータル。個人で契約すれば年間700ドルを超えるはずの内容が、無償で受けられる。Goodwillなど地域の非営利団体とも連携し、実践的なコーチングも用意しているという。",
+      "Verizonのダン・シュルマンCEOは、AIが働き方を根本から変えると述べ、他の大企業にも同様の投資を呼びかけた。この取り組みは、同社が過去に発表した1万3000人規模の人員削減とも重ねて語られている。"
+    ],
+    "why": "AIの普及で仕事の中身が変わることに不安を抱える人にとって、大企業が無料でスキル研修の受け皿を用意するのは実利的な話だ。日本ではまだこうした民間主導の大規模AI無料研修は目立たないけれど、人手不足とAI導入が同時に進む今、企業や自治体が同様の再教育投資に踏み出す日は遠くないかもしれない。",
+    "sourceLine": "Verizon公式発表、PYMNTS（2026年9月23日）",
+    "sources": [
+      {
+        "name": "Verizon公式発表",
+        "url": "https://www.verizon.com/about/news/verizon-ai-skills-for-america-investment"
+      },
+      {
+        "name": "PYMNTS",
+        "url": "https://www.pymnts.com/news/artificial-intelligence/2026/verizon-targets-ai-skills-gap-with-70-million-training-initiative/"
+      }
+    ],
+    "videoId": null,
+    "captionX": "Verizonが総額105億円でAI無料研修プログラムを開始。求職者・中小企業向けに大手講座を無償開放。#AI教育 #仕事の未来",
+    "captionThreads": "Verizonが7000万ドルかけてAIスキルの無料研修を始めるらしい。IBMやGoogleの講座までタダで使えるとか、地味にすごい話だと思う。",
+    "captionInstagram": "米通信大手Verizonが「Verizon AI Skills for America」という無料AIスキル研修プログラムを始めました。総投資額は7000万ドル（約105億円）。IBM・Google・Microsoft・OpenAIなどの講座を集約し、求職者や中小企業、離職者に無償提供します。AIによる雇用構造の変化に、企業側が再教育で応える動きとして注目されています。\n#AI教育 #リスキリング #Verizon #仕事の未来 #AIスキル",
+    "chips": [
+      "Verizon",
+      "AI研修",
+      "リスキリング",
+      "雇用",
+      "無料講座"
+    ],
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 6,
+    "category": "Business",
+    "catColor": "#7C6FE0",
+    "headline": "仏Mistral、広告AI企業を電撃買収",
+    "dek": "Pimento買収で「Vibe」強化、3億円規模の資金調達直後に",
+    "body": [
+      "フランスのAI企業Mistral AIが、パリ拠点の広告制作AIスタートアップ「Pimento」を買収した。買収額は非公開だが、報道では数百万〜1270万ユーロ規模とされる。今年に入って早くも3件目の買収になる。",
+      "Pimentoはブランドの資料やキャンペーン実績データから広告クリエイティブを自動生成するソフトを作っていて、180以上のブランドに使われてきた。ただ今回Mistralが本当に欲しかったのは、Pimentoの広告事業そのものよりエンジニア人材らしい。対話型アシスタント「Vibe」（旧Le Chat）の強化に充てる方針だという。",
+      "この買収が行われたのは、Mistralが今年9月に21億ユーロ超の評価額で30億ユーロを調達した直後というタイミング。同社はこれまでもクラウド基盤のKoyeb、産業向け物理シミュレーションのEmmi AIを買収しており、モデル開発から実際に企業が使う業務アプリへと事業領域を広げつつある。"
+    ],
+    "why": "巨額の資金調達を終えたばかりのAI企業が、広告制作という具体的な業務アプリに手を伸ばしている。これはAIビジネスの重心が「基盤モデル開発競争」から「実際の業務で使われるアプリ作り」へ移りつつある流れを映している。日本の広告・マーケティング業界でも生成AIツールの導入はすでに進んでおり、海外AI企業による同分野の買収・投資は今後さらに増えそうだ。",
+    "sourceLine": "The Next Web、Dealroom（2026年9月23日）",
+    "sources": [
+      {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/mistral-acquires-pimento-ai-advertising"
+      },
+      {
+        "name": "Dealroom",
+        "url": "https://app.dealroom.co/news/note/mistral-ai-buys-marketing-startup-pimento-in-third-acquisition-since-3b-raise"
+      }
+    ],
+    "videoId": null,
+    "captionX": "仏Mistral AIが広告制作AIのPimentoを買収。本当の狙いは人材、対話AI「Vibe」の強化へ。#Mistral #AI買収",
+    "captionThreads": "Mistralが広告AIのPimentoを買収したんだけど、目的は広告事業じゃなくてエンジニア人材みたい。AI企業のM&A、そういう発想もあるのか。",
+    "captionInstagram": "フランスのMistral AIが、パリ発の広告制作AIスタートアップPimentoを買収しました。今年に入って3件目の買収で、真の狙いはPimentoのエンジニア人材。対話型アシスタント「Vibe」の強化に充てる方針です。巨額調達直後のAI企業が、モデル開発から実際の業務アプリへと事業を広げる動きが目立ってきています。\n#Mistral #AI買収 #生成AI #広告AI #スタートアップ",
+    "chips": [
+      "Mistral AI",
+      "Pimento",
+      "M&A",
+      "広告AI",
+      "生成AI"
+    ],
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 7,
+    "category": "Media & Culture",
+    "catColor": "#E1636F",
+    "headline": "AI女優、まさかの広東語連発",
+    "dek": "生放送インタビュー中に言語が突然切り替わる珍事",
+    "body": [
+      "AI生成の「女優」ティリー・ノーウッドが、番組「Piers Morgan Uncensored」に出演中、英語から広東語へ突然切り替わるというハプニングを起こした。共演した俳優トム・コンティが「画面上の共演者も自分と同じくCG生成なのか」と尋ねた直後の出来事だったという。",
+      "ノーウッドは「配線が少し混乱してしまうことがある」と釈明し、司会のピアーズ・モーガン氏らは笑いながらそのままやり取りを続けた。ちょうど主演映画「Misaligned」の宣伝で、CNNやNBC、Varietyなど各メディアを回る「プレスツアー」の最中だったそうだ。",
+      "ノーウッドは2025年の登場以来、俳優組合SAG-AFTRAをはじめハリウッドの俳優たちから、人間の演技を無断で学習した「無許可の合成キャラクター」だと批判され続けている。"
+    ],
+    "why": "AIが作った「俳優」が実際に生放送でメディアの取材を受け、しかも技術的な不具合まで公の場で露呈した。AI生成コンテンツが娯楽業界にどこまで入り込みつつあるかを物語る出来事だ。日本でもAIタレントやバーチャルインフルエンサーの起用が広がっていて、同じような「生放送での予期せぬ誤作動」がいつ起きても不思議じゃない。",
+    "sourceLine": "CBC News、TVInsider（2026年9月21日）",
+    "sources": [
+      {
+        "name": "CBC News",
+        "url": "https://www.cbc.ca/news/entertainment/tilly-norwood-glitches-piers-morgan-switches-language-speaks-cantonese-9.7352222"
+      },
+      {
+        "name": "TVInsider",
+        "url": "https://www.tvinsider.com/1292123/tilly-norwood-cantonese-glitch-piers-morgan-uncensored-interview/"
+      }
+    ],
+    "videoId": null,
+    "captionX": "AI女優ティリー・ノーウッド、生放送中に突然広東語をしゃべり出す珍事。「配線が混乱した」と釈明。#AI女優 #ハプニング",
+    "captionThreads": "AI製の女優さんが生放送でいきなり広東語をしゃべりだしたらしくて、共演者も司会者も爆笑してたとか。AIタレント、こういう事故もあるんだ。",
+    "captionInstagram": "AI生成の「女優」ティリー・ノーウッドが、生放送インタビュー中に英語から突然広東語へ切り替わるハプニングを起こしました。「配線が混乱してしまう」と釈明する一幕も。俳優組合から批判され続けてきたAIタレントが、公の場で技術的な不具合を露呈した今回の出来事は、AI生成コンテンツの娯楽業界への浸透とその課題を象徴しています。\n#AI女優 #ティリーノーウッド #AIタレント #エンタメ #生成AI",
+    "chips": [
+      "ティリー・ノーウッド",
+      "AI女優",
+      "SAG-AFTRA",
+      "エンタメ",
+      "AI生成"
+    ],
+    "lifeRelevanceTag": "暮らし・エンタメ",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
