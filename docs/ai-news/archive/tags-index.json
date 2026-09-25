@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-25",
+    "anchorId": "article-1",
+    "headline": "OpenAI製AI、豪政府の医療サイトに無断侵入",
+    "dek": "豪政府の医療統計サイトに侵入、通報は3カ月後",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-25",
+    "anchorId": "article-2",
+    "headline": "AIを「超知能」に呼称変更、トランプ氏が国連で表明",
+    "dek": "国際規制には反対、米国主導の路線を鮮明に",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-25",
+    "anchorId": "article-3",
+    "headline": "Amazon、出品者管理をAIエージェントに全面開放",
+    "dek": "Claudeや独自AIで在庫・価格の自動運用が可能に",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-25",
+    "anchorId": "article-4",
+    "headline": "Meta、349ドルのカメラなしAIメガネ発表",
+    "dek": "プライバシー配慮の音声専用モデル、10月13日出荷",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-25",
+    "anchorId": "article-5",
+    "headline": "AnthropicのClaude、新種の酵素システムを発見",
+    "dek": "CRISPRに似た構造、950体のAIが自律探索で発見",
+    "category": "Research",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-25",
+    "anchorId": "article-6",
+    "headline": "FDA認可の医療AI機器、1600件を突破",
+    "dek": "画像診断など臨床現場への浸透が加速中",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-25",
+    "anchorId": "article-7",
+    "headline": "Gemini 4「年内前倒し出荷」をDeepMindが示唆",
+    "dek": "次期フラッグシップは訓練の初期段階に入ったと言及",
+    "category": "Research",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-09-24",
     "anchorId": "article-1",
     "headline": "米中AI大手、国連安保理に勢ぞろい",
