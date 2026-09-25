@@ -260,41 +260,5 @@
     "videoId": null,
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
-  },
-  {
-    "importance": 7,
-    "category": "Research",
-    "catColor": "#7C6FE0",
-    "headline": "Gemini 4「年内前倒し出荷」をDeepMindが示唆",
-    "dek": "次期フラッグシップは訓練の初期段階に入ったと言及",
-    "body": [
-      "Google DeepMindのコーライ・カヴクチュオール氏が9月24日、業界イベント「AI Agenda Live Summit」でちょっと気になる発言をした。次期フラッグシップモデル「Gemini 4」がポストトレーニング（事後学習）の初期段階に入ったことを明かし、年末より「もっと早く」出荷したいという意向をにじませたと報じられている。",
-      "Gemini 4は、Googleが現行の主力モデル「Gemini 3」に続いて投入する次世代モデルという位置づけだ。同じ週にはOpenAIの新モデルやAnthropicのClaude Opus 5.5も相次いで発表されており、大手各社によるフラッグシップモデルの投入競争は、いよいよ激しさを増している。"
-    ],
-    "stats": [
-      {
-        "n": "2026年内",
-        "l": "Google DeepMindが目指す出荷時期"
-      },
-      {
-        "n": "9月24日",
-        "l": "DeepMind幹部が見通しを語った日"
-      }
-    ],
-    "why": "主要AI企業が年内に相次いでフラッグシップモデルを投入しようとしている動きの一端であり、開発サイクルの短縮競争が価格・性能競争と並行して激しくなっていることがよく分かる。日本企業を含む利用者側にとっては、次々に新モデルが登場することで導入判断や既存システムの更新頻度が上がっていく可能性がある。",
-    "sourceLine": "AI Weekly（The Information報道の引用、2026年9月24日）",
-    "sources": [
-      {
-        "name": "AI Weekly",
-        "url": "https://aiweekly.co/ai-news-today/edition/2026-09-24"
-      }
-    ],
-    "captionX": "Google DeepMind幹部、次期フラッグシップ「Gemini 4」を年内前倒しで出したい意向を示唆。訓練は初期段階へ突入。#Google #Gemini",
-    "captionThreads": "Gemini 4、もう訓練の初期段階に入ってるらしいです。DeepMindの幹部いわく『年末より早く出したい』とのこと。各社のモデル競争、いよいよスピード勝負になってきました。",
-    "captionInstagram": "Google DeepMindの幹部が9月24日、次期フラッグシップモデル「Gemini 4」がポストトレーニングの初期段階に入ったことを明らかにし、年末より前倒しでの出荷を目指す考えを示したと報じられました。同じ週にはOpenAIやAnthropicも新モデルを相次いで発表しており、大手AI企業によるモデル投入競争がさらに加速しています。次々登場する新モデルに、利用する企業側も対応のスピードが求められそうです。\n#Google #Gemini #DeepMind #AIモデル #生成AI",
-    "lifeRelevanceTag": "なし",
-    "videoId": null,
-    "_affiliateKeywordsUsed": [],
-    "_affiliateLinkCount": 0
   }
 ]
