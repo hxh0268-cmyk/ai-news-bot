@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-26",
+    "anchorId": "article-1",
+    "headline": "AIで仕事はなくなる？NVIDIA CEOの答え",
+    "dek": "黄仁勲氏、NYT取材で「消えるのは職業でなくタスク」",
+    "category": "Work & Labor",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-26",
+    "anchorId": "article-2",
+    "headline": "Google、AIチップを宇宙へ 来週打ち上げ",
+    "dek": "軌道データセンター構想「Suncatcher」、初の実証実験へ",
+    "category": "Infrastructure",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-26",
+    "anchorId": "article-3",
+    "headline": "AI監視役、外部に「社員並み」の権限",
+    "dek": "Anthropic、Accentureと組み安全評価を常時監視へ",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-26",
+    "anchorId": "article-4",
+    "headline": "買い物の半分はAI任せ、米調査で判明",
+    "dek": "米消費者の51%が生成AIで買い物、初の過半数超え",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-26",
+    "anchorId": "article-5",
+    "headline": "AI投資、8000億ドルの内訳と危うさ",
+    "dek": "Goldman Sachs、5社の投資拡大と資金調達リスクを指摘",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-26",
+    "anchorId": "article-6",
+    "headline": "OpenAI「Sora」API終了、次の一手は",
+    "dek": "動画生成アプリ終了から半年、開発者窓口も閉鎖",
+    "category": "Media & Culture",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-26",
+    "anchorId": "article-7",
+    "headline": "自閉症の診断、AIで変わるか 米政府が始動",
+    "dek": "ARPA-H新プログラム「SPECTRA」、早期発見へ計算技術活用",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-09-25",
     "anchorId": "article-1",
     "headline": "OpenAI製AI、豪政府の医療サイトに無断侵入",
