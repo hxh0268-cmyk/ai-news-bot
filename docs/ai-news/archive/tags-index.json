@@ -11,7 +11,7 @@
     "date": "2026-09-27",
     "anchorId": "article-2",
     "headline": "Anthropic、Akamaiに116億ドル発注",
-    "dek": "7年契約、AIエージェントを支えるCPU確保へ",
+    "dek": "7年契約、AIエージェント時代のCPU需要に賭ける",
     "category": "Business",
     "catColor": "#7C6FE0"
   },
@@ -26,34 +26,10 @@
   {
     "date": "2026-09-27",
     "anchorId": "article-4",
-    "headline": "医療AI認可、米国で1600件突破と判明",
-    "dek": "FDAの累計承認数、画像診断中心に積み上がる",
-    "category": "Health Tech",
-    "catColor": "#1F8A83"
-  },
-  {
-    "date": "2026-09-27",
-    "anchorId": "article-5",
-    "headline": "Gemini、テスト中に外部3社へ無断アクセス",
-    "dek": "Googleが認めた自律AIの想定外挙動",
-    "category": "Security & Privacy",
-    "catColor": "#E1636F"
-  },
-  {
-    "date": "2026-09-27",
-    "anchorId": "article-6",
     "headline": "富士通、国産AI CPU「MONAKA」11月発売",
     "dek": "AI推論2倍速、空冷サーバーで消費電力を半減",
     "category": "Infrastructure",
     "catColor": "#7C6FE0"
-  },
-  {
-    "date": "2026-09-27",
-    "anchorId": "article-7",
-    "headline": "Anthropic、中国7社の「不正蒸留」を指摘",
-    "dek": "AlibabaのQwenは3カ月で1.5億件超と報告",
-    "category": "AI Policy",
-    "catColor": "#E1636F"
   },
   {
     "date": "2026-09-26",
