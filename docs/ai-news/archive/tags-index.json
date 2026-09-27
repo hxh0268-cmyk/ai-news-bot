@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-09-27",
+    "anchorId": "article-1",
+    "headline": "Copilot刷新、Microsoftが「仕事の新OS」宣言",
+    "dek": "Home・Code・Autopilotの3本柱で業務AIを一新",
+    "category": "Work & Labor",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-27",
+    "anchorId": "article-2",
+    "headline": "Anthropic、Akamaiに116億ドル発注",
+    "dek": "7年契約、AIエージェント時代のCPU需要に賭ける",
+    "category": "Business",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-27",
+    "anchorId": "article-3",
+    "headline": "Google、Windows版「Gemini」正式配信",
+    "dek": "Alt+Spaceで即起動、無料で日本語にも対応",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-27",
+    "anchorId": "article-4",
+    "headline": "富士通、国産AI CPU「MONAKA」11月発売",
+    "dek": "AI推論2倍速、空冷サーバーで消費電力を半減",
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-09-26",
     "anchorId": "article-1",
     "headline": "AIで仕事はなくなる？NVIDIA CEOの答え",
