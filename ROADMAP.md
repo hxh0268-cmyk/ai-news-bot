@@ -15,7 +15,7 @@
 ③アフィリエイトリンクを自動挿入／PR表記を自動付与（該当日のみ）
 ④Nano Banana 2 Liteが5本の背景ビジュアルを生成
 ⑤5枚の画像カード（背景＋見出し・数値）を合成
-⑥ElevenLabsがナレーション音声を生成、5枚の画像によるスライドショー動画に合成
+⑥5枚の画像によるスライドショー動画（音声なし）を生成
 ⑦広告枠付きの記事サイト（GitHub Pages）を生成
 ⑧note販売用の記事ドラフトを生成
 ⑨Pull Requestを自動作成
@@ -24,9 +24,10 @@
 ⑫あなたがnote-article.mdをnoteに貼り付け・価格設定・公開　★手動（3分）★
 ```
 
-準備するアカウントは **Anthropic／Google AI Studio（Gemini）／ElevenLabs／GitHub／Buffer／Zapier** の6つです。上から順に作っていきます。
+準備するアカウントは **Anthropic／Google AI Studio（Gemini）／GitHub／Buffer／Zapier** の5つです。上から順に作っていきます。
 
-> 2026-09時点の更新：コスト最適化のため、Kling AI（動画クリップ生成）は廃止しました。動画は5枚のカード画像による静止画スライドショー＋ナレーションのみで構成されます（下記フェーズ4は廃止済みです）。
+> 2026-09時点の更新：コスト最適化のため、Kling AI（動画クリップ生成）は廃止しました。動画は5枚のカード画像による静止画スライドショーのみで構成されます（下記フェーズ4は廃止済みです）。
+> 2026-09-28の更新：ElevenLabsによるナレーションも廃止し、動画は音声なしになりました（下記フェーズ5は廃止済みです）。
 
 ---
 
@@ -66,17 +67,13 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 
 ## フェーズ4：（廃止）
 
-コスト最適化のため、Kling AIによる動画クリップ生成は廃止しました。このフェーズの作業は不要です。動画は5枚のカード画像による静止画スライドショー＋ナレーションのみで生成されます（フェーズ番号は既存のドキュメント参照との整合のため欠番のまま残しています）。
+コスト最適化のため、Kling AIによる動画クリップ生成は廃止しました。このフェーズの作業は不要です。動画は5枚のカード画像による静止画スライドショーのみで生成されます（フェーズ番号は既存のドキュメント参照との整合のため欠番のまま残しています）。
 
 ---
 
-## フェーズ5：ElevenLabsのキーを取得する
+## フェーズ5：ElevenLabsのキーを取得する（廃止済み）
 
-**費用：無料枠あり、本格運用は月5ドル〜／所要時間：10分**
-
-1. https://elevenlabs.io/ でアカウント作成
-2. 「Profile」→「API Keys」からキーを発行
-3. 「Voices」から使いたい声を選び、Voice IDを控える
+2026-09-28にナレーションを廃止したため、このフェーズの作業は不要です（フェーズ番号は既存のドキュメント参照との整合のため欠番のまま残しています）。
 
 ---
 
@@ -101,8 +98,6 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 |---|---|
 | `ANTHROPIC_API_KEY` | フェーズ2で取得 |
 | `GEMINI_API_KEY` | フェーズ3で取得 |
-| `ELEVENLABS_API_KEY` | フェーズ5で取得 |
-| `ELEVENLABS_VOICE_ID` | フェーズ5で確認したVoice ID |
 | `GA_MEASUREMENT_ID` | Google Analytics 4の測定ID（任意・効果測定用） |
 | `SLACK_WEBHOOK_URL` | 障害通知先のSlack Webhook URL（任意） |
 | `ZAPIER_WEBHOOKS_JSON` | 話題ごとのWebhook URLをまとめたJSON。例: `{"ai-news": "https://hooks.zapier.com/..."}` |
@@ -176,7 +171,7 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 2. 完了後、「Pull requests」タブでPRを開く
 3. 以下を確認：
    - `output/ai-news/<日付>/cards/1〜5.png`（画像）
-   - `output/ai-news/<日付>/slideshow.mp4`（動画・5枚のカード画像によるスライドショー＋ナレーション）
+   - `output/ai-news/<日付>/slideshow.mp4`（動画・5枚のカード画像によるスライドショー・音声なし）
    - `output/ai-news/<日付>/note-article.md`（note記事案）
    - `output/ai-news/<日付>/monetization-report.md`（アフィリエイト・PR表記の確認）
 4. 問題なければ「Merge」　★これがメインのHuman Check★
@@ -225,11 +220,10 @@ Threadsは同じアカウントに連動するため、これで両方の準備�
 |---|---|
 | Claude API | 500〜2,000円 |
 | Nano Banana 2 Lite（Gemini API） | 100〜300円 |
-| ElevenLabs（ナレーション） | 0〜1,000円 |
 | Buffer（3チャンネル） | 2,000〜2,700円 |
 | Zapier | 0円（無料プラン） |
 | GitHub／GitHub Pages／AdSense／ASP登録／note | 0円 |
-| **合計目安** | **約2,600〜6,000円/月** |
+| **合計目安** | **約2,600〜5,000円/月** |
 
 **収益源**：X/Threads/Instagram経由のPR案件、記事サイトの広告収益・アフィリエイト報酬、note有料記事販売の3系統。
 
