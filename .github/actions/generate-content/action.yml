@@ -1,7 +1,7 @@
 name: "コンテンツ一式生成 (STEP1〜STEP3c)"
 description: >
   ニュース収集(STEP1)からカード画像・note記事・背景ビジュアル・サイト・
-  ナレーション・動画結合(STEP3c、静止画スライドショー)までを一括で行う。
+  動画結合(STEP3c、音声なしの静止画スライドショー)までを一括で行う。
   generate.yml（日次自動生成）と regenerate-content.yml（手動の丸ごと再生成）の
   両方から呼び出される共通処理。ここではPRの作成やコミットは行わない
   （呼び出し元がそれぞれの方法で生成物を確定させる）。
@@ -23,10 +23,6 @@ inputs:
   anthropic_api_key:
     required: true
   gemini_api_key:
-    required: true
-  elevenlabs_api_key:
-    required: true
-  elevenlabs_voice_id:
     required: true
   adsense_client_id:
     required: false
@@ -93,16 +89,6 @@ runs:
         CONTENT_DATE: ${{ inputs.content_date }}
       run: bash scripts/run-and-capture-error.sh node scripts/render-cards.mjs
 
-    - name: STEP3b ElevenLabsでナレーション音声を生成（失敗しても全体は継続）
-      continue-on-error: true
-      shell: bash
-      env:
-        ELEVENLABS_API_KEY: ${{ inputs.elevenlabs_api_key }}
-        ELEVENLABS_VOICE_ID: ${{ inputs.elevenlabs_voice_id }}
-        TOPIC: ${{ inputs.topic }}
-        CONTENT_DATE: ${{ inputs.content_date }}
-      run: node scripts/generate-narration.mjs
-
     - name: STEP2.5 広告枠付きサイトを生成
       shell: bash
       env:
@@ -116,7 +102,7 @@ runs:
       shell: bash
       run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
-    - name: STEP3c 静止画スライドショー生成＋ナレーション合成
+    - name: STEP3c 静止画スライドショー生成（音声なし）
       shell: bash
       env:
         TOPIC: ${{ inputs.topic }}

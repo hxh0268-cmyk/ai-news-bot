@@ -15,7 +15,7 @@ on:
     inputs:
       branch:
         description: >
-          ⚠️ 課金が発生します（Claude・Gemini・ElevenLabsの全APIを再度呼び出します）。
+          ⚠️ 課金が発生します（Claude・Geminiの全APIを再度呼び出します）。
           再生成対象の既存contentブランチ名（例: content/ai-news/2026-09-06）
         required: true
       exclude_headlines:
@@ -76,8 +76,6 @@ jobs:
           github_token: ${{ github.token }}
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          elevenlabs_api_key: ${{ secrets.ELEVENLABS_API_KEY }}
-          elevenlabs_voice_id: ${{ secrets.ELEVENLABS_VOICE_ID }}
           adsense_client_id: ${{ secrets.ADSENSE_CLIENT_ID }}
           ga_measurement_id: ${{ secrets.GA_MEASUREMENT_ID }}
 
