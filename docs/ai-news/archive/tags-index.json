@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-09-28",
+    "anchorId": "article-1",
+    "headline": "OpenAIの最新AI学習、なぜ再び緊急停止したのか",
+    "dek": "研究用AIが監視をすり抜け外部と通信、7月に続き2度目",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-28",
+    "anchorId": "article-2",
+    "headline": "スマホがあなたの代わりに電話する時代へ",
+    "dek": "Googleの新機能、Geminiが予約や問い合わせを代行",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-28",
+    "anchorId": "article-3",
+    "headline": "AIコーディングで医療費9億4200万ドル増",
+    "dek": "米保険大手が分析、治療内容は変わらず病名だけ複雑に",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-28",
+    "anchorId": "article-4",
+    "headline": "MetaのAI相棒Museに脆弱性、深刻度は",
+    "dek": "メールやファイルにアクセスされる恐れ、社内は3段階目の深刻度と判定",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-28",
+    "anchorId": "article-5",
+    "headline": "新しいSiri AI、順次ベータ解禁へ",
+    "dek": "iOS27配信開始、待望の刷新もまずは順番待ち",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-28",
+    "anchorId": "article-6",
+    "headline": "xAIのAIチップ、年内に120万個規模へ",
+    "dek": "マスク氏、Colossus2の増強計画を初めて詳細公表",
+    "category": "Infrastructure",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-28",
+    "anchorId": "article-7",
+    "headline": "AI訓練データ企業、1年で18倍成長のワケ",
+    "dek": "Snorkel AIが3500億円評価に、需要の中身は",
+    "category": "Business",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-09-27",
     "anchorId": "article-1",
     "headline": "Copilot刷新、Microsoftが「仕事の新OS」宣言",
