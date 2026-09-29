@@ -61,8 +61,10 @@ jobs:
       # 深夜帯に複数ステップをまたいで実行すると new Date() の評価タイミングによって
       # ステップごとに日付が変わり、後続スクリプトが前のステップが書いたファイルを
       # 見つけられなくなる（ENOENT）。CONTENT_DATE を全ステップに渡すことで防ぐ。
+      # 日付は日本時間（Asia/Tokyo）で決める。ニュースの鮮度（何日前の出来事か）も
+      # この日付を基準に判定する（scripts/freshness.mjs）。
       - id: date
-        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+        run: echo "date=$(TZ=Asia/Tokyo date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
       # STEP1〜STEP3c（ニュース収集〜カード画像・サイト・動画生成）は
       # regenerate-content.yml（手動の丸ごと再生成）と共通のComposite Actionに
@@ -77,6 +79,22 @@ jobs:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           adsense_client_id: ${{ secrets.ADSENSE_CLIENT_ID }}
           ga_measurement_id: ${{ secrets.GA_MEASUREMENT_ID }}
+
+      # STEP1（generate.mjs）が書き出した鮮度チェックの結果を、PR本文に載せるために読み込む。
+      - name: 鮮度チェックの結果を読み込む
+        id: freshness
+        env:
+          REPORT_PATH: output/${{ matrix.topic }}/${{ steps.date.outputs.date }}/freshness-report.md
+        run: |
+          {
+            echo "report<<FRESHNESS_REPORT_EOF"
+            if [ -f "$REPORT_PATH" ]; then
+              cat "$REPORT_PATH"
+            else
+              echo "（鮮度チェックの結果ファイルが見つかりませんでした）"
+            fi
+            echo "FRESHNESS_REPORT_EOF"
+          } >> "$GITHUB_OUTPUT"
 
       - name: 生成物をPull Requestとして提出（★Human Check★）
         id: create-pr
@@ -95,6 +113,7 @@ jobs:
             - `output/${{ matrix.topic }}/<日付>/note-article.md`：note販売用の記事ドラフト（手動貼り付け）
             - `output/${{ matrix.topic }}/<日付>/monetization-report.md`：**アフィリエイト・PR表記の確認レポート（必読）**
             - `output/${{ matrix.topic }}/<日付>/humanize-comparison.md`：**文章の「書き直し前・後」を表形式で見比べられる比較ファイル（まずこれを見てください）**
+            - `output/${{ matrix.topic }}/<日付>/freshness-report.md`：ニュースの鮮度チェックの結果（下にも同じ内容を載せています）
             - `docs/${{ matrix.topic }}/index.html`：広告枠付きの記事サイト
 
             **確認事項（背景画像）**：AI生成の背景画像に、看板・モニター等に見える不自然な
@@ -103,6 +122,8 @@ jobs:
 
             内容を確認し、問題なければこのPRをMergeしてください。Mergeが「GO」判定になり、
             自動的にSNSへの投稿処理が始まります。
+
+            ${{ steps.freshness.outputs.report }}
           add-paths: |
             output/${{ matrix.topic }}/**
             docs/${{ matrix.topic }}/**
