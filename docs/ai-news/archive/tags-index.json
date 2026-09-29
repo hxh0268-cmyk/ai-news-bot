@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-09-29",
+    "anchorId": "article-1",
+    "headline": "OpenAI「DevDay」開催へ、焦点はAIエージェント",
+    "dek": "年次開発者会議で自律稼働AIエージェントの発表に注目",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-29",
+    "anchorId": "article-2",
+    "headline": "AIエージェントの暴走阻止へ、Nvidiaが新基盤",
+    "dek": "100社超が参加、暴走エージェントを数ミリ秒で隔離",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-09-29",
+    "anchorId": "article-3",
+    "headline": "1500億円調達のAI秘書「Instinct」急成長",
+    "dek": "買い物や予約代行、企業価値は約1.5兆円に",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-29",
+    "anchorId": "article-4",
+    "headline": "Meta「Muse」旋風も、市場の反応は限定的",
+    "dek": "専用端末「Charm」も話題、市場全体は落ち着いた動き",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-09-28",
     "anchorId": "article-1",
     "headline": "OpenAIの最新AI学習、なぜ再び緊急停止したのか",
