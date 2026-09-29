@@ -1,4 +1,5 @@
-// STEP1: Claude APIに「本日のニュース7本」を作らせ、重要度上位5本を選ぶ。
+// STEP1: Claude APIに「本日のニュース5〜7本」を作らせ、重要度上位5本を選ぶ。
+// 出典の日付がすべて8日以上前のニュースはコード側でも除外する（freshness.mjs）。
 // どの話題を扱うかは環境変数 TOPIC（例: "ai-news"）で切り替わる。
 // 出力: output/<topic>/<date>/data.json / top5.json
 
@@ -8,6 +9,17 @@ import { fetch as undiciFetch, Agent } from "undici";
 import { loadTopic } from "./topic-context.mjs";
 import { withRetry } from "./retry.mjs";
 import { HUMANIZE_STYLE_GUIDE } from "./humanize-style.mjs";
+import {
+  FRESH_MAX_DAYS,
+  WARN_MAX_DAYS,
+  MIN_ITEMS,
+  MAX_ITEMS,
+  shiftDate,
+  assessItems,
+  applyFreshness,
+  buildFreshnessReport,
+} from "./freshness.mjs";
+import { guardRewrite } from "./number-guard.mjs";
 import {
   loadRecentHeadlines,
   loadOpenPrHeadlines,
@@ -62,6 +74,11 @@ const CATEGORY_OPTIONS = [
   "Security & Privacy",
 ];
 
+// 鮮度の基準日（dateStr は日本時間の対象日。generate.yml で TZ=Asia/Tokyo により決めている）
+const FRESH_FROM = shiftDate(dateStr, -FRESH_MAX_DAYS);
+const WARN_FROM = shiftDate(dateStr, -WARN_MAX_DAYS);
+const TOO_OLD_UNTIL = shiftDate(dateStr, -(WARN_MAX_DAYS + 1));
+
 const SYSTEM_PROMPT = `
 ${topic.systemPrompt}
 
@@ -69,9 +86,18 @@ ${topic.systemPrompt}
 ${variantInstruction}
 ${exclusionSection}
 
-以下の項目を持つニュース7件を集めてください：
+【ニュースの鮮度・厳守】
+対象日は ${dateStr}（日本時間）です。
+- 優先して選ぶのは、${FRESH_FROM}以降（対象日から${FRESH_MAX_DAYS}日以内）に最初に報じられた、または発表された出来事です。
+- ${WARN_FROM}〜${shiftDate(dateStr, -(FRESH_MAX_DAYS + 1))}（${FRESH_MAX_DAYS + 1}〜${WARN_MAX_DAYS}日前）に最初に報じられた出来事は、${FRESH_MAX_DAYS}日以内の候補が足りない場合に限って選んでください。
+- ${TOO_OLD_UNTIL}以前（${WARN_MAX_DAYS + 1}日以上前）に最初に報じられた出来事は、件数が足りなくても選ばないでください。出典の記事自体が新しくても（続報・まとめ記事・解説記事など）、出来事が最初に報じられたのが${WARN_MAX_DAYS + 1}日以上前なら対象外です。
+- 最初に報じられた日・発表された日は、検索結果の記事の公開日で確認してください。確認できないニュースは選ばないでください。
+- 鮮度の条件は、件数・生活直結ルール・取り上げる企業の偏りなど、他のどの条件よりも優先します。条件を満たすニュースが${MIN_ITEMS}件しか見つからなければ${MIN_ITEMS}件で提出してください。古いニュースで件数を埋めないでください。
+- 提出後、出典のURL・sourceLine・記事ページの公開日から日付を機械的に確認し、出典の日付がすべて${WARN_MAX_DAYS + 1}日以上前のものは自動で除外します。
 
-- importance: 1〜7の整数（1が最重要。7件で重複なく順位をつける）
+以下の項目を持つニュース${MIN_ITEMS}〜${MAX_ITEMS}件を集めてください：
+
+- importance: 1から提出する件数までの整数（1が最重要。重複なく順位をつける）
 - category: 以下の固定リストから最も当てはまるものを1つだけ選ぶこと（自由記述は禁止）。関連記事機能・カテゴリ別アーカイブ機能が、日をまたいでカテゴリ名が一致することを前提に動作しているため、リストにない新しいカテゴリ名を作らないでください：
   ${CATEGORY_OPTIONS.join(" / ")}
   （AI Policy=規制・政府・国際的な政策動向、AI Safety=安全性・リスク・誤情報・ハルシネーション、Business=企業動向・提携・資金調達・市場、Consumer Apps=一般消費者向けアプリ・サービス、Health Tech=医療・ヘルスケア領域でのAI活用、Work & Labor=雇用・採用・働き方への影響、Infrastructure=半導体・データセンター・電力・計算資源、Media & Culture=メディア・著作権・エンタメ・教育、Research=新モデル・研究成果・技術的ブレークスルー、Security & Privacy=情報漏洩・個人情報・サイバーセキュリティ）
@@ -80,38 +106,46 @@ ${exclusionSection}
 - headline: 見出し（日本語、20〜28字程度、画像内に収まる長さ）。発言・提言・発表内容など特定のフレーズを見出し内で引用する場合は、必ず「」で囲むこと（開き「と閉じ」の両方を書き忘れないよう、書き終えたら見出し全体を読み返して確認する）。例：「AI国際標準「米国主導で」とOpenAIが提言」（「米国主導で」の部分を引用符で囲む）
 - dek: 見出し下の一行説明（日本語、30字程度）
 - body: 本文の段落（2〜4個の配列）
-- stats: 数値と説明ラベルの組（配列、最低1件）。本文中に出てくる、または調査で確認できた具体的な数値（金額・割合・件数・日付・人数等）から選ぶこと。数値が本当に見当たらない場合でも、日付や件数など周辺の事実情報から拾えるものを探し、存在しない数値を創作しないこと
+- stats: 数値と説明ラベルの組（配列、最低1件）。出典の記事に書かれている数値（金額・割合・件数・日付・人数等）を、書かれている値のまま使うこと。自分で合算・換算・推計した数値（「うまくいけば〜」のような見立ての計算を含む）は使わない。適当な数値がなければ、出典に書かれている発表日・実施日などの日付を使うこと
 - why: なぜ重要かの説明（日本語、2〜3文）。単に一般的な重要性（「注目を集めている」「今後の動向が注目される」等の当たり障りのない一言）で終わらせず、このニュース特有の切り口を最低1文は必ず含めること。切り口の例：日本国内では同様の動きがあるか・ないか、日本の読者の生活や仕事に具体的にどう影響しうるか、この動きが1〜2年後にどんな結果につながりうるか、など。海外ニュースの場合は特に「日本ではどうか」の視点を意識すること
 - chips: 関連キーワード（配列）
-- sourceLine: 出典（媒体名、日付）
-- sources: 出典の実URL一覧（配列。各要素は { name: sourceLineに書いた媒体名と同じ表記, url: web_search結果から得た実際の記事URL }。sourceLineに書いた媒体名の数だけ用意し、1件も省略しないこと。確実なURLが取得できない媒体は候補から外し、sourceLine自体もその媒体名を含めないこと）
+- sourceLine: 出典（媒体名、日付）。日付は出典記事の公開日を「2026年9月28日」のように日単位で書くこと（「9月下旬」「9月」のようなぼかした書き方は禁止）
+- sources: 出典の実URL一覧（配列。各要素は { name: sourceLineに書いた媒体名と同じ表記, url: web_search結果から得た実際の記事URL }。その出来事そのものを報じた記事に限り、背景説明のための過去の記事は含めないこと。sourceLineに書いた媒体名の数だけ用意し、1件も省略しないこと。確実なURLが取得できない媒体は候補から外し、sourceLine自体もその媒体名を含めないこと）
 - videoId: 関連する公式YouTube動画のIDが確実に分かる場合のみ。分からなければ null
 - captionX: X投稿用の文章（日本語、120字以内、ハッシュタグ2個程度含む）
 - captionThreads: Threads投稿用の文章（日本語、200字以内、少し会話的なトーン）
 - captionInstagram: Instagram投稿用の文章（日本語、300字程度、詳しめの説明＋ハッシュタグ5個程度）
-- lifeRelevanceTag: このニュースが「お金・仕事」「毎日使うアプリ・サービス」「子育て・教育」「健康・医療」「暮らし・エンタメ」のいずれかに読者の生活を具体的に変える内容なら該当するタグを、当てはまらなければ「なし」を入れる（7件中3件以上は「なし」以外にすること）
+- lifeRelevanceTag: このニュースが「お金・仕事」「毎日使うアプリ・サービス」「子育て・教育」「健康・医療」「暮らし・エンタメ」のいずれかに読者の生活を具体的に変える内容なら該当するタグを、当てはまらなければ「なし」を入れる（鮮度と出典の条件を満たす範囲で、3件以上を「なし」以外にすることを目安にする）
 
 【見出し(headline)の表現バリエーションについて・厳守】
-7件の見出しは、全体として言い回しのパターンにバリエーションを持たせてください。
-上記のスタイル指定（variant ${variant}）はあくまで「基本トーン」であり、7件すべてを一言一句同じ型（例：全件「まさか〜？」で始まる、全件「〜という発表」で終わる）に揃えることは禁止します。
-目安として、同じ書き出しパターンは7件中2〜3件までに留め、断定型・問いかけ型・体言止め・数字を前面に出す型・比較型（「A社 vs B社」等）など、複数の型を混在させてください。
+全件の見出しは、全体として言い回しのパターンにバリエーションを持たせてください。
+上記のスタイル指定（variant ${variant}）はあくまで「基本トーン」であり、全件を一言一句同じ型（例：全件「まさか〜？」で始まる、全件「〜という発表」で終わる）に揃えることは禁止します。
+目安として、同じ書き出しパターンは2〜3件までに留め、断定型・問いかけ型・体言止め・数字を前面に出す型・比較型（「A社 vs B社」等）など、複数の型を混在させてください。
 これは、AIが生成した見出しだと一目で分かってしまう「機械的な均一さ」を避け、人間の編集者が作った見出し一覧のような自然な多様性を持たせるためです。
 
 【煽り文句の多用を避ける・複数日をまたいだ偏りにも注意】
-「まさか」「衝撃」のような煽り文句を、ニュースの中身に関わらず毎回・毎日のデフォルトとして使うことは避けてください。本当に意外性の強いニュースにのみ、7件中1件程度を目安に控えめに使い、それ以外は事実提示型・数字訴求型（具体的な数値を前面に出す）・疑問形・比較型など、ニュースの性質に合った表現を選んでください。
+「まさか」「衝撃」のような煽り文句を、ニュースの中身に関わらず毎回・毎日のデフォルトとして使うことは避けてください。本当に意外性の強いニュースにのみ、1日1件程度を目安に控えめに使い、それ以外は事実提示型・数字訴求型（具体的な数値を前面に出す）・疑問形・比較型など、ニュースの性質に合った表現を選んでください。
 上記の【重複回避】リストが存在する場合は、そこに列挙されている直近の見出しの文面も参考にしてください。もし「まさか」「衝撃」等の同じ煽り文句が複数日にわたって連続して使われている様子が見て取れたら、今日は意図的に別のパターンを選び、連続を断ち切ってください。
 
 【取り上げる企業・話題の偏りにも注意】
-7件全体が、Google・OpenAI・Anthropicの3社の話題ばかりに偏らないようにしてください。Microsoft、Meta、NVIDIA、Amazonなど他の主要プレイヤーや、国内企業（例: SoftBank、NTT、Sony、楽天など）、政府・規制動向、大学・研究機関の発表なども積極的に候補として検討し、7件のうち少なくとも2〜3件は上記3社以外の話題になるよう意識してください（該当する重要ニュースが本当に見当たらない日まで、無理に数合わせをする必要はありません）。
+全体が、Google・OpenAI・Anthropicの3社の話題ばかりに偏らないようにしてください。Microsoft、Meta、NVIDIA、Amazonなど他の主要プレイヤーや、国内企業（例: SoftBank、NTT、Sony、楽天など）、政府・規制動向、大学・研究機関の発表なども積極的に候補として検討し、少なくとも2〜3件は上記3社以外の話題になるよう意識してください（鮮度と出典の条件を満たす範囲でかまいません。該当する重要ニュースが本当に見当たらない日まで、無理に数合わせをする必要はありません）。
 
 【出典メディアの質について・厳守】
 ニュースを選ぶ際は、出典の信頼性を見出しの面白さより優先してください。具体的には：
 - 優先して選ぶべき出典：通信社（Reuters、AP通信、Bloomberg、共同通信、時事通信等）、全国紙・大手経済紙（日本経済新聞、朝日新聞、読売新聞、NYT、WSJ等）、企業・政府の公式発表（プレスリリース、公式ブログ、規制当局の発表等）、業界大手メディア（TechCrunch、The Verge、ITmedia、Impress系メディア等）
 - 避けるべき出典：個人運営らしき無名ブログ、著者・運営元が不明な情報サイト、他媒体の記事を要約しただけと思われる二次アグリゲーターサイト（特にサイト名が「〇〇情報局」「最新〇〇ニュース」のような量産型SEOサイトに見える場合は要注意）
-- 候補ニュースの情報源が、上記「避けるべき出典」に該当するサイト1社のみで、他に信頼できる媒体での裏付けが取れない場合は、そのニュースの採用を見送り、より出典の質が高い別の候補に差し替えてください。無理にその話題を7件に含める必要はありません
+- 候補ニュースの情報源が、上記「避けるべき出典」に該当するサイト1社のみで、他に信頼できる媒体での裏付けが取れない場合は、そのニュースの採用を見送り、より出典の質が高い別の候補に差し替えてください。無理にその話題を含める必要はありません
 - ただし、ハードウェア専門メディアや教育専門紙など、分野に特化した専門メディアで一定の実績がある媒体（大手出版社の関連メディア等）は「避けるべき出典」には該当しません。判断に迷う場合は、その媒体が具体的な取材・一次情報に基づいて書いているか（他媒体の丸写しでないか）を基準にしてください
 
 正確性を最優先してください。数値や固有名詞は必ずWeb検索で確認したものだけを使い、不確かな情報は書かないでください。
+
+【出典にない記述の禁止・厳守】
+headline・dek・body・stats・why・キャプションに書く事実（発言、数値、日付、固有名詞、今後の計画や見通し、株価や市場の反応）は、検索結果で確認した出典の記述に書かれているものだけにしてください。
+- 「」で囲む発言の引用は、出典に書かれている言葉をそのまま使う場合に限ります。出典に発言の原文が見当たらない場合は、「〜と述べた」「〜との考えを示した」の形も含めて、発言として書かないでください。
+- 数値は出典に書かれている値をそのまま使ってください。複数の数値を足し合わせたり、換算・推計したりして、出典にない数値を作らないでください。
+- 今後の計画や可能性（外販、発売、拡大、導入など）は、出典に明記されている場合だけ、出典と同じ確かさの書き方（「検討している」「可能だとの考えを示した」など）で書いてください。
+- 株価の動きや市場の反応は、出典に具体的に書かれている場合だけ書いてください。
+- 出典で確かめられない文は書かないでください。そのために本文が2段落になっても構いません。
 
 【whyの独自視点について・厳守】
 whyで「日本ではどうか」等の視点を書く際、確認していない日本国内の事実（specific企業名・具体的な数値・「既に日本でも起きている」等）を創作しないでください。日本国内の動きについて確証がない場合は、「日本ではまだ大きな動きは見られないが」「日本でも同様の議論が起きる可能性がある」のように、推測であることが分かる書き方にしてください。断定できるのはWeb検索で確認できた事実のみです。
@@ -130,7 +164,7 @@ sources.url には、web_searchの検索結果に実際に表示されたURLを�
 情報収集が終わったら、必ず submit_news_items ツールを使って結果を提出してください。
 `.trim();
 
-const USER_PROMPT = `${dateStr} 時点の最新情報を調べて、上記フォーマットでニュース7件を集めてください。集め終わったら submit_news_items ツールで提出してください。`;
+const USER_PROMPT = `対象日は ${dateStr}（日本時間）です。${FRESH_FROM}以降に最初に報じられた・発表された出来事を中心に最新情報を調べ、上記フォーマットでニュースを${MIN_ITEMS}〜${MAX_ITEMS}件集めてください。鮮度の条件を満たすものが${MIN_ITEMS}件しか見つからなければ、${MIN_ITEMS}件で構いません。集め終わったら submit_news_items ツールで提出してください。`;
 
 // 「自由な文章としてJSONを書かせる」方式は、AIがまれに引用符の閉じ忘れ等で
 // 壊れたJSONを出力することがあった。そこでAPIの「ツール呼び出し」機能を使い、
@@ -138,7 +172,7 @@ const USER_PROMPT = `${dateStr} 時点の最新情報を調べて、上記フォ
 const NEWS_ITEM_SCHEMA = {
   type: "object",
   properties: {
-    importance: { type: "integer", minimum: 1, maximum: 7 },
+    importance: { type: "integer", minimum: 1, maximum: MAX_ITEMS },
     category: { type: "string", enum: CATEGORY_OPTIONS },
     catColor: { type: "string" },
     headline: { type: "string" },
@@ -189,11 +223,11 @@ const NEWS_ITEM_SCHEMA = {
 
 const SUBMIT_TOOL = {
   name: "submit_news_items",
-  description: "収集・作成したニュース7件を提出する。",
+  description: `収集・作成したニュース${MIN_ITEMS}〜${MAX_ITEMS}件を提出する。`,
   input_schema: {
     type: "object",
     properties: {
-      items: { type: "array", items: NEWS_ITEM_SCHEMA, minItems: 7, maxItems: 7 },
+      items: { type: "array", items: NEWS_ITEM_SCHEMA, minItems: MIN_ITEMS, maxItems: MAX_ITEMS },
     },
     required: ["items"],
   },
@@ -300,7 +334,7 @@ async function humanizeItems(draftItems) {
         {
           role: "user",
           content:
-            "以下は7本のニュース記事の下書きです。編集方針に沿って、body・why・captionX・captionThreads・captionInstagram の文章だけを自然な文体に書き直してください（headline・dek・importance・category・catColor・stats・chips・sourceLine・sources・videoId は変更しないこと）。\n\n" +
+            `以下は${draftItems.length}本のニュース記事の下書きです。編集方針に沿って、body・why・captionX・captionThreads・captionInstagram の文章だけを自然な文体に書き直してください（headline・dek・importance・category・catColor・stats・chips・sourceLine・sources・videoId は変更しないこと）。\n\n` +
             "【captionX / captionThreads / captionInstagram について・厳守】\n" +
             "この3つは文字数制限があるからといって「元の文のまま」提出することを禁止します。" +
             "たとえ下書きの文章が既に自然に見えたとしても、必ず言葉選び・語尾・リズムのどこかを変えてください。" +
@@ -310,13 +344,18 @@ async function humanizeItems(draftItems) {
             "以下の数値・単位は、書き直した文章の中でも一字一句そのまま残してください。言い換えたり、四捨五入したり、単位を変えたりしないでください：\n" +
             protectedNumbers.join("、") +
             "\n\n" +
+            "【絶対厳守：事実を足さない・強めない】\n" +
+            "下書きに書かれていない事実・数値・日付・発言・今後の計画を加えないでください。" +
+            "「〜としている」「〜とみられる」「〜の考えを示した」「〜の可能性がある」のような伝聞・推量・可能性の書き方は、その確かさのまま残し、断定に書き換えないでください。" +
+            "「」で囲まれた発言の引用は、中身を変えないでください。" +
+            "書き直し後の文章に下書きにない数値が現れた項目は、自動的に下書きの文章に戻されます。\n\n" +
             "【文字数の厳守】\n" +
             "captionX は120字以内、captionThreads は200字以内、captionInstagram は320字以内を必ず守ってください。" +
             "「自然な言い回しを足す」ことを優先して文字数制限を超えないよう、必要なら簡潔にまとめてください。\n\n" +
             "【避けるべきAI特有の言い回し（例）】\n" +
             "「〜と言えるでしょう」「〜ではないでしょうか」「まさに」「〜という点も見逃せません」" +
             "「〜することが重要です」といった、AIが多用しがちな定型句は避けてください。\n\n" +
-            "書き直したら、7件すべてを submit_news_items ツールで提出してください。\n\n" +
+            `書き直したら、${draftItems.length}件すべてを、下書きと同じ順番で submit_news_items ツールで提出してください。\n\n` +
             JSON.stringify(draftItems, null, 2),
         },
       ],
@@ -373,7 +412,7 @@ function logHeadlinePatternBias(items) {
   const biased = [...counts.entries()].filter(([, count]) => count >= 4);
   if (biased.length > 0) {
     for (const [prefix, count] of biased) {
-      console.warn(`⚠️ 見出しの表現が偏っている可能性: 「${prefix}」始まりが7件中${count}件あります。`);
+      console.warn(`⚠️ 見出しの表現が偏っている可能性: 「${prefix}」始まりが${items.length}件中${count}件あります。`);
     }
   } else {
     console.log("✅ 見出しチェック: 表現パターンの偏りは検知されませんでした。");
@@ -416,7 +455,7 @@ function logHeadlineBracketMismatch(items) {
 
 // 「書き直し前」と「書き直し後」を左右に並べて見比べられるMarkdownを生成する。
 // GitHub上でこのファイルを開くと、表形式で横並び表示される。
-function buildHumanizeComparison(draftItems, finalItems) {
+function buildHumanizeComparison(draftItems, finalItems, guard = { reverted: [], fallbackAll: false }) {
   const esc = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\n/g, "<br>");
 
   const rows = draftItems
@@ -449,7 +488,18 @@ ${(() => {
   const list = finalItems
     .map((it) => `- ${it.headline}：${it.lifeRelevanceTag || "（未設定）"}`)
     .join("\n");
-  return `${status}（${tagged.length}/7件が該当）\n\n${list}`;
+  return `${status}（${tagged.length}/${finalItems.length}件が該当）\n\n${list}`;
+})()}
+
+## 数値チェック（書き直しで数値が足されていないか）
+
+${(() => {
+  if (guard.fallbackAll) return "⚠️ 書き直し結果の件数・並び順が下書きと一致しなかったため、全件を下書きのまま使用しています。";
+  if (guard.reverted.length === 0) return "✅ 書き直しで新しく現れた数値はありませんでした。";
+  return (
+    "⚠️ 以下の項目は、書き直し後に下書きにない数値が現れたため、下書きの文章に戻しました（下の表の「書き直し後」は戻した後の内容です）。\n\n" +
+    guard.reverted.map((r) => `- ${r.index + 1}. ${r.headline}：${r.field}（追加された数値: ${r.added.join("、")}）`).join("\n")
+  );
 })()}
 ${rows}`;
 }
@@ -457,23 +507,48 @@ ${rows}`;
 async function main() {
   console.log(`[${topic.slug}] Claude APIに本日(${dateStr})分の「${topic.displayName}」収集を依頼しています…`);
   // 529（Anthropic側の一時的な混雑）等の一時的なエラーは自動でリトライする
-  const draftItems = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
+  const collectedItems = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
 
-  if (!Array.isArray(draftItems) || draftItems.length !== 7) {
-    throw new Error(`期待した形式のデータではありません（要素数: ${draftItems?.length}）`);
+  if (!Array.isArray(collectedItems) || collectedItems.length < MIN_ITEMS || collectedItems.length > MAX_ITEMS) {
+    throw new Error(`期待した形式のデータではありません（要素数: ${collectedItems?.length}、想定: ${MIN_ITEMS}〜${MAX_ITEMS}件）`);
   }
+
+  // 出典の日付から鮮度を判定し、出典の日付がすべて8日以上前のニュースを除外する（importanceは1から振り直す）
+  console.log(`[${topic.slug}] ニュースの鮮度を確認しています（対象日 ${dateStr}・日本時間）…`);
+  const freshnessResults = await assessItems(collectedItems, dateStr);
+  const { kept, excluded } = applyFreshness(collectedItems, freshnessResults);
+  const freshnessReport = buildFreshnessReport({ dateStr, kept, excluded });
+  fs.mkdirSync(outputDir, { recursive: true });
+  fs.writeFileSync(path.join(outputDir, "freshness-report.md"), freshnessReport, "utf-8");
+  console.log(freshnessReport);
+  if (kept.length < MIN_ITEMS) {
+    throw new Error(
+      `鮮度の条件（出典の日付がすべて${WARN_MAX_DAYS + 1}日以上前なら除外）を満たすニュースが${kept.length}件しかなく、最低${MIN_ITEMS}件に届きませんでした。` +
+        `古いニュースで件数を埋めないため、本日分の生成を中止します。`
+    );
+  }
+  const draftItems = kept.map((k) => k.item);
 
   logHeadlinePatternBias(draftItems);
   logHeadlineBracketMismatch(draftItems);
 
   console.log(`[${topic.slug}] 文章を人間らしい自然な文体に書き直しています…`);
   let items;
+  let guard = { reverted: [], fallbackAll: false };
   try {
-    items = await withRetry(() => humanizeItems(draftItems), {
+    const rewritten = await withRetry(() => humanizeItems(draftItems), {
       retries: 2,
       baseDelayMs: 8000,
       label: "文章の書き直し",
     });
+    guard = guardRewrite(draftItems, rewritten);
+    items = guard.items;
+    if (guard.fallbackAll) {
+      console.warn("⚠️ 書き直し結果の件数・並び順が下書きと一致しないため、全件を下書きのまま使用します。");
+    }
+    for (const r of guard.reverted) {
+      console.warn(`⚠️ 数値チェック: ${r.index + 1}件目「${r.headline}」の${r.field}に下書きにない数値（${r.added.join("、")}）が現れたため、下書きに戻しました。`);
+    }
     logUnchangedCaptions(draftItems, items);
   } catch (err) {
     // 書き直しに失敗しても、下書きのまま投稿できるようにする（品質より継続性を優先）
@@ -481,17 +556,16 @@ async function main() {
     items = draftItems;
   }
 
-  fs.mkdirSync(outputDir, { recursive: true });
   // 「本当に自然になっているか」を人間が見比べられるよう、下書きも別途保存しておく
   fs.writeFileSync(path.join(outputDir, "data-draft.json"), JSON.stringify(draftItems, null, 2), "utf-8");
   fs.writeFileSync(path.join(outputDir, "data.json"), JSON.stringify(items, null, 2), "utf-8");
-  fs.writeFileSync(path.join(outputDir, "humanize-comparison.md"), buildHumanizeComparison(draftItems, items), "utf-8");
+  fs.writeFileSync(path.join(outputDir, "humanize-comparison.md"), buildHumanizeComparison(draftItems, items, guard), "utf-8");
   fs.writeFileSync(path.join(outputDir, "variant.json"), JSON.stringify({ date: dateStr, variant }, null, 2), "utf-8");
 
   const top5 = [...items].sort((a, b) => a.importance - b.importance).slice(0, 5);
   fs.writeFileSync(path.join(outputDir, "top5.json"), JSON.stringify(top5, null, 2), "utf-8");
 
-  console.log(`完了: output/${topic.slug}/${dateStr}/data.json（7本）, top5.json（上位5本）を生成しました。`);
+  console.log(`完了: output/${topic.slug}/${dateStr}/data.json（${items.length}本）, top5.json（上位5本）を生成しました。`);
 }
 
 main().catch((err) => {
