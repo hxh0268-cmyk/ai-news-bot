@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-09-30",
+    "anchorId": "article-1",
+    "headline": "AI規制、トランプ氏「自主規制で十分」と表明",
+    "dek": "AI企業ほぼ20社が自主規制協定に署名、政府サイトも始動",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-09-30",
+    "anchorId": "article-2",
+    "headline": "Anthropic上場、2兆ドル評価と420億ドル赤字",
+    "dek": "10月にもNasdaq上場へ、目論見書に「存在論的リスク」の文字も",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-30",
+    "anchorId": "article-3",
+    "headline": "AMD、82億ドルでAI研究者を迎える狙いとは",
+    "dek": "Fei-Fei Li氏のWorld Labsを買収、ロボットや物理AIへ布石",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-09-30",
+    "anchorId": "article-4",
+    "headline": "新薬開発はAI任せに？ロシュが自律型ラボ始動",
+    "dek": "「AI独立」目指すロシュ、フェーズ3成功率も上昇",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-09-30",
+    "anchorId": "article-5",
+    "headline": "医療AI導入に賛成7割超、政府調査でわかったこと",
+    "dek": "厚労白書、診断支援AIには72.4%が賛成の結果",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-09-29",
     "anchorId": "article-1",
     "headline": "OpenAI「DevDay」開催へ、焦点はAIエージェント",
