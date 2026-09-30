@@ -1,0 +1,4 @@
+# npm install で作られる依存パッケージ（リポジトリには含めない）
+node_modules/
+# macOSが自動で作るファイル
+.DS_Store
