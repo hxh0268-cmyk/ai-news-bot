@@ -8,6 +8,7 @@
 // 横断集計になるため、まだレビュー前の内容を参照してしまう可能性があるため。
 import fs from "node:fs";
 import path from "node:path";
+import { gaSnippet } from "./ga-snippet.mjs";
 
 const SITE_URL = process.env.SITE_URL || "https://hxh0268-cmyk.github.io/ai-news-bot";
 const root = process.cwd();
@@ -68,7 +69,7 @@ function buildHtml(topics) {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <meta name="theme-color" content="#151A2E">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23151A2E'/><text x='50%25' y='54%25' font-size='20' text-anchor='middle' dominant-baseline='middle' fill='%231F8A83' font-family='monospace' font-weight='bold'>AI</text></svg>">
 <title>AI News Bot - トピック一覧</title>
