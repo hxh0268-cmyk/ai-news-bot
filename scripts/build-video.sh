@@ -50,7 +50,10 @@ else
   # concat demuxerの仕様上、最後のファイルをもう一度書く必要がある
   LAST_CARD="${card_files[-1]}"
   echo "file '$(pwd)/${LAST_CARD}'" >> "$CONCAT_LIST"
-  ffmpeg -y -f concat -safe 0 -i "$CONCAT_LIST" -vf "scale=1080:1350,fps=30" -pix_fmt yuv420p -an "$FINAL_OUT"
+  # 最後に再指定したカードの表示時間はffmpegの版で変わる（6.1は1コマ、8.0以降は3秒で最後のカードが6秒になる）ため、
+  # 出力の長さを「枚数×3秒」で明示して、どの版でも同じ長さにする（2026-09-30に6.1.1・8.0.1・9.0.2で確認）
+  ffmpeg -y -f concat -safe 0 -i "$CONCAT_LIST" -vf "scale=1080:1350,fps=30" -pix_fmt yuv420p -an \
+    -t $(( ${#card_files[@]} * 3 )) "$FINAL_OUT"
 fi
 
 echo "生成しました: ${FINAL_OUT}"
