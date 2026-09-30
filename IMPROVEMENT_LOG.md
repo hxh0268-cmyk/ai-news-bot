@@ -113,3 +113,4 @@
 ## 2026-09-30
 
 - 9/29に、手動実行したgenerate.yml（run 36509809092、10:50 JST開始）の9分後に、遅れていた定期実行（run 36510512071）も動き、同じ日の生成が2回走った（API料金が2回分かかり、あとの実行がcontent/ai-news/2026-09-29ブランチを強制pushで上書きした）。対応として、generate.ymlに①ワークフロー単位のconcurrency（cancel-in-progress: false。あとから来た実行は先の実行の終了を待つ）と、②APIを呼ぶ前に「同じ対象日のcontent/<話題>/<日付>のPRがオープン中またはマージ済みか」を確認し、そうなら以降のステップを飛ばす判定（scripts/check-already-generated.sh）を追加した。recovery-check.ymlの再実行は前の実行が失敗してPRが無いときに行われるため、これまでどおり生成される
+- 出典にない記述への対応の第2段階（C3：検索結果の保存）。STEP1（generate.mjs）のAPI応答から、検索した言葉と検索結果のURL・タイトル・page_age（本文の抜粋 encrypted_content は保存しない）を取り出し、data.jsonの各記事の出典URLが検索結果に含まれていたか（完全一致／スキーム・www・末尾の/・#・utm_*を揃えると一致／含まれていなかった）とあわせて output/<話題>/<日付>/search-log.json に保存するようにした（scripts/search-log.mjs）。プロンプト・モデル・記事の中身・鮮度チェックの判定は変えておらず、後続の処理にも渡さない。保存に失敗しても警告のみで生成は続ける。文章中の引用（citations）にだけあるURLは「含まれていた」とはみなさない

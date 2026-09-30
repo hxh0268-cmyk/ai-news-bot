@@ -1,7 +1,7 @@
 // STEP1: Claude APIに「本日のニュース5〜7本」を作らせ、重要度上位5本を選ぶ。
 // 出典の日付がすべて8日以上前のニュースはコード側でも除外する（freshness.mjs）。
 // どの話題を扱うかは環境変数 TOPIC（例: "ai-news"）で切り替わる。
-// 出力: output/<topic>/<date>/data.json / top5.json
+// 出力: output/<topic>/<date>/data.json / top5.json / search-log.json（検索の記録。search-log.mjs）
 
 import fs from "node:fs";
 import path from "node:path";
@@ -20,6 +20,7 @@ import {
   buildFreshnessReport,
 } from "./freshness.mjs";
 import { guardRewrite } from "./number-guard.mjs";
+import { saveSearchLog } from "./search-log.mjs";
 import {
   loadRecentHeadlines,
   loadOpenPrHeadlines,
@@ -297,7 +298,8 @@ async function callClaude() {
     console.error(JSON.stringify(submitBlock.input, null, 2).slice(0, 3000));
     throw new Error("submitBlock.input.items が配列ではありません。上記ログを確認してください。");
   }
-  return submitBlock.input.items;
+  // content（検索の記録を含む応答全体）は search-log.json の保存だけに使う
+  return { items: submitBlock.input.items, content: data.content };
 }
 
 // STEP1後半：下書き（items）を、人間らしい自然な文章に書き直す2段階目の処理。
@@ -507,7 +509,8 @@ ${rows}`;
 async function main() {
   console.log(`[${topic.slug}] Claude APIに本日(${dateStr})分の「${topic.displayName}」収集を依頼しています…`);
   // 529（Anthropic側の一時的な混雑）等の一時的なエラーは自動でリトライする
-  const collectedItems = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
+  const collected = await withRetry(() => callClaude(), { retries: 3, baseDelayMs: 15000, label: "ニュース収集" });
+  const collectedItems = collected.items;
 
   if (!Array.isArray(collectedItems) || collectedItems.length < MIN_ITEMS || collectedItems.length > MAX_ITEMS) {
     throw new Error(`期待した形式のデータではありません（要素数: ${collectedItems?.length}、想定: ${MIN_ITEMS}〜${MAX_ITEMS}件）`);
@@ -564,6 +567,10 @@ async function main() {
 
   const top5 = [...items].sort((a, b) => a.importance - b.importance).slice(0, 5);
   fs.writeFileSync(path.join(outputDir, "top5.json"), JSON.stringify(top5, null, 2), "utf-8");
+
+  // STEP1の検索の記録と、出典URLが検索結果に含まれていたかを保存する（後続の処理には渡さない）。
+  // 保存に失敗しても警告を出すだけで、生成は続ける。
+  saveSearchLog({ outputDir, dateStr, topicSlug: topic.slug, content: collected.content, items });
 
   console.log(`完了: output/${topic.slug}/${dateStr}/data.json（${items.length}本）, top5.json（上位5本）を生成しました。`);
 }

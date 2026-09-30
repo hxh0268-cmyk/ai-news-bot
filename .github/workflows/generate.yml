@@ -139,6 +139,7 @@ jobs:
             - `output/${{ matrix.topic }}/<日付>/monetization-report.md`：**アフィリエイト・PR表記の確認レポート（必読）**
             - `output/${{ matrix.topic }}/<日付>/humanize-comparison.md`：**文章の「書き直し前・後」を表形式で見比べられる比較ファイル（まずこれを見てください）**
             - `output/${{ matrix.topic }}/<日付>/freshness-report.md`：ニュースの鮮度チェックの結果（下にも同じ内容を載せています）
+            - `output/${{ matrix.topic }}/<日付>/search-log.json`：ニュース収集で行った検索の記録と、出典URLが検索結果に含まれていたか（調査用。記事の生成には使っていません）
             - `docs/${{ matrix.topic }}/index.html`：広告枠付きの記事サイト
 
             **確認事項（背景画像）**：AI生成の背景画像に、看板・モニター等に見える不自然な
