@@ -70,6 +70,8 @@ jobs:
         run: node scripts/publish.mjs
 
       - name: トピック一覧ページ(docs/index.html)を再生成
+        env:
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
         run: node scripts/render-topics-index.mjs
 
       - name: ledger・トップページ更新をmainにコミット

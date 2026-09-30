@@ -13,10 +13,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import { loadTopic } from "./topic-context.mjs";
+import { gaSnippet } from "./ga-snippet.mjs";
 
 const { topic, sponsor, outputDir, docsDir, dateStr } = loadTopic();
 const ADSENSE_CLIENT_ID = process.env.ADSENSE_CLIENT_ID || "";
-const GA_MEASUREMENT_ID = process.env.GA_MEASUREMENT_ID || "";
 
 // サイトの公開URL。カスタムドメインを設定した場合はここを変更してください。
 const SITE_URL = process.env.SITE_URL || "https://hxh0268-cmyk.github.io/ai-news-bot";
@@ -41,18 +41,6 @@ function slugifyCategory(category) {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
   return base || "uncategorized";
-}
-
-function gaSnippet() {
-  if (!GA_MEASUREMENT_ID) return "";
-  return `
-<script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${GA_MEASUREMENT_ID}');
-</script>`;
 }
 
 // AdSense未設定の間は、訪問者に「未設定」という内部向け文言を見せないよう、
@@ -456,7 +444,7 @@ function buildAboutHtml() {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>運営方針・AIについて - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}がどのように作られているか、AIの活用方法や出典の扱いについて説明しています。">
 <link rel="canonical" href="${ABOUT_URL}">
@@ -516,7 +504,7 @@ function buildPrivacyHtml() {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>プライバシーポリシー・広告について - 今日の${topic.displayName}</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -579,7 +567,7 @@ function buildContactHtml() {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>お問い合わせ - 今日の${topic.displayName}</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -673,7 +661,7 @@ function buildTagArchiveHtml(category, entries) {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>${category} の記事一覧 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}の「${category}」カテゴリの過去記事一覧。">
 <link rel="canonical" href="${TOPIC_URL}/archive/tag/${slug}.html">
@@ -723,7 +711,7 @@ function buildTagsIndexHtml(entries) {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>カテゴリ一覧 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}のカテゴリ別記事一覧。">
 <link rel="canonical" href="${TOPIC_URL}/archive/tag/">
@@ -761,7 +749,7 @@ function buildArchiveIndexHtml(manifest) {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>過去記事一覧 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}のバックナンバー一覧。">
 <link rel="canonical" href="${ARCHIVE_INDEX_URL}">
@@ -801,7 +789,7 @@ function buildSearchHtml() {
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
 <title>検索 - 今日の${topic.displayName}</title>
 <meta name="description" content="今日の${topic.displayName}の記事をキーワードで検索できます。">
 <link rel="canonical" href="${TOPIC_URL}/search.html">
