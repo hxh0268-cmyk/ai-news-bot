@@ -17,6 +17,17 @@ permissions:
   contents: write
   pull-requests: write
 
+# 同じワークフローの実行が同時に進まないようにする（2026-09-29に、手動実行の9分後に
+# 遅れていた定期実行が動き、同じ日の生成が2回走ったため）。あとから来た実行は、
+# 先の実行が終わるまで待機してから動き、generateジョブ内の「生成済みかどうかの確認」で
+# 先の実行が作ったPRを見つけて、APIを呼ばずに終了する。
+# 先の実行が失敗していた場合は、待機していた実行がそのまま生成を行う。
+# cancel-in-progress: false なので、実行中の生成が途中で止められることはない
+# （待機中の実行がさらに後から来た実行に置き換えられることはあるが、置き換えた側が同じ判定を行う）。
+concurrency:
+  group: daily-content-generate
+  cancel-in-progress: false
+
 jobs:
   # config/topics/ 内のJSONファイルを自動検出し、話題の一覧をマトリクスとして出力する。
   # 新しい話題を増やしたいときは、config/topics/に設定ファイルを1つ追加するだけでよく、
@@ -66,10 +77,22 @@ jobs:
       - id: date
         run: echo "date=$(TZ=Asia/Tokyo date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
+      # 同じ対象日の生成がすでに成功している（content/<topic>/<日付> のPRがオープン中
+      # またはマージ済み）なら、以降のステップ（APIの呼び出し・PRの作成）をすべて飛ばす。
+      # recovery-check.ymlからの再実行は前の実行が失敗してPRが無いときに行われるため、
+      # この確認を通過してこれまでどおり生成される。判定内容は scripts/check-already-generated.sh を参照。
+      - name: 同じ対象日の生成が済んでいないか確認
+        id: already
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: bash scripts/check-already-generated.sh "${{ matrix.topic }}" "${{ steps.date.outputs.date }}"
+
       # STEP1〜STEP3c（ニュース収集〜カード画像・サイト・動画生成）は
       # regenerate-content.yml（手動の丸ごと再生成）と共通のComposite Actionに
       # まとめている。処理内容を変更する場合は .github/actions/generate-content/action.yml を編集する。
       - name: STEP1〜STEP3c コンテンツ一式を生成
+        if: steps.already.outputs.skip != 'true'
         uses: ./.github/actions/generate-content
         with:
           topic: ${{ matrix.topic }}
@@ -83,6 +106,7 @@ jobs:
       # STEP1（generate.mjs）が書き出した鮮度チェックの結果を、PR本文に載せるために読み込む。
       - name: 鮮度チェックの結果を読み込む
         id: freshness
+        if: steps.already.outputs.skip != 'true'
         env:
           REPORT_PATH: output/${{ matrix.topic }}/${{ steps.date.outputs.date }}/freshness-report.md
         run: |
@@ -98,6 +122,7 @@ jobs:
 
       - name: 生成物をPull Requestとして提出（★Human Check★）
         id: create-pr
+        if: steps.already.outputs.skip != 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

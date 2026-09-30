@@ -50,4 +50,4 @@ AIツール企業（今回の記事で扱っているHeyGen、Pictory、Runway�
 
 ## 注意：本パイプラインとPR案件の関係
 
-このリポジトリの自動化は「通常のニュース配信」を前提にしています。PR案件を受けた日は、`config/sponsor-today.json` を配置してから `generate.yml` を手動実行（Run workflow）してください。自動生成された投稿案は、PR表記込みでPRとして提出されるので、通常通り内容を確認してからMergeしてください。
+このリポジトリの自動化は「通常のニュース配信」を前提にしています。PR案件を受けた日は、`config/sponsor-today.json` を配置してから `generate.yml` を手動実行（Run workflow）してください。その日の分のPRがすでに作られている場合、`generate.yml` は二重生成を防ぐために何もせず終了するので、代わりに `regenerate-content.yml` でそのブランチを作り直してください。自動生成された投稿案は、PR表記込みでPRとして提出されるので、通常通り内容を確認してからMergeしてください。
