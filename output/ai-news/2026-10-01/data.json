@@ -1,0 +1,138 @@
+[
+  {
+    "importance": 1,
+    "category": "AI Policy",
+    "catColor": "#F4B942",
+    "headline": "Anthropic排除、米控訴裁が2対1で支持",
+    "dek": "国防総省の安全保障認定、法廷闘争は長期化へ",
+    "body": [
+      "米連邦控訴裁判所(DC巡回区)は9月25日、国防総省がAnthropicを「サプライチェーン上の安全保障リスク」に認定して軍事契約から排除した措置について、2対1でこれを支持する判決を出した。多数意見を書いたKatsas判事は、Claudeを国防総省の情報システムに組み込み続けることには法律上の安全保障リスクがあると判断するだけの十分な根拠があった、としている。",
+      "Anthropicは2025年7月に国防総省と2億ドルの契約を結んでいたが、同年9月に始まった国防総省のAI基盤「GenAI.mil」へのClaude導入をめぐる交渉が決裂した。国防総省側は『あらゆる合法的用途』への無制限アクセスを求めたが、Anthropicは『Claudeを完全自律型兵器や国内の大規模監視に使わせない』という保証を求めて譲らなかった。",
+      "Anthropicは声明でこの判決に同意しないとし、上訴も含めあらゆる選択肢を検討していると表明した。ちょうど上場準備を進めているさなかの判断となった。"
+    ],
+    "stats": [
+      {
+        "n": "2対1",
+        "l": "控訴裁判決の評決"
+      },
+      {
+        "n": "3月",
+        "l": "国防総省がリスク認定した時期"
+      },
+      {
+        "n": "2億ドル",
+        "l": "2025年7月に結んだ国防総省との契約額"
+      }
+    ],
+    "why": "AI企業が掲げる『安全上の一線』と政府の調達判断が真っ向からぶつかり、司法がどちらに軍配を上げるかを示した初めての本格的な判断。今後の政府とAI企業の契約条件全般に影響しそうだ。日本ではまだ防衛省がAIベンダーの安全方針を理由に契約対立を表沙汰にした例はないが、自衛隊や官公庁でのAI活用が進めば同様の論点が浮上してくるかもしれない。",
+    "sourceLine": "The Washington Post、CNBC、U.S. News & World Report、2026年9月25日",
+    "sources": [
+      {
+        "name": "The Washington Post",
+        "url": "https://www.washingtonpost.com/technology/2026/09/25/federal-appeals-court-rules-pentagon-can-blacklist-anthropic/"
+      },
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html"
+      },
+      {
+        "name": "U.S. News & World Report",
+        "url": "https://www.usnews.com/news/top-news/articles/2026-09-25/us-appeals-court-declines-to-block-pentagons-blacklisting-of-anthropic"
+      }
+    ],
+    "captionX": "AIを自律兵器に使わせないというAnthropicの筋を通した結果が、国防総省との全面対立に。米控訴裁は2対1で政府側を支持する判断を下した。 #Anthropic #AI政策",
+    "captionThreads": "AIを自律兵器や監視に使わせないと突っぱねたAnthropic、その代償として国防総省に排除された件。控訴裁は2対1で政府寄りの判断。IPOを控えるタイミングでは痛い一撃になりそう。",
+    "captionInstagram": "AIを自律兵器や大規模監視に使わせないという安全方針を貫いたAnthropicが、米国防総省から『安全保障上のリスク』に認定され契約から外された問題。米連邦控訴裁判所は9月25日、2対1でこの判断を支持しました。ちょうど上場準備中というタイミングでの法廷闘争で、今後最高裁まで争われる可能性もあります。AIの安全方針と政府調達のあり方を占う、注目の判断です。 #Anthropic #AI政策 #AI安全性 #国防総省 #ClaudeAI",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83",
+    "headline": "米政府、AI窓口「America.gov」稼働開始",
+    "dek": "Gemini・Grokが2.9万の行政サイトを一本化",
+    "body": [
+      "米政府は9月29日、連邦政府が運営する約2万9000のウェブサイトへの単一の入り口となるAIチャットボット「America.gov」を稼働させた。質問に答えるのはGoogleのGeminiとxAIのGrokだ。",
+      "米国のチーフ・デザイン・オフィサーを務めるJoe Gebbia氏は「毎日4000万人が政府のウェブサイトで用事を済ませようとしている。もっと良くなってほしいと誰もが思っているはずだ」と述べ、使いにくい行政サイトを改善する狙いを語った。トランプ大統領も式典で「単なるウェブサイトではない。建国の約束の回復であり、21世紀に向けた政府の再構築だ」と述べている。",
+      "ただ、税申告の期限や食料支援、ビザの規則などで答えを間違えれば、実際の罰則や給付拒否、在留資格への悪影響に直結しかねないという懸念も出ている。"
+    ],
+    "stats": [
+      {
+        "n": "29,000",
+        "l": "対象となる政府ウェブサイト数"
+      },
+      {
+        "n": "4000万人",
+        "l": "日々政府サイトを利用する国民数"
+      },
+      {
+        "n": "9月29日",
+        "l": "America.gov稼働開始日"
+      }
+    ],
+    "why": "政府サービスの入り口を生成AIが代行する試みとしては過去最大級。税務や給付金申請といった生活直結の手続きが対話形式で完結する可能性がある一方、誤答がそのまま実害になるリスクも指摘されている。日本でもマイナポータルなど行政デジタル化は進んでいるが、生成AIを前面に出した一本化窓口はまだなく、今後の制度設計を考えるうえで参考になりそうだ。",
+    "sourceLine": "Quartz、Yahoo News、TechEchelon、2026年9月29日",
+    "sources": [
+      {
+        "name": "Quartz",
+        "url": "https://qz.com/trump-america-gov-ai-portal-gemini-grok-092926"
+      },
+      {
+        "name": "Yahoo News",
+        "url": "https://www.yahoo.com/news/politics/articles/trump-launches-america-gov-ai-182742808.html"
+      },
+      {
+        "name": "TechEchelon",
+        "url": "https://www.techechelon.com/post/trump-administration-launches-america-gov-chatbot-powered-by-google-gemini-and-xais-grok"
+      }
+    ],
+    "captionX": "米政府が行政サイトの玄関口になるAIチャットボット『America.gov』を稼働。応答するのはGoogleのGeminiとxAIのGrok。 #America_gov #AI政策",
+    "captionThreads": "米政府、2.9万の行政サイトを束ねるAIチャットボット『America.gov』を始動。税金や給付金の疑問にAIが答えてくれる仕組みらしい。誤答リスクの指摘もあるけど、便利にはなりそう。",
+    "captionInstagram": "米政府は9月29日、連邦政府の約2万9千のウェブサイトへの『単一の入り口』となるAIチャットボット『America.gov』を稼働させました。応答を担うのはGoogleの『Gemini』とxAIの『Grok』です。毎日4000万人が利用する政府サイトの分かりにくさを解消する狙いですが、税金や給付金に関する誤答が実害につながる懸念も出ています。日本でもマイナポータルなど行政デジタル化が進む中、参考になりそうな事例です。 #America_gov #Gemini #Grok #行政DX #AI政策",
+    "lifeRelevanceTag": "暮らし・エンタメ",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Research",
+    "catColor": "#7C6FE0",
+    "headline": "Anthropic、新型「Sonnet 5.5」を公開",
+    "dek": "価格はOpus 5.5の半額、サイバー安全策も強化",
+    "body": [
+      "Anthropicは9月28日、新モデル「Claude Sonnet 5.5」を公開した。CEOのDario Amodei氏がAI業界に開発の『ペース』を落とすよう呼びかけてから、これで2件目のモデルリリースになる。",
+      "同社によれば、Sonnet 5.5は前モデルより速く安くなった上で、コーディングや作業の遂行、資料作成といった面では前モデルを上回る性能を発揮するという。価格は入力100万トークンあたり2ドル、出力は10ドルで、上位モデル「Opus 5.5」の半額に設定された。",
+      "サイバーセキュリティ関連の能力は前モデルから『大幅な改善』があったとされ、最上位モデル群と同じ安全策・フォールバック機構を備えた初のSonnetモデルになったという。"
+    ],
+    "stats": [
+      {
+        "n": "$2/$10",
+        "l": "100万トークンあたりの入力/出力価格"
+      },
+      {
+        "n": "2件目",
+        "l": "ペース減速宣言後のモデル公開数"
+      },
+      {
+        "n": "9月28日",
+        "l": "Sonnet 5.5公開日"
+      }
+    ],
+    "why": "トップのCEO自らが『開発速度を落とす』と宣言した直後にもかかわらず、実際には短い間隔で新モデルを出し続けている。この矛盾こそ、AI大手が掲げる『安全』と『競争』の両立がいかに難しいかを物語っている。日本でもClaudeをAPI経由で業務に組み込む企業もあり、価格低下や性能向上は、そうした企業の開発・運用コストに響いてきそうだ。",
+    "sourceLine": "CNBC、2026年9月28日",
+    "sources": [
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/09/28/anthropic-sonnet-5-5-launch.html"
+      }
+    ],
+    "captionX": "Anthropicが新モデル『Claude Sonnet 5.5』を公開。価格はOpus 5.5の半額、サイバー安全策も強化。CEOの『減速宣言』後なのに2件目のリリースに。 #Anthropic #Claude",
+    "captionThreads": "Anthropic、また新モデル出してきた。『ペース落とす』って言ってたのにSonnet 5.5が公開。価格はOpus 5.5の半額で、性能も前モデルより上がってるらしい。相変わらずのペース。",
+    "captionInstagram": "Anthropicは9月28日、新モデル『Claude Sonnet 5.5』を公開しました。CEOのダリオ・アモデイ氏がAI業界に開発ペースを落とすよう呼びかけてから、これで早くも2件目のモデルリリースです。価格は上位モデル『Opus 5.5』の半額ながら、コーディングや資料作成の性能も向上。サイバーセキュリティ関連の安全策も大幅に強化されたとのことです。『安全』と『スピード』の両立という業界の難題が、ここにも表れています。 #Anthropic #Claude #AI安全性 #生成AI #ClaudeAI",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
