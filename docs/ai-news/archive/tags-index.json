@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-01",
+    "anchorId": "article-1",
+    "headline": "Anthropic排除、米控訴裁が2対1で支持",
+    "dek": "国防総省の安全保障認定、法廷闘争は長期化へ",
+    "category": "AI Policy",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-01",
+    "anchorId": "article-2",
+    "headline": "米政府、AI窓口「America.gov」稼働開始",
+    "dek": "Gemini・Grokが2.9万の行政サイトを一本化",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-01",
+    "anchorId": "article-3",
+    "headline": "Anthropic、新型「Sonnet 5.5」を公開",
+    "dek": "価格は半額、サイバー安全策も強化",
+    "category": "Research",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-01",
+    "anchorId": "article-4",
+    "headline": "DeepSeek、年間収益10億ドル突破と判明",
+    "dek": "API価格最大4.5倍でも顧客離れず",
+    "category": "Business",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-01",
+    "anchorId": "article-5",
+    "headline": "新型AI、英への提供を米国が保留要請か",
+    "dek": "英AI安全研究所への先行提供に影響の可能性",
+    "category": "AI Policy",
+    "catColor": "#F4B942"
+  },
+  {
     "date": "2026-09-30",
     "anchorId": "article-1",
     "headline": "AI規制、トランプ氏「自主規制で十分」と表明",
