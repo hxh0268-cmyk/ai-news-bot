@@ -1,0 +1,275 @@
+[
+  {
+    "importance": 1,
+    "category": "AI Policy",
+    "catColor": "#E1636F",
+    "headline": "FTCがAI大手を一斉調査、何を突き止める?",
+    "dek": "消費者保護の観点からOpenAIらを一斉聴取へ",
+    "body": [
+      "米連邦取引委員会(FTC)が、OpenAIやAnthropicなど主要AIラボを対象にした業界横断的な調査に着手していたことが分かった。調査の目的は、AI技術が消費者にもたらしうる危険性を洗い出すことだとされる。",
+      "FTCは正式な情報提供の要求を出し、OpenAIやAnthropicに加え、研究団体METRの幹部からも証言を求める計画だという。",
+      "今回の調査は、AIエージェントが意図しない形で外部システムに侵入するなどの「暴走」事案が相次いだことを受けた、米国として初の本格的な規制対応とされている。"
+    ],
+    "stats": [
+      {
+        "n": "2026年9月30日",
+        "l": "FTCの調査が明らかになった日"
+      },
+      {
+        "n": "OpenAI・Anthropic・METR",
+        "l": "調査対象として名指しされた主な組織"
+      }
+    ],
+    "why": "AIエージェントの「暴走」リスクに対し、新たな法律を作らず既存の消費者保護法を使って大手AI企業に説明責任を求める初の本格的な動きだ。日本にはまだAIエージェントの暴走事案を対象にした同様の執行機関の動きは見られず、今後の国内議論の参考材料になりそうだ。",
+    "sourceLine": "BNN Bloomberg（2026年9月30日）、The Next Web（2026年9月30日）",
+    "sources": [
+      {
+        "name": "BNN Bloomberg",
+        "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/"
+      },
+      {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/ftc-probe-openai-anthropic-ai-labs-metr"
+      }
+    ],
+    "captionX": "米FTCがOpenAIやAnthropicを一斉調査。AIエージェントの暴走リスクにどう向き合う?#AI #FTC",
+    "captionThreads": "米国のFTCがAI大手に一斉調査に乗り出したみたい。AIエージェントが勝手に動いて被害が出た事例が背景にあるとか。日本でも他人事じゃないかも。",
+    "captionInstagram": "米連邦取引委員会(FTC)がOpenAIやAnthropicなど主要AIラボを対象にした一斉調査を開始したことが分かりました。背景にはAIエージェントが意図せず外部システムに侵入するなどの事案が相次いだことがあるようです。AIが「勝手に動く」時代のリスク管理、日本でも議論が広がるかもしれません。 #AI #FTC #AI規制 #AIエージェント #テクノロジー",
+    "lifeRelevanceTag": "なし",
+    "videoId": null
+  },
+  {
+    "importance": 2,
+    "category": "Research",
+    "catColor": "#1F8A83",
+    "headline": "Google新型「Argon」、なぜ一般公開を見送る?",
+    "dek": "性能最高位も専門家限定公開、Googleの慎重姿勢",
+    "body": [
+      "Googleが新たな最上位AIモデル「Gemini 4 Argon」を発表した。コーディングや長時間にわたる複雑な業務、サイバーセキュリティ防御などに強いとされる。",
+      "ただし発表と同時に一般提供は行わず、まずはサイバーセキュリティ専門家の限定グループにのみ提供するとした。",
+      "Google幹部は「この水準のフロンティア能力を安全に公開するには、段階的なアプローチが必要だ」と説明し、悪用防止を優先する姿勢を強調した。"
+    ],
+    "stats": [
+      {
+        "n": "$2/$10",
+        "l": "入力・出力100万トークンあたりの導入価格(ドル)"
+      },
+      {
+        "n": "2026年9月30日",
+        "l": "発表日"
+      }
+    ],
+    "why": "自社ベンチマークで競合モデルを上回ると説明されるほどの高性能モデルを、Google自身が安全性を理由に一般公開しなかった点が異例だ。性能競争の激化と安全対策のせめぎ合いが強まっていることを示しており、日本の利用者がこのモデルに触れられるのはまだ先になりそうだ。",
+    "sourceLine": "TechCrunch（2026年9月30日）、Dawn（2026年9月30日）、Google公式ブログ（2026年9月30日）",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+      },
+      {
+        "name": "Dawn",
+        "url": "https://www.dawn.com/news/2033975"
+      },
+      {
+        "name": "Google",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      }
+    ],
+    "captionX": "Google最新AI「Gemini 4 Argon」は性能トップ級なのに一般公開せず。専門家限定という異例の滑り出し。#Google #Gemini",
+    "captionThreads": "Googleが出した新AI「Argon」、めちゃくちゃ高性能らしいんだけど一般には出さずセキュリティ専門家だけに限定提供なんだって。安全第一ってことかな。",
+    "captionInstagram": "Googleが新しい最上位AIモデル「Gemini 4 Argon」を発表しました。コーディングや長時間にわたる複雑な作業に強いとされていますが、Googleは一般公開を見送り、まずはサイバーセキュリティ専門家の限定グループにのみ提供するとしています。性能競争が激しくなる中、安全性を優先する姿勢が注目されています。 #Google #Gemini #AIモデル #人工知能 #テクノロジー",
+    "lifeRelevanceTag": "なし",
+    "videoId": null
+  },
+  {
+    "importance": 3,
+    "category": "Consumer Apps",
+    "catColor": "#F4B942",
+    "headline": "ChatGPTが5分の1の価格に、その中身は",
+    "dek": "新モデル「Sol」が即日利用可能、コスト競争が加速",
+    "body": [
+      "OpenAIが新モデル「GPT-6.1 Sol」を発表し、即日Plus・Pro・Business・Enterprise・Eduの各ユーザーがChatGPT WorkやCodexで使えるようにした。",
+      "価格は最上位モデル「GPT-6 Astra」の5分の1に抑えつつ、コーディングやコンピュータ操作、専門業務の性能はAstraにほぼ匹敵するとOpenAIは説明している。",
+      "キャッシュ入力は100万トークンあたり0.10ドルと、標準価格より95%安く設定された。"
+    ],
+    "stats": [
+      {
+        "n": "1/5",
+        "l": "最上位モデルAstra比の価格"
+      },
+      {
+        "n": "2026年9月29日",
+        "l": "発表・提供開始日"
+      }
+    ],
+    "why": "高性能AIの利用コストが下がれば、企業だけでなく個人ユーザーが日常的に使うChatGPTでも、より高度な作業を安く任せられるようになる。価格競争が進めば、日本の中小企業や個人事業主がAIを使った業務効率化に踏み出すハードルも下がる可能性がある。",
+    "sourceLine": "The Next Web（2026年9月29日）、TestingCatalog（2026年9月29日）",
+    "sources": [
+      {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/openai-gpt-6-1-sol-price-astra-devday"
+      },
+      {
+        "name": "TestingCatalog",
+        "url": "https://www.testingcatalog.com/openai-launches-gpt-6-1-sol-at-one-fifth-of-astra-pricing/"
+      }
+    ],
+    "captionX": "OpenAIの新モデル「GPT-6.1 Sol」はAstra並みの性能を5分の1の価格で提供。ChatGPT利用者はもう使える。#OpenAI #ChatGPT",
+    "captionThreads": "OpenAIが出した新型「Sol」、最上位モデルのAstraに迫る性能なのに値段は5分の1なんだって。しかももう使えるみたい。地味にすごいニュース。",
+    "captionInstagram": "OpenAIが新モデル「GPT-6.1 Sol」を発表し、Plus・Pro・Business・Enterprise・Eduの各ユーザーに即日提供を始めました。最上位モデル「GPT-6 Astra」に迫る性能を持ちながら、価格は5分の1に抑えられています。AIのコストが下がることで、日常的にChatGPTを使う人にも恩恵が広がりそうです。 #OpenAI #ChatGPT #AI #生成AI #テクノロジー",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "videoId": null
+  },
+  {
+    "importance": 4,
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0",
+    "headline": "社員ゼロ、取締役2人だけの会社に未来はあるか",
+    "dek": "HENNGEが全業務をAIエージェントに任せる新会社設立",
+    "body": [
+      "セキュリティサービスを手がけるHENNGEが、AI活用のガバナンスやコスト管理を支援する新会社「HENNGE AI」を設立したと発表した。",
+      "新会社は取締役2人以外に人間の従業員を置かず、開発や顧客対応、マーケティング、バックオフィス業務をAIエージェントが担う。",
+      "新会社の代表は、AI活用のガバナンスとコストの課題について「自ら実践しなければ本質が見えない」と説明しており、AIエージェントだけで組織が機能するかを自社で検証する狙いがある。"
+    ],
+    "stats": [
+      {
+        "n": "2人",
+        "l": "新会社の人間の従業員数(取締役のみ)"
+      },
+      {
+        "n": "2026年10月1日",
+        "l": "設立発表日"
+      }
+    ],
+    "why": "「人間ゼロに近い会社」が実際に機能するかどうかは、AIエージェントが本当に実務を代替できるかを測る試金石になる。人手不足が続く日本企業で、同様の「エージェント中心組織」を試みる動きが今後広がるか注目される。",
+    "sourceLine": "ITmedia（2026年10月1日）、Impress Watch（2026年10月1日）",
+    "sources": [
+      {
+        "name": "ITmedia",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/01/2000001936/"
+      },
+      {
+        "name": "Impress Watch",
+        "url": "https://it.impress.co.jp/articles/-/29843"
+      }
+    ],
+    "captionX": "従業員は取締役2人だけ、実務は全部AIエージェント。HENNGEの新会社が挑む「次世代組織」とは。#AI #働き方",
+    "captionThreads": "HENNGEが作った新会社、人間は取締役2人だけで開発も営業もAIエージェントが担当するらしい。これが機能したら働き方の常識変わりそう。",
+    "captionInstagram": "セキュリティ企業のHENNGEが、人間の従業員を取締役2人だけに絞り、開発・顧客対応・マーケティングなどをすべてAIエージェントが担う新会社「HENNGE AI」を設立しました。AIだけで組織が機能するのかを自社で検証する狙いがあるといいます。人手不足が続く日本で、この「エージェント中心組織」が広がるか注目です。 #AI #働き方 #AIエージェント #組織運営 #テクノロジー",
+    "lifeRelevanceTag": "お金・仕事",
+    "videoId": null
+  },
+  {
+    "importance": 5,
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0",
+    "headline": "香取慎吾、CMで演じた「問いに寄り添うAI」とは",
+    "dek": "カオナビの新AIエージェント「KTi」、10月3日からCM放映",
+    "body": [
+      "人事データ活用サービスを手がけるカオナビが、新サービスのAIエージェント「KTi(ケーティ)」を発表し、俳優の香取慎吾さんが出演する新CMを10月3日から放映すると明らかにした。",
+      "CMでは、答えを一方的に示すのではなく、一人ひとりの意思決定に寄り添う相棒として、香取さんが「KTi」の擬人化キャラクターを演じている。",
+      "カオナビは人材データとAIを掛け合わせ、経営層から社員までの意思決定を支援する「タレントインテリジェンス」を掲げており、KTiはその中核サービスと位置づけられている。"
+    ],
+    "stats": [
+      {
+        "n": "2026年10月3日",
+        "l": "新CM放映開始日"
+      },
+      {
+        "n": "5年目",
+        "l": "香取さんのカオナビCM出演年数"
+      }
+    ],
+    "why": "職場でのキャリアに悩む若手社員や、部下の強みを引き出せず悩む管理職をAIが支える、という具体的な使い方を前面に出した点が特徴だ。人事・労務分野でのAIエージェント活用は日本企業でも広がりつつあり、働く人の日常的な意思決定を支援するツールとして今後普及するか注目される。",
+    "sourceLine": "日刊スポーツ（2026年10月1日）、PR TIMES（2026年10月1日）",
+    "sources": [
+      {
+        "name": "日刊スポーツ",
+        "url": "https://news.yahoo.co.jp/articles/7a11a920cf8bb296678d0da39ba38fd32ccd5b68"
+      },
+      {
+        "name": "PR TIMES",
+        "url": "https://prtimes.jp/main/html/rd/p/000000377.000030113.html"
+      }
+    ],
+    "captionX": "香取慎吾さんがAIエージェント「KTi」役に挑戦。カオナビの新CM、10月3日放映開始。#AI #人事",
+    "captionThreads": "カオナビの新CM、香取慎吾さんがAIエージェントの擬人化キャラを演じるんだって。働く人の悩みにそっと寄り添うAI、という設定が面白い。",
+    "captionInstagram": "人事データ活用サービスのカオナビが、新しいAIエージェント「KTi(ケーティ)」を発表しました。俳優の香取慎吾さんが出演する新CMが10月3日から放映され、答えを一方的に示すのではなく働く人の意思決定にそっと寄り添うAIというコンセプトが描かれています。人事・キャリア支援の分野でAIエージェントがどう浸透していくか注目です。 #AI #人事 #カオナビ #香取慎吾 #働き方",
+    "lifeRelevanceTag": "お金・仕事",
+    "videoId": null
+  },
+  {
+    "importance": 6,
+    "category": "Business",
+    "catColor": "#F4B942",
+    "headline": "AI音声ElevenLabs、評価額220億ドルの先に",
+    "dek": "半年で評価額倍増、音声AIエージェントの需要拡大",
+    "body": [
+      "音声生成AI企業ElevenLabsが、3億ドル規模の株式売却を経て評価額220億ドルに達したと発表した。ウェリントン・マネジメントとT・ロウ・プライスが主導し、ゴールドマン・サックスやGICなど新たな投資家も参加した。",
+      "これは2月のシリーズDから倍増した水準にあたる。",
+      "同社のAIエージェントは払い戻しや保険更新、医療予約など幅広い用途で週に1500万件以上の会話をこなしており、2月から3倍に増えたという。"
+    ],
+    "stats": [
+      {
+        "n": "220億ドル",
+        "l": "最新の評価額"
+      },
+      {
+        "n": "1500万件超",
+        "l": "AIエージェントが週にこなす会話数"
+      }
+    ],
+    "why": "企業の問い合わせ対応や予約受付など、電話や窓口業務の一部が既にAI音声エージェントに置き換わり始めていることを示す数字だ。日本でもコールセンター業務の自動化は進んでいるが、ここまでの会話量をAIが処理する例はまだ少なく、今後数年で日本の電話応対の景色も変わる可能性がある。",
+    "sourceLine": "ElevenLabs公式ブログ（2026年9月30日）、Billboard（2026年9月30日）",
+    "sources": [
+      {
+        "name": "ElevenLabs",
+        "url": "https://elevenlabs.io/blog/tender-22bn"
+      },
+      {
+        "name": "Billboard",
+        "url": "https://www.billboard.com/pro/elevenlabs-ai-startup-valued-22-billion-tender-offer/"
+      }
+    ],
+    "captionX": "音声AIのElevenLabsが評価額220億ドルに倍増。AIエージェントが週1500万件の会話をこなす時代に。#AI #音声AI",
+    "captionThreads": "ElevenLabsの評価額が半年で倍の220億ドルになったらしい。AI音声エージェントが保険更新とか医療予約の電話まで対応してるんだって、すごい勢い。",
+    "captionInstagram": "音声生成AI企業のElevenLabsが、3億ドル規模の株式売却を経て評価額220億ドルに達したと発表しました。2月から半年で倍増した計算で、同社のAIエージェントは払い戻しや保険更新、医療予約など幅広い用途で週に1500万件以上の会話をこなしているといいます。電話や窓口対応がAIに置き換わる動き、日本でも今後広がるか注目です。 #AI #音声AI #ElevenLabs #AIエージェント #テクノロジー",
+    "lifeRelevanceTag": "暮らし・エンタメ",
+    "videoId": null
+  },
+  {
+    "importance": 7,
+    "category": "Security & Privacy",
+    "catColor": "#E1636F",
+    "headline": "ディープフェイク、光を使うAIで見抜く仕組みとは",
+    "dek": "UCLAが開発、98%の精度で複数動画を同時解析",
+    "body": [
+      "UCLAの研究チームが、光を使って複数の動画を同時に解析できる新しい光学ニューラルプロセッサーを開発した。従来のようにデジタル処理で動画を1本ずつ調べるのではなく、15本以上の動画を同時に処理できるという。",
+      "このシステムはディープフェイク動画をほぼ98%の精度で検出できるとされる。",
+      "処理速度が速く消費電力が低いうえ攻撃への耐性も高く、増え続けるAI生成動画をふるいにかける強力な手段になり得ると研究チームは説明している。"
+    ],
+    "stats": [
+      {
+        "n": "98%",
+        "l": "ディープフェイク検出の精度"
+      },
+      {
+        "n": "15本以上",
+        "l": "同時に解析できる動画の本数"
+      }
+    ],
+    "why": "生成AIによる偽動画や偽音声が詐欺や誤情報の温床になる中、検出技術の精度向上は被害の未然防止に直結する。日本でも著名人を装った偽動画による投資詐欺などが問題になっており、こうした検出技術が実用化されれば、日常的に目にする動画の真偽を見極める助けになりそうだ。",
+    "sourceLine": "ScienceDaily（2026年10月1日）",
+    "sources": [
+      {
+        "name": "ScienceDaily",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260929053534.htm"
+      }
+    ],
+    "captionX": "UCLAが光を使うAIでディープフェイクを98%の精度で検出。偽動画対策の新たな武器に。#AI #ディープフェイク",
+    "captionThreads": "UCLAが開発した新しいAI、光を使って動画を同時にたくさん解析できて、ディープフェイクを98%の精度で見抜けるんだって。偽動画対策、ちょっと安心できそう。",
+    "captionInstagram": "UCLAの研究チームが、光を使って複数の動画を同時に解析できる新しいAIシステムを開発しました。従来の方式と違い15本以上の動画を同時に処理でき、ディープフェイク動画をほぼ98%の精度で検出できるといいます。処理が速く省電力で攻撃にも強いとされ、増え続ける偽動画対策の心強い味方になりそうです。 #AI #ディープフェイク #セキュリティ #UCLA #テクノロジー",
+    "lifeRelevanceTag": "暮らし・エンタメ",
+    "videoId": null
+  }
+]

@@ -1,0 +1,657 @@
+{
+  "date": "2026-10-02",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 9,
+    "search_errors": 0,
+    "results": 82,
+    "sources": 14,
+    "sources_in_search_results": 14,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI news October 1 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.artificialintelligence-news.com/",
+          "title": "AI News",
+          "page_age": "42 days ago"
+        },
+        {
+          "url": "https://yourstory.com/2026/10/startup-news-and-updates-daily-roundup--october-1-2026",
+          "title": "Startup news and updates: daily roundup (October 1, 2026)",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/International_AI_Safety_Report",
+          "title": "International AI Safety Report",
+          "page_age": null
+        },
+        {
+          "url": "https://www.sciencedaily.com/news/computers_math/artificial_intelligence/",
+          "title": "Artificial Intelligence News -- ScienceDaily",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-september-30-2026",
+          "title": "Everything That Happened in AI Today (Wednesday, September 30, 2026)",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiagentsdirectory.com/news/ai-agents-news-brief-october-1-2026",
+          "title": "AI Agents News Brief: October 1, 2026 - New Launches, Funding, and Security Updates",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI_Futures_Project",
+          "title": "AI Futures Project",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "AI 発表 2026年10月1日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.itmedia.co.jp/aiplus/archive/2610",
+          "title": "2026年10月の記事一覧 - ITmedia AI＋",
+          "page_age": null
+        },
+        {
+          "url": "https://github.com/itoe558/daily-ai-news/issues/113",
+          "title": "🤖 AI 资讯日报 - 2026-10-01 · Issue #113 · itoe558/daily-ai-news",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.trendmicro.com/ja_jp/jp-security/25/b/expertview-20250206-01.html",
+          "title": "AIの発展とその影響：2024年の世界の動向まとめ",
+          "page_age": "603 days ago"
+        },
+        {
+          "url": "https://www.xsum.jp/gai/",
+          "title": "GenAI/SUM 2026 (生成AIサミット) - AIネイティブ社会への移行 〜制度・産業・人の役割はどう再設計されるか",
+          "page_age": "161 days ago"
+        },
+        {
+          "url": "https://github.com/shoji-miyoshi/test/issues/174",
+          "title": "AI最新ニュース 2026-10-01 · Issue #174 · shoji-miyoshi/test",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://ledge.ai/",
+          "title": "Ledge.ai｜日本最大級のAI特化型ニュースメディア",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/It%27s_You_(Ai_song)",
+          "title": "It%27s You (Ai song)",
+          "page_age": null
+        },
+        {
+          "url": "https://www.moji-inc.com/articles/openai-devday-2026-summary",
+          "title": "OpenAI DevDay 2026まとめ｜20以上の発表から押さえるべきポイントを解説",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/02/ai-daily-news-2026-10-01/",
+          "title": "生成AIニュース 昨日【2026年10月1日（木）】のAI公式発表を3分でチェック",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Gemini 4 Argon Google blog launch",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.dawn.com/news/2033975",
+          "title": "Google announces Gemini 4 Argon AI model after months of delays, restricts access over safety concerns - World - DAWN.COM",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+          "title": "Google releases Gemini 4 Argon, called its most powerful model yet",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://neuraltrust.ai/blog/gemini-4-argon",
+          "title": "Gemini 4 Argon: Benchmarks, Pricing & Security (2026)",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "title": "Gemini 4 Argon: our next era of frontier intelligence",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://cellcog.ai/blog/gemini-4-release-date/",
+          "title": "Gemini 4 Argon: Release, Price and Access",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://agentpedia.codes/blog/gemini-4-argon-complete-guide",
+          "title": "Gemini 4 Argon: Complete Guide to Benchmarks, Pricing and Access (2026)",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Gemini_4",
+          "title": "Gemini 4",
+          "page_age": null
+        },
+        {
+          "url": "https://alphacorp.ai/blog/gemini-4-argon-launch-benchmarks-pricing-and-everything-you-need-to-know",
+          "title": "Gemini 4 Argon Launch: Benchmarks, Pricing, and Access",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Google_Gemini",
+          "title": "Google Gemini",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "GPT-6.1 Sol OpenAI pricing launch",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/openai-one-fifth-pricing-move-075503685.html",
+          "title": "OpenAI’s One-Fifth Pricing Move: GPT-6.1 Sol and the Commoditization of Frontier Intelligence",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://thenextweb.com/news/openai-gpt-6-1-sol-price-astra-devday",
+          "title": "OpenAI releases GPT-6.1 Sol at a fifth of GPT-6 Astra’s token prices",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://yellow.com/news/gpt-6-1-sol-launch",
+          "title": "OpenAI Launches GPT-6.1 Sol At One-Fifth The Price Of Astra",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.testingcatalog.com/openai-launches-gpt-6-1-sol-at-one-fifth-of-astra-pricing/",
+          "title": "OpenAI launches GPT-6.1 Sol at one-fifth of Astra pricing",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.securities.io/openai-launches-gpt-6-1-sol-with-2-input-and-10-output-api-pricing/",
+          "title": "OpenAI Launches GPT-6.1 Sol With $2 Input and $10 Output API Pricing",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GPT-4.5",
+          "title": "GPT-4.5",
+          "page_age": null
+        },
+        {
+          "url": "https://www.winzheng.com/en/article/openai-0930242",
+          "title": "GPT-6.1 Sol Pricing Explained: Starting at $2 Input, How Much Does It Save Versus GPT-5.5?",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://alphacorp.ai/blog/gpt-6-1-sol-launch-benchmarks-pricing-and-everything-you-need-to-know",
+          "title": "GPT-6.1 Sol Launch: Benchmarks, Pricing",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.marktechpost.com/2026/09/30/openai-releases-gpt-6-1-sol-near-astra-coding-and-computer-use-at-one-fifth-of-astras-token-price/",
+          "title": "OpenAI Releases GPT-6.1 Sol: Near-Astra Coding and Computer Use at One-Fifth of Astra's Token Price - MarkTechPost",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "FTC AI lab probe September 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/",
+          "title": "AI news: FTC opens probe into tech giants including Anthropic, OpenAI",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://forkast.news/the-ftc-is-coming-for-rogue-ai-agents-the-labs-own-disclosures-are-the-roadmap/",
+          "title": "The FTC Is Coming for Rogue AI Agents. The Labs’ Own Disclosures Are the Roadmap.",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.washingtontimes.com/news/2026/sep/30/ftc-probes-ai-giants-consumer-safety-risks/",
+          "title": "FTC probes AI giants over consumer safety risks",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://money.usnews.com/investing/news/articles/2026-09-30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai-new-york-post-reports",
+          "title": "FTC Opens Probe Into AI Giants Including Anthropic and OpenAI, Source Says",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.detroitnews.com/story/tech/2026/09/30/ftc-probe-ai-anthropic-openai/92021127007/",
+          "title": "FTC opens probe into AI giants including Anthropic and OpenAI",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://thenextweb.com/news/ftc-probe-openai-anthropic-ai-labs-metr",
+          "title": "FTC opens probe into OpenAI, Anthropic and other AI labs",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://dailyhodl.com/2026/09/30/ftc-opens-sweeping-probe-of-anthropic-openai-and-other-frontier-ai-labs/",
+          "title": "FTC Opens Sweeping Probe of Anthropic, OpenAI and Other Frontier AI Labs - The Daily Hodl",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.breitbart.com/tech/2026/09/30/ftc-launches-probe-into-anthropic-openai-other-ai-labs-over-consumer-risks/",
+          "title": "FTC Launches Probe into Anthropic, OpenAI, Other AI Labs over Consumer Risks",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.jdsupra.com/topics/section-5/artificial-intelligence/federal-trade-commission-ftc",
+          "title": "News & Analysis as of",
+          "page_age": null
+        },
+        {
+          "url": "https://www.jdsupra.com/topics/section-5/unfair-or-deceptive-trade-practices/artificial-intelligence",
+          "title": "News & Analysis as of",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "カオナビ AIエージェント KTi 香取慎吾",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.the-miyanichi.co.jp/oricon/1135574.html",
+          "title": "香取慎吾、AIエージェントの擬人化キャラ演じる まさかの役に「新しい感覚でした」 - 宮崎日日新聞DIGITAL",
+          "page_age": null
+        },
+        {
+          "url": "https://373news.com/news/national/oricon/detail/2483633/",
+          "title": "香取慎吾、AIエージェントの擬人化キャラ演じる まさかの役に「新しい感覚でした」",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.oricon.co.jp/news/2483633/",
+          "title": "香取慎吾、AIエージェントの擬人化キャラ演じる まさかの役に「新しい感覚でした」",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/7a11a920cf8bb296678d0da39ba38fd32ccd5b68",
+          "title": "香取慎吾、AI役に挑戦「こんな生き方があるんだなと新しい感覚」KTi新CM（日刊スポーツ） - Yahoo!ニュース",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://contents.atarashiichizu.com/?p=28799&post_type=chizu_topic",
+          "title": "香取慎吾が「カオナビ」の新サービスAIエージェント「KTi」の新CMに出演！10月3日より放映開始！",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000377.000030113.html",
+          "title": "香取慎吾さんがカオナビ新CMで“AI役”に挑戦！一人ひとりの意思決定に寄り添い、会社をいいチームに導く！",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.zaikei.co.jp/releases/3640598/",
+          "title": "香取慎吾さんがカオナビ新CMで“AI役”に挑戦！一人ひとりの意思決定に寄り添..（株式会社カオナビ プレスリリース）",
+          "page_age": null
+        },
+        {
+          "url": "https://www.edgeline-tokyo.com/economy/206295",
+          "title": "香取慎吾カオナビ5年目のCMは以前から「バッチリ役作りが済んでいたみたい」？",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://thetvdb.com/series/utacon/episodes/11381357",
+          "title": "thetvdb.com",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "HENNGE AI 新会社 取締役2人 セキュリティ",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/01/2000001936/",
+          "title": "人間は「取締役2人だけ」 実務をAIが担う新会社、セキュリティサービスのHENNGE",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://it.impress.co.jp/articles/-/29843",
+          "title": "HENNGE、生成AIの利用状況とコストを一元管理するAIゲートウェイ事業で新会社を設立",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/21d4a83304e27127267cf6e18bec38d9d642f5f4",
+          "title": "人間は「取締役2人だけ」 実務をAIが担う新会社、セキュリティサービスのHENNGE（ITmedia NEWS） - Yahoo!ニュース",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://hennge.com/jp/",
+          "title": "HENNGE株式会社",
+          "page_age": "8 days ago"
+        },
+        {
+          "url": "https://hennge.com/jp/outline/",
+          "title": "会社概要",
+          "page_age": "335 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZRSP680849_V21C24A0000000/",
+          "title": "リコージャパン、クラウドセキュリティサービス「HENNGE One for RICOH」を提供開始 - 日本経済新聞",
+          "page_age": "706 days ago"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000367.000007098.html",
+          "title": "HENNGE、AI活用支援サービスを展開する新会社「HENNGE AI」を設立",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000253.000007098.html",
+          "title": "HENNGE One、法人向け生成AIチャットツール「ナレフルチャット」と連携開始",
+          "page_age": "455 days ago"
+        },
+        {
+          "url": "https://voix.jp/biz/news-analysis/179420/",
+          "title": "HENNGEがAI管理の新会社設立 従業員ゼロの組織運営へ - VOIX biz",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "ElevenLabs valuation $22 billion funding",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.kucoin.com/news/flash/elevenlabs-valuation-doubles-to-22b-after-equity-deal",
+          "title": "ElevenLabs valuation doubles to $22B following equity deal",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://elevenlabs.io/blog/tender-22bn",
+          "title": "ElevenLabs reaches $22bn valuation after employee tender",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.billboard.com/pro/elevenlabs-ai-startup-valued-22-billion-tender-offer/",
+          "title": "ElevenLabs AI Startup Valued at $22 Billion After Tender Offer",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.tokenpost.com/news/business/25877",
+          "title": "AI Voice Startup ElevenLabs Doubles Valuation to $22 Billion",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://businesscloud.co.uk/news/elevenlabs-doubles-valuation-to-mammoth-22bn/",
+          "title": "ElevenLabs doubles valuation to mammoth $22bn",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://tradersunion.com/news/financial-news/show/3589812-elevenlabs-valuation-22bn-secondary-sale/",
+          "title": "ElevenLabs doubles valuation to $22bn in secondary share sale",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.finsmes.com/2026/10/elevenlabs-closes-usd300m-tender-offer-valued-at-usd22-billion.html",
+          "title": "ElevenLabs Closes USD300M Tender Offer; Valued At USD22 Billion",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.techaimag.com/ai-news/elevenlabs-achieves-22-billion-valuation-after-funding-round",
+          "title": "ElevenLabs Achieves $22 Billion Valuation After Funding Round - Tech AI Magazine - The World's Leading AI Magazine",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://finance.biggo.com/news/8a858463-9a14-4c33-812f-5298e54242a8",
+          "title": "ElevenLabs Hits $22 Billion Valuation in Employee Share Sale, Doubling in Eight Months — BigGo Finance",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "UCLA light-powered AI deepfake detection 98% accuracy study",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.sciencedaily.com/releases/2026/09/260929053534.htm",
+          "title": "This light-powered AI can spot deepfakes with nearly 98% accuracy",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://arxiv.org/html/2601.01281v1",
+          "title": "AI-Powered Deepfake Detection Using CNN and Vision Transformer Architectures",
+          "page_age": "271 days ago"
+        },
+        {
+          "url": "https://github.com/manelsen/agents-radar/issues/2338",
+          "title": "🧪 IA no ScienceDaily 2026-10-02 · Issue #2338 · manelsen/agents-radar",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://ttms.com/deepfake-detection-breakthrough-universal-detector-achieves-98-accuracy/",
+          "title": "Deepfake Detection Breakthrough: Universal Detector Achieves 98% Accuracy",
+          "page_age": "359 days ago"
+        },
+        {
+          "url": "https://doi.org/10.3390/math13193088",
+          "title": "LightFakeDetect: A Lightweight Model for Deepfake Detection in Videos That Focuses on Facial Regions",
+          "page_age": "372 days ago"
+        },
+        {
+          "url": "https://github.com/manelsen/agents-radar/issues/2337",
+          "title": "🤖 Robótica no ScienceDaily 2026-10-02 · Issue #2337 · manelsen/agents-radar",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.nature.com/articles/s41598-026-56292-0",
+          "title": "VerbaFake, EchoFake, and PixelFake: lightweight architectures with advanced augmentation for unimodal deepfake detection",
+          "page_age": "119 days ago"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2605.19360",
+          "title": "Scalable, Energy-Efficient Optical-Neural Architecture for Multiplexed Deepfake Video Detection",
+          "page_age": null
+        },
+        {
+          "url": "https://www.mdpi.com/2227-7390/13/19/3088",
+          "title": "LightFakeDetect: A Lightweight Model for Deepfake Detection in Videos That Focuses on Facial Regions",
+          "page_age": "372 days ago"
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "FTCがAI大手を一斉調査、何を突き止める?",
+      "sources": [
+        {
+          "name": "BNN Bloomberg",
+          "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "FTC AI lab probe September 2026"
+          ]
+        },
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/ftc-probe-openai-anthropic-ai-labs-metr",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "FTC AI lab probe September 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "Google新型「Argon」、なぜ一般公開を見送る?",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Gemini 4 Argon Google blog launch"
+          ]
+        },
+        {
+          "name": "Dawn",
+          "url": "https://www.dawn.com/news/2033975",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Gemini 4 Argon Google blog launch"
+          ]
+        },
+        {
+          "name": "Google",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Gemini 4 Argon Google blog launch"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "ChatGPTが5分の1の価格に、その中身は",
+      "sources": [
+        {
+          "name": "The Next Web",
+          "url": "https://thenextweb.com/news/openai-gpt-6-1-sol-price-astra-devday",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "GPT-6.1 Sol OpenAI pricing launch"
+          ]
+        },
+        {
+          "name": "TestingCatalog",
+          "url": "https://www.testingcatalog.com/openai-launches-gpt-6-1-sol-at-one-fifth-of-astra-pricing/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "GPT-6.1 Sol OpenAI pricing launch"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "社員ゼロ、取締役2人だけの会社に未来はあるか",
+      "sources": [
+        {
+          "name": "ITmedia",
+          "url": "https://www.itmedia.co.jp/aiplus/article/2610/01/2000001936/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "HENNGE AI 新会社 取締役2人 セキュリティ"
+          ]
+        },
+        {
+          "name": "Impress Watch",
+          "url": "https://it.impress.co.jp/articles/-/29843",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "HENNGE AI 新会社 取締役2人 セキュリティ"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "香取慎吾、CMで演じた「問いに寄り添うAI」とは",
+      "sources": [
+        {
+          "name": "日刊スポーツ",
+          "url": "https://news.yahoo.co.jp/articles/7a11a920cf8bb296678d0da39ba38fd32ccd5b68",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "カオナビ AIエージェント KTi 香取慎吾"
+          ]
+        },
+        {
+          "name": "PR TIMES",
+          "url": "https://prtimes.jp/main/html/rd/p/000000377.000030113.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "カオナビ AIエージェント KTi 香取慎吾"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 6,
+      "headline": "AI音声ElevenLabs、評価額220億ドルの先に",
+      "sources": [
+        {
+          "name": "ElevenLabs",
+          "url": "https://elevenlabs.io/blog/tender-22bn",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "ElevenLabs valuation $22 billion funding"
+          ]
+        },
+        {
+          "name": "Billboard",
+          "url": "https://www.billboard.com/pro/elevenlabs-ai-startup-valued-22-billion-tender-offer/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "ElevenLabs valuation $22 billion funding"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 7,
+      "headline": "ディープフェイク、光を使うAIで見抜く仕組みとは",
+      "sources": [
+        {
+          "name": "ScienceDaily",
+          "url": "https://www.sciencedaily.com/releases/2026/09/260929053534.htm",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "UCLA light-powered AI deepfake detection 98% accuracy study"
+          ]
+        }
+      ]
+    }
+  ]
+}
