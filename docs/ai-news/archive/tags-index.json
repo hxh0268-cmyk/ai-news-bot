@@ -1,5 +1,61 @@
 [
   {
+    "date": "2026-10-02",
+    "anchorId": "article-1",
+    "headline": "FTCがAI大手を一斉調査、何を突き止める?",
+    "dek": "消費者保護の観点からOpenAIらを一斉聴取へ",
+    "category": "AI Policy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-02",
+    "anchorId": "article-2",
+    "headline": "Google新型「Argon」、なぜ一般公開を見送る?",
+    "dek": "性能最高位も専門家限定公開、Googleの慎重姿勢",
+    "category": "Research",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-02",
+    "anchorId": "article-3",
+    "headline": "ChatGPTが5分の1の価格に、その中身は",
+    "dek": "新モデル「Sol」が即日利用可能、コスト競争が加速",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-02",
+    "anchorId": "article-4",
+    "headline": "社員ゼロ、取締役2人だけの会社に未来はあるか",
+    "dek": "HENNGEが全業務をAIエージェントに任せる新会社設立",
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-02",
+    "anchorId": "article-5",
+    "headline": "香取慎吾、CMで演じた「問いに寄り添うAI」とは",
+    "dek": "カオナビの新AIエージェント「KTi」、10月3日からCM放映",
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-02",
+    "anchorId": "article-6",
+    "headline": "AI音声ElevenLabs、評価額220億ドルの先に",
+    "dek": "半年で評価額倍増、音声AIエージェントの需要拡大",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-02",
+    "anchorId": "article-7",
+    "headline": "ディープフェイク、光を使うAIで見抜く仕組みとは",
+    "dek": "UCLAが開発、98%の精度で複数動画を同時解析",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
     "date": "2026-10-01",
     "anchorId": "article-1",
     "headline": "Anthropic排除、米控訴裁が2対1で支持",

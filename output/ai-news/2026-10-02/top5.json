@@ -1,0 +1,211 @@
+[
+  {
+    "importance": 1,
+    "category": "AI Policy",
+    "catColor": "#E1636F",
+    "headline": "FTCがAI大手を一斉調査、何を突き止める?",
+    "dek": "消費者保護の観点からOpenAIらを一斉聴取へ",
+    "body": [
+      "米連邦取引委員会(FTC)が、OpenAIやAnthropicなど主要AIラボを対象にした業界横断的な調査に乗り出していたことが分かった。狙いは、AI技術が消費者にどんな危険をもたらしうるかを洗い出すことだとされる。",
+      "FTCはすでに正式な情報提供要求を出していて、OpenAIやAnthropicに加え、研究団体METRの幹部からも証言を取る計画だという。",
+      "AIエージェントが意図しない形で外部システムに侵入するなど、「暴走」とも言える事案が相次いだことを受けての動きで、米国としては初の本格的な規制対応とされている。"
+    ],
+    "stats": [
+      {
+        "n": "2026年9月30日",
+        "l": "FTCの調査が明らかになった日"
+      },
+      {
+        "n": "OpenAI・Anthropic・METR",
+        "l": "調査対象として名指しされた主な組織"
+      }
+    ],
+    "why": "AIエージェントの「暴走」リスクに対して、新しい法律を作るのではなく既存の消費者保護法を使って大手AI企業に説明責任を迫る、初めての本格的な動きだ。日本ではまだAIエージェントの暴走事案に対してこうした執行機関の動きは見られず、今後の国内議論の参考になりそうだ。",
+    "sourceLine": "BNN Bloomberg（2026年9月30日）、The Next Web（2026年9月30日）",
+    "sources": [
+      {
+        "name": "BNN Bloomberg",
+        "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/09/30/ftc-opens-probe-into-ai-giants-including-anthropic-and-openai/"
+      },
+      {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/ftc-probe-openai-anthropic-ai-labs-metr"
+      }
+    ],
+    "captionX": "米FTCがOpenAIやAnthropicを一斉調査へ。AIエージェントの暴走リスク、どう向き合う?#AI #FTC",
+    "captionThreads": "米FTCがAI大手に一斉調査をかけたらしい。AIエージェントが勝手に動いて被害が出た事例が背景にあるみたいで、日本も他人事じゃない気がする。",
+    "captionInstagram": "米連邦取引委員会(FTC)がOpenAIやAnthropicなど主要AIラボを対象にした一斉調査に乗り出したことが分かりました。背景には、AIエージェントが意図せず外部システムに侵入するといった事案が相次いだことがあるようです。AIが「勝手に動く」時代のリスク管理、日本でも議論が広がるかもしれません。 #AI #FTC #AI規制 #AIエージェント #テクノロジー",
+    "lifeRelevanceTag": "なし",
+    "videoId": null,
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Research",
+    "catColor": "#1F8A83",
+    "headline": "Google新型「Argon」、なぜ一般公開を見送る?",
+    "dek": "性能最高位も専門家限定公開、Googleの慎重姿勢",
+    "body": [
+      "Googleが新たな最上位AIモデル「Gemini 4 Argon」を発表した。コーディングや長時間にわたる複雑な業務、サイバーセキュリティ防御に強いという触れ込みだ。",
+      "ただ発表と同時に一般提供はせず、まずはサイバーセキュリティ専門家の限定グループにだけ提供するという。",
+      "Google幹部は「この水準のフロンティア能力を安全に公開するには、段階的なアプローチが必要だ」と語り、悪用防止を優先する姿勢をにじませた。"
+    ],
+    "stats": [
+      {
+        "n": "$2/$10",
+        "l": "入力・出力100万トークンあたりの導入価格(ドル)"
+      },
+      {
+        "n": "2026年9月30日",
+        "l": "発表日"
+      }
+    ],
+    "why": "自社ベンチマークで競合モデルを上回るとされるほどの高性能モデルを、Google自身が安全性を理由に一般公開しなかったのは異例だ。性能競争の激化と安全対策のせめぎ合いが強まっている証拠でもあり、日本の利用者がこのモデルに触れられるのはまだ先になりそうだ。",
+    "sourceLine": "TechCrunch（2026年9月30日）、Dawn（2026年9月30日）、Google公式ブログ（2026年9月30日）",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/09/30/google-releases-gemini-4-argon-called-its-most-powerful-model-yet/"
+      },
+      {
+        "name": "Dawn",
+        "url": "https://www.dawn.com/news/2033975"
+      },
+      {
+        "name": "Google",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+      }
+    ],
+    "captionX": "Googleの新AI「Gemini 4 Argon」、性能はトップ級なのに一般公開は見送り。専門家限定という異例の滑り出し。#Google #Gemini",
+    "captionThreads": "Googleの新AI「Argon」、相当高性能らしいけど一般には出さずセキュリティ専門家だけに限定提供なんだとか。安全優先ってことなんだろうな。",
+    "captionInstagram": "Googleが新しい最上位AIモデル「Gemini 4 Argon」を発表しました。コーディングや長時間にわたる複雑な作業に強いとされる一方、Googleは一般公開を見送り、まずサイバーセキュリティ専門家の限定グループにだけ提供するとしています。性能競争が激しくなる中、安全性を優先する姿勢が目を引きます。 #Google #Gemini #AIモデル #人工知能 #テクノロジー",
+    "lifeRelevanceTag": "なし",
+    "videoId": null,
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Consumer Apps",
+    "catColor": "#F4B942",
+    "headline": "ChatGPTが5分の1の価格に、その中身は",
+    "dek": "新モデル「Sol」が即日利用可能、コスト競争が加速",
+    "body": [
+      "OpenAIが新モデル「GPT-6.1 Sol」を発表し、即日Plus・Pro・Business・Enterprise・Eduの各ユーザーがChatGPT WorkやCodexで使えるようにした。",
+      "価格は最上位モデル「GPT-6 Astra」の5分の1に抑えつつ、コーディングやコンピュータ操作、専門業務の性能はAstraにほぼ匹敵するとOpenAIは説明している。",
+      "キャッシュ入力は100万トークンあたり0.10ドルと、標準価格より95%安く設定された。"
+    ],
+    "stats": [
+      {
+        "n": "1/5",
+        "l": "最上位モデルAstra比の価格"
+      },
+      {
+        "n": "2026年9月29日",
+        "l": "発表・提供開始日"
+      }
+    ],
+    "why": "高性能AIの利用コストが下がれば、企業だけでなく日常的にChatGPTを使う個人も、より高度な作業を安く任せられるようになる。価格競争がさらに進めば、日本の中小企業や個人事業主がAIで業務効率化に踏み出すハードルも下がっていきそうだ。",
+    "sourceLine": "The Next Web（2026年9月29日）、TestingCatalog（2026年9月29日）",
+    "sources": [
+      {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/openai-gpt-6-1-sol-price-astra-devday"
+      },
+      {
+        "name": "TestingCatalog",
+        "url": "https://www.testingcatalog.com/openai-launches-gpt-6-1-sol-at-one-fifth-of-astra-pricing/"
+      }
+    ],
+    "captionX": "OpenAIの新モデル「Sol」、Astra並みの性能で価格は5分の1。しかももう使える。#OpenAI #ChatGPT",
+    "captionThreads": "OpenAIの新型「Sol」、最上位Astraに迫る性能なのに値段は5分の1なんだって。しかも今すぐ使えるのが地味にすごい。",
+    "captionInstagram": "OpenAIが新モデル「GPT-6.1 Sol」を発表し、Plus・Pro・Business・Enterprise・Eduの各ユーザーに即日提供を始めました。最上位モデル「GPT-6 Astra」に迫る性能ながら、価格は5分の1に抑えられています。AIのコストが下がることで、普段からChatGPTを使う人にも恩恵が広がりそうです。 #OpenAI #ChatGPT #AI #生成AI #テクノロジー",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "videoId": null,
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0",
+    "headline": "社員ゼロ、取締役2人だけの会社に未来はあるか",
+    "dek": "HENNGEが全業務をAIエージェントに任せる新会社設立",
+    "body": [
+      "セキュリティサービスを手がけるHENNGEが、AI活用のガバナンスやコスト管理を支援する新会社「HENNGE AI」を設立したと発表した。",
+      "新会社は取締役2人以外に人間の従業員を置かず、開発や顧客対応、マーケティング、バックオフィス業務はすべてAIエージェントが担う。",
+      "新会社の代表は、AI活用のガバナンスとコストの課題について「自ら実践しなければ本質が見えない」と語っており、AIエージェントだけで組織が回るのかを自社で検証する狙いがあるようだ。"
+    ],
+    "stats": [
+      {
+        "n": "2人",
+        "l": "新会社の人間の従業員数(取締役のみ)"
+      },
+      {
+        "n": "2026年10月1日",
+        "l": "設立発表日"
+      }
+    ],
+    "why": "「人間ゼロに近い会社」が実際に機能するかどうかは、AIエージェントが本当に実務を代替できるかを測る試金石になる。人手不足が続く日本企業で、こうした「エージェント中心組織」を試す動きが今後広がるか注目される。",
+    "sourceLine": "ITmedia（2026年10月1日）、Impress Watch（2026年10月1日）",
+    "sources": [
+      {
+        "name": "ITmedia",
+        "url": "https://www.itmedia.co.jp/aiplus/article/2610/01/2000001936/"
+      },
+      {
+        "name": "Impress Watch",
+        "url": "https://it.impress.co.jp/articles/-/29843"
+      }
+    ],
+    "captionX": "人間は取締役2人だけ、実務は全部AIエージェント任せ。HENNGEの新会社が挑む「次世代組織」。#AI #働き方",
+    "captionThreads": "HENNGEの新会社、人間は取締役2人だけで開発も営業もAIエージェントがやるらしい。これがうまく回ったら働き方の常識が変わりそう。",
+    "captionInstagram": "セキュリティ企業のHENNGEが、人間の従業員を取締役2人だけに絞り、開発・顧客対応・マーケティングなどをすべてAIエージェントが担う新会社「HENNGE AI」を設立しました。AIだけで組織が機能するのかを自社で検証する狙いがあるといいます。人手不足が続く日本で、この「エージェント中心組織」がどこまで広がるか注目です。 #AI #働き方 #AIエージェント #組織運営 #テクノロジー",
+    "lifeRelevanceTag": "お金・仕事",
+    "videoId": null,
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 5,
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0",
+    "headline": "香取慎吾、CMで演じた「問いに寄り添うAI」とは",
+    "dek": "カオナビの新AIエージェント「KTi」、10月3日からCM放映",
+    "body": [
+      "人事データ活用サービスを手がけるカオナビが、新サービスのAIエージェント「KTi(ケーティ)」を発表し、俳優の香取慎吾さんが出演する新CMを10月3日から放映すると明らかにした。",
+      "CMでは、答えを一方的に示すのではなく、一人ひとりの意思決定にそっと寄り添う相棒として、香取さんが「KTi」の擬人化キャラクターを演じている。",
+      "カオナビは人材データとAIを掛け合わせ、経営層から社員までの意思決定を支援する「タレントインテリジェンス」を掲げており、KTiはその中核サービスに位置づけられている。"
+    ],
+    "stats": [
+      {
+        "n": "2026年10月3日",
+        "l": "新CM放映開始日"
+      },
+      {
+        "n": "5年目",
+        "l": "香取さんのカオナビCM出演年数"
+      }
+    ],
+    "why": "職場でのキャリアに悩む若手社員や、部下の強みを引き出せず悩む管理職をAIが支える、という具体的な使い方を前面に出したのが特徴だ。人事・労務分野でのAIエージェント活用は日本企業でも広がりつつあり、働く人の日常的な意思決定を支援するツールとして今後根付くか注目される。",
+    "sourceLine": "日刊スポーツ（2026年10月1日）、PR TIMES（2026年10月1日）",
+    "sources": [
+      {
+        "name": "日刊スポーツ",
+        "url": "https://news.yahoo.co.jp/articles/7a11a920cf8bb296678d0da39ba38fd32ccd5b68"
+      },
+      {
+        "name": "PR TIMES",
+        "url": "https://prtimes.jp/main/html/rd/p/000000377.000030113.html"
+      }
+    ],
+    "captionX": "香取慎吾さんがAIエージェント「KTi」役に。カオナビの新CM、10月3日から放映スタート。#AI #人事",
+    "captionThreads": "カオナビの新CM、香取慎吾さんがAIエージェントの擬人化キャラを演じるみたい。働く人の悩みにそっと寄り添うAIって設定が面白い。",
+    "captionInstagram": "人事データ活用サービスのカオナビが、新しいAIエージェント「KTi(ケーティ)」を発表しました。俳優の香取慎吾さんが出演する新CMが10月3日から放映され、答えを一方的に示すのではなく、働く人の意思決定にそっと寄り添うAIというコンセプトが描かれています。人事・キャリア支援の分野でAIエージェントがどこまで浸透するか注目です。 #AI #人事 #カオナビ #香取慎吾 #働き方",
+    "lifeRelevanceTag": "お金・仕事",
+    "videoId": null,
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
