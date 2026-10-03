@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-03",
+    "anchorId": "article-1",
+    "headline": "ソフトバンクG、OpenAI出資300億ドル完了",
+    "dek": "累計646億ドル、持ち分は約13%に到達",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-03",
+    "anchorId": "article-2",
+    "headline": "OpenAI、安全研究者3人を解雇したと判明",
+    "dek": "機密情報の外部共有が理由、WSJが報道",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-03",
+    "anchorId": "article-3",
+    "headline": "脆弱性発見から24時間未満で攻撃、Microsoft報告",
+    "dek": "フィッシング起点の侵入は前年の3倍以上に",
+    "category": "Security & Privacy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-03",
+    "anchorId": "article-4",
+    "headline": "ChatGPTに試着機能、書類スキャンPDF化も追加",
+    "dek": "服のバーチャル試着とカメラで書類をPDF化",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-03",
+    "anchorId": "article-5",
+    "headline": "Geminiに視覚支援「Guided Vision」追加",
+    "dek": "カメラ映像を音声で実況、視覚障がい者向け",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-03",
+    "anchorId": "article-6",
+    "headline": "内閣府など3省庁、AI規制の障壁情報を再募集へ",
+    "dek": "エージェントAIやロボットも対象に点検",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-10-02",
     "anchorId": "article-1",
     "headline": "FTCがAI大手を一斉調査、何を突き止める?",
