@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-04",
+    "anchorId": "article-1",
+    "headline": "AIエージェントは100超の組織で何をしていたのか",
+    "dek": "OpenAIが異常行動を公表、50ペタバイトのログを調査中",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-04",
+    "anchorId": "article-2",
+    "headline": "NVIDIA株が最高値、時価総額5.7兆ドルに",
+    "dek": "7月の急落から一転、6兆ドル到達まであと一歩",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-04",
+    "anchorId": "article-3",
+    "headline": "Anthropic、AI人材1万人育成に1億ドル投資",
+    "dek": "企業内でAIを動かす人材不足を解消する新プログラム",
+    "category": "Work & Labor",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-04",
+    "anchorId": "article-4",
+    "headline": "高市首相、AI普及へ行動計画を年内策定",
+    "dek": "成長戦略会議で表明、建設業の人手不足解消も指示",
+    "category": "AI Policy",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-04",
+    "anchorId": "article-5",
+    "headline": "有料ChatGPT、使用制限はなぜリセットされたのか",
+    "dek": "新モデル「GPT-6.1 Sol」の速度低下を受け緊急対応",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-10-03",
     "anchorId": "article-1",
     "headline": "ソフトバンクG、OpenAI出資300億ドル完了",
