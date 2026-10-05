@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-05",
+    "anchorId": "article-1",
+    "headline": "Hinton氏らAI研究者20人超「知能爆発」警鐘",
+    "dek": "AI開発の自動化が招くリスクを論文で指摘",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-05",
+    "anchorId": "article-2",
+    "headline": "OpenAI安全責任者「文化は壊れている」と辞任",
+    "dek": "退社の理由を米メディアへの寄稿で説明",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-05",
+    "anchorId": "article-3",
+    "headline": "米情報長官のクレイトン氏、AI政策責任者兼務へ",
+    "dek": "トランプ氏が新たなAI担当トップに起用と報道",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-05",
+    "anchorId": "article-4",
+    "headline": "「労働者犠牲にしない」カリフォルニア新法成立",
+    "dek": "AI単独判断による解雇・懲戒を禁止する法律に署名",
+    "category": "Work & Labor",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-05",
+    "anchorId": "article-5",
+    "headline": "NVIDIA株、最高値更新 自社株買い拡大が追い風",
+    "dek": "時価総額は世界首位、AI需要と巨額買いを好感",
+    "category": "Business",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-10-03",
     "anchorId": "article-1",
     "headline": "ソフトバンクG、OpenAI出資300億ドル完了",
