@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-06",
+    "anchorId": "article-1",
+    "headline": "AIは人類の「敵」になるのか、NY公聴会で警告",
+    "dek": "元Anthropic社員が公聴会で、業界の開発姿勢に異例の警鐘",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-06",
+    "anchorId": "article-2",
+    "headline": "OpenAIに召喚状、米加州がサイバー問題を追及",
+    "dek": "Hugging Face侵入問題で、州司法長官が情報提供を要求",
+    "category": "Security & Privacy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-06",
+    "anchorId": "article-3",
+    "headline": "ChatGPTの画像生成に広告、無料版はどうなる？",
+    "dek": "生成中の待ち時間に表示、有料プランは引き続き非表示",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-06",
+    "anchorId": "article-4",
+    "headline": "Gemini無料版、使えるのはFlash-Liteだけに",
+    "dek": "10月9日から契約プラン別にモデルを制限",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-06",
+    "anchorId": "article-5",
+    "headline": "中国発の無料AIに対抗、米新興が「Beam」投入",
+    "dek": "NVIDIA支援のReflection AI、初の公開モデルを発表",
+    "category": "Research",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-10-05",
     "anchorId": "article-1",
     "headline": "OpenAIの安全担当者が辞任、「文化は壊れている」",

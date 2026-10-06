@@ -1,0 +1,620 @@
+{
+  "date": "2026-10-06",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 9,
+    "search_errors": 0,
+    "results": 86,
+    "sources": 9,
+    "sources_in_search_results": 9,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI ニュース 2026年10月5日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://github.com/alpaca-23/test/issues/291",
+          "title": "【AI News】2026年10月05日 生成AIニュースダイジェスト · Issue #291 · alpaca-23/test",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://business.nikkei.com/latest",
+          "title": "新着記事：日経ビジネス電子版",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://github.com/teruhikonomizu-ops/ai-radio/releases/tag/tech-2026-10-05",
+          "title": "Release 【世界のAIニュース】10/5 スーパーインテリジェンス／Gemini無料枠 · teruhikonomizu-ops/ai-radio",
+          "page_age": null
+        },
+        {
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908pwbi.html",
+          "title": "新浪科技热点小时报丨2026年10月05日14时_今日实时科技热点速递|AI|机器人|html|新品|能量_新浪新闻",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908pvo6.html",
+          "title": "新浪人工智能热点小时报丨2026年10月05日10时_今日实时人工智能热点速递|AI|it之家|html|机器狗|吴中_新浪新闻",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niufsvm2181993",
+          "title": "人参咖啡豆替代牛磺酸，植物配方能量饮料代表作王者英雄的天然成分全拆解",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niufsvm2184763",
+          "title": "沃尔沃XC40落地价最低16万？2026款优惠直降13.69万，3个维度说清怎么选+FAQ",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261005de54399",
+          "title": "トランプ大統領 AI政策を調整する司令塔組織を設立",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/06/ai-daily-news-2026-10-05/",
+          "title": "生成AIニュース 昨日【2026年10月5日（月）】のAI公式発表を3分でチェック",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "AI news October 5 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://trustinsights.substack.com/p/so-what-ai-news-you-should-care-about-987",
+          "title": "So What? AI News You Should Care About for the week of October 5, 2026",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.artificialintelligence-news.com/",
+          "title": "AI News",
+          "page_age": "46 days ago"
+        },
+        {
+          "url": "https://inforrm.org/2026/10/05/law-and-media-round-up-5-october-2026/",
+          "title": "Law and Media Round Up",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html",
+          "title": "AI researcher warns 'we are racing to build and grow our own adversary' in NYC hearing",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/",
+          "title": "AI News: Artificial Intelligence Stories, Ranked",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://abc7news.com/story/president-donald-trump-announces-creation-super-intelligence-force-ai-task/19907473/",
+          "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force - ABC7 San Francisco",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/International_AI_Safety_Report",
+          "title": "International AI Safety Report",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Microsoft_AI",
+          "title": "Microsoft AI",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "California Attorney General subpoena OpenAI cybersecurity",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://betanews.com/article/california-ag-subpoenas-openai-cybersecurity/",
+          "title": "California serves OpenAI with subpoena over AI cybersecurity incidents",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/us/articles/california-attorney-general-subpoenas-openai-041757772.html",
+          "title": "California attorney general subpoenas OpenAI over cyber incidents",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.insurancejournal.com/news/west/2026/10/02/887757.htm",
+          "title": "California AG Bonta Issues Subpoena to OpenAI over AI Cybersecurity Risks",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://thehill.com/policy/technology/6124245-openai-subpoena-rob-bonta-california/",
+          "title": "California attorney general subpoenas OpenAI over cyber incidents",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/politics/articles/california-subpoenas-openai-over-ai-211604857.html",
+          "title": "California Subpoenas OpenAI Over AI Models That Hacked Their Way Out of a Test",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.news10.com/news/national/california-attorney-general-subpoenas-openai-over-cyber-incidents/",
+          "title": "California attorney general subpoenas OpenAI over cyber incidents",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://programbusiness.com/news/california-attorney-general-subpoenas-openai-over-ai-cybersecurity-risks/",
+          "title": "California Attorney General Subpoenas OpenAI Over AI Cybersecurity Risks - ProgramBusiness",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://dig.watch/updates/california-attorney-openai-ai-agent-coalition-15",
+          "title": "California Attorney General examines OpenAI AI-agent, expanding a coalition of 15 state AG inquiry",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.theepochtimes.com/tech/california-attorney-general-subpoenas-openai-in-cybersecurity-inquiry-6097830",
+          "title": "California Attorney General Subpoenas OpenAI in Cybersecurity Inquiry",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.zerohedge.com/ai/california-attorney-general-subpoenas-openai-cybersecurity-inquiry",
+          "title": "California Attorney General Subpoenas OpenAI In Cybersecurity Inquiry<!-- -->",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Reflection AI Beam open weight model NVIDIA",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://x.com/wallstengine/status/2107204823561232615",
+          "title": "Wall St Engine on X: \"Nvidia-backed Reflection AI has launched Beam, a 501B-parameter open-weight AI model built for coding, reasoning and AI-agent workloads. Beam is aimed at competing with leading open-weight models from China. Beam is a text-only mixture-of-experts model with: • 501B total par… / X",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.theinformation.com/briefings/reflection-ai-announces-first-open-source-model-beam",
+          "title": "Reflection AI Announces First Open Source Model, Beam — The Information",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finimize.com/content/nvidia-backed-reflection-ai-unveils-beam-to-take-on-chinas-coders",
+          "title": "Nvidia-Backed Reflection AI Unveils Beam To Take On China’s Coders - Finimize",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://thehill.com/policy/technology/6130496-reflection-ai-releases-beam-model/",
+          "title": "Reflection AI unveils Beam model to rival China on open source",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://startupfortune.com/reflection-ai-launches-beam-an-open-model-it-says-beats-the-west-on-efficiency/",
+          "title": "Reflection AI launches Beam, an open model it says beats the West on efficiency - Startup Fortune",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://startupfortune.com/reflection-ai-unveils-beam-a-501-billion-parameter-open-model-to-rival-china/",
+          "title": "Reflection AI unveils Beam, a 501-billion-parameter open model to rival China - Startup Fortune",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Nemotron",
+          "title": "Nemotron",
+          "page_age": null
+        },
+        {
+          "url": "https://www.933thedrive.com/2026/10/05/nvidia-backed-reflection-unveils-first-ai-model-to-take-on-chinese-open-models/",
+          "title": "Nvidia-backed Reflection unveils first AI model to take on Chinese open models",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://shattered.io/reflection-ai-beam-vs-glm-5-2-2026/",
+          "title": "Reflection AI Beam: Open Model Takes on GLM-5.2 [2026]",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://shattered.io/reflection-ai-beam-4x-less-compute-2026/",
+          "title": "Reflection AI’s Beam Claims 4x Less Compute [2026]",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "OpenAI ChatGPT 広告 画像生成 導入 10月",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.techno-edge.net/article/2026/10/06/5554.html",
+          "title": "OpenAI、ChatGPTの画像生成機能に連動するビジュアル広告を導入へ。まず米国でテスト開始",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://xenospectrum.com/chatgpt-image-generation-visual-ads/",
+          "title": "画像生成の待ち時間に商品広告、ChatGPTが米国で10月後半に試験へ",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-will-show-visual-ads-in-chatgpt-while-you-generate-images/",
+          "title": "OpenAI will show visual ads in ChatGPT while you generate images",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://thedesk.net/2026/10/chatgpt-to-begin-displaying-image-based-ad-spots/",
+          "title": "ChatGPT to begin displaying image-based ad spots",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI",
+          "title": "OpenAI",
+          "page_age": null
+        },
+        {
+          "url": "https://www.newsbytesapp.com/news/science/openai-will-test-image-based-ads-inside-chatgpt-chats-in-us/tldr",
+          "title": "OpenAI will test image-based ads inside ChatGPT chats in US.",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.digitaltoday.co.kr/en/view/110758/openai-to-launch-visual-ads-next-to-chatgpt-image-generation-results",
+          "title": "OpenAI to launch visual ads next to ChatGPT image generation results",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://blog.netmanageit.com/openai-will-show-visual-ads-in-chatgpt-while-you-generate-images/",
+          "title": "OpenAI will show visual ads in ChatGPT while you generate images",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.androidheadlines.com/2026/10/chatgpt-visual-ads-image-generation.html",
+          "title": "ChatGPT Free Tier Is Getting Visual Ads During AI Image Generation",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Gemini 無料 Flash-Lite モデル選択 制限",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://news.yahoo.co.jp/articles/aa86e2a5a95c0d028deac747446fe08b59f9ccd4",
+          "title": "Googleの「Gemini」個人向けでモデルの利用制限を導入、一般ユーザーは「Flash-Lite」のみ（ケータイ Watch） - Yahoo!ニュース",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://gori.me/google/google-news/170900",
+          "title": "Geminiの無料プラン、使用可能モデルを制限へ。10月9日からFlash-Liteだけになる",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://k-tai.watch.impress.co.jp/docs/news/2145604.html",
+          "title": "Googleの「Gemini」個人向けでモデルの利用制限を導入、一般ユーザーは「Flash-Lite」のみ - ケータイ Watch",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.itmedia.co.jp/news/article/2610/04/2000001987/",
+          "title": "個人向けGeminiのモデル選択が厳格化 無料ユーザーが使えるのは「Flash-Lite」のみに - ITmedia NEWS",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://ai-revolution.co.jp/media/gemini-free-flash-lite-only/",
+          "title": "Gemini無料版がFlash-Liteのみに｜10月9日からのプラン別モデル制限・AI Plusで使えなくなるPro・代替手段【2026年10月最新】",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.gcafe.jp/gemini-flash-lite-only/",
+          "title": "Gemini無料版は「Flash-Lite」のみに！10月9日からの制限とGoogleの狙い",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://oossa.com/ja/gemini-10-9-flash-lite",
+          "title": "Gemini無料版、10月9日から利用モデルをFlash-Liteに限定",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://13navi.com/gemini-2026-10-03/",
+          "title": "Google AI Geminiが無料は「Flash-Lite」に限定化へ！あとは有料になる！？",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.danshihack.com/2026/10/05/junp/gemini-free-user-limit.html",
+          "title": "Gemini、無料ユーザーの利用モデルを制限。10月9日から「Flash」「Pro」が使えなくなる｜男子ハック",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "AI 教育 医療 発表 2026年10月5日 OR 10月4日 OR 10月3日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://weibo.com/2/detail/comos:niufsvm2181433",
+          "title": "中国足球小将两天两冠背后，董路如何回应含金量质疑？",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niufsvm2181993",
+          "title": "人参咖啡豆替代牛磺酸，植物配方能量饮料代表作王者英雄的天然成分全拆解",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niufsvm2168957",
+          "title": "华山今天限流吗？限流实况+预约规则+避坑路线全解析+FAQ",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niufsvp3775014",
+          "title": "张家界暑假门票多少钱？2026价格+优惠全解析+FAQ",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/The_Gene_of_AI",
+          "title": "The Gene of AI",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI_Expo_Taiwan",
+          "title": "AI Expo Taiwan",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Tairex_Agent_Hospital",
+          "title": "Tairex Agent Hospital",
+          "page_age": null
+        },
+        {
+          "url": "https://ict-enews.net/",
+          "title": "ICT教育ニュース - ICT教育分野における最新ニュース発信 -",
+          "page_age": "299 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2026_in_artificial_intelligence",
+          "title": "2026 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/05/ai-weekly-news-2026-09-28-2026-10-04/",
+          "title": "生成AIニュースまとめ 先週【2026年9月28日（月）〜10月4日（日）】のAI公式発表を5分でチェック",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "NTTデータ 法人向けAIプラットフォーム 米国 日立 日経ビジネス",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://business.nikkei.com/atcl/gen/19/00511/093000063/",
+          "title": "NTTデータG、法人向けAIで日立らに挑む 人月ビジネスから脱却図る：日経ビジネス電子版",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC175XY0X10C26A6000000/",
+          "title": "日経の法人向け生成AI「NIKKEI KAI」、NTTデータと販売連携 - 日本経済新聞",
+          "page_age": "108 days ago"
+        },
+        {
+          "url": "https://www.itmedia.co.jp/news/articles/2606/19/news121.html",
+          "title": "日経のAI、NTTデータが販売契約 出典明示でハルシネーションに強い法人向け「NIKKEI KAI」 - ITmedia NEWS",
+          "page_age": "106 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC044JR0U5A101C2000000/",
+          "title": "NTTデータG、AI事業開拓へ新会社 米シリコンバレーに - 日本経済新聞",
+          "page_age": "335 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC2333G0T20C25A4000000/",
+          "title": "NTTデータ､OpenAIと提携 AIエージェントを世界で販売 - 日本経済新聞",
+          "page_age": "529 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC136SM0T10C25A8000000/",
+          "title": "NTTデータG、GoogleとAIエージェント50種類以上を世界販売 - 日本経済新聞",
+          "page_age": "418 days ago"
+        },
+        {
+          "url": "https://diamond.jp/articles/-/327804",
+          "title": "NEC、日立、NTTデータ…ChatGPTでITベンダーの現場に大変革！塩漬けレガシーシステムの更新も可能に？",
+          "page_age": "722 days ago"
+        },
+        {
+          "url": "https://www.nttdata.com/jp/ja/trends/data-insight/2026/032502/",
+          "title": "シリコンバレーに新会社を設立。NTT DATAが描く最新生成AI戦略",
+          "page_age": "195 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/nkd/company/us/CRM/news/?DisplayType=1&ng=DGXZQOUC241WF024102024000000",
+          "title": "NTTデータ、自律型のAIエージェント開発 営業部門向け - 日本経済新聞",
+          "page_age": "711 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Microsoft Meta AMD AI 発表 10月5日 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.businessinsider.jp/article/2610-meta-connect-2026-muse-ai/",
+          "title": "Metaが個人向けAI「Muse」で攻勢に一転。メタバースは読み違えどパーソナルアシスタントに勝機",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://x.com/KagawaTomo/article/2072231485751615659",
+          "title": "MetaのAI反転攻勢2026",
+          "page_age": "96 days ago"
+        },
+        {
+          "url": "https://note.com/yoshiyuki_hongoh/n/n9579ea554325",
+          "title": "🤝Meta、AMDと超大型提携/🏛️防衛省、国会にAIを導入/OpenAI、コンサル大手と提携、ほか｜本郷喜千",
+          "page_age": "111 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/video/2026/07/20/amd-rivals-nvidia-with-first-ai-system-signing-microsoft-and-meta.html",
+          "title": "AMD rivals Nvidia with first AI system, signing Microsoft and Meta",
+          "page_age": "77 days ago"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "page_age": "75 days ago"
+        },
+        {
+          "url": "https://newsroom.amd.com/news/aai-2026-full-stack-compute-agentic-ai/",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era - AMD Newsroom",
+          "page_age": "74 days ago"
+        },
+        {
+          "url": "https://newsroom.amd.com/news/amd-and-meta-announce-expanded-strategic-partnersh/",
+          "title": "AMD, Meta Announce Expanded Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs - AMD Newsroom",
+          "page_age": "223 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/07/20/amd-helios-microsoft-ai-nvidia.html",
+          "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+          "page_age": "77 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/news/meta-announces-4-new-ai-chips-raising-competitive-stakes-with-nvidia-amd-140011384.html",
+          "title": "Meta announces 4 new AI chips, raising competitive stakes with Nvidia, AMD",
+          "page_age": "208 days ago"
+        },
+        {
+          "url": "https://about.fb.com/news/2026/02/meta-amd-partner-longterm-ai-infrastructure-agreement/",
+          "title": "Meta and AMD Partner for Longterm AI Infrastructure Agreement",
+          "page_age": "223 days ago"
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "AIは人類の「敵」になるのか、NY公聴会で警告",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/05/anthropic-openai-google-meta-execs-testify-nyc-council-ai-hearing.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "AI news October 5 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "OpenAIに召喚状、米加州がサイバー問題を追及",
+      "sources": [
+        {
+          "name": "Insurance Journal",
+          "url": "https://www.insurancejournal.com/news/west/2026/10/02/887757.htm",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "California Attorney General subpoena OpenAI cybersecurity"
+          ]
+        },
+        {
+          "name": "The Hill",
+          "url": "https://thehill.com/policy/technology/6124245-openai-subpoena-rob-bonta-california/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "California Attorney General subpoena OpenAI cybersecurity"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "ChatGPTの画像生成に広告、無料版はどうなる？",
+      "sources": [
+        {
+          "name": "techno-edge",
+          "url": "https://www.techno-edge.net/article/2026/10/06/5554.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI ChatGPT 広告 画像生成 導入 10月"
+          ]
+        },
+        {
+          "name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-will-show-visual-ads-in-chatgpt-while-you-generate-images/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI ChatGPT 広告 画像生成 導入 10月"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "Gemini無料版、使えるのはFlash-Liteだけに",
+      "sources": [
+        {
+          "name": "ケータイ Watch",
+          "url": "https://k-tai.watch.impress.co.jp/docs/news/2145604.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Gemini 無料 Flash-Lite モデル選択 制限"
+          ]
+        },
+        {
+          "name": "ITmedia NEWS",
+          "url": "https://www.itmedia.co.jp/news/article/2610/04/2000001987/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Gemini 無料 Flash-Lite モデル選択 制限"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "中国発の無料AIに対抗、米新興が「Beam」投入",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://www.933thedrive.com/2026/10/05/nvidia-backed-reflection-unveils-first-ai-model-to-take-on-chinese-open-models/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Reflection AI Beam open weight model NVIDIA"
+          ]
+        },
+        {
+          "name": "The Information",
+          "url": "https://www.theinformation.com/briefings/reflection-ai-announces-first-open-source-model-beam",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Reflection AI Beam open weight model NVIDIA"
+          ]
+        }
+      ]
+    }
+  ]
+}
