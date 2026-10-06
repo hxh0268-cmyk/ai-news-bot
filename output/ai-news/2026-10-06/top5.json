@@ -7,7 +7,7 @@
     "dek": "元Anthropic社員が公聴会で、業界の開発姿勢に異例の警鐘",
     "body": [
       "2026年10月5日、ニューヨーク市議会の公聴会にAnthropic・OpenAI・Google・Metaの関係者が宣誓のうえ出席した。元Anthropic社員のJacob Coxon氏は業界の開発姿勢を「極めて無謀」とばっさり切り捨て、「このままの路線を続ければ、人類がAIへの制御を失う可能性の方が高い。最悪、人類絶滅にもつながりかねない」と、満席の会場で語った。",
-      "きっかけは、ニューヨーク市議会のJulie Menin議長が投げかけた問い――中国との開発競争がある中で、フロンティアモデルの開発をどう安全に進めるべきか、というものだった。OpenAIやMeta、Googleの政策責任者らもビデオリンクで証言に加わっている。"
+      "ニューヨーク市議会のJulie Menin議長が、中国との技術競争の中でフロンティアモデルの開発をどう両立させるかを問うと、元Google DeepMind研究者のAlex Turner氏は「人間の意図からずれたAIは、私たち自身を含むすべての人の敵だ」と答えた。OpenAIやMeta、Googleの政策責任者らもビデオリンクで証言に加わっている。"
     ],
     "stats": [
       {
@@ -29,7 +29,7 @@
     ],
     "captionX": "元Anthropic社員が「人類がAIの制御を失う可能性の方が高い」とNY市議会で証言。4大AI企業も顔をそろえた異例の公聴会。 #AI安全性 #Anthropic",
     "captionThreads": "ニューヨーク市議会の公聴会で、元Anthropic社員が業界の開発姿勢を「極めて無謀」とバッサリ。Anthropic、OpenAI、Google、Metaの担当者も証言に並んだようで、安全性論争がついに公の場に出てきた感じ。",
-    "captionInstagram": "2026年10月5日、ニューヨーク市議会の公聴会で、元Anthropic社員のJacob Coxon氏が宣誓のうえ「このままでは人類がAIの制御を失う可能性の方が高い」と証言しました。Anthropic、OpenAI、Google、Metaの担当者もビデオリンクで出席。開発競争の裏側で、安全性への懸念が内部の人間からも語られ始めています。 #AI安全性 #Anthropic #OpenAI #NY市議会 #人工知能",
+    "captionInstagram": "2026年10月5日、ニューヨーク市議会の公聴会で、元Anthropic社員のJacob Coxon氏が「このままでは人類がAIの制御を失う可能性の方が高い」と証言しました。Anthropic、OpenAI、Google、Metaの担当者もビデオリンクで出席。開発競争の裏側で、安全性への懸念が内部の人間からも語られ始めています。 #AI安全性 #Anthropic #OpenAI #NY市議会 #人工知能",
     "lifeRelevanceTag": "なし",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
@@ -48,7 +48,7 @@
     "stats": [
       {
         "n": "2026年10月1日",
-        "l": "召喚状が送付された日"
+        "l": "召喚状の発行を発表した日"
       },
       {
         "n": "15州",
@@ -86,8 +86,8 @@
     "dek": "生成中の待ち時間に表示、有料プランは引き続き非表示",
     "body": [
       "OpenAIは、ChatGPTで画像を生成している間に商品やサービスを訴求するビジュアル広告を表示する新フォーマットを、米国でテストすると発表した。広告は生成中の画像とはっきり区別して出され、ChatGPTの回答内容には影響しないという。",
-      "対象はFree・Goプランのユーザー。有料プラン以上では広告は出ない。OpenAIによれば、ChatGPTは週に12億人が利用しており、広告は課金していない利用者からも収益を得る手段のひとつだとしている。効果測定のため、DoubleVerifyやIntegral Ad Scienceといった外部サービスとの連携も広げていく。",
-      "なお、ChatGPT広告は2026年2月に米国で試験が始まり、8月には日本にも導入済みだ。今回の画像生成向け広告の拡大も、そう遠くないうちに日本のユーザーに波及してもおかしくない。"
+      "ChatGPT PlusやProの有料会員、法人向けの契約者には、これまでどおり広告は表示されない。OpenAIによれば、ChatGPTは週に12億人が利用しており、広告は課金していない利用者からも収益を得る手段のひとつだとしている。広告の効果測定ツールを拡充するほか、不適切な会話の横に広告が出ないよう、DoubleVerifyやIntegral Ad Scienceとブランド適合性の検証でも連携する。",
+      "なお、ChatGPTの広告は2026年2月に米国で試験が始まり、日本でも6月に表示が始まっている。今回の画像生成向け広告の拡大も、そう遠くないうちに日本のユーザーに波及してもおかしくない。"
     ],
     "stats": [
       {
@@ -100,7 +100,7 @@
       }
     ],
     "why": "普段無料で使っているチャット画面に商品広告が入り込むとなると、多くの日常ユーザーの体験そのものが変わってくる。日本ではすでに広告表示が先行導入されているので、画像生成への広告拡大も遠からず国内に波及してくる可能性が高い。",
-    "sourceLine": "techno-edge（2026年10月6日）、BleepingComputer（2026年10月5日）",
+    "sourceLine": "techno-edge（2026年10月6日）、BleepingComputer（2026年10月5日）、Impress Watch（2026年6月19日）",
     "sources": [
       {
         "name": "techno-edge",
@@ -109,11 +109,15 @@
       {
         "name": "BleepingComputer",
         "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-will-show-visual-ads-in-chatgpt-while-you-generate-images/"
+      },
+      {
+        "name": "Impress Watch",
+        "url": "https://www.watch.impress.co.jp/docs/news/2118443.html"
       }
     ],
     "captionX": "ChatGPTの画像生成中に広告が出るようになる。対象は無料ユーザー、有料プランは引き続き広告なし。週12億人利用の新たな収益源に。 #ChatGPT #OpenAI",
-    "captionThreads": "ChatGPTで画像を作ってる待ち時間に、広告が入るようになるらしい。無料・Goプランが対象で、有料プランはこれまで通り広告なし。日本にも広がりそうな気配。",
-    "captionInstagram": "OpenAIが、ChatGPTで画像を生成している間にビジュアル広告を出す新フォーマットを米国でテストすると発表しました。対象はFree・Goプランのユーザーで、有料プラン以上は引き続き広告なし。ChatGPTは週12億人が使っており、無料ユーザーからも収益を得る新しい手段になりそうです。日本にはすでに広告が先行導入されているため、今回の拡大もいずれ波及するかもしれません。 #ChatGPT #OpenAI #広告 #画像生成 #AIニュース",
+    "captionThreads": "ChatGPTで画像を作ってる待ち時間に、広告が入るようになるらしい。有料のPlus・Proはこれまで通り広告なし。日本にも広がりそうな気配。",
+    "captionInstagram": "OpenAIが、ChatGPTで画像を生成している間にビジュアル広告を出す新フォーマットを米国でテストすると発表しました。有料のPlus・Proなどは引き続き広告なし。ChatGPTは週12億人が使っており、無料ユーザーからも収益を得る新しい手段になりそうです。日本にはすでに広告が先行導入されているため、今回の拡大もいずれ波及するかもしれません。 #ChatGPT #OpenAI #広告 #画像生成 #AIニュース",
     "lifeRelevanceTag": "毎日使うアプリ・サービス",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
@@ -138,7 +142,7 @@
         "l": "Flash-Lite・Flash・Proのモデル階層数"
       }
     ],
-    "why": "無料で使えていたGeminiの上位モデルが事実上の有料化対象になるわけで、普段の文章作成や調べものにGeminiを無料で使っていた読者は、来週以降その性能差を身をもって感じることになりそうだ。日本でも同じ契約プラン体系が適用されるため、国内の無料ユーザーも同様の影響を受ける見込み。",
+    "why": "無料で使えていたGeminiの上位モデルが事実上の有料化対象になるわけで、普段の文章作成や調べものにGeminiを無料で使っていた読者は、10月9日以降、その性能差を身をもって感じることになりそうだ。日本でも同じ契約プラン体系が適用されるため、国内の無料ユーザーも同様の影響を受ける見込み。",
     "sourceLine": "ケータイ Watch（2026年10月5日）、ITmedia NEWS（2026年10月4日）",
     "sources": [
       {
@@ -150,9 +154,9 @@
         "url": "https://www.itmedia.co.jp/news/article/2610/04/2000001987/"
       }
     ],
-    "captionX": "Gemini無料版、10月9日からFlash-Liteのみに。FlashはAI Plus以上、Proは上位プラン限定に格下げ。 #Gemini #Google",
+    "captionX": "Gemini無料版、10月9日からFlash-Liteのみに。FlashはAI Plus以上、ProはAI Pro以上の契約が必要に。 #Gemini #Google",
     "captionThreads": "Geminiの無料版、10月9日から使えるモデルがFlash-Liteだけになるみたい。今まで無料でFlashを使ってた人は結構変わりそう。",
-    "captionInstagram": "Googleが、個人向けGeminiアプリで使えるモデルを契約プランごとに制限すると発表しました。10月9日以降、無料アカウントで使えるのは軽量モデルの「Flash-Lite」のみ。「Flash」はAI Plus以上、「Pro」はAI Pro・AI Ultra限定です。無料でGeminiを使っていた人は、来週から使い勝手の違いを感じそうです。 #Gemini #Google #AIアプリ #無料プラン #生成AI",
+    "captionInstagram": "Googleが、個人向けGeminiアプリで使えるモデルを契約プランごとに制限すると発表しました。10月9日以降、無料アカウントで使えるのは軽量モデルの「Flash-Lite」のみ。「Flash」はAI Plus以上、「Pro」はAI Pro・AI Ultra限定です。無料でGeminiを使っていた人は、10月9日から使い勝手の違いを感じそうです。 #Gemini #Google #AIアプリ #無料プラン #生成AI",
     "lifeRelevanceTag": "毎日使うアプリ・サービス",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
@@ -166,7 +170,7 @@
     "body": [
       "NVIDIAが出資するスタートアップ、Reflection AIは10月5日、同社初のオープンウェイトモデル「Beam」を発表した。狙いは、低コストな中国製の公開モデルへの対抗だという。",
       "Beamの総パラメータ数は5010億（501B）。ただしタスクごとに実際に使うのはそのうち230億（23B）だけで、これによって処理を速く安くしているとのことだ。Reflectionいわく、コーディングやAIエージェント関連のタスクでは中国Z.aiの「GLM-5.2」に匹敵する性能を持ち、Alibabaの「Qwen3.8-Max」にも迫っているという。",
-      "同社はこれまでに20億ドルを調達済み。モデルの重みはApache 2.0ライセンスのもと、10月中に完全公開する予定だ。"
+      "Reflectionは2024年に元DeepMind研究者のMisha Laskin氏とIoannis Antonoglou氏が設立し、ソフトウェア開発を自動化するツールを手がけている。"
     ],
     "stats": [
       {
@@ -174,8 +178,8 @@
         "l": "Beamの総パラメータ数"
       },
       {
-        "n": "20億ドル",
-        "l": "Reflection AIのこれまでの累計調達額"
+        "n": "230億",
+        "l": "タスクごとに実際に使うパラメータ数"
       }
     ],
     "why": "米国のAI開発は非公開（クローズド）モデルに偏りがちで、高性能なオープンウェイトモデル市場はこれまで中国勢の独壇場だった。NVIDIA出資のReflectionが米国発の公開モデルで対抗する構図は、企業や政府機関がAIモデルを選ぶ際の選択肢を広げるかもしれない。外部企業に依存せずAIを導入したい日本企業にとっても、こうした公開モデルの動向は見逃せない論点になりそうだ。",
@@ -190,9 +194,9 @@
         "url": "https://www.theinformation.com/briefings/reflection-ai-announces-first-open-source-model-beam"
       }
     ],
-    "captionX": "NVIDIA出資のReflection AI、中国勢に挑む初の公開モデル「Beam」を発表。5010億パラメータ、調達額は累計20億ドル。 #ReflectionAI #オープンソースAI",
+    "captionX": "NVIDIA出資のReflection AI、中国勢に挑む初の公開モデル「Beam」を発表。5010億パラメータ、実際に使うのはそのうち230億だけ。 #ReflectionAI #オープンソースAI",
     "captionThreads": "NVIDIAが出資するReflection AIってスタートアップが、中国の無料AIモデルに対抗する「Beam」を出したらしい。パラメータ数は5010億とのこと、桁がすごい。",
-    "captionInstagram": "NVIDIAが出資するスタートアップReflection AIが、初のオープンウェイトモデル「Beam」を発表しました。総パラメータ数は5010億、実際にタスクで使うのはそのうち230億のみという設計で、中国Z.aiの「GLM-5.2」に匹敵する性能だといいます。累計調達額は20億ドルで、モデルの重みは10月中に完全公開予定。米国発の公開モデルとして注目を集めています。 #ReflectionAI #NVIDIA #オープンソースAI #Beam #AIモデル",
+    "captionInstagram": "NVIDIAが出資するスタートアップReflection AIが、初のオープンウェイトモデル「Beam」を発表しました。総パラメータ数は5010億、実際にタスクで使うのはそのうち230億のみという設計で、中国Z.aiの「GLM-5.2」に匹敵する性能だといいます。米国発の公開モデルとして注目を集めています。 #ReflectionAI #NVIDIA #オープンソースAI #Beam #AIモデル",
     "lifeRelevanceTag": "なし",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
