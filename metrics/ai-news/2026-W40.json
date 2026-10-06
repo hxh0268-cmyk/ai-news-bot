@@ -8,11 +8,11 @@
     "prDeals": 0
   },
   "engagement": {
-    "totalImpressions": 0,
+    "totalImpressions": 82,
     "totalClicksToSite": 0,
     "followersGained_X": 0,
     "followersGained_Instagram": 0,
     "followersGained_Threads": 0
   },
-  "notes": "W40はエンゲージメント未入力（収益も未入力。0は実績ではなく未入力を表す）"
+  "notes": "W40（9/28〜10/4）の実績。収益4項目の0は実績の0。totalImpressions は期間中の投稿の表示回数の合計で、82 は Threads の Views のみ（X は Buffer で表示回数を取得できず未計上、Instagram は Buffer 上0で取得できていない可能性あり）。totalClicksToSite は GA4 で参照元が ai-news のセッション数で、GA4 は 10/1 開始のため 10/1〜10/4 の4日分（期間中のセッションは (direct) / (none) の2件のみで、動作確認とみられる）。followersGained_* は 9/28 と 10/4 のフォロワー数の差（X は期間を通じて2人）。投稿数は X 6・Threads 7・Instagram 7（X が1件少ない理由は未確認）。反応・コメントは3媒体とも0。"
 }
