@@ -1,0 +1,666 @@
+{
+  "date": "2026-10-07",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 10,
+    "search_errors": 0,
+    "results": 92,
+    "sources": 10,
+    "sources_in_search_results": 10,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI news October 6 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://innovationinthenews.substack.com/p/tech-tuesday-october-6-2026",
+          "title": "🤖 Tech Tuesday - October 6, 2026 - Innovation in the News",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/videos/wmar-2-news-headlines-october-100618569.html",
+          "title": "WMAR-2 News Headlines, October 6, 2026",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.washingtonpost.com/technology/innovations/",
+          "title": "Artificial Intelligence - The Washington Post",
+          "page_age": "58 days ago"
+        },
+        {
+          "url": "https://news.mit.edu/topic/artificial-intelligence2",
+          "title": "Artificial intelligence",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://note.com/hirokimiyano/n/n02cc6bbaa77a?hl=en",
+          "title": "Deep Dive into Today's AI News",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://openai.com/news/",
+          "title": "OpenAI News",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2017_in_artificial_intelligence",
+          "title": "2017 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2021_in_artificial_intelligence",
+          "title": "2021 in artificial intelligence",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "OpenAI 発表 10月6日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://github.com/alpaca-23/test/issues/294",
+          "title": "【AI News】2026年10月06日 生成AIニュースダイジェスト · Issue #294 · alpaca-23/test",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://webtan.impress.co.jp/n/2026/10/07/53405",
+          "title": "OpenAIが「ChatGPT」に新たなビジュアル広告フォーマットを導入、米国で一部広告主にテスト",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://zenn.dev/schroneko/articles/openai-devday-2026",
+          "title": "OpenAI DevDay 2026 発表まとめ",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://ai-revolution.co.jp/media/openai-devday-2026/",
+          "title": "OpenAI DevDay 2026とは？9月29日開催の発表まとめ｜dots・GPT-6.1 Sol・Pro 500と過去の傾向・参加方法【2026年最新】",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://ai-garage.jp/column/openai-2026-timeline/",
+          "title": "OpenAI の2026年まとめ — モデル更新・自前チップ・訴訟・日本での動きを時系列で追う",
+          "page_age": "14 days ago"
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/06/ai-daily-news-2026-10-05/",
+          "title": "生成AIニュース 昨日【2026年10月5日（月）】のAI公式発表を3分でチェック",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://web3rover.substack.com/p/openai-ceo-ai",
+          "title": "解读OpenAI CEO 对自民党AI发展会议上所做宣讲",
+          "page_age": null
+        },
+        {
+          "url": "https://www.infoq.com/jp/OpenAI/news/30/",
+          "title": "InfoQ ホームページ OpenAI に関するすべてのコンテンツ",
+          "page_age": null
+        },
+        {
+          "url": "https://rubygems.org/gems/ruby-openai/versions/6.5.0",
+          "title": "rubygems.org",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Reflection AI open model release October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://siliconangle.com/2026/10/05/reflection-ai-debuts-open-source-beam-model-with-501b-parameters/",
+          "title": "Reflection AI debuts open-source Beam model with 501B parameters - SiliconANGLE",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.unite.ai/reflection-ai-unveils-beam-a-501b-parameter-open-weight-model/",
+          "title": "Reflection AI Unveils Beam, a 501B-Parameter Open-Weight Model",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Reflection_AI",
+          "title": "Reflection AI",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.implicator.ai/reflection-ai-beam-open-weight-model-glm-5-2/",
+          "title": "Reflection AI Unveils Beam Open-Weight Model",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/05/reflection-debuts-beam-a-open-weight-ai-model-to-rival-chinese-models-at-lower-compute-cost/",
+          "title": "Reflection debuts Beam, an open-weight AI model to rival Chinese models at lower compute cost",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/LTX-2",
+          "title": "LTX-2",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "title": "ChatGPT",
+          "page_age": null
+        },
+        {
+          "url": "https://tech-insider.org/reflection-ai-beam-501b-param-open-model-2026/",
+          "title": "Reflection AI Beam: 501B-Param Open Model Debuts [2026]",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GPT_Image",
+          "title": "GPT Image",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "みずほ AI エージェント Cowork 3万人 導入",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12072/",
+          "title": "みずほ、AIエージェント「Cowork」3万人に導入へ 非定型タスクも自律処理",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://corp.moneyforward.com/news/release/service/20260407-mf-press-1/",
+          "title": "バックオフィス業務を自律的に遂行するAIサービス 『マネーフォワード AI Cowork』を2026年7月より提供開始予定",
+          "page_age": "183 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/be83477f363953acb8d6ea7dd555d9f7b7250c5d",
+          "title": "みずほ銀、AIエージェント導入（時事通信） - Yahoo!ニュース",
+          "page_age": "141 days ago"
+        },
+        {
+          "url": "https://enterprisezine.jp/news/detail/25226",
+          "title": "みずほFG、自律型AIエージェント基盤「みずほCowork」を開発 業務適用に向けPoC開始",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZRSP713330_V01C26A0000000/",
+          "title": "みずほFG、自律型AIエージェント基盤「みずほCowork」を開発し業務適用に向けたPoCを開始 - 日本経済新聞",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://news.mynavi.jp/techplus/article/20261005-5078763/",
+          "title": "みずほFG、自律型AIエージェント基盤「みずほCowork」開発 - Claude Agent SDKを活用",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/11900/",
+          "title": "みずほFGがAIエージェント3000体構想、銀行業務全体をAI前提で再設計へ",
+          "page_age": "81 days ago"
+        },
+        {
+          "url": "https://note.com/it_daytrading/n/nb3d9074c2d7e",
+          "title": "みずほの未来を変えるのはAIではない――3万人の業務知識をどう形式知に変えるか｜IT-daytrading",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://iotnews.jp/finance/275982/",
+          "title": "みずほFG、自律型AIエージェント基盤「みずほCowork」を開発しPoCを開始",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "NVIDIA security platform AI agents buyback Guardian October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://pluang.com/en/news-feed/nvidia-luncurkan-platform-keamanan-dan-buyback-saham-150-miliar",
+          "title": "Nvidia launches AI security platform and announ...",
+          "page_age": "9 days ago"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000038/a2026-annualxreportxwebxfi.pdf",
+          "title": "NVIDIA CORP - Form ARS - FY2026",
+          "page_age": null
+        },
+        {
+          "url": "https://www.inkl.com/news/nvidia-unveils-security-platform-to-rein-in-ai-agents-and-150bn-stock-buyback",
+          "title": "Nvidia unveils security platform to rein in AI agents and $150bn stock buyback",
+          "page_age": "8 days ago"
+        },
+        {
+          "url": "https://kalkinemedia.com/us/stocks/technology/nvidia-nasdaqnvda-expands-buyback-adds-ai-safety-tools",
+          "title": "Nvidia (NASDAQ:NVDA) Expands Buyback, Adds AI-Safety Tools",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000036/nvda-20260512.htm",
+          "title": "NVIDIA CORP - Form DEF 14A - FY2026",
+          "page_age": null
+        },
+        {
+          "url": "https://kalkinemedia.com/us/stocks/artificial-intelligence/why-is-nvidia-nasdaqnvda-stock-in-focus-after-its-record-buyback-today",
+          "title": "Why is Nvidia (NASDAQ:NVDA) stock in focus after its record buyback today?",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.naturalnews.com/2026-10-01-nvidia-launches-ai-agent-safety-platform-authorizes-buyback.html",
+          "title": "Nvidia Launches AI Agent Safety Platform, Authorizes $150 Billion Buyback",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://newstarget.com/2026-10-01-nvidia-launches-ai-agent-safety-platform-authorizes-buyback.html",
+          "title": "Nvidia Launches AI Agent Safety Platform, Authorizes $150 Billion Buyback",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://stockpil.com/nvidia-open-agent-safety-platform-150bn-buyback",
+          "title": "Nvidia launches agent safety platform and $150bn buyback",
+          "page_age": "7 days ago"
+        }
+      ]
+    },
+    {
+      "query": "韓国 金融機関 AI 攻撃 個人情報流出 10月",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://piyolog.hatenadiary.jp/entry/2026/10/06/103019",
+          "title": "韓国の金融機関で相次いだ不正アクセスについてまとめてみた - piyolog",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://topics.smt.docomo.ne.jp/amp/article/yonhap/world/yonhap-20261002wow054",
+          "title": "韓国金融界でハッキング相次ぐ 中国系AIエージェント悪用か（聯合ニュース）｜ｄメニューニュース",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/fbf8f456f22d0699689533b6ce5cb2683799fe87",
+          "title": "AIハッキング、韓国金融業界全体に拡大…当局「同一犯の可能性も」（朝鮮日報日本語版） - Yahoo!ニュース",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.sbbit.jp/article/fj/187309",
+          "title": "韓国金融機関6行へAIを使ったサイバー攻撃、2万5000人超の個人情報流出",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/2682f3c73edbd22281a3714846e5672270ad3c89",
+          "title": "韓国金融機関6行へAIを使ったサイバー攻撃、2万5000人超の個人情報流出（ビジネス＋IT） - Yahoo!ニュース",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.zaikei.co.jp/article/20261006/872550.html",
+          "title": "韓国の金融機関7社で情報流出、6万5千人超に影響 業務支援システムへの攻撃を調査",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.isotop.jp/archives/9709",
+          "title": "韓国の銀行4行がサイバー攻撃を受け、AIエージェント使用の疑いも",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261006de55577",
+          "title": "韓国 金融機関で個人情報漏えい相次ぐ AI悪用のサイバー攻撃か",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://re-sho.com/%E9%9F%93%E5%9B%BD%E3%81%AE%E9%8A%80%E8%A1%8C4%E8%A1%8C%E3%81%ABai%E3%83%8F%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0-%E5%80%8B%E4%BA%BA%E6%83%85%E5%A0%B1%E6%B5%81%E5%87%BA-%E6%96%B0%E9%9F%93%E9%8A%80/",
+          "title": "韓国の銀行4行にAIハッキング 個人情報流出 新韓銀行・KB国民銀行・ハナ銀行・ウリ銀行・NH農協銀行・BNK釜山銀行など",
+          "page_age": "3 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Trump executive order \"Genesis Mission\" OR \"super intelligence\" AI October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.nbcnews.com/tech/tech-news/trump-signs-executive-order-launching-genesis-mission-ai-project-rcna245600",
+          "title": "Trump signs executive order launching Genesis Mission AI project",
+          "page_age": "314 days ago"
+        },
+        {
+          "url": "https://www.aoshearman.com/en/insights/ao-shearman-on-tech/new-ai-action-plan-executive-order-for-the-establishment-of-the-genesis-mission",
+          "title": "New AI Action Plan executive order for the establishment of the Genesis Mission",
+          "page_age": "287 days ago"
+        },
+        {
+          "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-inaugurates-the-era-of-super-intelligence/",
+          "title": "Fact Sheet: President Donald J. Trump Inaugurates The Era of Super Intelligence",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://www.scientificamerican.com/article/trump-orders-genesis-mission-to-advance-ai-breakthroughs/",
+          "title": "Trump Orders Genesis Mission to Advance AI Breakthroughs",
+          "page_age": "315 days ago"
+        },
+        {
+          "url": "https://www.freshfields.com/en/our-thinking/blogs/a-fresh-take/trump-executive-order-mandates-shift-to-super-intelligence-102o403",
+          "title": "Trump Executive Order Mandates Shift to \"Super Intelligence\"",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/",
+          "title": "Trump unveils his new Super Intelligence Force",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.theweek.in/news/sci-tech/2026/10/01/trump-replaces-ai-with-super-intelligence-whats-behind-the-executive-order.amp.html",
+          "title": "Trump replaces ‘AI’ with ‘Super Intelligence’: What's behind the executive order? - The Week",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://www.forbes.com/sites/siladityaray/2026/09/30/trump-signs-order-renaming-ai-to-super-intelligence--heres-what-it-says/",
+          "title": "Trump Signs Executive Order Renaming AI To ‘Super Intelligence’—Here’s What It Changes",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://www.jdsupra.com/topics/machine-learning/trump-administration/artificial-intelligence",
+          "title": "News & Analysis as of",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Microsoft 365 Copilot Claude Sonnet GPT-6.1 複数モデル 選択 発表",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://github.com/alpaca-23/test/issues/294",
+          "title": "【AI News】2026年10月06日 生成AIニュースダイジェスト · Issue #294 · alpaca-23/test",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://office-watch.com/2026/gpt-6-1-sol-vs-claude-sonnet-5-5-copilot/",
+          "title": "GPT 6.1 Sol and Claude Sonnet 5.5 in Copilot: What to Pick and When",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://mc.merill.net/message/MC1483844",
+          "title": "MC1483844 - Microsoft Copilot: GPT 6.1 Sol and Claude Sonnet 5.5 beginning to roll out today",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://himanekoblog.hatenablog.com/entry/2026/10/05/101332",
+          "title": "Microsoft CopilotにGPT-6.1 SolとClaude Sonnet 5.5追加｜使える場所と展開順を確認 - ひまなねこのひまつぶし",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://pupuweb.com/mc1483844-microsoft-copilot-gpt-6-1-sol-and-claude-sonnet-5-5-beginning-to-roll-out-today/",
+          "title": "MC1483844 Microsoft Copilot GPT 6.1 Sol and Claude Sonnet 5.5 beginning to roll out today",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://note.com/kagen_shin/n/nd32ba7d40f0e?hl=en",
+          "title": "[Microsoft 365 Copilot] The \"AI Model Switching\" feature has arrived in Microsoft 365 Copilot! #0244｜Shinichi Kawara",
+          "page_age": "171 days ago"
+        },
+        {
+          "url": "https://www.ebisuda.net/tech/2026/04/22/microsoft-365-copilotclaude-sonnet-anthropic-claude-sonnet-is-now-available-in-m/",
+          "title": "Microsoft 365 CopilotにClaude Sonnetが登場——「モデル選択」時代の幕開けと管理者が知るべき注意点",
+          "page_age": "168 days ago"
+        },
+        {
+          "url": "https://mwpro.co.uk/blog/2026/10/01/mc1483844-microsoft-copilot-adds-gpt-6-1-sol-and-claude-sonnet-5-5-models-across-microsoft-365-apps-2/",
+          "title": "MC1483844: Microsoft Copilot Adds GPT-6.1 & Claude Sonnet 5.5 to Microsoft 365",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://windowsforum.com/news/microsoft-365-copilot-adds-claude-opus-5-5-and-gpt-6-sol-models.445811/",
+          "title": "Microsoft 365 Copilot Adds Claude Opus 5.5 and GPT-6 Sol Models",
+          "page_age": "12 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Etched semiconductor startup valuation funding October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://dealroom.co/news/160240-etched-fields-offers-at-40b-valuation-for-ai-chip-push/",
+          "title": "Etched fields offers at $40B valuation for AI chip push",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.investing.com/news/company-news/etched-seeks-20-billion-valuation-in-new-ai-chip-funding-round--wsj-reports-4799566",
+          "title": "Etched seeks $20 billion valuation in new AI chip funding round - WSJ reports By Investing.com",
+          "page_age": "80 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+          "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
+          "page_age": "75 days ago"
+        },
+        {
+          "url": "https://americanbazaaronline.com/2026/10/06/etched-draws-funding-offers-at-over-40-billion-valuation-489501/",
+          "title": "Etched draws funding offers at over $40 billion valuation",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.renascence.io/news/93242/etched-reportedly-fielding-funding-offers-at-40b-valuation",
+          "title": "Etched Reportedly Fielding Funding Offers at $40B+ Valuation — Renascence",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/news/ai-chip-startup-etched-raises-160625909.html",
+          "title": "AI Chip Startup Etched Raises $500 Million in New Funding Round",
+          "page_age": "265 days ago"
+        },
+        {
+          "url": "https://dealroom.co/news/145606-etched-hits-21b-valuation-with-700m-series-d-led-by-jane-street/",
+          "title": "Etched hits $21B valuation with $700M Series D led by Jane Street",
+          "page_age": "49 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Etched_(company)",
+          "title": "Etched (company)",
+          "page_age": null
+        },
+        {
+          "url": "https://rcrtech.com/semiconductor-news/etched-20-billion-valuation/",
+          "title": "Etched in talks for $20B valuation in dual funding rounds",
+          "page_age": "77 days ago"
+        }
+      ]
+    },
+    {
+      "query": "AI 医療 診断 発表 2026年10月5日 OR 10月6日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://weibo.com/2/detail/comos:niuivus6384620",
+          "title": "邓紫棋的巡演纪录对华语乐坛有何意义",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niuivuv5123945",
+          "title": "山景房哪家好",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niuivus6390569",
+          "title": "大鹏音乐节首秀反响如何？从导演跨界歌手，万人合唱背后有何故事",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/11124500/001329696.pdf",
+          "title": "www.mhlw.go.jp",
+          "page_age": null
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/10601000/000468150.pdf",
+          "title": "www.mhlw.go.jp",
+          "page_age": null
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/10601000/000590642.pdf",
+          "title": "www.mhlw.go.jp",
+          "page_age": null
+        },
+        {
+          "url": "https://prtimes.jp/topics/keywords/NVIDIA%20AI%20Summit%20Japan",
+          "title": "11月12日、13日開催の「NVIDIA AI Summit Japan」に出展 代表の守屋による講演に加え日本語対応した「対話型AIバーチャルヒューマン」を初披露 2024年11月21日 12時00分 株式会社 Aww",
+          "page_age": null
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/10601000/000515848.pdf",
+          "title": "www.mhlw.go.jp",
+          "page_age": null
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/10601000/000468139.pdf",
+          "title": "www.mhlw.go.jp",
+          "page_age": null
+        },
+        {
+          "url": "https://www.mhlw.go.jp/content/10601000/000502281.pdf",
+          "title": "www.mhlw.go.jp",
+          "page_age": null
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "韓国の銀行7社に攻撃、AI悪用の疑いと報道",
+      "sources": [
+        {
+          "name": "NHK",
+          "url": "https://news.web.nhk/newsweb/na/nd-20261006de55577",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "韓国 金融機関 AI 攻撃 個人情報流出 10月"
+          ]
+        },
+        {
+          "name": "聯合ニュース（dメニューニュース）",
+          "url": "https://topics.smt.docomo.ne.jp/amp/article/yonhap/world/yonhap-20261002wow054",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "韓国 金融機関 AI 攻撃 個人情報流出 10月"
+          ]
+        },
+        {
+          "name": "ビジネス+IT",
+          "url": "https://www.sbbit.jp/article/fj/187309",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "韓国 金融機関 AI 攻撃 個人情報流出 10月"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "みずほ、AI社員代行「Cowork」3万人に導入へ",
+      "sources": [
+        {
+          "name": "日経クロステック",
+          "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12072/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "みずほ AI エージェント Cowork 3万人 導入"
+          ]
+        },
+        {
+          "name": "日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZRSP713330_V01C26A0000000/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "みずほ AI エージェント Cowork 3万人 導入"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "Copilotに新モデル追加、文書作成でも選択可に",
+      "sources": [
+        {
+          "name": "Microsoft 365 Message Center",
+          "url": "https://mc.merill.net/message/MC1483844",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Microsoft 365 Copilot Claude Sonnet GPT-6.1 複数モデル 選択 発表"
+          ]
+        },
+        {
+          "name": "Office Watch",
+          "url": "https://office-watch.com/2026/gpt-6-1-sol-vs-claude-sonnet-5-5-copilot/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Microsoft 365 Copilot Claude Sonnet GPT-6.1 複数モデル 選択 発表"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "AIチップ新興Etched、評価額500億ドル視野に",
+      "sources": [
+        {
+          "name": "Dealroom",
+          "url": "https://dealroom.co/news/160240-etched-fields-offers-at-40b-valuation-for-ai-chip-push/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Etched semiconductor startup valuation funding October 2026"
+          ]
+        },
+        {
+          "name": "American Bazaar",
+          "url": "https://americanbazaaronline.com/2026/10/06/etched-draws-funding-offers-at-over-40-billion-valuation-489501/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Etched semiconductor startup valuation funding October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "データセンター開発者を「略奪的」と米州知事",
+      "sources": [
+        {
+          "name": "ワシントン・ポスト",
+          "url": "https://www.washingtonpost.com/technology/innovations/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "AI news October 6 2026"
+          ]
+        }
+      ]
+    }
+  ]
+}

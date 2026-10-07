@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-07",
+    "anchorId": "article-1",
+    "headline": "韓国の金融機関7社以上に攻撃、AI悪用の疑いと報道",
+    "dek": "被害は数万件以上に、金融当局が緊急点検へ",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-07",
+    "anchorId": "article-2",
+    "headline": "みずほ、AI社員代行「Cowork」3万人に導入へ",
+    "dek": "交通費精算や監査も自律処理、2027年度に導入目指す",
+    "category": "Work & Labor",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-07",
+    "anchorId": "article-3",
+    "headline": "Copilotに新モデル2種追加、Wordなどにも順次",
+    "dek": "GPT-6.1 SolとClaude Sonnet 5.5が順次利用可能に",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-07",
+    "anchorId": "article-4",
+    "headline": "AIチップ新興Etched、評価額500億ドル視野に",
+    "dek": "8月の210億ドル評価から約2倍の水準に",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
     "date": "2026-10-06",
     "anchorId": "article-1",
     "headline": "AIは人類の「敵」になるのか、NY公聴会で警告",

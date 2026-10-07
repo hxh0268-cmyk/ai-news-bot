@@ -1,0 +1,162 @@
+[
+  {
+    "importance": 1,
+    "category": "Security & Privacy",
+    "catColor": "#E1636F",
+    "headline": "韓国の金融機関7社以上に攻撃、AI悪用の疑いと報道",
+    "dek": "被害は数万件以上に、金融当局が緊急点検へ",
+    "body": [
+      "2026年9月末から10月初旬にかけて、韓国の新韓銀行やKB国民銀行、ハナ銀行など複数の金融機関が立て続けにサイバー攻撃を受けた。新韓銀行だけでも顧客約2万5000人の氏名や電話番号、年収といった情報が流出した。被害はイェガラム相互貯蓄銀行など第2金融圏にも及び、計7社以上の金融機関に広がっている。被害の規模は全体で数万件以上に達するという。",
+      "調査を進める中で、攻撃に使われたサーバーから、中国語圏のオープンソースコミュニティで出回っている自律型侵入テストツール「ARTEX AI」の痕跡が見つかった。韓国の金融委員会と金融監督院は緊急対応会議を開き、全金融機関に、外部に露出したIT資産の脆弱性点検を命じている。"
+    ],
+    "stats": [
+      {
+        "n": "7社以上",
+        "l": "被害が確認された金融機関の数(第2金融圏を含む)"
+      },
+      {
+        "n": "約2万5000人",
+        "l": "新韓銀行単独で情報が流出した顧客数"
+      }
+    ],
+    "why": "AIエージェントが自律的な不正侵入ツールとして使われた疑いが出た事例だ。日本ではまだ同種の大規模被害は報告されていないけれど、金融機関の業務支援システムが狙われる構図は共通していて、国内の金融機関にとっても対策を見直すきっかけになりそうだ。",
+    "sourceLine": "NHK、聯合ニュース（dメニューニュース経由）、ビジネス+IT（2026年10月6日）",
+    "sources": [
+      {
+        "name": "NHK",
+        "url": "https://news.web.nhk/newsweb/na/nd-20261006de55577"
+      },
+      {
+        "name": "聯合ニュース（dメニューニュース）",
+        "url": "https://topics.smt.docomo.ne.jp/amp/article/yonhap/world/yonhap-20261002wow054"
+      },
+      {
+        "name": "ビジネス+IT",
+        "url": "https://www.sbbit.jp/article/fj/187309"
+      }
+    ],
+    "captionX": "韓国の金融機関7社以上がAI悪用の疑いがあるサイバー攻撃を受け、新韓銀行だけで約2万5000人の個人情報が流出。自律型ツール「ARTEX AI」の痕跡も見つかった。 #AIセキュリティ #個人情報漏えい",
+    "captionThreads": "韓国の金融機関が相次いでサイバー攻撃を受け、新韓銀行だけで約2万5000人分の個人情報が流出したそうです。しかもAIの自律型侵入ツールの痕跡まで見つかったとか…これ、どこの国でも起こりうる話だと思います。",
+    "captionInstagram": "韓国の新韓銀行やKB国民銀行など7社以上の金融機関で、2026年9月末から10月初旬にかけて立て続けにサイバー攻撃が発生し、新韓銀行だけでも約2万5000人分の個人情報が流出しました。調査では、攻撃に使われたサーバーから自律型のAI侵入テストツール「ARTEX AI」の痕跡が見つかっており、AIを悪用した攻撃が現実味を帯びてきたことを示しています。韓国の金融当局は、全金融機関に緊急の点検を命じています。日本ではまだ同規模の被害は報告されていませんが、金融機関のシステムが狙われる構図は決して他人事ではありません。 #AI #サイバーセキュリティ #個人情報保護 #韓国 #金融",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Work & Labor",
+    "catColor": "#1F8A83",
+    "headline": "みずほ、AI社員代行「Cowork」3万人に導入へ",
+    "dek": "交通費精算や監査も自律処理、2027年度に導入目指す",
+    "body": [
+      "みずほフィナンシャルグループが、従業員がパソコンで行ってきた作業を自律的に処理するAIエージェント基盤「みずほCowork」を開発し、2026年8月から一部部門でPoCを始めた。2027年度をめどに、みずほFGとみずほ銀行、みずほ信託銀行あわせて約3万人への導入を目指す。",
+      "対象になるのは交通費精算やSNS分析、業務監査など、これまで人が一件ずつ対応してきた非定型タスクだ。社員が目的と必要な資料を渡せば、AIエージェントが与えられた権限の範囲で作業手順を組み立て、複数の資料を横断した調査や分析、レポート作成までこなす仕組みになっている。"
+    ],
+    "stats": [
+      {
+        "n": "3万人",
+        "l": "導入目標の従業員数(みずほFG・みずほ銀行・みずほ信託銀行計)"
+      },
+      {
+        "n": "2027年度",
+        "l": "導入を目指す時期"
+      }
+    ],
+    "why": "大手銀行が非定型業務までAIエージェントに委ねる方針を打ち出した点で、日本の大企業がAIを同僚のように使う取り組みの先行例になりそうだ。同業他社や他業種にどう波及するか、現場の仕事そのものがどう組み替わるかが次の焦点になる。",
+    "sourceLine": "日経クロステック、日本経済新聞（2026年10月5日）",
+    "sources": [
+      {
+        "name": "日経クロステック",
+        "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00001/12072/"
+      },
+      {
+        "name": "日本経済新聞",
+        "url": "https://www.nikkei.com/article/DGXZRSP713330_V01C26A0000000/"
+      }
+    ],
+    "captionX": "みずほが自律型AIエージェント「Cowork」を3万人規模で導入へ。交通費精算や業務監査まで自律処理の対象に。2027年度の導入を目指す。 #みずほ #AIエージェント",
+    "captionThreads": "みずほがAI社員「Cowork」を3万人規模で入れるみたいです。経費精算や監査みたいな面倒な仕事を勝手にこなしてくれるそうで、銀行員の日常がどう変わるのか気になります。",
+    "captionInstagram": "みずほフィナンシャルグループが、従業員の業務を自律的に処理するAIエージェント基盤「みずほCowork」を開発し、2026年8月から一部部門でPoCを始めました。2027年度をめどに、みずほFGとみずほ銀行、みずほ信託銀行あわせて約3万人への導入を目指しています。交通費精算やSNS分析、業務監査といった、これまで人が個別にこなしてきた非定型業務も対象に含まれるとのことです。大手銀行がAIを同僚のように使う先行例になりそうです。 #AI #みずほ #業務効率化 #銀行 #働き方",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0",
+    "headline": "Copilotに新モデル2種追加、Wordなどにも順次",
+    "dek": "GPT-6.1 SolとClaude Sonnet 5.5が順次利用可能に",
+    "body": [
+      "Microsoftは2026年9月30日、Microsoft 365 Copilotで選べるAIモデルに、OpenAIの「GPT-6.1 Sol」とAnthropicの「Claude Sonnet 5.5」を加えると発表した。両モデルはまずCopilot CoworkとCopilot Studioで使えるようになり、課金は従量制だ。",
+      "Word・Excel・PowerPoint・Copilot Chatでは、9月30日の発表で、その後1週間のうちに段階的な展開を始めるとされた。こちらはMicrosoft 365 Copilotのユーザーサブスクリプションライセンスの範囲内で使える。タスクに応じてモデルを選べる点がポイントだ。"
+    ],
+    "stats": [
+      {
+        "n": "2モデル",
+        "l": "今回追加されたAIモデル数(GPT-6.1 Sol/Claude Sonnet 5.5)"
+      },
+      {
+        "n": "2026年9月30日",
+        "l": "ロールアウト開始日"
+      }
+    ],
+    "why": "普段使っているWordやExcelのCopilotに、OpenAIとAnthropicの新しいモデルが加わる変化は、仕事でAIを日常的に使う人に直結する話だ。モデルごとに得意不得意があるとされ、9月30日から始まった段階的な展開に伴い、日本のOffice利用者も画面上で切り替えて試す場面が増えそうだ。",
+    "sourceLine": "Microsoft 365 Message Center、Office Watch（2026年9月30日）",
+    "sources": [
+      {
+        "name": "Microsoft 365 Message Center",
+        "url": "https://mc.merill.net/message/MC1483844"
+      },
+      {
+        "name": "Office Watch",
+        "url": "https://office-watch.com/2026/gpt-6-1-sol-vs-claude-sonnet-5-5-copilot/"
+      }
+    ],
+    "captionX": "Microsoft 365 CopilotにGPT-6.1 SolとClaude Sonnet 5.5が追加。9月30日にCoworkとCopilot Studioで提供が始まり、WordやExcelでも段階的に展開。 #Microsoft365 #Copilot",
+    "captionThreads": "普段のWordやExcelのCopilotに、OpenAIとAnthropicの新しいモデルが加わるそうです。使えるモデルが増えて、仕事のやり方が少し変わるかもしれません。",
+    "captionInstagram": "Microsoftは2026年9月30日、Microsoft 365 CopilotのAIモデルに、OpenAIの「GPT-6.1 Sol」とAnthropicの「Claude Sonnet 5.5」を追加すると発表しました。9月30日にまずCopilot CoworkとCopilot Studioで提供が始まり、Word・Excel・PowerPoint・Chatでも、発表から1週間のうちに段階的な展開が始まるとされています。選べるモデルが増えることで、日々の仕事でのAI活用の幅が一段と広がりそうです。 #AI #Microsoft365 #Copilot #仕事効率化 #Office",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Business",
+    "catColor": "#F4B942",
+    "headline": "AIチップ新興Etched、評価額500億ドル視野に",
+    "dek": "8月の210億ドル評価から約2倍の水準に",
+    "body": [
+      "半導体スタートアップのEtchedが、400億〜500億ドル規模の評価額での資金調達オファーを受けていることが分かった。同社は8月に210億ドルの評価額で7億ドルを調達したばかりで、評価額がその約2倍に跳ね上がる可能性がある。",
+      "Etchedは、大規模言語モデルの推論処理に特化した専用チップを開発しており、NVIDIAの汎用GPUに対抗する存在として注目を集めている。自社システムならNVIDIA製チップより低コストで多くのトークンを処理できると、同社は主張している。"
+    ],
+    "stats": [
+      {
+        "n": "400億〜500億ドル",
+        "l": "今回のオファーで示された評価額"
+      },
+      {
+        "n": "210億ドル",
+        "l": "8月の資金調達時点の評価額"
+      }
+    ],
+    "why": "巨大IT企業以外にも、AI向け専用半導体のスタートアップへ資金が集中している一例だ。NVIDIA一強だったAIチップ市場に対抗馬が増えれば、いずれデータセンターの価格競争を通じて、クラウドAIサービスの利用料金が下がる形で、日本の利用者にも跳ね返ってくるかもしれない。",
+    "sourceLine": "Dealroom、American Bazaar（2026年10月6日）",
+    "sources": [
+      {
+        "name": "Dealroom",
+        "url": "https://dealroom.co/news/160240-etched-fields-offers-at-40b-valuation-for-ai-chip-push/"
+      },
+      {
+        "name": "American Bazaar",
+        "url": "https://americanbazaaronline.com/2026/10/06/etched-draws-funding-offers-at-over-40-billion-valuation-489501/"
+      }
+    ],
+    "captionX": "AIチップ新興Etchedに400億〜500億ドル規模の出資オファー。8月の210億ドルから評価額が約2倍に膨らむ勢い。 #AI半導体 #スタートアップ",
+    "captionThreads": "NVIDIA対抗のAIチップ新興Etchedに、評価額400億〜500億ドルの出資オファーが来ているそうです。8月は210億ドルだったのに、ここまで跳ねるとは。AI半導体への資金の集まり方がすごい。",
+    "captionInstagram": "AI推論向けの専用チップを開発する米新興Etchedが、400億〜500億ドル規模の評価額での出資オファーを受けていることが分かりました。8月に210億ドルの評価額で7億ドルを調達したばかりで、評価額が約2倍に膨らむ可能性があります。NVIDIAの汎用GPUに対抗する専用チップとして注目されており、AI半導体市場への資金集中ぶりを象徴する動きです。 #AI #半導体 #Etched #NVIDIA #スタートアップ",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
