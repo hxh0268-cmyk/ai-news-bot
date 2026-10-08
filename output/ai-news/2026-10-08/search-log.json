@@ -1,0 +1,644 @@
+{
+  "date": "2026-10-08",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 10,
+    "search_errors": 0,
+    "results": 91,
+    "sources": 8,
+    "sources_in_search_results": 8,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI news October 7 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/ai-news-today",
+          "title": "AI News Today, October 7: Top Stories",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.artificialintelligence-news.com/",
+          "title": "AI News",
+          "page_age": "48 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/",
+          "title": "AI News: Artificial Intelligence Stories, Ranked",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://openai.com/news/",
+          "title": "OpenAI News",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.washingtonpost.com/technology/innovations/",
+          "title": "Artificial Intelligence - The Washington Post",
+          "page_age": "59 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-october-7-dow-sp-500-nasdaq-080241833.html",
+          "title": "Stock market today: Dow falls, S&P 500 and Nasdaq retreat from records amid bond market jitters",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.mit.edu/topic/artificial-intelligence2",
+          "title": "Artificial intelligence",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "AI ニュース 2026年10月7日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aismiley.co.jp/ai_news/",
+          "title": "AIニュース",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://github.com/shoji-miyoshi/test/issues/186",
+          "title": "AI最新ニュース 2026-10-07 · Issue #186 · shoji-miyoshi/test",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://github.com/teruhikonomizu-ops/ai-radio/releases/tag/tech-2026-10-07",
+          "title": "Release 【世界のAIニュース】10/7 Mistral Large 4／情報流出 · teruhikonomizu-ops/ai-radio",
+          "page_age": null
+        },
+        {
+          "url": "https://weibo.com/2/detail/comos:niunezq5362291",
+          "title": "南阳到西安的高铁票候补成功的概率大吗？",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908q3kc.html",
+          "title": "新浪人工智能热点小时报丨2026年10月07日08时_今日实时人工智能热点速递|AI|机器人|it之家|html|博客_新浪新闻",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://note.com/lithe_boar7856/n/n6316ec96ddf1?hl=en",
+          "title": "AI News Highlights 10/7 (Wed)",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://note.com/hirokimiyano/n/ncae0e24d3371?hl=en",
+          "title": "7 AI News Stories of the Day",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://journal.omoshigo.link/trend/workai/20261007-20501/",
+          "title": "働き方 x AIニュース！2026年10月7日",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://qiita.com/aakan/items/c38a151f3d84879b3b28",
+          "title": "〖AI News まとめ〗生成AI ニュースレポート — 2026-10-07 #GenAI - Qiita",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "OpenAI 722 manuscripts math unsolved problems",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://eu.36kr.com/en/p/4015128916676736",
+          "title": "Mathematics Big Bang: OpenAI Solved 722 Complex Math Problems Overnight",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/openai-solves-722-math-problems-quasi-riemann-hypothesis-proven",
+          "title": "OpenAI Solves 722 Math Problems, Quasi-Riemann Hypothesis Proven",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://beincrypto.com/openai-ai-4000-unsolved-math-problems/",
+          "title": "OpenAI Gave Its New Model 4,000 Unsolved Math Problems",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://startupfortune.com/openai-says-its-model-solved-90-of-maths-500-hardest-open-problems/",
+          "title": "OpenAI says its model solved 90 of math's 500 hardest open problems - Startup Fortune",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.resetera.com/threads/openai-releases-722-math-manuscripts-on-github-covering-hundreds-of-math-problems.1653181/",
+          "title": "OpenAI releases 722 math manuscripts on GitHub, covering hundreds of math problems",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://tech-insider.org/openai-722-math-manuscripts-unreleased-model-2026/",
+          "title": "OpenAI Releases 722 Math Manuscripts From Secret Model [2026]",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finance.biggo.com/news/269cc3f5-7ade-42e3-8f0d-1630fa061477",
+          "title": "OpenAI Releases 722 AI-Generated Math Manuscripts, Claims Breakthroughs on Hundreds of Unsolved Problems — BigGo Finance",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Unsolved_Problems_in_Number_Theory",
+          "title": "Unsolved Problems in Number Theory",
+          "page_age": null
+        },
+        {
+          "url": "https://finance.biggo.com/news/1d522643-5fd9-4ac5-ae86-e4a5b99edfe2",
+          "title": "OpenAI Drops 722 Math Manuscripts Overnight, Claims Breakthrough on Quasi-Riemann Hypothesis, Sparking Fury in the Math Community — BigGo Finance",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "McDonald's AI pricing tool WSJ October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.washingtontimes.com/news/2026/oct/6/mcdonalds-sued-ai-tool-recommends-prices-us-franchisees/",
+          "title": "McDonald’s sued over AI tool that recommends prices to U.S. franchisees",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.ibj.com/articles/mcdonalds-sued-over-ai-tool-that-recommends-prices-to-franchisees",
+          "title": "McDonald's sued over AI tool that recommends prices to franchisees - Indianapolis Business Journal",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.whsv.com/2026/10/08/mcdonalds-sued-over-ai-tool-that-recommends-prices-us-franchisees/",
+          "title": "McDonald’s sued over AI tool that recommends prices to US franchisees",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.wcjb.com/2026/10/08/mcdonalds-sued-over-ai-tool-that-recommends-prices-us-franchisees/",
+          "title": "McDonald’s sued over AI tool that recommends prices to US franchisees",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/how-mcdonalds-sets-prices.html",
+          "title": "Separating Fact from Fiction: AI Does Not Set Prices at McDonald’s",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://thenextweb.com/news/mcdonalds-ai-pricing-engine-franchisees-reuters",
+          "title": "McDonald’s uses AI to set an optimal price at each store, Reuters reports",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://www.joemygod.com/2026/10/reuters-mcdonalds-uses-ai-set-each-stores-prices/",
+          "title": "Reuters: McDonald's Uses AI To Set Each Store's Prices - Joe.My.God.",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://futurism.com/future-society/mcdonalds-ai-burger-pricing",
+          "title": "McDonalds Has Secretly Deployed AI Models to Determine Exactly What to Charge You for Its Mid Fast Food Burgers",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/news/4-big-changes-coming-mcdonald-152613184.html",
+          "title": "The 4 big changes coming to McDonald’s in 2026 — and how they’ll impact prices",
+          "page_age": null
+        },
+        {
+          "url": "https://fortune.com/2024/06/17/mcdonalds-ai-order-taking-drive-thru-ends",
+          "title": "mcdonalds ai order taking drive thru ends",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "OpenAI math 722 manuscripts GitHub Reuters TechCrunch",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/alerts/openai-publishes-722-ai-generated-math-preprints-on-github",
+          "title": "OpenAI publishes 722 AI-generated math preprints on GitHub",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/openai-solves-722-math-problems-quasi-riemann-hypothesis-proven",
+          "title": "OpenAI Solves 722 Math Problems, Quasi-Riemann Hypothesis Proven",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.tokenpost.com/news/technology/27193",
+          "title": "OpenAI Releases 722 AI-Generated Math Manuscripts After Criticism",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.gadgetreview.com/openai-drops-722-ai-math-manuscripts-on-github-experts-must-now-verify-them",
+          "title": "OpenAI Drops 722 AI Math Manuscripts on GitHub. Experts Must Now Verify Them. - Gadget Review",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://xenospectrum.com/en/openai-math-manuscripts-verification/",
+          "title": "OpenAI Publishes 722 AI-Generated Math Manuscripts, Including Work Tied to the Riemann Hypothesis",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://tech-insider.org/openai-722-math-manuscripts-unreleased-model-2026/",
+          "title": "OpenAI Releases 722 Math Manuscripts From Secret Model [2026]",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://tech-insider.org/openai-377-vs-372-math-results-one-prompt-2026/",
+          "title": "OpenAI 377 Math Problems: 372 Families, One Prompt",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finance.biggo.com/news/1d522643-5fd9-4ac5-ae86-e4a5b99edfe2",
+          "title": "OpenAI Drops 722 Math Manuscripts Overnight, Claims Breakthrough on Quasi-Riemann Hypothesis, Sparking Fury in the Math Community — BigGo Finance",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o1",
+          "title": "OpenAI o1",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "OpenAI teen ChatGPT report median minutes per day",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://fourweekmba.com/ai-openai-says-teens-average-under-15-minutes-a-day-on-chatgpt/",
+          "title": "OpenAI Says Teens Average Under 15 Minutes a Day on ChatGPT - FourWeekMBA",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.koreatimes.co.kr/world/20261008/openai-says-teens-use-chatgpt-for-under-15-minutes-a-day-as-worries-over-risks-grow",
+          "title": "OpenAI says teens use ChatGPT for under 15 minutes a day as worries over risks grow - The Korea Times",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.detroitnews.com/story/tech/2026/10/07/openai-teens-chatgpt-15-minutes-a-day/92136458007/",
+          "title": "OpenAI says teens use ChatGPT for under 15 minutes a day as worries over risks grow",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.geo.tv/latest/685491-openai-says-teens-use-chatgpt-for-under-15-minutes-a-day-as-worries-over-risks-grow",
+          "title": "OpenAI says teens use ChatGPT for under 15 minutes a day as worries over risks grow",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://kfgo.com/2026/10/07/openai-says-teens-use-chatgpt-for-under-15-minutes-a-day-as-worries-over-risks-grow/",
+          "title": "OpenAI says teens use ChatGPT for under 15 minutes a day as worries over risks grow",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.inkl.com/news/openai-says-teens-use-chatgpt-for-under-15-minutes-a-day-as-worries-over-risks-grow",
+          "title": "OpenAI says teens use ChatGPT for under 15 minutes a day as worries over risks grow",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://kpic.com/news/nation-world/openais-chatgpt-for-teens-presents-unacceptable-risk-says-external-safety-report-common-sense-media-school-work",
+          "title": "OpenAI's ChatGPT for Teens presents 'unacceptable risk,' says external safety report",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://huggingnews.com/ai/openais-first-teen-report-says-users-average-under-15-minutes-a-day-719ea3b8",
+          "title": "OpenAI's First Teen Report Says Users Average Under 15 Minutes a Day",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o3",
+          "title": "OpenAI o3",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Mistral Large 4 trillion parameters release October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://huggingface.co/mistralai/Mistral-Large-4.0-1T05-A52B",
+          "title": "mistralai/Mistral-Large-4.0-1T05-A52B · Upcoming release · Hugging Face",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.yottalabs.ai/post/mistral-large-4-hardware-requirements-gpu-memory-2026",
+          "title": "Mistral Large 4 Hardware Requirements: GPU, Memory, and What to Plan For (2026)",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://xenospectrum.com/en/mistral-large-four-preview-comparison/",
+          "title": "Mistral Large 4 Preview Launches With 1.05 Trillion Parameters: Pricing and Benchmarks",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://tech-insider.org/mistral-large-4-le-chonk-1-05t-parameters-2026/",
+          "title": "Mistral Large 4 \"Le Chonk\": 1.05T Param AI Model",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Mistral_AI",
+          "title": "Mistral AI",
+          "page_age": null
+        },
+        {
+          "url": "https://www.getreadyforagents.com/news/mistral-large-4-le-chonk-trillion-parameter/",
+          "title": "Mistral AI releases Mistral Large 4 with 1 trillion parameters — Agentic Ready",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://runtimewire.com/article/mistral-large-4-preview-open-weights-cybersecurity",
+          "title": "Mistral stages Large 4 through a moderated API before releasing weights",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+          "title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model - MarkTechPost",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.technology.org/2026/10/07/mistral-large-4-open-weight-model-1-trillion-parameters/",
+          "title": "Mistral Large 4 Arrives With 1 Trillion Parameters - Technology Org",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Anthropic $60 billion chip financing Bank of America Citigroup Morgan Stanley",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.kucoin.com/news/flash/wall-street-banks-launch-60b-debt-financing-for-anthropic-s-ai-chip-leases",
+          "title": "Wall Street banks launch $60 billion debt financing for Anthropic’s AI chip leases.",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://discussion.fool.com/t/bac-c-ms-syndicate-massive-60b-chip-deal-for-anthropic/126711",
+          "title": "$BAC, $C, $MS syndicate massive $60B Chip deal for anthropic - Liquid Lounge - Motley Fool Community",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/wall-street-banks-launch-60b-ai-debt-financing-to-fund-anthropic-s-chip-leases",
+          "title": "Wall Street banks launch $60 billion in AI debt financing to fund Anthropic's chip leases.",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.itiger.com/news/1187410552",
+          "title": "Wall Street Syndicate Launches Record $60 Bln AI Chip Financing For ANTHROPIC - Tiger Brokers",
+          "page_age": null
+        },
+        {
+          "url": "https://uk.finance.yahoo.com/news/wall-street-tests-lender-appetite-214811519.html",
+          "title": "Wall Street tests lender appetite with $60 billion Broadcom-Anthropic deal - FT",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://cryptobriefing.com/wall-street-60-billion-anthropic-broadcom-deal/",
+          "title": "Wall Street banks launch record $60 billion chip financing package for Anthropic",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://tradersunion.com/news/financial-news/show/3672083-broadcom-ai-chip-financing-60bn/",
+          "title": "Broadcom-backed AI chip financing reaches $60bn as Wall Street tests debt demand",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://rtfclmgzn.com/article/broadcom-60-billion-debt-anthropic-chip-financing-syndication",
+          "title": "Broadcom's banks start raising the $60 billion that will actually fund Anthropic's chip buildout — RTFCLMGZN",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://breakingthenews.net/Article/Wall-Street-banks-said-to-issue-record-dollar60B-AI-chip-deal/67237788",
+          "title": "Wall Street banks said to issue record $60B AI chip deal",
+          "page_age": "2 days ago"
+        }
+      ]
+    },
+    {
+      "query": "日立 ファナック フィジカルAI 提携 2026年10月",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://news.livedoor.com/topics/detail/32454917/",
+          "title": "日立とファナックが協業 2027年度から「フィジカルAI」の展開目指す (2026年10月1日掲載) - ライブドアニュース",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://www.automation-news.jp/2026/10/109650/",
+          "title": "日立とファナック、フィジカルAI実装の共同事業化で協業 日立の工場で現場実践 27年度から外部展開へ",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://response.jp/article/2026/10/06/417433.html",
+          "title": "日立とファナック、フィジカルAI実装で戦略的パートナーシップ締結…2027年度からグローバル展開へ",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://s.response.jp/article/img/2026/10/06/417433/2249034.html?from=giga-page-gallery",
+          "title": "日立とファナック、フィジカルAI実装で戦略的パートナーシップ締結…2027年度からグローバル展開へ 1枚目の写真・画像",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.projectdesign.jp/articles/news/c2707e94-bc7e-4e02-96a8-000931895722",
+          "title": "日立、ファナック、フィジカルAIで戦略提携、2027年度から共同展開",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://online.logi-biz.com/150913/",
+          "title": "日立とファナック、フィジカルAI実装の共同事業化に向けた戦略的パートナーシップを締結",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://monoist.itmedia.co.jp/mn/articles/2610/01/news031.html",
+          "title": "日立とファナックがフィジカルAI協業 日立エッジAI×ファナックロボ有効性も検証",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://dempa-digital.com/article/726771",
+          "title": "日立とファナック、生産現場でフィジカルAIの共同実証 27年度から事業展開",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261006de55581",
+          "title": "フィジカルAI 日立とファナックなど大手連携の開発相次ぐ",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Microsoft Copilot 3 new features October 2026 autonomous tasks",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.etvbharat.com/amp/en/technology/microsoft-copilot-code-copilot-home-copilot-autopilot-enn26092601595",
+          "title": "Microsoft Unveils New Copilot With Home, Code And Autopilot Features",
+          "page_age": "11 days ago"
+        },
+        {
+          "url": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/what%E2%80%99s-new-in-microsoft-copilot--september-2026/4559107",
+          "title": "What’s New in Microsoft Copilot",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://www.eweek.com/news/microsoft-previews-copilot-tasks-multi-step-workflows/",
+          "title": "Microsoft’s Copilot Enters Its ‘Second Chapter’ With Autonomous Task Execution",
+          "page_age": "222 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GitHub_Copilot",
+          "title": "GitHub Copilot",
+          "page_age": null
+        },
+        {
+          "url": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+          "title": "Introducing the new Copilot with Home, Code and Autopilot - The Official Microsoft Blog",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://true-tech.net/microsoft-copilot-2026-new-features-announced/",
+          "title": "Microsoft Copilot 2026: new Home, Code and Autopilot features announced",
+          "page_age": "12 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Microsoft_AI",
+          "title": "Microsoft AI",
+          "page_age": null
+        },
+        {
+          "url": "https://venturebeat.com/technology/microsoft-revamps-its-copilot-ai-with-a-persistent-autopilot-agent-and-hosting-for-ai-generated-apps",
+          "title": "Microsoft revamps its Copilot AI with a persistent Autopilot agent and hosting for AI-generated apps",
+          "page_age": "12 days ago"
+        },
+        {
+          "url": "https://releasebot.io/updates/microsoft/microsoft-copilot",
+          "title": "Microsoft Copilot Updates by Microsoft - September 2026 - Releasebot",
+          "page_age": "13 days ago"
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "OpenAIが数学論文722本、何が起きた?",
+      "sources": [
+        {
+          "name": "BigGo Finance",
+          "url": "https://finance.biggo.com/news/1d522643-5fd9-4ac5-ae86-e4a5b99edfe2",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI 722 manuscripts math unsolved problems",
+            "OpenAI math 722 manuscripts GitHub Reuters TechCrunch"
+          ]
+        },
+        {
+          "name": "Gadget Review",
+          "url": "https://www.gadgetreview.com/openai-drops-722-ai-math-manuscripts-on-github-experts-must-now-verify-them",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI math 722 manuscripts GitHub Reuters TechCrunch"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "10代のChatGPT利用、1日15分未満の実態",
+      "sources": [
+        {
+          "name": "Reuters",
+          "url": "https://kfgo.com/2026/10/07/openai-says-teens-use-chatgpt-for-under-15-minutes-a-day-as-worries-over-risks-grow/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI teen ChatGPT report median minutes per day"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "Anthropicに600億ドル融資、過去最大規模に",
+      "sources": [
+        {
+          "name": "Financial Times",
+          "url": "https://uk.finance.yahoo.com/news/wall-street-tests-lender-appetite-214811519.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic $60 billion chip financing Bank of America Citigroup Morgan Stanley"
+          ]
+        },
+        {
+          "name": "Traders Union",
+          "url": "https://tradersunion.com/news/financial-news/show/3672083-broadcom-ai-chip-financing-60bn/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic $60 billion chip financing Bank of America Citigroup Morgan Stanley"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "マクドナルドのAI価格ツールに独禁法訴訟",
+      "sources": [
+        {
+          "name": "AP通信",
+          "url": "https://www.ibj.com/articles/mcdonalds-sued-over-ai-tool-that-recommends-prices-to-franchisees",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "McDonald's AI pricing tool WSJ October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "仏Mistral、1兆パラメータの新AI発表",
+      "sources": [
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Mistral Large 4 trillion parameters release October 2026"
+          ]
+        },
+        {
+          "name": "Technology.org",
+          "url": "https://www.technology.org/2026/10/07/mistral-large-4-open-weight-model-1-trillion-parameters/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Mistral Large 4 trillion parameters release October 2026"
+          ]
+        }
+      ]
+    }
+  ]
+}

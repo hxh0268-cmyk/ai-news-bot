@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-08",
+    "anchorId": "article-1",
+    "headline": "OpenAIが数学論文722本、何が起きた?",
+    "dek": "未解決問題に挑む内部AI、査読なき公開に波紋",
+    "category": "Research",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-08",
+    "anchorId": "article-2",
+    "headline": "10代のChatGPT利用、1日15分未満の実態",
+    "dek": "OpenAI初の利用データ公表、安全性評価は対立",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-08",
+    "anchorId": "article-3",
+    "headline": "Anthropicに600億ドル融資、過去最大規模に",
+    "dek": "半導体リース費用を調達、銀行団が販売開始",
+    "category": "Infrastructure",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-08",
+    "anchorId": "article-4",
+    "headline": "マクドナルドのAI価格ツールに独禁法訴訟",
+    "dek": "店舗ごとに価格差、消費者が集団訴訟を提起",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-08",
+    "anchorId": "article-5",
+    "headline": "仏Mistral、1兆パラメータの新AI発表",
+    "dek": "オープンウェイトは月末公開、100万トークン対応",
+    "category": "Research",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-10-07",
     "anchorId": "article-1",
     "headline": "韓国の金融機関7社以上に攻撃、AI悪用の疑いと報道",
