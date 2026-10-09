@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-09",
+    "anchorId": "article-1",
+    "headline": "ChatGPTに新型「GPT-6」、有料版から順次展開",
+    "dek": "無料版にも翌日から拡大、新UIも投入",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-09",
+    "anchorId": "article-2",
+    "headline": "Google、企業向け万能AIエージェント発表",
+    "dek": "「目的を伝えるだけ」で業務遂行、現在は非公開プレビュー",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-09",
+    "anchorId": "article-3",
+    "headline": "サムスン、AI特需で四半期利益800億ドル超に",
+    "dek": "前年比782%増、半導体メモリが牽引",
+    "category": "Infrastructure",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-09",
+    "anchorId": "article-4",
+    "headline": "MicrosoftとNVIDIA、AI搭載PCを16日発売",
+    "dek": "新型Surfaceは2599ドルから、クラウド不要でAI動作",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-09",
+    "anchorId": "article-5",
+    "headline": "ユタ州、AIがにきび薬を処方する実証実験",
+    "dek": "医師の診察なしで初回処方、月5ドルから",
+    "category": "Health Tech",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-09",
+    "anchorId": "article-6",
+    "headline": "OpenAI、「College Planner」で大学出願を支援",
+    "dek": "10代向けChatGPTに出願管理ツール追加へ",
+    "category": "Media & Culture",
+    "catColor": "#F4B942"
+  },
+  {
     "date": "2026-10-07",
     "anchorId": "article-1",
     "headline": "韓国の金融機関7社以上に攻撃、AI悪用の疑いと報道",

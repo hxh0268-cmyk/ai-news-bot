@@ -1,0 +1,283 @@
+[
+  {
+    "importance": 1,
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0",
+    "headline": "ChatGPTに新型「GPT-6」、有料版から順次展開",
+    "dek": "無料版にも翌日から拡大、新UIも投入",
+    "body": [
+      "OpenAIは10月7日、ChatGPTの通常会話向けに新しいGPT-6モデル「GPT-6 Sol」の提供を開始したと発表した。Plus、Pro、Business、Enterprise契約者から順次利用できるようになり、あわせて会話画面を自動で最適化する新インターフェース「Intelligent UI」も導入される。",
+      "無料ユーザーとGoプラン利用者向けには、軽量版の「GPT-6 Luna」が翌10月8日から順次展開される予定で、課金していない利用者にも最新モデルの恩恵が届く形になる。"
+    ],
+    "stats": [
+      {
+        "n": "2026年10月7日",
+        "l": "GPT-6 Sol提供開始(有料プラン)"
+      },
+      {
+        "n": "2026年10月8日",
+        "l": "GPT-6 Luna提供開始(無料・Goプラン)"
+      }
+    ],
+    "why": "ChatGPTは世界で日常的に使われる生成AIの代表格であり、新モデルへの切り替えは有料ユーザーだけでなく無料ユーザーの体験にも直接影響する。日本でも無料版ChatGPTを仕事や学習に使う人は多く、来週以降に応答の質や画面表示が変わったと感じる利用者が増える可能性がある。",
+    "sourceLine": "9to5Mac、OpenAI公式、2026年10月7日",
+    "sources": [
+      {
+        "name": "9to5Mac",
+        "url": "https://9to5mac.com/2026/10/07/openai-brings-gpt-6-to-chatgpt-and-debuts-intelligent-ui/"
+      },
+      {
+        "name": "OpenAI公式",
+        "url": "https://openai.com/news/"
+      }
+    ],
+    "chips": [
+      "ChatGPT",
+      "GPT-6",
+      "OpenAI",
+      "Intelligent UI"
+    ],
+    "videoId": null,
+    "captionX": "ChatGPTに新モデル「GPT-6」登場。有料版から展開が始まり、無料版にも翌日から拡大予定。普段使いのAIが一歩進化します。 #ChatGPT #GPT6",
+    "captionThreads": "ChatGPTの中身がまた進化してる…!新しい「GPT-6」が有料プランから使えるようになって、無料版にも次の日から広がっていくみたい。普段の会話がどう変わるか気になる人、チェックしてみて。",
+    "captionInstagram": "OpenAIが10月7日、ChatGPTに新モデル「GPT-6 Sol」を投入したと発表しました。まずは有料プラン(Plus・Pro・Business・Enterprise)から利用でき、無料ユーザー向けの軽量版「GPT-6 Luna」も翌日から順次展開されます。あわせて会話画面を自動調整する新しいインターフェース「Intelligent UI」も登場。毎日ChatGPTを使っている人なら、来週あたりから応答や画面の変化に気づくかもしれません。 #ChatGPT #GPT6 #OpenAI #生成AI #AIニュース",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス"
+  },
+  {
+    "importance": 2,
+    "category": "Business",
+    "catColor": "#F4B942",
+    "headline": "Google、企業向け万能AIエージェント発表",
+    "dek": "「目的を伝えるだけ」で業務遂行、日本企業も試験導入",
+    "body": [
+      "Google Cloudは10月8日、企業向けイベント「Gemini at Work 2026」で、業務全般をこなす新しいAIエージェント「Gemini agent」を発表した。1つのプロンプト入力欄から、質問対応や資料作成、コーディングまで幅広い業務を任せられる「万能エージェント」と位置づけている。",
+      "Googleによれば、利用者は細かい手順ではなく達成したい目的だけを伝えればよく、エージェントが計画を立てて社内のツールやデータに接続し、文書やメール、開発環境の中に成果物を返してくれるという。各エージェントには暗号学的に認証された専用のIDが割り当てられ、社員と同じように権限管理や作業ログの追跡ができる。",
+      "Gemini agentは現在非公開プレビュー段階で、Googleは今後Workspaceの一部のビジネス・エンタープライズプランの顧客向けに公開していくとしている。日本企業ではSOMPOやNTTドコモが活用結果を披露したという。"
+    ],
+    "stats": [
+      {
+        "n": "2026年10月8日",
+        "l": "Gemini agent発表"
+      },
+      {
+        "n": "非公開プレビュー",
+        "l": "現在の提供段階"
+      }
+    ],
+    "why": "Googleが企業の日常業務を丸ごと任せられるエージェントを打ち出したことで、OpenAIやAnthropicとの「業務代行AI」競争が一段と激しくなる。日本でもSOMPOやNTTドコモといった大手企業が活用結果を示しており、職場でAIエージェントに業務の一部を任せる働き方が国内でも徐々に現実味を帯びてきている。",
+    "sourceLine": "9to5Google、Google公式ブログ、2026年10月8日",
+    "sources": [
+      {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/10/08/gemini-agent-google-cloud/"
+      },
+      {
+        "name": "Google公式ブログ",
+        "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/"
+      }
+    ],
+    "chips": [
+      "Google Cloud",
+      "Gemini agent",
+      "Gemini at Work",
+      "AIエージェント"
+    ],
+    "videoId": null,
+    "captionX": "Googleが企業向け万能AIエージェント「Gemini agent」を発表。目的を伝えるだけで業務を代行、日本企業も試験導入中。 #Gemini #AIエージェント",
+    "captionThreads": "Googleがまた新しいAIエージェントを出してきた。「Gemini agent」は細かい指示じゃなくて目的だけ伝えればあとはやってくれるらしい。SOMPOやNTTドコモも試してるみたいで、職場のAI活用、どんどん進んでるなあ。",
+    "captionInstagram": "Google Cloudは10月8日、企業向けイベント「Gemini at Work 2026」で新しいAIエージェント「Gemini agent」を発表しました。1つのプロンプト欄から質問対応・資料作成・コーディングまで幅広い業務をこなせる「万能エージェント」で、利用者は細かい手順ではなく達成したい目的を伝えるだけで良いとしています。各エージェントには社員のように権限管理されたIDが割り当てられ、作業ログも追跡可能です。現在は非公開プレビュー段階ですが、日本ではSOMPOやNTTドコモが活用結果を披露しており、今後職場での導入が進みそうです。 #Gemini #AIエージェント #GoogleCloud #働き方 #AIニュース",
+    "lifeRelevanceTag": "お金・仕事"
+  },
+  {
+    "importance": 3,
+    "category": "Infrastructure",
+    "catColor": "#1F8A83",
+    "headline": "サムスン、AI特需で四半期利益8兆円超に",
+    "dek": "前年比782%増、半導体メモリが牽引",
+    "body": [
+      "Samsung Electronicsは10月8日、2026年第3四半期の営業利益が107.4兆ウォン(約80億ドル)に達する見通しだと発表した。テクノロジー企業として四半期の営業利益が100兆ウォンを超えるのは世界で初めてで、AIチップ向けメモリ需要の急増が業績を押し上げた。",
+      "前年同期の12.17兆ウォンから約9倍、率にして782.5%の増加となり、利益率は過去最高の55%に達した。売上高も195兆ウォン前後と、前年から127%近く伸びる見込みだという。",
+      "SamsungとMicronはいずれも、AI向けメモリの需給逼迫が2028年まで続くとの見方を示しているという。"
+    ],
+    "stats": [
+      {
+        "n": "107.4兆ウォン(約80億ドル)",
+        "l": "2026年第3四半期の営業利益見通し"
+      },
+      {
+        "n": "782.5%",
+        "l": "前年同期比の増加率"
+      },
+      {
+        "n": "55%",
+        "l": "過去最高の利益率"
+      }
+    ],
+    "why": "メモリ半導体の品薄と値上がりは、スマートフォンやパソコンなど私たちが日常的に買う電子機器の価格にも波及しうる。日本の家電量販店でもここ数カ月でメモリやストレージを積む製品の値上がりが話題になっており、この需給逼迫が長引けば日本の消費者が購入するPCやスマホの価格にも影響が及ぶ可能性がある。",
+    "sourceLine": "RTE、Quartz、2026年10月8日",
+    "sources": [
+      {
+        "name": "RTE",
+        "url": "https://www.rte.ie/news/business/2026/1008/1594493-samsung-quarterly-results/"
+      },
+      {
+        "name": "Quartz",
+        "url": "https://qz.com/samsung-q3-2026-record-profit-ai-chips-100826"
+      }
+    ],
+    "chips": [
+      "Samsung",
+      "AI半導体",
+      "メモリ不足",
+      "決算"
+    ],
+    "videoId": null,
+    "captionX": "サムスンの四半期営業利益がAI特需で前年比782%増、約8兆円に。メモリ不足は私たちの買い物にも影響するかも。 #半導体 #AI経済",
+    "captionThreads": "サムスンの決算がすごいことに。AI向けメモリの需要で営業利益が前年の9倍、約8兆円規模になる見通しなんだって。スマホやPCの値段にもじわじわ響いてきそうな話。",
+    "captionInstagram": "Samsung Electronicsが10月8日、2026年第3四半期の営業利益が107.4兆ウォン(約80億ドル)に達する見通しだと発表しました。テクノロジー企業として四半期利益が100兆ウォンを超えるのは世界初で、AIチップ向けメモリ需要の急増が牽引役です。前年同期比では782.5%という大幅な増加で、利益率は過去最高の55%に。SamsungとMicronはメモリの需給逼迫が2028年まで続くとみています。メモリ不足が長引けば、私たちが普段買うスマホやパソコンの価格にも影響が及ぶ可能性があります。 #半導体 #AI経済 #Samsung #メモリ不足 #AIニュース",
+    "lifeRelevanceTag": "お金・仕事"
+  },
+  {
+    "importance": 4,
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0",
+    "headline": "MicrosoftとNVIDIA、AI搭載PCを16日発売",
+    "dek": "新型Surfaceは2599ドルから、クラウド不要でAI動作",
+    "body": [
+      "Microsoftは10月7日、NVIDIAの新チップ「RTX Spark」を搭載した新型ノートパソコン「Surface Laptop Ultra」の価格と発売日を発表した。価格は2,599ドルからで、予約注文を開始、発売は10月16日としている。",
+      "最大の特徴は、AIモデルを手元の端末だけで動かせる点で、クラウドの利用料金を気にせず大規模なAIモデルを試せるとしている。構成によっては最大128GBの統合メモリを搭載できる。",
+      "発表の場にはMicrosoftのサティア・ナデラCEOとNVIDIAのジェンスン・ファンCEOが登壇し、ファン氏は「私たちはコンピューターを再発明した」と述べた。"
+    ],
+    "stats": [
+      {
+        "n": "$2,599",
+        "l": "Surface Laptop Ultraの価格"
+      },
+      {
+        "n": "10月16日",
+        "l": "発売開始日"
+      },
+      {
+        "n": "128GB",
+        "l": "最大統合メモリ容量"
+      }
+    ],
+    "why": "クラウド利用料を気にせず端末単体でAIを動かせるPCが主要メーカーから出そろってきたことは、AI利用コストの構造を変える可能性がある。日本でもDellやHPなど同じNVIDIAチップを使う機種の発売が見込まれており、今後AI機能を重視したパソコン選びが一般的になっていきそうだ。",
+    "sourceLine": "CNBC、Axios、2026年10月7日",
+    "sources": [
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/07/microsoft-starts-taking-preorders-for-2599-surface-laptop-ultra.html"
+      },
+      {
+        "name": "Axios",
+        "url": "https://www.axios.com/2026/10/07/microsoft-looks-to-reboot-the-ai-pc-with-nvidia"
+      }
+    ],
+    "chips": [
+      "Microsoft",
+      "NVIDIA",
+      "Surface Laptop Ultra",
+      "AI PC"
+    ],
+    "videoId": null,
+    "captionX": "MicrosoftとNVIDIAの新型AI PC「Surface Laptop Ultra」が10月16日発売。2599ドルからでクラウド不要のAI体験が売りに。 #SurfaceLaptopUltra #AIPC",
+    "captionThreads": "ついに価格と発売日が出た「Surface Laptop Ultra」。NVIDIAの新チップ搭載で、クラウドに頼らずAIモデルを動かせるのが売りらしい。2599ドルからで10月16日発売予定。気になる人多そう。",
+    "captionInstagram": "Microsoftは10月7日、NVIDIAの新チップ「RTX Spark」を搭載した新型PC「Surface Laptop Ultra」の価格と発売日を発表しました。価格は2,599ドルから、発売は10月16日です。最大の特徴はクラウドの利用料金を気にせず、手元の端末だけで大規模なAIモデルを動かせる点。構成次第で最大128GBの統合メモリを積めます。発表会にはMicrosoftのナデラCEOとNVIDIAのファンCEOが登壇しました。DellやHPなど他メーカーからも同じチップを積んだ機種が登場予定で、AI PCの選択肢が一気に広がりそうです。 #SurfaceLaptopUltra #AIPC #NVIDIA #Microsoft #AIニュース",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス"
+  },
+  {
+    "importance": 5,
+    "category": "Health Tech",
+    "catColor": "#E1636F",
+    "headline": "ユタ州、AIがにきび薬を処方する実証実験",
+    "dek": "医師の診察なしで初回処方、月5ドルから",
+    "body": [
+      "米ユタ州で、ヘルステック企業Nolla Healthが展開するアプリ「Nolla Derm」が、AIによる顔のスキャンだけでにきび治療薬の初回処方を出す1年間の実証プログラムを始めた。対象は軽度から中等度のにきびに限られ、重症や複雑なケースは人間の医師に回される。",
+      "利用者はアプリ上で本人確認や問診に答えたあと、顔を5つの角度から撮影するだけで、10〜15分ほどで治療方針と処方が示されるという。料金は月額4.99ドルで、通院は不要とされる。",
+      "Nolla Healthによると、ユタ州だけでも10万人超がにきびに悩んでいるが、皮膚科を受診するのは約1割にとどまり、受診できても予約まで平均61日待つ必要があるという。"
+    ],
+    "stats": [
+      {
+        "n": "$4.99/月",
+        "l": "Nolla Derm利用料金"
+      },
+      {
+        "n": "61日",
+        "l": "皮膚科受診までの平均待ち時間"
+      },
+      {
+        "n": "1年間",
+        "l": "ユタ州での実証期間"
+      }
+    ],
+    "why": "医師の診察を経ずにAIが処方まで行う仕組みが米国の州レベルで認められたのは異例で、遠隔医療やAI診療の規制のあり方を占う試金石になりそうだ。日本では医師法により医師以外が処方を行うことは認められておらず、同様の仕組みがすぐに導入される可能性は低いが、オンライン診療の規制緩和を巡る議論に影響を与える可能性はある。",
+    "sourceLine": "Newsweek、ABC News、2026年10月6日",
+    "sources": [
+      {
+        "name": "Newsweek",
+        "url": "https://www.newsweek.com/ai-prescriptions-here-utah-launches-first-us-pilot-12528553"
+      },
+      {
+        "name": "ABC News",
+        "url": "https://abcnews.com/US/utah-medical-company-announces-ai-powered-prescriptions/story?id=137043840"
+      }
+    ],
+    "chips": [
+      "Nolla Health",
+      "AI医療",
+      "ヘルステック",
+      "ユタ州"
+    ],
+    "videoId": null,
+    "captionX": "ユタ州でAIが顔をスキャンしてにきび薬を処方する実証実験が始動。月5ドル、通院不要という新しい医療の形。 #AI医療 #ヘルステック",
+    "captionThreads": "ちょっと驚きのニュース。ユタ州で、AIが顔をスキャンするだけでにきびの薬を処方してくれるサービスが始まったみたい。月5ドルで通院なし。日本ではまだ考えにくいけど、こういう流れ、今後どうなるんだろう。",
+    "captionInstagram": "米ユタ州で、AIによる顔のスキャンだけでにきび治療薬を処方する実証プログラムが始まりました。ヘルステック企業Nolla Healthのアプリ「Nolla Derm」は、本人確認と問診のあと顔を5角度から撮影するだけで、10〜15分ほどで治療方針と処方が示されるとのこと。料金は月額4.99ドルで通院は不要です。ユタ州では皮膚科を受診できる人が少なく、予約まで平均61日かかる現状への対応策とされています。日本では医師以外の処方は認められていませんが、オンライン診療の今後を考えるうえで注目したい動きです。 #AI医療 #ヘルステック #オンライン診療 #ユタ州 #AIニュース",
+    "lifeRelevanceTag": "健康・医療"
+  },
+  {
+    "importance": 6,
+    "category": "Media & Culture",
+    "catColor": "#F4B942",
+    "headline": "OpenAI、「College Planner」で大学出願を支援",
+    "dek": "10代向けChatGPTに出願管理ツール追加へ",
+    "body": [
+      "OpenAIは10月7日、10代向けの「ChatGPT for Teens」に、大学出願の締め切りや必要書類、奨学金情報をまとめて管理できる新機能「College Planner」を導入すると発表した。",
+      "対象はまず米国の高校10〜12年生で、4年制大学への出願を想定した内容からスタートし、将来的には2年制大学や職業訓練校、他国の学生向けにも広げる方針だという。フラッシュカードやクイズ機能、10代向けのAI評議会も同時に用意される。",
+      "OpenAIによると、ChatGPT for Teens導入後、利用できる生徒は利用できない生徒に比べて学習関連のメッセージを平均で約270万件多く送っているという。"
+    ],
+    "stats": [
+      {
+        "n": "2026年10月7日",
+        "l": "College Planner発表"
+      },
+      {
+        "n": "米国10〜12年生",
+        "l": "当初の対象学年"
+      }
+    ],
+    "why": "大学出願はスケジュール管理が煩雑で、保護者や生徒の負担が大きい作業の一つ。AIがその手続きを整理してくれることで、来年度以降に受験シーズンを迎える家庭の負担が軽くなる可能性がある。日本では大学入試の仕組みが異なるため同様のツールがすぐに広がるとは限らないが、学習管理AIへの関心は今後国内でも高まりそうだ。",
+    "sourceLine": "OpenAI公式、Fox Business、2026年10月7日",
+    "sources": [
+      {
+        "name": "OpenAI公式",
+        "url": "https://openai.com/index/teens-learn-and-plan/"
+      },
+      {
+        "name": "Fox Business",
+        "url": "https://www.foxbusiness.com/technology/openai-launches-college-planner-chatgpt-teens-track-application-financial-aid"
+      }
+    ],
+    "chips": [
+      "ChatGPT for Teens",
+      "College Planner",
+      "OpenAI",
+      "教育AI"
+    ],
+    "videoId": null,
+    "captionX": "ChatGPT for Teensに大学出願サポート「College Planner」が登場。締め切りや奨学金情報をまとめて管理できるように。 #ChatGPT #教育AI",
+    "captionThreads": "受験生あるある、出願書類の締め切り管理って本当に大変…。OpenAIがChatGPT for Teensに「College Planner」を追加するらしくて、出願のタスクや奨学金情報を一括管理できるようになるみたい。まずはアメリカの高校生向けだけど、こういう機能は気になるよね。",
+    "captionInstagram": "OpenAIは10月7日、10代向けのChatGPT for Teensに新機能「College Planner」を導入すると発表しました。大学出願の締め切りや必要書類、奨学金情報を一か所でまとめて管理できるようになり、まずは米国の高校10〜12年生が対象です。あわせてフラッシュカードやクイズ機能、生徒自身がAI開発に意見する「ティーン評議会」も用意されます。受験や進路選びに追われる家庭にとって、負担軽減につながるかもしれません。 #ChatGPT #教育AI #大学受験 #OpenAI #AIニュース",
+    "lifeRelevanceTag": "子育て・教育"
+  }
+]
