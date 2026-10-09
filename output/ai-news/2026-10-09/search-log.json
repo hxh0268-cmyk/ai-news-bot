@@ -1,0 +1,586 @@
+{
+  "date": "2026-10-09",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 8,
+    "search_errors": 0,
+    "results": 74,
+    "sources": 12,
+    "sources_in_search_results": 12,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI ニュース 2026年10月8日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://github.com/alina-lllu/ai-news-radar/issues/223",
+          "title": "AI 新闻雷达 - 2026-10-09 · Issue #223 · alina-lllu/ai-news-radar",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://github.com/shoji-miyoshi/test/issues/188",
+          "title": "AI最新ニュース 2026-10-08 · Issue #188 · shoji-miyoshi/test",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://github.com/teruhikonomizu-ops/ai-radio/releases/tag/tech-2026-10-08",
+          "title": "Release 【世界のAIニュース】10/8 Teens大学支援／数学722本 · teruhikonomizu-ops/ai-radio",
+          "page_age": null
+        },
+        {
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908qatw.html",
+          "title": "新浪AI热点小时报丨2026年10月08日23时_今日实时AI热点速递|html|机器人|模型|人工智能|学生_新浪新闻",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c001908qaxq.html",
+          "title": "新浪科技热点小时报丨2026年10月08日23时_今日实时科技热点速递|AI|html|成都市|智能体|美的_新浪新闻",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/It%27s_You_(Ai_song)",
+          "title": "It%27s You (Ai song)",
+          "page_age": null
+        },
+        {
+          "url": "https://journal.omoshigo.link/trend/workai/20261008-20504/",
+          "title": "働き方 x AIニュース！2026年10月8日",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://qiita.com/lhjjjk4/items/14ddf73015150981eba0",
+          "title": "AI日報 2026年10月8日：GPT-6が全世界へ、Haiku 5.5が75%安く、エージェントがWindowsに住む #プログラミング - Qiita",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ai_(chimpanzee)",
+          "title": "Ai (chimpanzee)",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "OpenAI announcement October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://9to5mac.com/2026/10/07/openai-brings-gpt-6-to-chatgpt-and-debuts-intelligent-ui/",
+          "title": "OpenAI brings GPT-6 to ChatGPT and debuts Intelligent UI - 9to5Mac",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://openai.com/news/",
+          "title": "OpenAI News",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "title": "ChatGPT",
+          "page_age": null
+        },
+        {
+          "url": "https://www.infoq.com/news/2026/10/openai-devday-2026/",
+          "title": "OpenAI DevDay 2026 Recap for Developers - InfoQ",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Parents_%26_Kids_Safe_AI_Coalition",
+          "title": "Parents %26 Kids Safe AI Coalition",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o3",
+          "title": "OpenAI o3",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GPT-4.5",
+          "title": "GPT-4.5",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/OpenAI_o4-mini",
+          "title": "OpenAI o4-mini",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "ChatGPT for Teens College Planner OpenAI announcement",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.foxbusiness.com/technology/openai-launches-college-planner-chatgpt-teens-track-application-financial-aid",
+          "title": "OpenAI launches college planner in ChatGPT for Teens to track applications, financial aid",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.digitaltrends.com/computing/chatgpt-for-teens-is-getting-a-college-planner-and-new-study-tools-like-flashcards-and-quizzes/",
+          "title": "ChatGPT for teens is getting a college planner and new study tools - Digital Trends",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://openai.com/index/teens-learn-and-plan/",
+          "title": "Helping teens learn, plan, and shape the future of AI",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.androidheadlines.com/2026/10/openai-adds-college-planner-study-tools-chatgpt-teens.html",
+          "title": "OpenAI Unveils College Planner in ChatGPT for Teens",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://etcjournal.com/2026/10/08/briefing-10-8-26-a-college-planner-added-to-chatgpt/",
+          "title": "Briefing 10/8/26: ‘a College Planner added to ChatGPT’",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.techaimag.com/ai-news/openai-introduces-college-planning-tools-in-chatgpt-for-teens",
+          "title": "OpenAI Introduces College Planning Tools in ChatGPT for Teens - Tech AI Magazine - The World's Leading AI Magazine",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://blockchain.news/news/openai-chatgpt-teens-college-planner",
+          "title": "OpenAI Expands ChatGPT for Teens with College Planner Tool - Blockchain.News",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.indexbox.io/blog/openai-adds-college-planner-to-chatgpt-for-teens/",
+          "title": "OpenAI Launches College Planner in ChatGPT for Teens - News and Statistics - IndexBox",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.techbooky.com/openai-is-bringing-college-planning-into-chatgpt-for-teens/",
+          "title": "OpenAI Is Bringing College Planning Into ChatGPT For Teens",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://insideai.news/news/ai-in-business/chatgpt-for-teens-college-planner/13804/",
+          "title": "OpenAI Adds College Planner to ChatGPT for Teens, Launches Teen AI Council",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Utah AI scan face acne medication prescription CNET",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://interestingengineering.com/ai-robotics/utah-autonomous-acne-prescriptions",
+          "title": "Utah clears world's first autonomous prescriptions without doctors",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://abcnews.com/US/utah-medical-company-announces-ai-powered-prescriptions/story?id=137043840",
+          "title": "Medical company announces program for 'AI-powered prescriptions' in Utah - ABC News",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.newsweek.com/ai-prescriptions-here-utah-launches-first-us-pilot-12528553",
+          "title": "AI Prescriptions Are Here: Utah Launches First US Pilot - Newsweek",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://americanbazaaronline.com/2026/10/06/utah-launches-ai-pilot-allowing-acne-prescriptions-without-a-doctor-489447/",
+          "title": "Utah launches AI pilot allowing acne prescriptions without a doctor",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.uniladtech.com/news/ai/utah-first-state-ai-examine-patients-prescribe-acne-medication-121207-20261007",
+          "title": "Utah to become first state to let AI examine patients and prescribe acne medication",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.techtimes.com/articles/328770/20261008/nolla-health-uses-ai-face-scanning-prescribe-acne-medication-patients-utah-did-this-get.htm",
+          "title": "Nolla Health Uses AI Face Scanning to Prescribe Acne Medication For Patients in Utah—Did This Get Approval?",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://bullsource.com/technology/utah-now-allows-ai-to-scan-your-face-and-prescribe-acne-medication/",
+          "title": "Utah Now Allows AI to Scan Your Face and Prescribe Acne Medication",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.dataworldbank.net/2026/10/08/utah-now-allows-ai-to-scan-your-face-and-prescribe-acne-medication/",
+          "title": "Utah Now Allows AI to Scan Your Face and Prescribe Acne Medication - Technology data bank",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://cctest.ai/en/articles/utah-lets-an-ai-issue-acne-prescriptions-in-a-closely-watched-pilot",
+          "title": "Utah pilot allows AI to issue acne prescriptions - CCTest",
+          "page_age": "2 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Samsung record profit AI chip boom Q3 2026 $80 billion",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://qz.com/samsung-q3-2026-record-profit-ai-chips-100826",
+          "title": "Samsung Q3 2026 earnings: $80 billion record profit forecast",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.sammobile.com/news/samsung-q3-2026-profit-usd-80-billion-record-breaking/",
+          "title": "Samsung earns record-breaking $80 billion profit, thanks to the rise of AI - SamMobile",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.rte.ie/news/business/2026/1008/1594493-samsung-quarterly-results/",
+          "title": "Samsung flags $80 billion profit on AI boom",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.indmoney.com/blog/us-stocks/samsung-s-ai-boom-what-its-80-billion-profit-estimate-reveals-about-the-memory-chip-shortage",
+          "title": "Samsung’s $80 Billion Q3 Profit: How the AI Memory Boom Is Driving Earnings",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://cryptobriefing.com/samsung-quarterly-profit-80-billion-ai-chips/",
+          "title": "Samsung quarterly profit surges to $80 billion on AI chip demand",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://americanbazaaronline.com/2026/10/08/samsungs-ai-chip-boom-drives-record-80b-third-quarter-profit-489637/",
+          "title": "Samsung's AI chip boom drives record $80B third-quarter profit forecast",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.sammyfans.com/2026/10/07/samsung-q3-2026-profit-ai-chip-demand/",
+          "title": "Samsung’s Q3 2026 profit jumps 782% to $80 billion on AI chip demand - Sammy Fans",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://cryptobriefing.com/samsung-80-billion-q3-profit-ai-memory/",
+          "title": "Samsung forecasts $80 billion quarterly profit as AI memory demand surges",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://careeraheadonline.com/ai-chip-boom-pushes-samsung-profits-to-record-80bn",
+          "title": "AI chip boom pushes Samsung profits to record $80bn",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.techbuzz.ai/articles/samsung-hits-record-80b-profits-on-ai-chip-surge",
+          "title": "Samsung Hits Record $80B Profits on AI Chip Surge",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Microsoft Surface Laptop Ultra NVIDIA chip price announcement",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.techspot.com/news/114130-microsoft-surface-laptop-ultra-starts-2600-running-nvidia.html",
+          "title": "Microsoft's Surface Laptop Ultra starts at $2,600, running Nvidia's RTX Spark chip",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/07/microsoft-starts-taking-preorders-for-2599-surface-laptop-ultra.html",
+          "title": "Microsoft to sell $2,599 Surface Laptop Ultra containing Nvidia AI chip",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.xda-developers.com/surface-laptop-ultra-release-date-pricing-microsoft-surface-event/",
+          "title": "We finally know the Surface Laptop Ultra’s price and release date, and how its clever breakaway USB-C port works",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/microsoft-and-nvidia-launch-surface-laptop-ultra-with-rtx-spark-chip-introduce-ai-assistant-scout",
+          "title": "Microsoft and NVIDIA Launch Surface Laptop Ultra with RTX Spark Chip, Introduce AI Assistant Scout",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.techrepublic.com/article/news-microsoft-surface-laptop-ultra-nvidia-rtx-spark/",
+          "title": "Microsoft’s $2,599 Surface Laptop Ultra Puts Nvidia RTX Spark Inside a Windows Laptop",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Surface_Studio",
+          "title": "Surface Studio",
+          "page_age": null
+        },
+        {
+          "url": "https://www.axios.com/2026/10/07/microsoft-looks-to-reboot-the-ai-pc-with-nvidia",
+          "title": "Microsoft launches Windows Surface Ultra, other Nvidia-based Windows PCs",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://cryptobriefing.com/microsoft-surface-laptop-ultra-nvidia-rtx-spark/",
+          "title": "Microsoft launches Surface Laptop Ultra with Nvidia RTX Spark chip, takes aim at MacBook Pro",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Surface_Laptop_(7th_generation)",
+          "title": "Surface Laptop (7th generation)",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Anthropic \"Frontier Academy\" training program enterprise announcement",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/alerts/anthropic-launches-claude-frontier-academy-commits-100m-to-train-10000",
+          "title": "Anthropic Launches Claude Frontier Academy, Commits $100M to Train 10,000 Enterprise AI Engineers by 2027",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://x.com/AGTPinsights/status/2106228546603741483",
+          "title": "AGTP on X: \"Anthropic just launched Claude Frontier Academy with a $100M commitment. Here's what you need to know. The goal is to train 10,000 \"Frontier Deployed Engineers\" by the end of 2027. Anthropic announced it on Oct 2, 2026. The aim is to build more engineers who can take enterprise AI proj… / X",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://www.neowin.net/news/anthropic-launches-100-million-claude-frontier-academy-training-program-for-enterprises/",
+          "title": "Anthropic boots $100m Claude Frontier Academy for businesses - Neowin",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://www.tun.com/home/anthropic-launches-100m-claude-frontier-academy-to-train-engineers/",
+          "title": "Anthropic Launches $100M Claude Frontier Academy to Train Engineers - TUN",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://itbrief.asia/story/anthropic-launches-ai-academy-for-enterprise-engineers",
+          "title": "Anthropic launches AI academy for enterprise engineers",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://nextwith.ai/anthropic-launches-a-100-million-academy-for-enterprise-ai-engineers/",
+          "title": "Anthropic launches $100M academy to train enterprise AI engineers",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://pondero.ai/news/2026-10-04-claude-frontier-academy/",
+          "title": "Anthropic launches $100 million Claude Frontier Academy to train 10,000 engineers",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://elevateconecta.com/blog/en/anthropic-claude-frontier-academy-100-millones-ingenieros-agentes/",
+          "title": "Anthropic commits $100 million to train 10,000 enterprise agent engineers",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.datastudios.org/post/anthropic-claude-frontier-academy-100m-10000-enterprise-ai-engineers",
+          "title": "Anthropic launches Claude Frontier Academy with $100M to train 10,000 enterprise AI engineers",
+          "page_age": "3 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Google Gemini enterprise agent \"Gemini at Work\" October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.unite.ai/google-cloud-unveils-gemini-its-universal-agent-for-work/",
+          "title": "Google Cloud Unveils Gemini, Its Universal Agent for Work",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.google.com/read/CBMibEFVX3lxTE10b3pzV0h6VjhSd0d2bUpoaktyYmVoa1ozNW1ZbE15dUY0MkltSlhta3hDMjFTM3BVdk9UUW9mMDJMWkZMbVpxeFJsV3RYRGQ3eG82U29YVTItVXp1Zko5cTZWdGp5SkJhOHdfUQ?hl=en-US&gl=US&ceid=US%3Aen",
+          "title": "Google Cloud announces 'Gemini agent' as ‘universal agent for work’",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.neowin.net/news/google-cloud-unveils-universal-gemini-agent-at-gemini-at-work-2026/",
+          "title": "Google Cloud unveils universal Gemini agent at Gemini at Work 2026 - Neowin",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/alerts/google-cloud-unveils-universal-gemini-agent-with-its-own-gmail-calendar-and",
+          "title": "Google Cloud Unveils Universal Gemini Agent With Its Own Gmail, Calendar, and Drive for Multi-Day Enterprise Jobs",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://9to5google.com/2026/10/08/gemini-agent-google-cloud/",
+          "title": "Google Cloud announces 'Gemini agent' as ‘universal agent for work’",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://tbreak.com/google-cloud-gemini-agent-universal-work/",
+          "title": "Google Cloud launches Gemini agent as a universal agent for work",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Gemini_Enterprise_Agent_Platform",
+          "title": "Gemini Enterprise Agent Platform",
+          "page_age": null
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/",
+          "title": "Google Cloud introduces the Gemini agent.",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finance.biggo.com/news/0c0ef6e6-cdda-47bd-a7ee-4a46b170383a",
+          "title": "Google Cloud Unveils Gemini Universal Work Agent, Enabling Enterprise Users to Handle Q&A, Content Creation, and Coding in a Single Window — BigGo Finance",
+          "page_age": "0 days ago"
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "ChatGPTに新型「GPT-6」、有料版から順次展開",
+      "sources": [
+        {
+          "name": "9to5Mac",
+          "url": "https://9to5mac.com/2026/10/07/openai-brings-gpt-6-to-chatgpt-and-debuts-intelligent-ui/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI announcement October 2026"
+          ]
+        },
+        {
+          "name": "OpenAI公式",
+          "url": "https://openai.com/news/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI announcement October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "Google、企業向け万能AIエージェント発表",
+      "sources": [
+        {
+          "name": "9to5Google",
+          "url": "https://9to5google.com/2026/10/08/gemini-agent-google-cloud/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Google Gemini enterprise agent \"Gemini at Work\" October 2026"
+          ]
+        },
+        {
+          "name": "Google公式ブログ",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Google Gemini enterprise agent \"Gemini at Work\" October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "サムスン、AI特需で四半期利益8兆円超に",
+      "sources": [
+        {
+          "name": "RTE",
+          "url": "https://www.rte.ie/news/business/2026/1008/1594493-samsung-quarterly-results/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Samsung record profit AI chip boom Q3 2026 $80 billion"
+          ]
+        },
+        {
+          "name": "Quartz",
+          "url": "https://qz.com/samsung-q3-2026-record-profit-ai-chips-100826",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Samsung record profit AI chip boom Q3 2026 $80 billion"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "MicrosoftとNVIDIA、AI搭載PCを16日発売",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/07/microsoft-starts-taking-preorders-for-2599-surface-laptop-ultra.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Microsoft Surface Laptop Ultra NVIDIA chip price announcement"
+          ]
+        },
+        {
+          "name": "Axios",
+          "url": "https://www.axios.com/2026/10/07/microsoft-looks-to-reboot-the-ai-pc-with-nvidia",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Microsoft Surface Laptop Ultra NVIDIA chip price announcement"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "ユタ州、AIがにきび薬を処方する実証実験",
+      "sources": [
+        {
+          "name": "Newsweek",
+          "url": "https://www.newsweek.com/ai-prescriptions-here-utah-launches-first-us-pilot-12528553",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Utah AI scan face acne medication prescription CNET"
+          ]
+        },
+        {
+          "name": "ABC News",
+          "url": "https://abcnews.com/US/utah-medical-company-announces-ai-powered-prescriptions/story?id=137043840",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Utah AI scan face acne medication prescription CNET"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 6,
+      "headline": "OpenAI、「College Planner」で大学出願を支援",
+      "sources": [
+        {
+          "name": "OpenAI公式",
+          "url": "https://openai.com/index/teens-learn-and-plan/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "ChatGPT for Teens College Planner OpenAI announcement"
+          ]
+        },
+        {
+          "name": "Fox Business",
+          "url": "https://www.foxbusiness.com/technology/openai-launches-college-planner-chatgpt-teens-track-application-financial-aid",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "ChatGPT for Teens College Planner OpenAI announcement"
+          ]
+        }
+      ]
+    }
+  ]
+}
