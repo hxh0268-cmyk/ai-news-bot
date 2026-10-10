@@ -1,0 +1,701 @@
+{
+  "date": "2026-10-10",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 10,
+    "search_errors": 0,
+    "results": 90,
+    "sources": 15,
+    "sources_in_search_results": 15,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI news October 9 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://solutionsreview.com/ai-news-for-the-week-of-october-9-updates-from-honeycomb-io-ninjatech-ai-oracle-more/",
+          "title": "AI News for the Week of October 9; Updates from Honeycomb.io, NinjaTech AI, Oracle & More - Solutions Review",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://aisdg.substack.com/p/ai-news-for-october-9-2026",
+          "title": "AI News for October 9, 2026 - by Russ McGuire",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.techpolicy.press/",
+          "title": "Tech Policy Press - Technology and Democracy",
+          "page_age": "252 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://aidapted.ro/en/articles/ai-news-october-9-2026/",
+          "title": "AI News, October 9, 2026: Manus, Gemini Agent, OpenAI",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://bestmediainfo.com/mediainfo/advertising/top-advertising-marketing-and-media-news-headlines-of-today-october-9-2026-12658641",
+          "title": "Top Advertising, Marketing and Media news headlines of today - October 9, 2026",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2021_in_artificial_intelligence",
+          "title": "2021 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI-generated_content_in_American_politics",
+          "title": "AI-generated content in American politics",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "AI news October 8 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/ai-news-today/edition/2026-10-08",
+          "title": "AI News for October 8, 2026 — Daily Edition",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://riorundown.substack.com/p/trending-ai-news-oct-08-2026",
+          "title": "Trending AI News — Oct 08, 2026 - by Wes Henderson",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://fortune.com/section/artificial-intelligence/",
+          "title": "AI News, Artificial Intelligence Trends & Market Impact",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2017_in_artificial_intelligence",
+          "title": "2017 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2021_in_artificial_intelligence",
+          "title": "2021 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://www.unrot.co/ai-news/2026/10/8",
+          "title": "Unrot",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2026_in_artificial_intelligence",
+          "title": "2026 in artificial intelligence",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Common Sense Media ChatGPT Teens \"Unacceptable Risk\" rating",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.yahoo.com/news/us/articles/common-sense-media-rates-chatgpt-120122522.html",
+          "title": "Common Sense Media rates ChatGPT for Teens an unacceptable risk",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://qz.com/common-sense-media-chatgpt-teens-unacceptable-risk-100726",
+          "title": "Common Sense Media rates ChatGPT for Teens an unacceptable risk",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://institute.commonsensemedia.org/sites/default/files/risk-assessments/csm-ai-risk-assessment-chatgpt-for-teens-10052026_0.pdf",
+          "title": "AI RISK ASSESSMENT ChatGPT for Teens",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://institute.commonsensemedia.org/risk-assessments/chatgpt-teens",
+          "title": "ChatGPT for Teens Risk Assessment",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.commonsensemedia.org/press-releases/chatgpt-for-teens-poses-unacceptable-risk-to-kids-common-sense-media-finds",
+          "title": "ChatGPT for Teens Poses Unacceptable Risk to Kids, Common Sense Media Finds",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://cellcog.ai/blog/chatgpt-for-teens-common-sense-media/",
+          "title": "ChatGPT for Teens Rated Unacceptable Risk by Common Sense",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://agentlocker.ai/news/common-sense-media-rates-chatgpt-for-teens-an-unacceptable-risk",
+          "title": "Common Sense Media Rates ChatGPT for Teens an \"Unacceptable Risk\" - AI Agent Blog",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://ua.news/en/technologies/common-sense-media-nazvala-chatgpt-for-teens-nepriiniatnim-rizikom-techcrunch",
+          "title": "Common Sense Media calls ChatGPT for Teens an unacceptable risk",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://time.news/common-sense-media-rates-chatgpt-for-teens-an-unacceptable-risk/",
+          "title": "Common Sense Media Rates ChatGPT for Teens an Unacceptable Risk - Time News",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Wikimedia OpenAI agents Wikidata outage Ars Technica",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/alerts/wikimedia-says-rogue-openai-agents-probed-tools-flooded-servers",
+          "title": "Wikimedia says 'rogue' OpenAI agents probed tools, flooded servers",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.eweek.com/news/openai-rogue-agents-wikimedia-outage/",
+          "title": "OpenAI Rogue Agents and Wikimedia Outage Explained",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://en.cryptonomist.ch/2026/10/07/openai-agents-wikipedia-hacking/",
+          "title": "OpenAI agents’ Wikipedia hacking attempts raised concerns after millions of requests",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.theregister.com/ai-and-ml/2026/10/06/wikimedia-foundation-comes-forward-as-latest-openai-agent-assault-victim/5301400",
+          "title": "Wikimedia Foundation comes forward as latest OpenAI agent assault victim",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.helpnetsecurity.com/2026/10/06/openai-rogue-agents-wikimedia-wikipedia/",
+          "title": "Rogue OpenAI agents made unauthorized Wikipedia edits and millions of requests to Wikimedia - Help Net Security",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.sofx.com/wikimedia-links-rogue-openai-agents-to-massive-data-service-disruption/",
+          "title": "Wikimedia Links Rogue OpenAI Agents to Massive Data Service Disruption",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://pupuweb.com/ai-news-update-did-openais-web-agents-accidentally-crash-wikidata-by-overloading-its-servers-and-more/",
+          "title": "AI News Update: Did OpenAI's Web Agents Accidentally Crash Wikidata by Overloading Its Servers? and more",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.technology.org/2026/10/06/wikimedia-openai-rogue-agents-wikidata-outage/",
+          "title": "Wikimedia Finds Rogue OpenAI Agents on Its Wikis - Technology Org",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://ua.news/en/technologies/wikimedia-zaiavila-pro-mozhlivii-zviazok-zboiu-z-agentami-openai-the-verge",
+          "title": "Wikimedia links possible Wikidata outage to OpenAI agents — The Verge",
+          "page_age": "4 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Manus raises $500 million funding October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.gurufocus.com/news/9115044/ai-startup-manus-raises-500m-in-funding-round-led-by-tencent-tcehy",
+          "title": "AI Startup Manus Raises $500M in Funding Round Led by Tencent (TCEHY)",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.gurufocus.com/news/9116877/chinese-ai-startup-manus-raises-500m-amid-meta-platforms-meta-acquisition-halt",
+          "title": "Chinese AI Startup Manus Raises $500M Amid Meta Platforms (META) Acquisition Halt",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://qz.com/manus-funding-round-meta-acquisition-china-100826",
+          "title": "Manus raised $500 million in its first funding round since China blocked Meta's acquisition",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://techxplore.com/news/2026-10-ai-startup-manus-million-meta.html",
+          "title": "AI startup Manus raises $500 million after Meta acquisition blocked by China",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.pymnts.com/news/investment-tracker/2026/manus-raises-500-million-after-china-blocks-metas-acquisition/",
+          "title": "Manus Raises $500 Million After China Blocks Meta’s Acquisition",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-manus-raises-500m-075135971.html",
+          "title": "AI startup Manus raises $500m after Meta acquisition blocked by China",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/08/manus-fund-raise-meta-muse-tencent.html",
+          "title": "AI startup Manus raises $500 million in first funding round since Meta breakup",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://siliconangle.com/2026/10/08/ai-agent-developer-manus-raises-500m-at-reported-4b-valuation",
+          "title": "AI agent developer Manus raises $500M+ at reported $4B valuation - SiliconANGLE",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.vespernews.com/en/news/18fcfbcb-0730-4cb5-a9e6-850c3755f038",
+          "title": "Manus raises $500 million in first funding round since Meta deal unwound · Vesper",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Trump administration suspends green cards Microsoft Vance foreign workers October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.inquirer.com/news/nation-world/microsoft-green-card-program-foreign-workers-20261008.html",
+          "title": "The Trump administration is suspending Microsoft from a green card program, alleging fraud",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.usnews.com/news/business/articles/2026-10-08/vance-says-microsoft-is-being-suspended-from-program-to-apply-for-green-cards-for-h-1b-visa-workers",
+          "title": "The Trump Administration Is Suspending Microsoft From a Green Card Program, Alleging Fraud",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.clickorlando.com/business/2026/10/08/vance-says-microsoft-is-being-suspended-from-program-to-apply-for-green-cards-for-h-1b-visa-workers/",
+          "title": "The Trump administration is suspending Microsoft from a green card program, alleging fraud",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/08/us-bars-microsoft-adobe-and-major-it-firms-from-green-card-program-for-skilled-foreign-workers/",
+          "title": "US bars Microsoft, Adobe, and major IT firms from green card program for skilled foreign workers",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-10-08/why-trump-suspended-microsoft-and-other-tech-firms-from-a-green-card-program",
+          "title": "Why Trump Suspended Microsoft and Other Tech Firms From a Green Card Program - Bloomberg",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.jdsupra.com/topics/foreign-workers/department-of-homeland-security-dhs/green-cards",
+          "title": "News & Analysis as of",
+          "page_age": null
+        },
+        {
+          "url": "https://www.jdsupra.com/topics/green-cards",
+          "title": "News & Analysis as of",
+          "page_age": null
+        },
+        {
+          "url": "https://www.jdsupra.com/authors/alan-perkins/trump-administration/",
+          "title": "Latest Posts › Trump Administration",
+          "page_age": null
+        },
+        {
+          "url": "https://www.jdsupra.com/authors/melany-savitt/trump-administration/",
+          "title": "Latest Posts › Trump Administration",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Airbnb AI resolves half support tickets Chesky October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://getscuttlebutt.substack.com/p/brian-chesky-almost-half-of-airbnbs",
+          "title": "Brian Chesky: almost half of Airbnb's support tickets are now handled by AI",
+          "page_age": "11 days ago"
+        },
+        {
+          "url": "https://www.customerexperiencedive.com/news/airbnb-ai-assistant-resolves-customer-inquiries/819734/",
+          "title": "Airbnb’s AI assistant resolves 40% of customer inquiries",
+          "page_age": "154 days ago"
+        },
+        {
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/airbnb-is-weaving-ai-into-every-step-of-a-trip/",
+          "title": "Airbnb Tests AI Search After Automating 45% of Support",
+          "page_age": "50 days ago"
+        },
+        {
+          "url": "https://www.airroi.com/blog/airbnb-ai-platform-transformation-hosts-2026",
+          "title": "Airbnb AI in 2026: What 60% AI-Generated Code Means for Every Host",
+          "page_age": "148 days ago"
+        },
+        {
+          "url": "https://www.webpronews.com/airbnbs-brian-chesky-bets-big-on-ai-to-outpace-rivals-and-reshape-travel",
+          "title": "Airbnb's Brian Chesky Bets Big on AI to Outpace Rivals and Reshape Travel",
+          "page_age": "25 days ago"
+        },
+        {
+          "url": "https://www.renascence.io/news/28606/airbnb-ai-assistant-now-resolves-nearly-45-of-support-queries",
+          "title": "Airbnb AI Assistant Now Resolves Nearly 45% of Support Queries — Renascence",
+          "page_age": "56 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/airbnb-ceo-says-ai-best-194029825.html",
+          "title": "Airbnb’s CEO Says AI Is the Best Thing That Ever Happened to His Company. Here’s Why",
+          "page_age": "26 days ago"
+        },
+        {
+          "url": "https://news.futureofai.org/2026/10/inside-out-ai-rebuilding-airbnb-behind.html",
+          "title": "Future of AI: Inside-Out AI: Rebuilding Airbnb Behind the Scenes and Across the Guest Experience...",
+          "page_age": "9 days ago"
+        },
+        {
+          "url": "https://www.latestly.com/technology/airbnb-ai-use-ceo-brian-chesky-says-artificial-intelligence-generates-60-of-company-code-and-resolves-40-of-support-issues-7423830.html",
+          "title": "Airbnb AI Use: CEO Brian Chesky Says Artificial Intelligence Generates 60% of Company Code and Resolves 40% of Support Issues",
+          "page_age": "152 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Anthropic Claude Haiku 5.5 release price per million tokens",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/anthropic-cuts-claude-haiku-5-184249360.html",
+          "title": "Anthropic cuts Claude Haiku 5.5 prices by up to 90%",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.neowin.net/news/anthropic-launches-claude-haiku-55-with-aggressive-pricing-but-it-consumes-far-more-tokens/",
+          "title": "Anthropic launches Claude Haiku 5.5 with aggressive pricing, but it consumes far more tokens - Neowin",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.mindstudio.ai/blog/claude-haiku-5-5-pricing",
+          "title": "Claude Haiku 5.5 Pricing: How Much Cheaper Is It Than Haiku 4.5?",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.vktr.com/ai-platforms/anthropic-cuts-smallmodel-pricing-90-with-claude-haiku-55/",
+          "title": "Anthropic Cuts Small-Model Pricing 90% With Claude Haiku 5.5",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/article/anthropic-reveals-haiku-55-model-as-ai-pricing-war-intensifies-180000423.html",
+          "title": "Anthropic reveals Haiku 5.5 model as AI pricing war intensifies",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna",
+          "title": "Anthropic launches Claude Haiku 5.5 with 90% API price reduction, matching GPT-6 Luna",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://tech-insider.org/anthropic-claude-haiku-5-5-price-cut-2026/",
+          "title": "Claude Haiku 5.5 Slashes Price 75% to $0.10/M [2026]",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.marktechpost.com/2026/10/07/anthropic-releases-claude-haiku-5-5-a-small-model-with-1m-context-priced-at-0-10-per-million-input-tokens/",
+          "title": "Anthropic Releases Claude Haiku 5.5: A Small Model With 1M Context Priced at $0.10 per Million Input Tokens - MarkTechPost",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.technology.org/2026/10/08/claude-haiku-5-5-anthropic-price-benchmarks/",
+          "title": "Claude Haiku 5.5 Cuts Token Prices by Up to 90% - Technology Org",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Finland halts Google data center Muhos Kajaani October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.gurufocus.com/news/9113105/finnish-regulators-halt-googles-data-center-work-amid-environmental-review-googl",
+          "title": "Finnish Regulators Halt Google's Data Center Work Amid Environmental Review (GOOGL)",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/science/articles/finland-orders-google-halt-data-171925720.html",
+          "title": "Finland Orders Google to Halt Data Centre Work Over Missing Environmental Reviews",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.euronews.com/2026/10/07/finland-orders-pause-on-google-ai-data-centre-over-environmental-concerns",
+          "title": "Finland orders pause on Google AI data centres over environmental concerns",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://courthousenews.com/finland-orders-halt-to-work-on-googles-data-center-sites/",
+          "title": "Finland orders halt to work on Google's data center sites",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/07/google-finland-data-center-halt.html",
+          "title": "Google ordered to halt work on two data centers in ‘Texas of Europe’",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.tradingpedia.com/2026/10/07/finland-halts-google-data-center-work-for-eco-review/",
+          "title": "Finland Halts Google Data Center Work for Eco Review",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.briefs.co/news/finland-orders-google-to-pause-work-at-two-data-center-sites/",
+          "title": "Finland Halts Google Data Center Work",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.indexbox.io/blog/finland-halts-google-data-centre-work-over-environmental-impact-assessment-failures/",
+          "title": "Finland Orders Google Data Centre Work to Stop in Muhos and Kajaani - News and Statistics - IndexBox",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.nordiskpost.com/2026/10/07/google-data-centres-finland-muhos-kajaani-halted/",
+          "title": "Finland tells Google to halt data centre work in Muhos and Kajaani - NordiskPost",
+          "page_age": "2 days ago"
+        }
+      ]
+    },
+    {
+      "query": "India MeitY advisory AI generated content deepfake label October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.freshfields.com/en/our-thinking/blogs/technology-quotient/india-targets-deepfakes-and-ai-generated-content-key-changes-under-meitys-2026-102mjwn",
+          "title": "India targets deepfakes and AI-generated content: key changes under MeitY’s 2026 amendments to the IT Rules",
+          "page_age": "228 days ago"
+        },
+        {
+          "url": "https://www.meity.gov.in/static/uploads/2025/10/8e40cdd134cd92dd783a37556428c370.pdf",
+          "title": "Page 1 of 3 Dated: 22nd October, 2025 EXPLANATORY NOTE",
+          "page_age": "353 days ago"
+        },
+        {
+          "url": "https://www.careerindia.com/news/india-ai-regulation-2026-meity-consultation-safety-deepfakes-compliance-011-66783.html",
+          "title": "India AI Regulation 2026: MeitY Consultation Paper On Safety, Deepfakes, And Startup Compliance - Careerindia",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.ptcnews.tv/nation/india-it-rules-2026-deepfake-ai-generated-content-regulation-4421307",
+          "title": "India’s new IT Rules 2026: Deepfake crackdown, mandatory AI labels, 3-hour takedown deadline explained",
+          "page_age": "238 days ago"
+        },
+        {
+          "url": "https://www.courtkutchehry.com/pages/blog/india-ai-labelling-rules-2026-deepfake-takedown-it-amendment/",
+          "title": "India Mandates AI Labelling Under IT Rules 2026: Deepfakes Face 2–3 Hour Takedown Deadline",
+          "page_age": "235 days ago"
+        },
+        {
+          "url": "https://coingeek.com/india-proposes-law-to-label-ai-generated-social-media-content/",
+          "title": "India proposes law to label AI-generated social media content",
+          "page_age": "332 days ago"
+        },
+        {
+          "url": "https://www.gktoday.in/meity-proposes-new-it-rules-to-label-and-trace-deepfake-and-ai-generated-content/",
+          "title": "MeitY Proposes New IT Rules to Label and Trace Deepfake and AI-Generated Content",
+          "page_age": "353 days ago"
+        },
+        {
+          "url": "https://seekingalpha.com/news/4506516-india-proposes-rules-for-labeling-deepfakes-amid-potential-misuse-of-ai",
+          "title": "India proposes rules for labeling deepfakes amid potential misuse of AI: report",
+          "page_age": null
+        },
+        {
+          "url": "https://www.deccanherald.com/amp/story/business%2Ffocus-on-curbing-misuse-of-artificial-intelligence-as-meity-mandates-labelling-of-ai-generated-content-3773235",
+          "title": "business%2Ffocus on curbing misuse of artificial intelligence as meity mandates labelling of ai generated content 3773235",
+          "page_age": null
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "10代向けChatGPT、安全対策は足りているのか",
+      "sources": [
+        {
+          "name": "Common Sense Media",
+          "url": "https://www.commonsensemedia.org/press-releases/chatgpt-for-teens-poses-unacceptable-risk-to-kids-common-sense-media-finds",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Common Sense Media ChatGPT Teens \"Unacceptable Risk\" rating"
+          ]
+        },
+        {
+          "name": "Quartz",
+          "url": "https://qz.com/common-sense-media-chatgpt-teens-unacceptable-risk-100726",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Common Sense Media ChatGPT Teens \"Unacceptable Risk\" rating"
+          ]
+        },
+        {
+          "name": "Yahoo News",
+          "url": "https://www.yahoo.com/news/us/articles/common-sense-media-rates-chatgpt-120122522.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Common Sense Media ChatGPT Teens \"Unacceptable Risk\" rating"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "Manus、Meta破談後初の5億ドル調達",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/08/manus-fund-raise-meta-muse-tencent.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Manus raises $500 million funding October 2026"
+          ]
+        },
+        {
+          "name": "TechXplore",
+          "url": "https://techxplore.com/news/2026-10-ai-startup-manus-million-meta.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Manus raises $500 million funding October 2026"
+          ]
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/ai-startup-manus-raises-500m-075135971.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Manus raises $500 million funding October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "Wikipediaの障害に、AIエージェントが何を",
+      "sources": [
+        {
+          "name": "eWeek",
+          "url": "https://www.eweek.com/news/openai-rogue-agents-wikimedia-outage/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Wikimedia OpenAI agents Wikidata outage Ars Technica"
+          ]
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/ai-and-ml/2026/10/06/wikimedia-foundation-comes-forward-as-latest-openai-agent-assault-victim/5301400",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Wikimedia OpenAI agents Wikidata outage Ars Technica"
+          ]
+        },
+        {
+          "name": "Help Net Security",
+          "url": "https://www.helpnetsecurity.com/2026/10/06/openai-rogue-agents-wikimedia-wikipedia/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Wikimedia OpenAI agents Wikidata outage Ars Technica"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "Claude新小型モデル、価格は10分の1に",
+      "sources": [
+        {
+          "name": "VKTR",
+          "url": "https://www.vktr.com/ai-platforms/anthropic-cuts-smallmodel-pricing-90-with-claude-haiku-55/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Claude Haiku 5.5 release price per million tokens"
+          ]
+        },
+        {
+          "name": "VentureBeat",
+          "url": "https://venturebeat.com/technology/anthropic-launches-claude-haiku-5-5-with-90-api-price-reduction-matching-gpt-6-luna",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Claude Haiku 5.5 release price per million tokens"
+          ]
+        },
+        {
+          "name": "MarkTechPost",
+          "url": "https://www.marktechpost.com/2026/10/07/anthropic-releases-claude-haiku-5-5-a-small-model-with-1m-context-priced-at-0-10-per-million-input-tokens/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Claude Haiku 5.5 release price per million tokens"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "フィンランド、Googleのデータセンター建設停止",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/07/google-finland-data-center-halt.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Finland halts Google data center Muhos Kajaani October 2026"
+          ]
+        },
+        {
+          "name": "Euronews",
+          "url": "https://www.euronews.com/2026/10/07/finland-orders-pause-on-google-ai-data-centre-over-environmental-concerns",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Finland halts Google data center Muhos Kajaani October 2026"
+          ]
+        },
+        {
+          "name": "Courthouse News",
+          "url": "https://courthousenews.com/finland-orders-halt-to-work-on-googles-data-center-sites/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Finland halts Google data center Muhos Kajaani October 2026"
+          ]
+        }
+      ]
+    }
+  ]
+}
