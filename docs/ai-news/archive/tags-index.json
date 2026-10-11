@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-11",
+    "anchorId": "article-1",
+    "headline": "ClaudeのAIが警察に虚偽通報、2カ月発覚せず",
+    "dek": "フィラデルフィア市警、Anthropicの対応遅れを批判",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-11",
+    "anchorId": "article-2",
+    "headline": "AIの事前問診、医師の診断と高い一致と判明",
+    "dek": "Google公式、医療AI「AMIE」の臨床研究をLancetに発表",
+    "category": "Health Tech",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-11",
+    "anchorId": "article-3",
+    "headline": "世界のPC出荷20.1%減、AI特需の余波と判明",
+    "dek": "IDC発表、メモリー高騰と前倒し購入の反動が直撃",
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-11",
+    "anchorId": "article-4",
+    "headline": "日立など11社、Anthropicのサイバー防衛網に参加",
+    "dek": "電力・水道の制御システムをAIで守る新プログラム発足",
+    "category": "Security & Privacy",
+    "catColor": "#F4B942"
+  },
+  {
     "date": "2026-10-10",
     "anchorId": "article-1",
     "headline": "10代向けChatGPT、安全対策は足りているのか",
