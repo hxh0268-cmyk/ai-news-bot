@@ -1,0 +1,679 @@
+{
+  "date": "2026-10-11",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 10,
+    "search_errors": 0,
+    "results": 91,
+    "sources": 12,
+    "sources_in_search_results": 12,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI news October 10 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://riorundown.substack.com/p/trending-ai-news-oct-10-2026",
+          "title": "Trending AI News — Oct 10, 2026 - by Wes Henderson",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://agilebrandguide.com/yesterdays-marketing-technology-ai-news-october-10-2026/",
+          "title": "Yesterday's Marketing Technology & AI News: October 10, 2026 - The Agile Brand Guide®",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+          "title": "AI Agents News — Week of October 10, 2026 (Daily Updates)",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://hervecuviliez.substack.com/p/market-news-saturday-10-october-2026",
+          "title": "Market News — Saturday 10 October 2026 - by Herve Cuviliez",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.un.org/en/story/2026/10/1168529",
+          "title": "‘The clock on AI regulation is ticking’, warns UN rights chief",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/",
+          "title": "AI News: Artificial Intelligence Stories, Ranked",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://www.foxnews.com/live-news/ai-super-intelligence-safety-10-06",
+          "title": "OpenAI, Anthropic, Meta, Google stop short of AI safety guarantee",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2021_in_artificial_intelligence",
+          "title": "2021 in artificial intelligence",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "AI 発表 2026年10月10日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://github.com/alpaca-23/test/issues/302",
+          "title": "【AI News】2026年10月10日 生成AIニュースダイジェスト · Issue #302 · alpaca-23/test",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://perkin0909.substack.com/p/2026-10-10",
+          "title": "科技與商業簡報：2026 年 10 月 10 日（早報） - Perkin's Substack",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://github.com/shoji-miyoshi/test/issues/192",
+          "title": "AI最新ニュース 2026-10-10 · Issue #192 · shoji-miyoshi/test",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/It%27s_You_(Ai_song)",
+          "title": "It%27s You (Ai song)",
+          "page_age": null
+        },
+        {
+          "url": "https://snowsystem.net/ai/ai-news-202610/",
+          "title": "【2026年10月】主要AIニュースまとめ｜Gemini 4・GPT-6.1・超知能協定",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/09/ai-daily-news-2026-10-08/",
+          "title": "生成AIニュース 昨日【2026年10月8日（木）】のAI公式発表を3分でチェック",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/10/ai-daily-news-2026-10-09/",
+          "title": "生成AIニュース 昨日【2026年10月9日（金）】のAI公式発表を3分でチェック",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp/gtc/session-catalog/sessions/gtc26-ex82371/",
+          "title": "AI カンファレンス & エキスポ 2026 年 3 月 16 ~ 19 日 | 基調講演 3 月 16 日 | ワークショップ 3 月 15 日 | サンノゼとバーチャル",
+          "page_age": null
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp/gtc/session-catalog/sessions/gtc26-cwes82212",
+          "title": "AI カンファレンス & エキスポ 2026 年 3 月 16 ~ 19 日 | 基調講演 3 月 16 日 | ワークショップ 3 月 15 日 | サンノゼとバーチャル",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Google AMIE Lancet 診断AI 臨床研究",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://sites.research.google/gr/amie/",
+          "title": "AMIE",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.unite.ai/googles-amie-primary-care-feasibility-study-published-in-the-lancet/",
+          "title": "Google’s AMIE Primary Care Feasibility Study Published in The Lancet",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://blog.google/innovation-and-ai/technology/health/amie-clinical-study-lancet/",
+          "title": "Study in The Lancet suggests AI could improve patient-physician relationships.",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.aiposthub.com/google-amie-lancet-study-differential-diagnosis-supervision/",
+          "title": "Google AMIE 刊登 Lancet：90%七候選診斷與醫師監督限制",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.techbuzz.ai/articles/google-s-amie-ai-shows-promise-in-lancet-study",
+          "title": "Google's AMIE AI Shows Promise in Lancet Study",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.memesita.com/google-ai-chatbot-amie-evaluated-98-patients-in-lancet-study/",
+          "title": "Google AI chatbot AMIE evaluated 98 patients in Lancet study - Memesita",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.world-today-news.com/google-ai-amie-matched-human-diagnoses-in-90-of-lancet-study-cases/",
+          "title": "Google AI Amie matched human diagnoses in 90% of Lancet study cases - World Today News",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.newsdirectory3.com/google-amie-study-tests-medical-ai-with-patients-under-doctors/",
+          "title": "Google AMIE study tests medical AI with patients under doctors - News Directory 3",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://world-today-journal.com/google-ai-pre-visit-chatbot-safely-matches-doctor-diagnoses-in-study/",
+          "title": "Google AI Pre-Visit Chatbot Safely Matches Doctor Diagnoses in Study - World Today Journal",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "OpenAI ChatGPT 透かし EU watermark AI text",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://interestingengineering.com/ai-robotics/openai-chatgpt-invisible-watermarks-eu",
+          "title": "OpenAI adds invisible watermarks to ChatGPT text under EU rules",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu/",
+          "title": "OpenAI will start watermarking ChatGPT's text in the EU",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://the-decoder.com/openai-will-watermark-chatgpt-text-in-the-eu-but-makes-it-optional-for-api-users-worldwide/",
+          "title": "OpenAI will watermark ChatGPT text in the EU but makes it optional for API users worldwide",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://www.businesstoday.in/amp/technology/artificial-intelligence/story/openai-plans-to-watermark-chatgpt-and-codex-text-output-in-eu-amid-ai-transparency-push-559728-2026-10-06",
+          "title": "OpenAI plans to watermark ChatGPT and Codex text output in EU amid AI transparency push - BusinessToday",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://www.techrepublic.com/article/news-openai-chatgpt-codex-watermark-emea-eu/",
+          "title": "OpenAI to Watermark ChatGPT and Codex Text in EU",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.bitdefender.com/en-us/blog/hotforsecurity/openai-invisible-watermark-chatgpt-codex-text",
+          "title": "OpenAI is adding invisible watermarks to ChatGPT text. What this means for you",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://www.bleepingcomputer.com/news/artificial-intelligence/openai-is-adding-invisible-watermarks-to-chatgpt-and-codex-text-in-the-eu/",
+          "title": "OpenAI is adding invisible watermarks to ChatGPT and Codex text in the EU",
+          "page_age": "5 days ago"
+        },
+        {
+          "url": "https://www.searchenginejournal.com/openai-to-watermark-chatgpt-text-in-the-eu-opens-api-opt-in/592014/",
+          "title": "OpenAI To Watermark ChatGPT Text In The EU, Opens API Opt-In",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://cellcog.ai/blog/openai-text-watermark-eu/",
+          "title": "OpenAI Text Watermark: ChatGPT EU Rollout and textGrain",
+          "page_age": "3 days ago"
+        }
+      ]
+    },
+    {
+      "query": "PC出荷 20%減 関税 AI半導体 2026年10月",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://gigazine.net/news/20261010-pc-market-shipments-fall-20-q3-2026",
+          "title": "2026年第3四半期のPC出荷台数は前年比で20.1％も減少 - GIGAZINE",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.sbbit.jp/article/cont1/187385",
+          "title": "世界のPC出荷、7～9月期は前年同期比20.1％減の6,270万台 米IDC発表、2四半期連続減",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://pasqualepillitteri.it/ja/news/22272/pc-shukka-20-1-gen-idc",
+          "title": "PC出荷台数が20.1%減、IDCは在庫の前倒し購入とメモリ高を要因に挙げる",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://ettoday.net/news/20261010/3252254.htm",
+          "title": "電腦太貴了、全球銷量暴跌 20%！專家直言：很難降價",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://poweruse.seesaa.net/article/521744618.html",
+          "title": "PC出荷台数は2026年第3四半期に20.1%減少…… 供給価格高騰で需要急減: なんとなく綴ってみた",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://xenospectrum.com/pc-shipments-inventory-price-pressure/",
+          "title": "世界PC出荷20.1%減、在庫が余っても値下がりしにくい理由",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.gadget2ch.com/archives/post-280600.html",
+          "title": "世界のPC出荷台数、前年同期比20.1％減ｗｗｗｗｗｗｗｗ",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://eetimes.itmedia.co.jp/ee/articles/2603/05/news048.html",
+          "title": "米国がAIチップの対中輸出を再開 米中は「管理された相互依存」に：半導体企業は板挟み状態（1/2 ページ） - EE Times Japan",
+          "page_age": "219 days ago"
+        },
+        {
+          "url": "https://gadget.e-sakenomi.com/pc/2026101049886",
+          "title": "【悲報】PC市場出荷、2割減で逝く…10台出てたところが8台になる重さ、高いんだって - 酒呑ガジェット",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Anthropic Claude 誤報 警察 フィラデルフィア 殺人事件 通報",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://news.yahoo.co.jp/expert/articles/bfbf4fe9dba5bab71f343f654b2223c75be065c5",
+          "title": "AnthropicのAI暴走、殺人事件に偽の情報提供、偽のビザ申請 米政府「通報・是正は義務」（平和博） - エキスパート - Yahoo!ニュース",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://gigazine.net/news/20261011-anthropic-ai-gave-fake-tip-unsolved-homicide",
+          "title": "AnthropicのAIが未解決殺人事件に関する虚偽の情報を提供 - GIGAZINE",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://jp.beincrypto.com/claude-ai-fake-murder-tip-police",
+          "title": "クロードAI、警察に偽の殺人情報提供",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://remio.ai/ja/post/anthropic-ai-false-tip-exposed-a-dangerous-gap-in-agent-testing-ja",
+          "title": "Anthropic AIの虚偽情報提供が露呈させた、エージェントテストの危険な隙",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://xenospectrum.com/anthropic-ai-false-homicide-tip",
+          "title": "殺人事件の情報をAIが捏造し警察へ送信、Anthropicのテストで何が起きたか",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.cbc.ca/news/world/ai-agents-false-homicide-tip-anthropic-claude-9.7377169",
+          "title": "Anthropic's Claude AI submits a false tip on a Philadelphia unsolved homicide case",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.upi.com/Top_News/US/2026/10/10/anthropic-claude-philadelphia-police/2781791671461/",
+          "title": "Anthropic AI model sends police false tip about unsolved homicide - UPI.com",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/us/articles/anthropic-ai-model-sent-fake-221343703.html",
+          "title": "Anthropic AI model sent fake murder tip to Philadelphia police",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/us/articles/philadelphia-police-receive-false-homicide-193119727.html",
+          "title": "Philadelphia police receive false homicide tip from Anthropic AI model",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "ソフトバンク OR トヨタ OR NTT AI 発表 2026年10月9",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://xtech.nikkei.com/atcl/nxt/column/18/00687/060200245/",
+          "title": "AIに猛進するソフトバンクG、トヨタ抜き時価総額国内1位も目標に程遠い",
+          "page_age": "130 days ago"
+        },
+        {
+          "url": "https://www.issoh.co.jp/tech/details/11749/",
+          "title": "Noetra（旧・日本AI基盤モデル開発）とは｜出資企業とNTT・富士通の立ち位置",
+          "page_age": "88 days ago"
+        },
+        {
+          "url": "https://equity.jiji.com/evening_check/2026100100915",
+          "title": "ソフトバンクＧ、４．７兆円追加出資を完了＝オープンＡＩに - イブニングチェック - 時事エクイティ",
+          "page_age": null
+        },
+        {
+          "url": "https://www.softbank.jp/biz/about/ai/",
+          "title": "ソフトバンクが描くAIとの共存社会",
+          "page_age": "117 days ago"
+        },
+        {
+          "url": "https://businessnetwork.jp/article/35871/",
+          "title": "ソフトバンク、AIガバナンス策定支援サービスを提供開始｜BUSINESS NETWORK",
+          "page_age": "89 days ago"
+        },
+        {
+          "url": "https://ai-revolution.co.jp/media/what-is-japan-ai-foundation-model/",
+          "title": "日本AI基盤モデル開発とは？SoftBank・NEC・Honda・Sony 1兆パラメータ物理AIを徹底解説",
+          "page_age": "166 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC297QR0Z20C26A6000000/",
+          "title": "国産AIを44社連合で開発へ、官民でフィジカルAI推進 社名一覧 - 日本経済新聞",
+          "page_age": "103 days ago"
+        },
+        {
+          "url": "https://note.com/zephel01/n/n4993598ac473?hl=en",
+          "title": "Generative AI: Strategies and Competitive Outlook of 6 Major Japanese Companies [2026 Edition] — A Thorough Comparison of Fujitsu, NEC, Hitachi, NTT DATA, SoftBank, and Palantir —｜zephel01",
+          "page_age": "135 days ago"
+        },
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC1207B0S6A410C2000000/",
+          "title": "ソフトバンクが国産AIの新会社設立、NECやホンダなど8社出資 - 日本経済新聞",
+          "page_age": "181 days ago"
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp/gtc/session-catalog/sessions/gtc26-ex82371/",
+          "title": "AI カンファレンス & エキスポ 2026 年 3 月 16 ~ 19 日 | 基調講演 3 月 16 日 | ワークショップ 3 月 15 日 | サンノゼとバーチャル",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Meta Amazon AI announcement October 9 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/amazon-pushing-back-metas-ai-162912475.html",
+          "title": "Amazon is pushing back on Meta's new AI agent, and the reason matters for every online retailer",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.bizpacreview.com/2026/10/07/after-amazon-slammed-the-door-meta-rallies-partners-to-welcome-ai-shoppers-1662303/",
+          "title": "After Amazon slammed the door, Meta rallies partners to welcome AI shoppers",
+          "page_age": "3 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ray-Ban_Meta",
+          "title": "Ray-Ban Meta",
+          "page_age": null
+        },
+        {
+          "url": "https://www.engadget.com/2267230/everything-announced-at-meta-connect-2026/",
+          "title": "Everything announced at Meta Connect 2026 - Engadget",
+          "page_age": "17 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Horizon_Worlds",
+          "title": "Horizon Worlds",
+          "page_age": null
+        },
+        {
+          "url": "https://www.socialmediatoday.com/news/meta-introduces-new-ai-powered-tools-at-ad-week-2026/832288/",
+          "title": "Meta introduces new AI-powered tools at Advertising Week",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Alexandr_Wang",
+          "title": "Alexandr Wang",
+          "page_age": null
+        },
+        {
+          "url": "https://www.cnn.com/2026/09/28/tech/meta-muse-ai-agents-amazon",
+          "title": "AI agents promise to do everything for you. There may be a big wrinkle in that plan",
+          "page_age": "12 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Anthropic Cyber Mission 発足 電力網 水道 サイバー防衛",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.sbbit.jp/article/cont1/187365",
+          "title": "アンソロピック、サイバー防御の長期構想「Cyber Mission」 重要インフラとOSSが第1弾",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.sbbit.jp/article/cont1/187398",
+          "title": "日立製作所、米Anthropicの重要インフラ向けサイバー防衛プログラムに参画 電力や水道など制御システム対象、AIで脆弱性検出や修復の迅速化｜ビジネス+IT",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.salesforceben.com/anthropic-launches-cyber-mission-to-protect-infrastructure-from-attackers/",
+          "title": "Anthropic Launches ‘Cyber Mission’ to Protect Infrastructure From Attackers",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.tun.com/home/anthropic-launches-cyber-mission-to-protect-critical-infrastructure/",
+          "title": "Anthropic Launches Cyber Mission to Protect Critical Infrastructure - TUN",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.newsbytesapp.com/news/science/anthropic-launches-cyber-mission-to-help-secure-critical-software-systems/story",
+          "title": "Anthropic launches Cyber Mission to protect critical infrastructure from attacks",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://cellcog.ai/blog/anthropic-cyber-mission/",
+          "title": "Anthropic Cyber Mission: OSS Scanner and Grid Defense",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.yayafa.com/2906484/",
+          "title": "Anthropic、重要インフラとOSSを保護する「Cyber Mission」 - AI Watch - YAYAFA",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://mlq.ai/news/anthropic-launches-cyber-mission-for-critical-infrastructure-defenders/",
+          "title": "Anthropic Launches Cyber Mission for Critical Infrastructure Defenders",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://jp.headtopics.com/news/651101161041141293563-88615575",
+          "title": "Anthropic、サイバー防御の新たな取り組み「Cyber Mission」 OSS向け無料脆弱性スキャンや重要インフラ防御プログラムも",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "ChatGPT 新機能 10月9日 発表 ユーザー",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://forest.watch.impress.co.jp/docs/news/2134855.html",
+          "title": "「ChatGPT」に6つの新機能 ～「Site」の共同編集、ピン留めチャットの同期など - 窓の杜",
+          "page_age": "47 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/d782cbec80069e72e2472345b9873815e4d794cd",
+          "title": "OpenAI、ChatGPTでのGPT-6の提供開始と新機能「Intelligent UI」を発表（ケータイ Watch） - Yahoo!ニュース",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://help.openai.com/ja-jp/articles/6825453-chatgpt-%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%88",
+          "title": "ChatGPT — リリースノート",
+          "page_age": "112 days ago"
+        },
+        {
+          "url": "https://www.itmedia.co.jp/news/article/2610/08/2000002119/",
+          "title": "ChatGPT、無料版を含む全ユーザーに「GPT-6」 回答内に“操作できる画面”を生成する「Intelligent UI」搭載 - ITmedia NEWS",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://menext.jp/news/tool/chatgpt",
+          "title": "ChatGPT最新アップデート情報｜新機能・変更点を業務視点で解説｜ミーネクスト",
+          "page_age": null
+        },
+        {
+          "url": "https://mihata.jp/column/intelligent-ui-chatgpt",
+          "title": "ChatGPT Intelligent UIとは？回答が操作できる画面に【10月7日開始】",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://uravation.com/media/chatgpt-work-guide-2026/",
+          "title": "ChatGPT Workとは｜できること・料金・使い方【2026年10月】 ｜ 株式会社Uravation",
+          "page_age": "8 days ago"
+        },
+        {
+          "url": "https://openai.com/index/gpt-5-1/",
+          "title": "GPT-5.1：さらに賢く、より会話的になった ChatGPT",
+          "page_age": "333 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "title": "ChatGPT",
+          "page_age": null
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "ClaudeのAIが警察に虚偽通報、2カ月発覚せず",
+      "sources": [
+        {
+          "name": "GIGAZINE",
+          "url": "https://gigazine.net/news/20261011-anthropic-ai-gave-fake-tip-unsolved-homicide",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Claude 誤報 警察 フィラデルフィア 殺人事件 通報"
+          ]
+        },
+        {
+          "name": "CBC",
+          "url": "https://www.cbc.ca/news/world/ai-agents-false-homicide-tip-anthropic-claude-9.7377169",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Claude 誤報 警察 フィラデルフィア 殺人事件 通報"
+          ]
+        },
+        {
+          "name": "UPI",
+          "url": "https://www.upi.com/Top_News/US/2026/10/10/anthropic-claude-philadelphia-police/2781791671461/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Claude 誤報 警察 フィラデルフィア 殺人事件 通報"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "AIの事前問診、医師の診断と高い一致と判明",
+      "sources": [
+        {
+          "name": "Google公式ブログ",
+          "url": "https://blog.google/innovation-and-ai/technology/health/amie-clinical-study-lancet/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Google AMIE Lancet 診断AI 臨床研究"
+          ]
+        },
+        {
+          "name": "Unite.AI",
+          "url": "https://www.unite.ai/googles-amie-primary-care-feasibility-study-published-in-the-lancet/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Google AMIE Lancet 診断AI 臨床研究"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "世界のPC出荷20.1%減、AI特需の余波と判明",
+      "sources": [
+        {
+          "name": "GIGAZINE",
+          "url": "https://gigazine.net/news/20261010-pc-market-shipments-fall-20-q3-2026",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "PC出荷 20%減 関税 AI半導体 2026年10月"
+          ]
+        },
+        {
+          "name": "ビジネス+IT",
+          "url": "https://www.sbbit.jp/article/cont1/187385",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "PC出荷 20%減 関税 AI半導体 2026年10月"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "日立など11社、Anthropicのサイバー防衛網に参加",
+      "sources": [
+        {
+          "name": "ビジネス+IT",
+          "url": "https://www.sbbit.jp/article/cont1/187365",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Cyber Mission 発足 電力網 水道 サイバー防衛"
+          ]
+        },
+        {
+          "name": "ビジネス+IT",
+          "url": "https://www.sbbit.jp/article/cont1/187398",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Cyber Mission 発足 電力網 水道 サイバー防衛"
+          ]
+        },
+        {
+          "name": "Salesforce Ben",
+          "url": "https://www.salesforceben.com/anthropic-launches-cyber-mission-to-protect-infrastructure-from-attackers/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic Cyber Mission 発足 電力網 水道 サイバー防衛"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "AI購入代行Museに待った、Amazonが反発",
+      "sources": [
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/amazon-pushing-back-metas-ai-162912475.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Meta Amazon AI announcement October 9 2026"
+          ]
+        },
+        {
+          "name": "BizPacReview",
+          "url": "https://www.bizpacreview.com/2026/10/07/after-amazon-slammed-the-door-meta-rallies-partners-to-welcome-ai-shoppers-1662303/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Meta Amazon AI announcement October 9 2026"
+          ]
+        }
+      ]
+    }
+  ]
+}
