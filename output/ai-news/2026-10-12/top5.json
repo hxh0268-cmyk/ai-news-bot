@@ -3,17 +3,17 @@
     "importance": 1,
     "category": "Business",
     "catColor": "#F4B942",
-    "headline": "Amazon、Decart買収へ70億ドル規模の交渉",
+    "headline": "Amazon、Decart買収へ最大70億ドル規模の交渉",
     "dek": "Anthropicが撤退した買収先に、今度はAmazonが交渉",
     "body": [
-      "Amazonが、AI新興企業Decartの買収について話し合いを進めていることが分かった。The Wall Street Journalが10月11日、関係者の話として報じたもので、取引額は70億ドル規模に膨らむ可能性があるという。",
-      "Decartが手がけるのは、開発者が異なる半導体をまたいでAIモデルを柔軟に動かせるようにするソフトウェアだ。リアルタイムで映像編集ができるモデル「Lucy」、さらにロボティクスや自動運転システムの訓練・試験のために仮想環境を作り出す「Oasis」も開発している。",
+      "Amazonが、AI新興企業Decartの買収について話し合いを進めていることが分かった。The Wall Street Journalが10月11日、関係者の話として報じたもので、取引額は最大70億ドル規模に膨らむ可能性があるという。",
+      "Decartが手がけるのは、開発者が異なる半導体をまたいでAIモデルを柔軟に動かせるようにするソフトウェアだ。さらに、ゲームやロボットの訓練などに向けて3D環境を生成・シミュレーションするワールドモデル「Lucy」「Oasis」も開発している。",
       "実はこのDecart、Anthropicが一時60億ドル規模での買収に向けデューデリジェンスまで進めていた相手。それが9月に白紙に戻っている。Amazonは既にAnthropicの主要出資者でもあり、自分が支えている会社が一度見送った買収先を、今度は自ら追いかけるという妙な構図になっている。"
     ],
     "stats": [
       {
-        "n": "70億ドル",
-        "l": "Amazonが提示したとされる買収額"
+        "n": "最大70億ドル",
+        "l": "報じられた取引規模"
       },
       {
         "n": "4億ドル超",
@@ -39,9 +39,9 @@
       "AIチップ"
     ],
     "videoId": null,
-    "captionX": "Amazonが AI新興Decartの買収交渉中、総額70億ドル規模との報道。Anthropicが一度手を引いた相手を今度はAmazonが追う展開に。 #AI #Amazon",
+    "captionX": "Amazonが AI新興Decartの買収交渉中、総額は最大70億ドル規模との報道。Anthropicが一度手を引いた相手を今度はAmazonが追う展開に。 #AI #Amazon",
     "captionThreads": "AmazonがAIスタートアップDecartの買収を検討してるらしい。しかもこの会社、かつてAnthropicが買おうとして途中でやめた相手なんだよね。クラウド大手のAI争奪戦、まだ落ち着きそうにない。",
-    "captionInstagram": "Amazonが、AI新興企業Decartの買収について協議していることが分かりました。取引額は70億ドル規模になるとWall Street Journalが報じています。DecartはAIモデルを異なる半導体間で柔軟に動かすソフトウェアを手がける会社で、以前はAnthropicが買収に向けデューデリジェンスまで進めていたものの、9月に撤退した経緯があります。AIインフラをめぐる大手同士の駆け引きから目が離せません。 #AI #Amazon #Decart #買収 #テクノロジー",
+    "captionInstagram": "Amazonが、AI新興企業Decartの買収について協議していることが分かりました。取引額は最大70億ドル規模になるとWall Street Journalが報じています。DecartはAIモデルを異なる半導体間で柔軟に動かすソフトウェアを手がける会社で、以前はAnthropicが買収に向けデューデリジェンスまで進めていたものの、9月に撤退した経緯があります。AIインフラをめぐる大手同士の駆け引きから目が離せません。 #AI #Amazon #Decart #買収 #テクノロジー",
     "lifeRelevanceTag": "なし",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
@@ -55,7 +55,7 @@
     "body": [
       "NvidiaがAI新興企業Reflection AIへの追加出資、あるいは買収そのものについて協議していると、Financial Timesが10月10日に報じた。",
       "関係者によれば協議はまだ初期段階で、人材と技術を取り込む「アクハイア」方式を含め複数の形が検討されているという。この手法なら、長引きがちな規制当局の審査を回避できる可能性がある。",
-      "Nvidiaは既にReflection AIに8億ドルを出資している大株主だ。Reflectionは2026年のラウンドで250億ドルの評価額をつけたとされ、元DeepMind研究者らが2024年に立ち上げた会社で、ソフトウェア開発を自動化するオープンウェイトモデルを手がけている。"
+      "Nvidiaは既にReflection AIに8億ドルを出資している大株主だ。Reflectionは2026年のラウンドで250億ドルの評価額をつけたとされ、ソフトウェア開発を自動化するオープンウェイトモデルを手がけている。"
     ],
     "stats": [
       {
@@ -67,7 +67,7 @@
         "l": "Reflection AIの評価額"
       }
     ],
-    "why": "Nvidiaはチップを売るだけでなく、オープンウェイトモデルを開発する企業への出資・買収を通じて、OpenAIやAnthropic、Googleといった閉鎖的な大手モデル勢に対抗する陣営を育てようとしている。チップ大手がモデル開発企業を事実上取り込む動きは、業界の勢力図を塗り替えかねない。日本でも大手クラウドや通信各社がオープンモデルの採用を検討しており、こうした海外の再編は国内の技術選定にも波及しそうだ。",
+    "why": "Nvidiaはチップを売るだけでなく、オープンウェイトモデルを開発する企業への出資・買収を通じて、DeepSeekやKimiといった中国勢の安価なモデルに対抗する陣営を育てようとしている。チップ大手がモデル開発企業を事実上取り込む動きは、業界の勢力図を塗り替えかねない。日本でも大手クラウドや通信各社がオープンモデルの採用を検討しており、こうした海外の再編は国内の技術選定にも波及しそうだ。",
     "sourceLine": "Reuters、Yahoo Finance（2026年10月10日）",
     "sources": [
       {
@@ -88,7 +88,7 @@
     "videoId": null,
     "captionX": "NvidiaがAI新興Reflectionへの追加出資または買収を協議中、とFTが報道。オープンウェイト陣営をさらに強化する狙いか。 #Nvidia #AI",
     "captionThreads": "NvidiaがReflection AIへの出資を増やすか、丸ごと買うか検討中らしい。もう8億ドル入れてる相手なんだよね。チップ屋がモデル会社まで囲い込む時代になってきた。",
-    "captionInstagram": "NvidiaがAI新興企業Reflection AIへの追加出資、あるいは買収について協議していることが、Financial Timesの報道で分かりました。協議はまだ初期段階で、人材と技術を取り込む「アクハイア」方式も選択肢に入っているとのこと。Nvidiaは既に8億ドルをReflectionに出資済みで、同社はオープンウェイトモデルでOpenAIやAnthropicなど大手に対抗する存在として注目されています。 #Nvidia #AI #ReflectionAI #半導体 #オープンソースAI",
+    "captionInstagram": "NvidiaがAI新興企業Reflection AIへの追加出資、あるいは買収について協議していることが、Financial Timesの報道で分かりました。協議はまだ初期段階で、人材と技術を取り込む「アクハイア」方式も選択肢に入っているとのこと。Nvidiaは既に8億ドルをReflectionに出資済みで、同社はオープンウェイトモデルで、DeepSeekやKimiといった中国勢の安価なモデルに対抗する存在として注目されています。 #Nvidia #AI #ReflectionAI #半導体 #オープンソースAI",
     "lifeRelevanceTag": "なし",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
@@ -98,9 +98,9 @@
     "category": "Consumer Apps",
     "catColor": "#E1636F",
     "headline": "Claudeに新機能、資料作成はどう変わる？",
-    "dek": "Docs・Slides・Designが無料プランでも使い放題に",
+    "dek": "Docs・Slides・Designが無料プランでも利用可能に",
     "body": [
-      "Anthropicが10月上旬、新機能「Claude Dashboards」と「Claude Motion」をベータ版として公開した。あわせて、これまで一部プラン限定だった「Docs」「Slides」「Design」も、無料プランを含む全プランで使えるようになっている。",
+      "Anthropicが10月上旬、新機能「Claude Dashboards」と「Claude Motion」をベータ版として公開した。あわせて、「Docs」「Slides」「Design」もベータ版から正式版になり、無料プランを含む全プランで利用可能になった。",
       "Dashboardsは有料プラン向け機能で、Redshift、BigQuery、Snowflakeなどのデータ基盤とつなぎ、自然言語での質問からダッシュボードを自動で作ってくれる。Motionはチーム・エンタープライズプラン向けで、指示文から説明用アニメーションを作成し、MP4として書き出せる。",
       "Anthropicによれば、Claude上でこれまでに生まれた文書・プレゼン資料・デザインは4500万件を超えるという。"
     ],
@@ -110,12 +110,12 @@
         "l": "Claudeでこれまでに作成された文書・資料の件数"
       },
       {
-        "n": "2026年10月9日",
-        "l": "新機能が発表された日（日本時間）"
+        "n": "10月8日",
+        "l": "新機能が発表された日（米国時間）"
       }
     ],
-    "why": "これまで有料プラン限定だった文書・資料作成機能が無料でも使えるようになったことで、学生や個人ユーザーも含め裾野が広がりそうだ。企業向けのダッシュボード機能やアニメーション生成機能がいずれ個人向けプランにも広がれば、日常の資料作成の手間が大きく変わる可能性がある。日本でも大学や企業でClaudeの導入が進んでおり、今回の無料開放は利用者増につながりそうだ。",
-    "sourceLine": "Anthropic公式ブログ（2026年10月9日）",
+    "why": "文書・資料作成機能がベータ版から正式版になり、無料を含む全プランで利用可能になったことで、学生や個人ユーザーも含め裾野が広がりそうだ。企業向けのダッシュボード機能やアニメーション生成機能がいずれ個人向けプランにも広がれば、日常の資料作成の手間が大きく変わる可能性がある。",
+    "sourceLine": "Anthropic公式ブログ（米国時間2026年10月8日）",
     "sources": [
       {
         "name": "Anthropic公式ブログ",
@@ -129,9 +129,9 @@
       "Motion"
     ],
     "videoId": null,
-    "captionX": "Claudeに新機能「Dashboards」「Motion」がベータ登場。Docs・Slides・Designも無料プランで使えるように。 #Claude #Anthropic",
-    "captionThreads": "Claudeに新機能来た。データからダッシュボードを作る「Dashboards」と、説明動画が作れる「Motion」。地味に嬉しいのは、DocsとかSlidesが無料プランでも使えるようになったこと。",
-    "captionInstagram": "Anthropicが、Claudeの新機能「Dashboards」と「Motion」をベータ版として公開しました。Dashboardsは社内データをもとに自然言語でダッシュボードを作れる機能、Motionは説明用アニメーションをMP4で書き出せる機能です。さらに、これまで一部プランに限られていた「Docs」「Slides」「Design」が無料プランを含む全プランで解禁されました。Claudeでこれまでに作られた文書・資料は4500万件を超えるそうです。 #Claude #Anthropic #生成AI #資料作成 #業務効率化",
+    "captionX": "Claudeに新機能「Dashboards」「Motion」がベータ登場。Docs・Slides・Designも正式版になり、無料を含む全プランで利用可能に。 #Claude #Anthropic",
+    "captionThreads": "Claudeに新機能来た。データからダッシュボードを作る「Dashboards」と、説明動画が作れる「Motion」。地味に嬉しいのは、DocsとかSlidesが正式版になって、無料プランでも使えること。",
+    "captionInstagram": "Anthropicが、Claudeの新機能「Dashboards」と「Motion」をベータ版として公開しました。Dashboardsは社内データをもとに自然言語でダッシュボードを作れる機能、Motionは説明用アニメーションをMP4で書き出せる機能です。さらに、「Docs」「Slides」「Design」がベータ版から正式版になり、無料プランを含む全プランで利用可能になりました。Claudeでこれまでに作られた文書・資料は4500万件を超えるそうです。 #Claude #Anthropic #生成AI #資料作成 #業務効率化",
     "lifeRelevanceTag": "毎日使うアプリ・サービス",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
@@ -143,8 +143,8 @@
     "headline": "ChatGPT高速モード、速度8倍でも価格6倍に",
     "dek": "速度は最大8倍、でも料金は6倍に跳ね上がる",
     "body": [
-      "OpenAIが、コーディングやエージェント処理向けモデル「GPT-6.1 Sol」の高速版「Ultrafast」モードを発表した。Codex上では標準版に比べ最大8倍、APIでは最大6倍のトークン生成速度が出るという。",
-      "気になる料金は入力100万トークンあたり12ドル、出力60ドル。標準モード（入力2ドル、出力10ドル）のちょうど6倍だ。提供開始時点ではChatGPT WorkおよびCodex上で、上位プラン「Pro 500」や対象の企業・教育機関向けプランに限定されており、Plus、Businessなどでは使えない。"
+      "OpenAIが、コーディングやエージェント処理向けモデル「GPT-6.1 Sol」の高速版「Ultrafast」モードを発表した。Codex上では標準版に比べ最大8倍の速度が出るという。",
+      "気になる料金は入力100万トークンあたり12ドル、出力60ドル。標準モード（入力2ドル、出力10ドル）のちょうど6倍だ。"
     ],
     "stats": [
       {
@@ -156,7 +156,7 @@
         "l": "標準モードに対する利用料金の倍率"
       }
     ],
-    "why": "AIの進化が「賢さ」だけでなく「速さ」にも軸足を広げていることを象徴する発表で、コーディング支援やリアルタイムのエージェント処理など、応答速度がものを言う場面での活用が進みそうだ。とはいえ高速モードの料金は標準の6倍で、提供開始時点では上位プランや企業・教育機関向けプランに限られており、恩恵を受けられるユーザーは当面限定的だろう。日本でも企業向けプランを導入する大学や大企業が先に恩恵を受け、個人の無料・低価格プラン利用者との差が広がる可能性がある。",
+    "why": "AIの進化が「賢さ」だけでなく「速さ」にも軸足を広げていることを象徴する発表で、コーディング支援やリアルタイムのエージェント処理など、応答速度がものを言う場面での活用が進みそうだ。とはいえ高速モードの料金は標準の6倍で、恩恵を受けられるユーザーは当面限定的だろう。日本でも、高い料金を負担できる大企業などが先に恩恵を受け、個人利用者との差が広がる可能性がある。",
     "sourceLine": "Neowin、AWS（2026年10月9日）",
     "sources": [
       {
@@ -176,8 +176,8 @@
     ],
     "videoId": null,
     "captionX": "ChatGPT新モード「Ultrafast」、Codexで最大8倍速く動く。ただし料金は標準の6倍。 #ChatGPT #OpenAI",
-    "captionThreads": "OpenAIがChatGPT向けモデルに爆速モードを追加した。Codexだと最大8倍速いらしいけど、お値段も6倍。今のところ使えるのは上位プランと企業・教育機関向けプランだけ。",
-    "captionInstagram": "OpenAIが、コーディング・エージェント向けモデル「GPT-6.1 Sol」の高速版「Ultrafast」モードを発表しました。Codex上で標準版に比べ最大8倍、APIでは最大6倍のトークン生成速度を実現するとのこと。ただし料金は入力100万トークンあたり12ドル、出力60ドルと標準モードの6倍で、提供開始時点では上位プラン「Pro 500」や対象の企業・教育機関向けプランに限られています。AIの進化軸が「賢さ」だけでなく「速さ」にも広がってきました。 #ChatGPT #OpenAI #GPT6 #Codex #生成AI",
+    "captionThreads": "OpenAIがChatGPT向けモデルに爆速モードを追加した。Codexだと最大8倍速いらしいけど、お値段も6倍。",
+    "captionInstagram": "OpenAIが、コーディング・エージェント向けモデル「GPT-6.1 Sol」の高速版「Ultrafast」モードを発表しました。Codex上で標準版に比べ最大8倍の速度を実現するとのこと。ただし料金は入力100万トークンあたり12ドル、出力60ドルと標準モードの6倍です。AIの進化軸が「賢さ」だけでなく「速さ」にも広がってきました。 #ChatGPT #OpenAI #GPT6 #Codex #生成AI",
     "lifeRelevanceTag": "なし",
     "_affiliateKeywordsUsed": [],
     "_affiliateLinkCount": 0
