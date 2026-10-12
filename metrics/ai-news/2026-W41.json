@@ -8,11 +8,11 @@
     "prDeals": 0
   },
   "engagement": {
-    "totalImpressions": 0,
+    "totalImpressions": 76,
     "totalClicksToSite": 0,
     "followersGained_X": 0,
     "followersGained_Instagram": 0,
     "followersGained_Threads": 0
   },
-  "notes": "0は実績ではなく未入力を表す。このレポート（2026-W41.md）の集計対象は 9/28〜10/5 の日付フォルダで、週番号とずれている（週次レビューの週番号のずれ。10月中に対応予定）。W41（10/5〜10/11）の数字は 10/12 以降に入力する。"
+  "notes": "W41（10/5〜10/11）の実測。0は未入力ではなく実績。このファイルのレポート（2026-W41.md）の集計対象は9/28〜10/5の日付フォルダで、週番号とずれている（10月中に対応予定）。投稿は各チャンネル6件（1日投稿なし）、反応0・コメント0。totalImpressions は Threads 76・Instagram 0 の合計で、X は Buffer で取得できないため含まない。フォロワーは X が2→1（獲得0・減少1）、Threads・Instagram は0。totalClicksToSite は GA4 の utm（ai-news/threads）のエンゲージのあったセッション数。4件あったが、市区町村が Prineville・Forest City・Gallatin・Dublin（いずれも Meta のデータセンターの所在地）のため機械の訪問として除き、0とした。収益は0円。"
 }
