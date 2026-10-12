@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-12",
+    "anchorId": "article-1",
+    "headline": "Amazon、Decart買収へ70億ドル規模の交渉",
+    "dek": "Anthropicが撤退した買収先に、今度はAmazonが交渉",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-12",
+    "anchorId": "article-2",
+    "headline": "Nvidia、Reflection AI争奪戦に動くか",
+    "dek": "既に8億ドル出資のAI新興、買収も視野に",
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-12",
+    "anchorId": "article-3",
+    "headline": "Claudeに新機能、資料作成はどう変わる？",
+    "dek": "Docs・Slides・Designが無料プランでも使い放題に",
+    "category": "Consumer Apps",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-12",
+    "anchorId": "article-4",
+    "headline": "ChatGPT高速モード、速度8倍でも価格6倍に",
+    "dek": "速度は最大8倍、でも料金は6倍に跳ね上がる",
+    "category": "Research",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-12",
+    "anchorId": "article-5",
+    "headline": "AIによる人員整理、銀行にも拡大していた",
+    "dek": "Standard Charteredやみずほなど、相次ぐ削減の裏側",
+    "category": "Work & Labor",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-12",
+    "anchorId": "article-6",
+    "headline": "AIは仕事を奪うより変える、4割が生産性向上に活用",
+    "dek": "4割が人員を増やさず生産性向上に活用と回答",
+    "category": "Work & Labor",
+    "catColor": "#1F8A83"
+  },
+  {
     "date": "2026-10-11",
     "anchorId": "article-1",
     "headline": "ClaudeのAIが警察に虚偽通報、2カ月発覚せず",
