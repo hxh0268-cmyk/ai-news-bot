@@ -2,7 +2,7 @@
   {
     "date": "2026-10-12",
     "anchorId": "article-1",
-    "headline": "Amazon、Decart買収へ70億ドル規模の交渉",
+    "headline": "Amazon、Decart買収へ最大70億ドル規模の交渉",
     "dek": "Anthropicが撤退した買収先に、今度はAmazonが交渉",
     "category": "Business",
     "catColor": "#F4B942"
@@ -19,7 +19,7 @@
     "date": "2026-10-12",
     "anchorId": "article-3",
     "headline": "Claudeに新機能、資料作成はどう変わる？",
-    "dek": "Docs・Slides・Designが無料プランでも使い放題に",
+    "dek": "Docs・Slides・Designが無料プランでも利用可能に",
     "category": "Consumer Apps",
     "catColor": "#E1636F"
   },
@@ -42,8 +42,8 @@
   {
     "date": "2026-10-12",
     "anchorId": "article-6",
-    "headline": "AIは仕事を奪うより変える、4割が生産性向上に活用",
-    "dek": "4割が人員を増やさず生産性向上に活用と回答",
+    "headline": "AIは仕事を奪うより変える、4割が生産性向上を期待",
+    "dek": "経営層の4割が、AIで今の社員からより多くを引き出せると見込む",
     "category": "Work & Labor",
     "catColor": "#1F8A83"
   },
