@@ -3,12 +3,12 @@
     "importance": 1,
     "category": "Business",
     "catColor": "#1F8A83",
-    "headline": "Copilot強化にAnthropicへ巨額支払いと判明",
-    "dek": "Office作業の精度向上へAnthropicとの統合拡大へ",
+    "headline": "Copilot強化にAnthropicへ巨額支払いと報道",
+    "dek": "Excelなどの自動化への不満が背景と米メディア報道",
     "body": [
       "MicrosoftがOffice 365のAIアシスタント「Copilot」のために、Anthropicへ年20億ドル超を支払う見通しだと米The Informationが報じた。",
-      "きっかけは、ExcelやPowerPointでの自動化作業について「不具合が多くて使い物にならない」という顧客からの不満だったようだ。",
-      "Office部門トップのCharles Lamanna氏が、コストがかさむのを承知でAnthropicのモデル採用を強く進言したという。今ではWord、Excel、Outlook、PowerPointの中で、ClaudeとOpenAIのモデルが併用される形になっている。"
+      "きっかけは、Copilotは不具合が多く、ExcelやPowerPointでの作業の自動化には力不足だという顧客からの不満だったようだ。",
+      "こうした不満を受けて動いたのが、Office部門トップのCharles Lamanna氏だという。"
     ],
     "stats": [
       {
@@ -25,16 +25,16 @@
     "sources": [
       {
         "name": "The Information",
-        "url": "https://www.theinformation.com/"
+        "url": "https://www.theinformation.com/articles/microsofts-new-office-chief-fixed-copilot-won-nadella"
       },
       {
         "name": "Techmeme",
         "url": "https://www.techmeme.com/261012/p23"
       }
     ],
-    "captionX": "MicrosoftがCopilot強化のためAnthropicへ年20億ドル超支払う見通しと判明。狙いはExcelやPowerPointの自動化精度アップ。 #Copilot #Anthropic",
-    "captionThreads": "Office仕事に効くかも？MicrosoftがCopilot強化でAnthropicに年2000億円規模を払う見通しらしい。ExcelやPowerPoint、もう少し賢くなってくれるといいけど。",
-    "captionInstagram": "📊 仕事効率化のニュース\nMicrosoftが自社AI「Copilot」の性能を上げるため、AnthropicのClaudeモデルに年20億ドル超を支払う見通しだと分かりました。ExcelやPowerPointの自動化がうまく動かないという顧客からの苦情がきっかけだったようです。普段Office製品を使っている人には、地味に関係してくる話かもしれません。\n#Microsoft #Anthropic #Copilot #Office #AI活用",
+    "captionX": "MicrosoftがCopilot強化のためAnthropicへ年20億ドル超支払う見通しと米The Informationが報じた。狙いはExcelやPowerPointの自動化精度アップ。 #Copilot #Anthropic",
+    "captionThreads": "Office仕事に効くかも？MicrosoftがCopilot強化でAnthropicに年20億ドル超を払う見通しらしい。ExcelやPowerPoint、もう少し賢くなってくれるといいけど。",
+    "captionInstagram": "📊 仕事効率化のニュース\nMicrosoftが自社AI「Copilot」の性能を上げるため、AnthropicのClaudeモデルに年20億ドル超を支払う見通しだと、米The Informationが報じました。ExcelやPowerPointの自動化がうまく動かないという顧客からの苦情がきっかけだったようです。普段Office製品を使っている人には、地味に関係してくる話かもしれません。\n#Microsoft #Anthropic #Copilot #Office #AI活用",
     "lifeRelevanceTag": "毎日使うアプリ・サービス",
     "chips": [
       "Microsoft",
@@ -96,9 +96,8 @@
     "headline": "英AI相、最先端AI企業に安全強化を要請",
     "dek": "サイバー防衛強化策もあわせて発表へ",
     "body": [
-      "英国のAI担当閣僚Kanishka Narayan氏が10月12日、ロンドン西部での演説で、最先端のAIを開発する企業にシステムの安全確保でもっと積極的に動くよう求めると表明した。",
-      "AIの安全性評価を企業の自主判断に丸ごと委ねるわけにはいかない、というのが同氏の立場で、英国として独自にコントロールできるAI技術基盤を整える必要性も訴えている。",
-      "この演説は、AI政策が内閣級の担当に格上げされて以降、Narayan氏として初めての本格的な演説となる。"
+      "英国のAI担当閣僚Kanishka Narayan氏が10月12日、Imperial College LondonのBase Oneで行った演説で、最先端のAIを開発する企業にシステムの安全確保でもっと積極的に動くよう求めると表明した。",
+      "AIの安全性評価を企業の自主判断に丸ごと委ねるわけにはいかない、というのが同氏の立場で、英国として独自にコントロールできるAI技術基盤を整える必要性も訴えている。"
     ],
     "stats": [
       {
@@ -107,7 +106,7 @@
       }
     ],
     "why": "AIの安全性を『企業任せにしない』という踏み込んだ姿勢は、各国の規制論議にも波及しそうだ。日本はAIの安全性評価や事故報告に関する明確な法制度がまだ整っておらず、英国の動きが今後の制度設計のヒントになるかもしれない。",
-    "sourceLine": "MLex／The Guardian、2026年10月12日",
+    "sourceLine": "MLex／Free Press Journal、2026年10月12日",
     "sources": [
       {
         "name": "MLex",
@@ -136,91 +135,43 @@
     "importance": 4,
     "category": "Business",
     "catColor": "#1F8A83",
-    "headline": "Broadcom CEO、AI投資家を「カジノ」と酷評",
-    "dek": "好調な半導体需要の裏で過熱警戒の発言",
+    "headline": "Broadcom CEO、AI投資を「カジノ」に例え警告",
+    "dek": "AI投資ブームで自社は急成長する中での警告",
     "body": [
-      "半導体大手Broadcomのホック・タンCEOが10月12日、シンガポールでのイベントで、AIブームに群がる投資家の多くはカジノのギャンブラーのようだと発言した。",
-      "「多くの投資家は自分が何に投資しているのか分かっていない」とまで言い切っている。過度な期待を抱く投資家が少なくないという指摘だ。",
-      "一方で、OpenAIの年換算売上高が9月に500億ドルに達した点は前向きな材料だと認めつつ、モデル訓練コストの重さから依然として黒字化には至っていないとも付け加えた。Broadcom自身は2028会計年度にAI半導体売上高が2300億ドルに達すると見込んでいる。"
+      "Broadcomのホック・タンCEOが10月12日、シンガポールでのイベントで、多くのAI投資家は自分が何を買っているのか理解していないと警告し、その行動をカジノでのギャンブルになぞらえた。Bloombergが報じた。",
+      "「多くの投資家は自分が何に投資しているのか分かっていない」と述べ、投資家は「非常に極端な期待」を抱いた末に、AIへの投資が「ほとんどカジノにいるようなもの」だと気づくのだという。",
+      "OpenAIの9月の年換算売上高が約500億ドルだったことは強い需要を示しているとしつつ、巨額の訓練コストを考えると、長期的な収益性を示す材料にはほとんどならないとも述べた。Broadcom自身は、年間のAIチップ売上高が今期の約580億ドルから2028会計年度には2300億ドルへ4倍になると見込んでいる。"
     ],
     "stats": [
       {
-        "n": "500億ドル",
-        "l": "OpenAIの9月時点の年換算売上高（Tan氏が言及）"
+        "n": "約500億ドル",
+        "l": "OpenAIの9月の年換算売上高（Tan氏が言及）"
       },
       {
         "n": "2300億ドル",
-        "l": "Broadcomが見込む2028会計年度のAI半導体売上高"
+        "l": "Broadcomが見込む2028会計年度の年間AIチップ売上高"
       }
     ],
-    "why": "AIブームを支えるチップ企業のトップ自身が投資家心理に警鐘を鳴らしたのは、AI関連株に資金を投じる個人投資家にとっても聞き流せない話だろう。日本でも半導体関連株や投資信託を通じてAIブームの恩恵を受けている人は多く、過熱への警戒感は参考になりそうだ。",
-    "sourceLine": "Bloomberg、2026年10月12日",
+    "why": "AI投資ブームで急成長しているチップ企業のトップ自身が投資家に警告したのは、AI関連株に資金を投じる個人投資家にとっても聞き流せない話だろう。日本でも半導体関連株や投資信託を通じてAI関連の銘柄に投資している人にとって、参考になるかもしれない。",
+    "sourceLine": "Bloomberg／Benzinga、2026年10月12日",
     "sources": [
       {
         "name": "Bloomberg",
         "url": "https://www.bloomberg.com/news/articles/2026-10-12/broadcom-ceo-likens-many-ai-investors-to-casino-gamblers"
+      },
+      {
+        "name": "Benzinga",
+        "url": "https://finance.yahoo.com/technology/ai/articles/broadcom-ceo-says-many-ai-193518585.html"
       }
     ],
-    "captionX": "Broadcomのホック・タンCEOが「AI投資家の多くはカジノのギャンブラーのようだ」と発言。チップ需要は好調でも投資熱には警鐘。 #AI投資 #Broadcom",
-    "captionThreads": "AI半導体で稼いでる張本人が言うから重みがある。「多くの投資家は自分が何に投資してるか分かってない」とBroadcomのCEOがばっさり。",
-    "captionInstagram": "🎰 AIブームに冷静な一言\nAI向け半導体で急成長するBroadcomのホック・タンCEOが、AIブームに群がる投資家の多くを「カジノのギャンブラーのようだ」と表現しました。OpenAIの売上拡大など明るい材料を認めつつも、投資熱の過熱ぶりには警戒を示しています。\n#Broadcom #AI投資 #半導体 #株式投資 #AIバブル",
+    "captionX": "Broadcomのホック・タンCEOが、多くのAI投資家は何に投資しているか分かっていないと警告し、カジノになぞらえた。自社はAI投資ブームで急成長中。 #AI投資 #Broadcom",
+    "captionThreads": "AI半導体で稼いでる張本人が言うから重みがある。「多くの投資家は自分が何に投資してるか分かってない」とBroadcomのCEOが警告。",
+    "captionInstagram": "🎰 AIブームに冷静な一言\nAI投資ブームで急成長するBroadcomのホック・タンCEOが、多くのAI投資家は自分が何に投資しているのか分かっていないと警告し、その行動をカジノでのギャンブルになぞらえました。OpenAIの約500億ドルの年換算売上高は強い需要を示すとしつつ、巨額の訓練コストを考えると長期的な収益性を示す材料にはほとんどならないとも述べています。\n#Broadcom #AI投資 #半導体 #株式投資",
     "lifeRelevanceTag": "お金・仕事",
     "chips": [
       "Broadcom",
       "AI投資",
-      "半導体",
-      "バブル懸念"
-    ],
-    "videoId": null,
-    "_affiliateKeywordsUsed": [],
-    "_affiliateLinkCount": 0
-  },
-  {
-    "importance": 5,
-    "category": "Consumer Apps",
-    "catColor": "#F4B942",
-    "headline": "スマホで1000億パラメータAI、2028年実現構想",
-    "dek": "Qualcomm CEOが語る「エージェント競争」の次の舞台",
-    "body": [
-      "Qualcommのクリスティアーノ・アモンCEOが、一部の有力AI企業からスマートフォン上で1000億パラメータ規模のAIモデルを直接動かしたいという話を持ちかけられていることを明らかにした。",
-      "目標は2028年までに、このモデルをほぼ常時起動させた状態でスマホ上で走らせること。実現すれば、クラウド頼みが前提の今のAIスマホとはかなり違う世界になる。",
-      "現在Android端末に入っているGemini Nano-2は32.5億パラメータなので、1000億パラメータはその規模をはるかに超えてくる。"
-    ],
-    "stats": [
-      {
-        "n": "1000億",
-        "l": "目標とされるパラメータ数"
-      },
-      {
-        "n": "2028年",
-        "l": "実現を目指す年"
-      },
-      {
-        "n": "32.5億",
-        "l": "現行Gemini Nano-2のパラメータ数"
-      }
-    ],
-    "why": "将来のスマホがクラウドに頼らず高度なAIを常時動かせるようになれば、プライバシーや応答速度の面で日常のアプリ体験はかなり変わってくる。日本のキャリアやメーカーがいつこの技術を取り入れるかはまだ見えないが、数年内にスマホの買い替え基準そのものが変わりそうな予兆ではある。",
-    "sourceLine": "YourStory、2026年10月12日",
-    "sources": [
-      {
-        "name": "YourStory",
-        "url": "https://yourstory.com/ai-story/qualcomm-ai-smartphones-100b-models-locally"
-      },
-      {
-        "name": "Stocktwits",
-        "url": "https://stocktwits.com/news-articles/markets/equity/qcom-cristiano-amon-ai-companies-100b-parameter-models-2028/cZx56UPRBFR"
-      }
-    ],
-    "captionX": "Qualcomm CEOが「2028年までにスマホで1000億パラメータAIを常時起動」という構想を明かした。スマホ体験が一変するかもしれない。 #Qualcomm #AIスマホ",
-    "captionThreads": "スマホの中に今よりずっと賢いAIがずっと起動してる未来、2028年に来るかもって話。QualcommのCEOが明かしたらしい。",
-    "captionInstagram": "📱 未来のスマホ、AIが“常時稼働”に？\nQualcommのクリスティアーノ・アモンCEOが、一部のAI企業から「2028年までにスマホで1000億パラメータのAIモデルをほぼ常時動かしたい」という要望を受けていることを明らかにしました。現在のAndroidに搭載されるAI(32.5億パラメータ)の数十倍の規模で、実現すればクラウド頼みではない新しいスマホ体験になりそうです。\n#Qualcomm #AIスマホ #オンデバイスAI #スマートフォン #テクノロジー",
-    "lifeRelevanceTag": "毎日使うアプリ・サービス",
-    "chips": [
-      "Qualcomm",
-      "スマートフォン",
-      "オンデバイスAI",
-      "エージェント"
+      "半導体"
     ],
     "videoId": null,
     "_affiliateKeywordsUsed": [],
@@ -231,23 +182,19 @@
     "category": "Media & Culture",
     "catColor": "#E1636F",
     "headline": "Getty Images、破産申請し非公開化へ",
-    "dek": "AI画像生成の普及でストック素材事業に打撃",
+    "dek": "素材の需要が減少、米メディアはAI普及が背景とみる",
     "body": [
       "画像素材大手のGetty Imagesが10月12日、主要な金融関係者との間で事業再建に合意したと発表した。プリパッケージ型のチャプター11（連邦破産法11条）手続きを申請したうえで、非公開化する方針だ。",
-      "Getty家とKoch Equity Developmentの関連会社が最大5億3300万ドルの新規出資を約束しており、再建後はこの両者がGetty Imagesを100%保有することになる。無担保債権者の83.5%は、2億7000万ドル分の既発債を退任させることに合意済みだ。",
-      "同社のiStockによるEC事業は、AI画像生成ツールの急速な普及で需要が落ち込み、混乱に見舞われていると投資家向け資料で説明されている。"
+      "Getty家とKoch Equity Developmentの関連会社が最大5億3300万ドルの新規出資を約束しており、再建後はこの両者がGetty Imagesを100%保有することになる。",
+      "同社は投資家向け資料で、iStockのEC事業について需要の減少と事業環境の混乱を挙げている。The Hollywood Reporterは、その背景にAIツールの急速な普及があるとみている。"
     ],
     "stats": [
       {
         "n": "最大5億3300万ドル",
         "l": "Getty家とKochが約束した新規出資額"
-      },
-      {
-        "n": "2億7000万ドル",
-        "l": "退任対象となる無担保債の額面"
       }
     ],
-    "why": "画像素材ビジネスの苦境は、生成AIが既存のクリエイティブ産業の稼ぎ方を直接揺さぶっている象徴的な出来事だ。日本でも写真素材やイラスト素材を提供してきた企業にとって、AI生成画像との競合はもう無視できない経営課題になりつつある。",
+    "why": "The Hollywood Reporterがみるように生成AIの普及が背景にあるなら、既存のクリエイティブ産業の稼ぎ方が揺さぶられている象徴的な出来事だ。日本でも写真素材やイラスト素材を提供してきた企業にとって、AI生成画像との競合はもう無視できない経営課題になりつつある。",
     "sourceLine": "PetaPixel／The Hollywood Reporter、2026年10月12日",
     "sources": [
       {
@@ -259,9 +206,9 @@
         "url": "https://www.hollywoodreporter.com/business/business-news/getty-images-to-file-for-bankruptcy-go-private-1236727902/"
       }
     ],
-    "captionX": "Getty Imagesが破産申請し非公開化へ。AI画像生成の普及でストック素材事業に打撃を受け、最大5.3億ドルの新規出資で再建へ。 #GettyImages #生成AI",
-    "captionThreads": "ストックフォトの老舗Getty Imagesが破産申請して非公開化するらしい。AI画像生成の影響、やっぱり大きかったみたい。",
-    "captionInstagram": "📷 ストックフォト業界に激震\n画像素材大手のGetty Imagesが、チャプター11（連邦破産法11条）の申請と非公開化を発表しました。背景には、AI画像生成ツールの普及によるストック素材事業の需要減少があるようです。Getty家とKoch Equity Developmentが最大5億3300万ドルを新規出資し、再建を目指します。\n#GettyImages #生成AI #AI画像 #ストックフォト #クリエイティブ業界",
+    "captionX": "Getty Imagesが破産申請し非公開化へ。素材の需要が減り、米メディアはAI普及が背景とみる。最大5.3億ドルの新規出資で再建へ。 #GettyImages #生成AI",
+    "captionThreads": "ストックフォトの老舗Getty Imagesが破産申請して非公開化するらしい。需要が落ちていて、米メディアはAI画像生成の普及が背景とみてるみたい。",
+    "captionInstagram": "📷 ストックフォト業界に激震\n画像素材大手のGetty Imagesが、チャプター11（連邦破産法11条）の申請と非公開化を発表しました。Getty自身は需要の減少と事業環境の変化を挙げており、The Hollywood ReporterはAI画像生成ツールの普及が背景とみています。Getty家とKoch Equity Developmentが最大5億3300万ドルを新規出資し、再建を目指します。\n#GettyImages #生成AI #AI画像 #ストックフォト #クリエイティブ業界",
     "lifeRelevanceTag": "なし",
     "chips": [
       "Getty Images",
