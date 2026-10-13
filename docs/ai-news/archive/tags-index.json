@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-13",
+    "anchorId": "article-1",
+    "headline": "Copilot強化にAnthropicへ巨額支払いと報道",
+    "dek": "Excelなどの自動化への不満が背景と米メディア報道",
+    "category": "Business",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-2",
+    "headline": "「牛乳より緩い」とMicrosoft社長が規制強化訴え",
+    "dek": "AIの安全規制めぐりBrad Smith氏が各国に要求",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-3",
+    "headline": "英AI相、最先端AI企業に安全強化を要請",
+    "dek": "サイバー防衛強化策もあわせて発表へ",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-4",
+    "headline": "Broadcom CEO、AI投資を「カジノ」に例え警告",
+    "dek": "AI投資ブームで自社は急成長する中での警告",
+    "category": "Business",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-5",
+    "headline": "Getty Images、破産申請し非公開化へ",
+    "dek": "素材の需要が減少、米メディアはAI普及が背景とみる",
+    "category": "Media & Culture",
+    "catColor": "#E1636F"
+  },
+  {
     "date": "2026-10-12",
     "anchorId": "article-1",
     "headline": "Amazon、Decart買収へ最大70億ドル規模の交渉",
