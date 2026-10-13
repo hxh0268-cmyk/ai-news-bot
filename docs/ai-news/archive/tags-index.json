@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-13",
+    "anchorId": "article-1",
+    "headline": "Copilot強化にAnthropicへ巨額支払いと判明",
+    "dek": "Office作業の精度向上へAnthropicとの統合拡大へ",
+    "category": "Business",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-2",
+    "headline": "「牛乳より緩い」とMicrosoft社長が規制強化訴え",
+    "dek": "AIの安全規制めぐりBrad Smith氏が各国に要求",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-3",
+    "headline": "英AI相、最先端AI企業に安全強化を要請",
+    "dek": "サイバー防衛強化策もあわせて発表へ",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-4",
+    "headline": "Broadcom CEO、AI投資家を「カジノ」と酷評",
+    "dek": "好調な半導体需要の裏で過熱警戒の発言",
+    "category": "Business",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-5",
+    "headline": "スマホで1000億パラメータAI、2028年実現構想",
+    "dek": "Qualcomm CEOが語る「エージェント競争」の次の舞台",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-13",
+    "anchorId": "article-6",
+    "headline": "Getty Images、破産申請し非公開化へ",
+    "dek": "AI画像生成の普及でストック素材事業に打撃",
+    "category": "Media & Culture",
+    "catColor": "#E1636F"
+  },
+  {
     "date": "2026-10-12",
     "anchorId": "article-1",
     "headline": "Amazon、Decart買収へ最大70億ドル規模の交渉",
