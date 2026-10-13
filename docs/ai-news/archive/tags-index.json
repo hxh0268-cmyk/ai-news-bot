@@ -2,8 +2,8 @@
   {
     "date": "2026-10-13",
     "anchorId": "article-1",
-    "headline": "Copilot強化にAnthropicへ巨額支払いと判明",
-    "dek": "Office作業の精度向上へAnthropicとの統合拡大へ",
+    "headline": "Copilot強化にAnthropicへ巨額支払いと報道",
+    "dek": "Excelなどの自動化への不満が背景と米メディア報道",
     "category": "Business",
     "catColor": "#1F8A83"
   },
@@ -26,24 +26,16 @@
   {
     "date": "2026-10-13",
     "anchorId": "article-4",
-    "headline": "Broadcom CEO、AI投資家を「カジノ」と酷評",
-    "dek": "好調な半導体需要の裏で過熱警戒の発言",
+    "headline": "Broadcom CEO、AI投資を「カジノ」に例え警告",
+    "dek": "AI投資ブームで自社は急成長する中での警告",
     "category": "Business",
     "catColor": "#1F8A83"
   },
   {
     "date": "2026-10-13",
     "anchorId": "article-5",
-    "headline": "スマホで1000億パラメータAI、2028年実現構想",
-    "dek": "Qualcomm CEOが語る「エージェント競争」の次の舞台",
-    "category": "Consumer Apps",
-    "catColor": "#F4B942"
-  },
-  {
-    "date": "2026-10-13",
-    "anchorId": "article-6",
     "headline": "Getty Images、破産申請し非公開化へ",
-    "dek": "AI画像生成の普及でストック素材事業に打撃",
+    "dek": "素材の需要が減少、米メディアはAI普及が背景とみる",
     "category": "Media & Culture",
     "catColor": "#E1636F"
   },
