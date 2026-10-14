@@ -27,7 +27,7 @@ function insertAffiliateLinks(item, articleIndex) {
   const linkedBody = (item.body || []).map((paragraph) => {
     let text = paragraph;
     for (const link of affiliateConfig.links) {
-      if (usedKeywords.has(link.keyword)) continue;
+      if (usedKeywords.has(link.keyword) || link.url.includes("アフィリエイトIDに差し替え")) continue;
       const re = new RegExp(escapeRegExp(link.keyword), "i");
       if (re.test(text)) {
         // どの記事・どのキーワード経由のクリックかを後から追跡できるよう、UTMパラメータを自動付与する

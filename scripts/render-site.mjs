@@ -273,7 +273,6 @@ function buildHtml(data, thumbnails, mode, tagEntries) {
 
   const disclosureLines = [
     "本サイトはアフィリエイトプログラムによる収益を得ている場合があります。",
-    "本サイトはGoogle AdSense等の広告配信サービスを利用しています。",
   ];
   if (sponsor) disclosureLines.unshift(`【PR】本日の記事は${sponsor.name}提供でお届けしています。`);
 
@@ -428,7 +427,7 @@ ${ADSENSE_CLIENT_ID ? `<script async src="https://pagead2.googlesyndication.com/
     <a href="${tagIndexLink}">カテゴリ一覧</a>
     <a href="${isArchive ? "../feed.xml" : "feed.xml"}">RSSフィード</a>
     <a href="${aboutLink}">運営方針・AIについて</a>
-    <a href="${privacyLink}">プライバシーポリシー・広告について</a>
+    <a href="${privacyLink}">プライバシーポリシー</a>
     <a href="${contactLink}">お問い合わせ</a>
   </p>
 </footer>
@@ -491,7 +490,7 @@ function buildAboutHtml() {
   <h2>運営者情報</h2>
   <p>本サイトの運営者：BAL（ペンネーム）</p>
 
-  <p>広告・アフィリエイト・Cookie等の取り扱いについては<a href="privacy.html">プライバシーポリシー・広告について</a>のページをご覧ください。</p>
+  <p>広告・アフィリエイト・Cookie等の取り扱いについては<a href="privacy.html">プライバシーポリシー</a>のページをご覧ください。</p>
   <p><a href="index.html">トップページに戻る</a> ｜ <a href="contact.html">お問い合わせ</a></p>
 </main>
 </body>
@@ -505,7 +504,7 @@ function buildPrivacyHtml() {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">${gaSnippet()}
-<title>プライバシーポリシー・広告について - 今日の${topic.displayName}</title>
+<title>プライバシーポリシー - 今日の${topic.displayName}</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -520,15 +519,12 @@ function buildPrivacyHtml() {
 </head>
 <body>
 <main class="wrap">
-  <h1>プライバシーポリシー・広告について</h1>
+  <h1>プライバシーポリシー</h1>
 
   <h2>運営者情報</h2>
   <p>本サイトの運営者：BAL（ペンネーム）</p>
   <p>お問い合わせについては、下記「お問い合わせ」の項目をご覧ください。</p>
 
-  <h2>広告の配信について</h2>
-  <p>本サイトは、第三者配信の広告サービス（Google AdSense等）を利用しています。これらの広告配信事業者は、ユーザーの興味・関心に応じた広告（パーソナライズ広告）を表示する目的で、Cookie（クッキー）を使用することがあります。</p>
-  <p>Googleが広告配信に使用するCookieの詳細や、パーソナライズ広告の無効化（オプトアウト）については、Googleの<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">広告に関するポリシー</a>、および<a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">広告設定ページ</a>からご確認・変更いただけます。</p>
 
   <h2>アフィリエイトプログラムについて</h2>
   <p>本サイトは、Amazonアソシエイトプログラムをはじめとする各種アフィリエイトプログラムに参加しており、これにより収益を得ている場合があります。</p>
@@ -538,7 +534,7 @@ function buildPrivacyHtml() {
   <p>Googleアナリティクスによるデータ収集を無効にしたい場合は、<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Googleアナリティクス オプトアウト アドオン</a>をご利用いただけます。</p>
 
   <h2>収集する情報について</h2>
-  <p>本サイトは、氏名・住所・電話番号・メールアドレスなど、ユーザーを個人として特定できる情報を直接収集することはありません。上記の広告配信・アクセス解析の各サービスがCookie等を通じて取得する情報も、匿名化された利用状況データにとどまります。</p>
+  <p>本サイトは、氏名・住所・電話番号・メールアドレスなど、ユーザーを個人として特定できる情報を直接収集することはありません。上記のアクセス解析ツールがCookie等を通じて取得する情報も、匿名化された利用状況データにとどまります。</p>
 
   <h2>AI生成コンテンツについて</h2>
   <p>本サイトの記事は、生成AI（Claude等）を用いて自動生成しています。国内外のニュース記事等の情報源をもとに、その内容を要約・分析した上で作成しており、記事そのものが一次情報ではありません。一次情報については、各記事末尾に記載の出典表記をあわせてご確認ください。制作プロセスの詳細は<a href="about.html">運営方針・AIについて</a>のページで説明しています。</p>
@@ -589,7 +585,7 @@ function buildContactHtml() {
   <p><a class="contact-btn" href="${CONTACT_FORM_URL}" target="_blank" rel="noopener noreferrer">お問い合わせフォームを開く</a></p>
   <p>技術的な内容（不具合報告等）については、リポジトリのIssueからのご連絡も受け付けています。</p>
 
-  <p><a href="privacy.html">プライバシーポリシー・広告について</a> ｜ <a href="index.html">トップページに戻る</a></p>
+  <p><a href="privacy.html">プライバシーポリシー</a> ｜ <a href="index.html">トップページに戻る</a></p>
 </main>
 </body>
 </html>`;
