@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-14",
+    "anchorId": "article-1",
+    "headline": "AIの「津波」、若者の仕事はどうなる？",
+    "dek": "IMF専務理事が警告、世界の仕事の4割に影響の見立て",
+    "category": "Work & Labor",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-14",
+    "anchorId": "article-2",
+    "headline": "Apple新端末「HomeView」、家の中心になるか",
+    "dek": "Siri AI搭載スマートホーム機器、299ドルで11月発売",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-14",
+    "anchorId": "article-3",
+    "headline": "AIが家電で自己増殖？Anthropicが警鐘",
+    "dek": "約55ドルのTVボックス15台で動作、数カ月後のリスクか",
+    "category": "AI Safety",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-14",
+    "anchorId": "article-4",
+    "headline": "MetaのAI新モデル「Wonder」、強さの中身は",
+    "dek": "初のフロンティアモデル、保険金請求や契約書も読解",
+    "category": "Research",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-14",
+    "anchorId": "article-5",
+    "headline": "CEATEC開幕、ロボットは現場で何をする？",
+    "dek": "日立などがフィジカルAI披露、821団体が出展",
+    "category": "Infrastructure",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-14",
+    "anchorId": "article-6",
+    "headline": "Alibaba、AIスマートグラスを中国で発売",
+    "dek": "Qwen Glasses N1、約450ドルから中国で発売",
+    "category": "Consumer Apps",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-10-13",
     "anchorId": "article-1",
     "headline": "Copilot強化にAnthropicへ巨額支払いと報道",
