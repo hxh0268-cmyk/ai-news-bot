@@ -1,0 +1,615 @@
+{
+  "date": "2026-10-14",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 9,
+    "search_errors": 0,
+    "results": 82,
+    "sources": 10,
+    "sources_in_search_results": 10,
+    "sources_not_in_search_results": 0
+  },
+  "searches": [
+    {
+      "query": "AI ニュース 2026年10月13日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://gigazine.net/news/20261013-the-x-subscription/",
+          "title": "X・Grok・Cursorのサブスクを統合した「The X Subscription」が登場、1つのサブスクでX有料機能や有料AIを使用可能に - GIGAZINE",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://gigazine.net/news/20261013-microsoft-decision-1/",
+          "title": "MicrosoftがJevっぽい意思決定モデル「Microsoft-Decision-1」をリリース - GIGAZINE",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://media-innovation.jp/article/2026/10/13/143838.html",
+          "title": "世界で相次ぐサイバー攻撃、AIの恐怖が現実に【Media Innovation Weekly】10/13号",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261013de58370",
+          "title": "CEATEC開幕 フィジカルAIの出展相次ぐ サイバー攻撃への対応も",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://journal.omoshigo.link/trend/workai/20261013-20510/",
+          "title": "働き方 x AIニュース！2026年10月13日",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://qiita.com/aakan/items/5134f78ea3c66d487ae7",
+          "title": "〖AI News まとめ〗生成AI ニュースレポート — 2026-10-13 #GenAI - Qiita",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://tech-noisy.com/2026/10/14/ai-daily-news-2026-10-13/",
+          "title": "生成AIニュース 昨日【2026年10月13日（火）】のAI公式発表を3分でチェック",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp/gtc/session-catalog/sessions/gtc26-cwes82212",
+          "title": "AI カンファレンス & エキスポ 2026 年 3 月 16 ~ 19 日 | 基調講演 3 月 16 日 | ワークショップ 3 月 15 日 | サンノゼとバーチャル",
+          "page_age": null
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp/gtc/session-catalog/sessions/gtc26-ex82371/",
+          "title": "AI カンファレンス & エキスポ 2026 年 3 月 16 ~ 19 日 | 基調講演 3 月 16 日 | ワークショップ 3 月 15 日 | サンノゼとバーチャル",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "AI news October 13 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiagentstore.ai/ai-agent-news/this-week",
+          "title": "AI Agents News — Week of October 13, 2026 (Daily Updates)",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/ai-news-today",
+          "title": "AI News Today, October 13: Top Stories",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://innovationinthenews.substack.com/p/tech-tuesday-october-13-2026",
+          "title": "🤖 Tech Tuesday - October 13, 2026 - Innovation in the News",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://theconversation.com/topics/artificial-intelligence-ai-90",
+          "title": "Artificial intelligence (AI) News, Research and Analysis - The Conversation",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/",
+          "title": "AI News: Artificial Intelligence Stories, Ranked",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aip.org/fyi/the-week-of-october-12-2026",
+          "title": "THE WEEK OF OCT 12, 2026",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://fortune.com/section/artificial-intelligence/",
+          "title": "AI News, Artificial Intelligence Trends & Market Impact",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2021_in_artificial_intelligence",
+          "title": "2021 in artificial intelligence",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "韓国 AI 銀行 ハッキング 7行 6万8000人 10月",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://article.auone.jp/2796113d-5515-43a3-b6e8-181bbafec76f",
+          "title": "韓国の金融機関に対してAIを用いたハッキングが発生、少なくとも7行から6万8000人分の個人情報が流出か",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/expert/articles/044a53f065bb5e83e2981117cefe06180a552031",
+          "title": "韓国の銀行襲撃に「中国製AI」の影 米中がAIの安全装置を決める危うさ（高口康太） - エキスパート - Yahoo!ニュース",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://news.yahoo.co.jp/articles/36c491edacd22d78c2b8dcac8d60b2dedf791fc3",
+          "title": "韓国でも金融機関で情報漏洩相次ぐ 中国系AI悪用の痕跡（TBS NEWS DIG Powered by JNN） - Yahoo!ニュース",
+          "page_age": "6 days ago"
+        },
+        {
+          "url": "https://www.zaikei.co.jp/article/20261006/872550.html",
+          "title": "韓国の金融機関7社で情報流出、6万5千人超に影響 業務支援システムへの攻撃を調査",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://jbpress.ismedia.jp/articles/-/97451",
+          "title": "韓国の銀行を襲った中国製AI「ARTEX」の脅威、「専門知識がなくてもハッキングできる時代」が到来(1/4)",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://hashout.jp/ai/12297/",
+          "title": "韓国の複数銀行狙ったサイバー攻撃、たった1人がAIを使い分けて実行した疑い",
+          "page_age": "4 days ago"
+        },
+        {
+          "url": "https://www.vietnam.vn/ja/hacker-dung-ai-danh-cap-70-000-du-lieu-ngan-hang-han-quoc-mo-cuoc-dieu-tra-quy-mo-lon",
+          "title": "ハッカーがAIを使って7万件の銀行データを盗み出し、韓国は大規模な捜査を開始した。",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://yasashii-cybersecurity.com/korea-bank-ai-attack-article/",
+          "title": "韓国の銀行を襲った「AIハッキング」の正体",
+          "page_age": "7 days ago"
+        },
+        {
+          "url": "https://m.boannews.com/html/detail.html?idx=139338",
+          "title": "李 대통령, “보안 없이는 AI 강국도 사상누각”...해킹 사고 범정부 대책 마련 지시",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Apple HomeView smart home hub announcement October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.macrumors.com/2026/10/13/apple-announces-homeview-smart-home-hub/",
+          "title": "Apple Announces 'HomeView' Smart Home Hub - MacRumors",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html",
+          "title": "Apple releases HomeView smart home hub with screen as showcase for Siri AI",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.tomsguide.com/news/live/apple-homeview-event-october-13-live-updates",
+          "title": "Apple 'Welcome home' event LIVE — HomeView, Apple TV 4K, HomePod mini 2 unveiled — all the news, prices and release dates",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/13/apple-makes-another-push-into-the-smart-home-market-with-homeview/",
+          "title": "Apple makes another push into the smart home market with HomeView",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+          "title": "Will the HomeView be Apple’s first smart home success?",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.macworld.com/article/676817/new-homeview-homepod-mini-screen-rumours-release-date.html",
+          "title": "Apple HomeView: Everything you need to know about Apple's smart-home display",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/SmartThings",
+          "title": "SmartThings",
+          "page_age": null
+        },
+        {
+          "url": "https://www.theapplepost.com/2026/10/13/73141/apple-officially-unveils-homeview-its-new-smart-home-hub/",
+          "title": "Apple HomeView Officially Unveiled as New Smart Home Hub",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.marketscreener.com/news/apple-inc-plans-to-introduce-new-products-in-2026-ce7d5adedd81f622",
+          "title": "apple inc plans to introduce new products in 2026 ce7d5adedd81f622",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Meta Muse Wonder frontier model announcement release",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.unite.ai/meta-unveils-muse-wonder-series-its-most-capable-ai-models-yet/",
+          "title": "Meta Unveils Muse Wonder Series, Its Most Capable AI Models Yet",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://tech.yahoo.com/ai/meta-ai/articles/meta-releases-first-frontier-model-175656485.html",
+          "title": "Meta releases its first frontier model, Muse Wonder",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/meta-launches-muse-wonder-a-frontier-ai-model-for-agents",
+          "title": "Meta Launches Muse Wonder, a Frontier AI Model for Agents",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://fundaai.substack.com/p/researchmeta-muse-wonder-returns",
+          "title": "Research|META: Muse Wonder Returns Meta to the Frontier as Compute Tightens",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finance.yahoo.com/technology/ai/articles/meta-launches-muse-wonder-first-153328164.html",
+          "title": "Meta Launches Muse Wonder, Its First Frontier AI Model: Can It Pay for the Capex?",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+          "title": "Introducing Muse Wonder and Muse Wonder Full: Frontier Models for Agents",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.msn.com/en-us/news/other/meta-releases-its-first-frontier-model-muse-wonder/ar-AA2e5zMh",
+          "title": "Meta releases its first frontier model, Muse Wonder",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://theaiinsider.tech/2026/10/13/meta-superintelligence-lab-releases-muse-wonder-models-in-first-push-into-frontier-ai/",
+          "title": "Meta Superintelligence Lab Releases Muse Wonder Models in First Push Into Frontier AI",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.technology.org/2026/10/13/meta-muse-wonder-frontier-model-pricing-muse-code/",
+          "title": "Meta Launches Muse Wonder, Its First Frontier AI Model, at $4 per Million Tokens",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "IMF Georgieva AI tsunami Gen Z barista October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://fortune.com/2026/10/13/imf-chief-kristalina-georgieva-ai-job-market-warning-tsunami-of-disruption-hurt-gen-z-workers/",
+          "title": "IMF chief warns AI’s ‘slow-moving tsunami’ is coming—and it could leave Gen Z grads as baristas",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html",
+          "title": "IMF warns of AI 'tsunami’ for job seekers",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.cnbcafrica.com/2026/world-bank-jobs-council-urges-crisis-era-support-measures-as-imf-warns-of-ai-tsunami-hit",
+          "title": "World Bank jobs council urges ‘crisis-era’ support measures as IMF warns of AI ‘tsunami’ hit",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.tokenpost.com/news/technology/31299",
+          "title": "IMF Chief Warns AI ‘Slow-Moving Tsunami’ Could Hit Young Workers",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.inkl.com/news/imf-chief-warns-ais-slow-moving-tsunami-is-coming-and-it-could-leave-gen-z-graduates-stuck-making-lattes-at-starbucks",
+          "title": "IMF chief warns AI’s ‘slow-moving tsunami’ is coming—and it could leave Gen Z graduates stuck making lattes at Starbucks",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://stockpil.com/imf-world-bank-ai-jobs-warning",
+          "title": "IMF Warns AI Is a Slow-Moving Tsunami for Young Workers",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://dc.fortune.com/2026/01/23/imf-chief-warns-ai-tsunami-entry-level-jobs-gen-z-middle-class",
+          "title": "imf chief warns ai tsunami entry level jobs gen z middle class",
+          "page_age": null
+        },
+        {
+          "url": "https://fortune.com/2026/01/23/imf-chief-warns-ai-tsunami-entry-level-jobs-gen-z-middle-class/?rand=8593",
+          "title": "imf chief warns ai tsunami entry level jobs gen z middle class",
+          "page_age": null
+        },
+        {
+          "url": "https://www.fortune.com/2024/05/14/ai-tsunami-imf-chief-labor-market-job-loss",
+          "title": "ai tsunami imf chief labor market job loss",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "CEATEC 2026 フィジカルAI ロボット 開幕 出展",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.nikkei.com/article/DGXZQOUC072HI0X01C26A0000000/",
+          "title": "フィジカルAIで工場自動化、防災も目玉 デジタル見本市CEATEC開幕 - 日本経済新聞",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.ceatec.com/ja/",
+          "title": "CEATEC 2026 ( Official Website )",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000032.000118478.html",
+          "title": "フィジカルAIを、学びから現場実装へ。commissureがCEATEC 2026のRobotMateHub合同ブースに出展",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.nishinippon.co.jp/item/1548500/",
+          "title": "社会問題解決AI競演 IT展示会「シーテック」 800超の企業・団体出展",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://news.web.nhk/newsweb/na/nd-20261013de58370",
+          "title": "CEATEC開幕 フィジカルAIの出展相次ぐ サイバー攻撃への対応も",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp/events/gtc-2026-followup-webinar",
+          "title": "gtc 2026 followup webinar",
+          "page_age": null
+        },
+        {
+          "url": "https://net1us.substack.com/p/weekly-newsletter-249",
+          "title": "Weekly Newsletter #249",
+          "page_age": null
+        },
+        {
+          "url": "https://www.nvidia.com/ja-jp//gtc",
+          "title": "3 月 16 ~ 19 日 | カリフォルニア州サンノゼ",
+          "page_age": null
+        },
+        {
+          "url": "https://tools.prnewswire.com/zh-cn/live/27204/release/20260107ZH57685",
+          "title": "创新者齐聚:CES 2026今日开幕",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Anthropic 小型AIモデル IoT家電 自己複製 10月 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002204/",
+          "title": "Anthropic、自己複製AIの「兆し」を指摘 55ドルのTVボックス15台で26Bモデルが稼働 - ITmedia NEWS",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://innovatopia.jp/cyber-security/cyber-security-news/118863/",
+          "title": "Anthropic、小型AIが家電で自己複製する可能性を警告｜年内に水準到達と推計",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://novaist.jp/articles/ai-iot-self-replication/",
+          "title": "小型AIは数カ月で自己複製可能に？ Anthropicが市販IoT機器での実行能力と課題を報告 - NOVAIST",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Anthropic",
+          "title": "Anthropic",
+          "page_age": null
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/anthropic-researchers-small-ai-models-may-soon-self-replicate-on-iot-devices",
+          "title": "Anthropic Researchers: Small AI Models May Soon Self-Replicate on IoT Devices",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.yayafa.com/2909371/",
+          "title": "Anthropic、自己複製AIの「兆し」を指摘 55ドルのTVボックス15台で26Bモデルが稼働 - ITmedia NEWS - YAYAFA",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://cellcog.ai/blog/anthropic-self-replicating-ai/",
+          "title": "Anthropic: Small AI Models Could Self-Replicate on IoT",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.chaincatcher.com/en/article/2295775",
+          "title": "Anthropic: Small models may selfreplicate on...",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.technology.org/2026/10/13/anthropic-small-ai-models-self-replicate-iot-devices/",
+          "title": "Anthropic: Small AI Models Near Self-Replication",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Alibaba Qwen Glasses N1 launch price yuan October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/alerts/alibaba-launches-qwen-glasses-n1-at-450-pro-adds-eye-tracking",
+          "title": "Alibaba launches Qwen Glasses N1 at $450, Pro adds eye tracking",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.gurufocus.com/news/9120888/alibaba-launches-qwen-glasses-n1-series-amid-mixed-market-sentiment-baba",
+          "title": "Alibaba Launches Qwen Glasses N1 Series Amid Mixed Market Sentiment (BABA)",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://oodaloop.com/briefs/technology/alibaba-unveils-450-qwen-n1-ai-glasses-in-push-into-consumer-hardware/",
+          "title": "Alibaba Unveils $450 Qwen N1 AI Glasses in Push into Consumer Hardware — OODAloop",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-10-13/alibaba-unveils-450-ai-glasses-in-expanding-push-into-gadgets",
+          "title": "Alibaba Unveils $450 AI Glasses in Expanding Push Into Gadgets - Bloomberg",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.newsbytesapp.com/news/science/alibaba-launches-450-ai-glasses-to-take-on-meta/story",
+          "title": "Alibaba launches $450 AI glasses to take on Meta",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.cryptonomist.ch/2026/10/13/alibaba-smart-glasses-n1-pro/",
+          "title": "Alibaba Smart Glasses N1 Pro Launch with Eye Tracking",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.briefs.co/news/alibaba-s-next-bet-smarter-glasses-smarter-playbook/",
+          "title": "Alibaba Qwen Glasses N1 - $450 AI Smart Glasses",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.chaincatcher.com/en/article/2295927",
+          "title": "Alibaba released Qwen smart glasses,...",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Qwen",
+          "title": "Qwen",
+          "page_age": null
+        },
+        {
+          "url": "https://www.archynewsy.com/alibaba-launches-new-qwen-smart-glasses-starting-at-2999-yuan/",
+          "title": "Alibaba Launches New Qwen Smart Glasses Starting at 2,999 Yuan - Archynewsy",
+          "page_age": "0 days ago"
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "AIの「津波」、若者の仕事はどうなる？",
+      "sources": [
+        {
+          "name": "Fortune",
+          "url": "https://fortune.com/2026/10/13/imf-chief-kristalina-georgieva-ai-job-market-warning-tsunami-of-disruption-hurt-gen-z-workers/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "IMF Georgieva AI tsunami Gen Z barista October 2026"
+          ]
+        },
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/12/imf-world-bank-ai-jobs-inflation-.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "IMF Georgieva AI tsunami Gen Z barista October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "Apple新端末「HomeView」、家の中心になるか",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/13/apple-homeview-smart-home-siri-ai.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Apple HomeView smart home hub announcement October 2026"
+          ]
+        },
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/13/apple-makes-another-push-into-the-smart-home-market-with-homeview/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Apple HomeView smart home hub announcement October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "AIが家電で自己増殖？Anthropicが警鐘",
+      "sources": [
+        {
+          "name": "ITmedia NEWS",
+          "url": "https://www.itmedia.co.jp/news/article/2610/13/2000002204/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Anthropic 小型AIモデル IoT家電 自己複製 10月 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "MetaのAI新モデル「Wonder」、強さの中身は",
+      "sources": [
+        {
+          "name": "Meta公式ブログ",
+          "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Meta Muse Wonder frontier model announcement release"
+          ]
+        },
+        {
+          "name": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/meta-launches-muse-wonder-first-153328164.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Meta Muse Wonder frontier model announcement release"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "CEATEC開幕、ロボットは現場で何をする？",
+      "sources": [
+        {
+          "name": "日本経済新聞",
+          "url": "https://www.nikkei.com/article/DGXZQOUC072HI0X01C26A0000000/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "CEATEC 2026 フィジカルAI ロボット 開幕 出展"
+          ]
+        },
+        {
+          "name": "西日本新聞",
+          "url": "https://www.nishinippon.co.jp/item/1548500/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "CEATEC 2026 フィジカルAI ロボット 開幕 出展"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 6,
+      "headline": "Alibabaのスマートグラス、価格競争はどうなる？",
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-13/alibaba-unveils-450-ai-glasses-in-expanding-push-into-gadgets",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Alibaba Qwen Glasses N1 launch price yuan October 2026"
+          ]
+        }
+      ]
+    }
+  ]
+}
