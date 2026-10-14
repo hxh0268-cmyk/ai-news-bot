@@ -3,7 +3,7 @@
     "date": "2026-10-14",
     "anchorId": "article-1",
     "headline": "AIの「津波」、若者の仕事はどうなる？",
-    "dek": "IMF専門が警告、世界の仕事の4割に影響の見立て",
+    "dek": "IMF専務理事が警告、世界の仕事の4割に影響の見立て",
     "category": "Work & Labor",
     "catColor": "#E1636F"
   },
@@ -19,7 +19,7 @@
     "date": "2026-10-14",
     "anchorId": "article-3",
     "headline": "AIが家電で自己増殖？Anthropicが警鐘",
-    "dek": "55ドルのTVボックス15台で動作、数カ月後のリスクか",
+    "dek": "約55ドルのTVボックス15台で動作、数カ月後のリスクか",
     "category": "AI Safety",
     "catColor": "#1F8A83"
   },
@@ -35,15 +35,15 @@
     "date": "2026-10-14",
     "anchorId": "article-5",
     "headline": "CEATEC開幕、ロボットは現場で何をする？",
-    "dek": "日立や三菱電機がフィジカルAI披露、821団体が出展",
+    "dek": "日立などがフィジカルAI披露、821団体が出展",
     "category": "Infrastructure",
     "catColor": "#F4B942"
   },
   {
     "date": "2026-10-14",
     "anchorId": "article-6",
-    "headline": "Alibabaのスマートグラス、価格競争はどうなる？",
-    "dek": "Qwen Glasses N1、約450ドルでMetaに対抗",
+    "headline": "Alibaba、AIスマートグラスを中国で発売",
+    "dek": "Qwen Glasses N1、約450ドルから中国で発売",
     "category": "Consumer Apps",
     "catColor": "#7C6FE0"
   },
