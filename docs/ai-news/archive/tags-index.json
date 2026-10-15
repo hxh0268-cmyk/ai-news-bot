@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-15",
+    "anchorId": "article-1",
+    "headline": "OpenAI社員逮捕、会議室に盗聴器設置と発覚",
+    "dek": "ChatGPTで作成方法を調査、FBIが摘発したと判明",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-15",
+    "anchorId": "article-2",
+    "headline": "AIチャット大手Character.AI、破産を申請",
+    "dek": "Disneyが資産に2000万ドルの買収提案",
+    "category": "Business",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-15",
+    "anchorId": "article-3",
+    "headline": "Gemini 4 Argon公開、価格は競合の5分の1",
+    "dek": "Google新モデル、サイバー防御向けから一般開放へ",
+    "category": "Consumer Apps",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-15",
+    "anchorId": "article-4",
+    "headline": "AI研究者400人超、サイバー対応AIの遮断要求",
+    "dek": "HintonやBengioら、国際的な監視機関の創設も提言",
+    "category": "AI Safety",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-15",
+    "anchorId": "article-5",
+    "headline": "広告最大手Publicis、AIで定型業務25%削減へ",
+    "dek": "従業員は11万人超に増加、競合は人員削減",
+    "category": "Work & Labor",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-15",
+    "anchorId": "article-6",
+    "headline": "NYTなど40媒体、AIに記事使用のルール要求",
+    "dek": "参加団体80超に拡大、日本の新聞団体も加盟",
+    "category": "Media & Culture",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-10-14",
     "anchorId": "article-1",
     "headline": "AIの「津波」、若者の仕事はどうなる？",
