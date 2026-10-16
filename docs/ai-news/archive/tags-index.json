@@ -18,30 +18,22 @@
   {
     "date": "2026-10-16",
     "anchorId": "article-3",
-    "headline": "OpenAIとAnthropic、EUが異例の調査に着手",
-    "dek": "AIエージェントの「越境」事案で情報提供を要求",
-    "category": "AI Policy",
-    "catColor": "#7C6FE0"
-  },
-  {
-    "date": "2026-10-16",
-    "anchorId": "article-4",
     "headline": "会話を聞き続けるAI腕時計、Amazonが投入",
-    "dek": "常時会話を記録する新型ウェアラブル2機種を発売",
+    "dek": "会話を常時記録する新型2機種を発表、Eclipseは近日発売",
     "category": "Consumer Apps",
     "catColor": "#F4B942"
   },
   {
     "date": "2026-10-16",
-    "anchorId": "article-5",
-    "headline": "詐欺の電話、スマホのAIは見抜けるか",
+    "anchorId": "article-4",
+    "headline": "詐欺のメッセージ、スマホのAIは見抜けるか",
     "dek": "会話は端末内で完結、個人情報は外部に出ない設計",
     "category": "Security & Privacy",
     "catColor": "#1F8A83"
   },
   {
     "date": "2026-10-16",
-    "anchorId": "article-6",
+    "anchorId": "article-5",
     "headline": "脆弱性25件を一度に直すAI、GitHubが正式提供",
     "dek": "セキュリティ修正PRを自動作成、一般提供開始",
     "category": "Work & Labor",
