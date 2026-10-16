@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-16",
+    "anchorId": "article-1",
+    "headline": "ChatGPTは子どもに安全か、8州が一斉提訴",
+    "dek": "未成年への悪影響を巡り米8州が法的措置に踏み切る",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-16",
+    "anchorId": "article-2",
+    "headline": "NVIDIA CEO、危険なAI企業への供給停止に言及",
+    "dek": "AI安全懸念を巡る発言、英国への支援拠出も表明",
+    "category": "AI Safety",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-16",
+    "anchorId": "article-3",
+    "headline": "OpenAIとAnthropic、EUが異例の調査に着手",
+    "dek": "AIエージェントの「越境」事案で情報提供を要求",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-16",
+    "anchorId": "article-4",
+    "headline": "会話を聞き続けるAI腕時計、Amazonが投入",
+    "dek": "常時会話を記録する新型ウェアラブル2機種を発売",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-16",
+    "anchorId": "article-5",
+    "headline": "詐欺の電話、スマホのAIは見抜けるか",
+    "dek": "会話は端末内で完結、個人情報は外部に出ない設計",
+    "category": "Security & Privacy",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-16",
+    "anchorId": "article-6",
+    "headline": "脆弱性25件を一度に直すAI、GitHubが正式提供",
+    "dek": "セキュリティ修正PRを自動作成、一般提供開始",
+    "category": "Work & Labor",
+    "catColor": "#F4B942"
+  },
+  {
     "date": "2026-10-15",
     "anchorId": "article-1",
     "headline": "OpenAI社員逮捕、会議室に盗聴器設置の疑い",
