@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-17",
+    "anchorId": "article-1",
+    "headline": "米政権のAIタスクフォース、始動",
+    "dek": "憲章を採択し、120日の活動期間に入った",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-2",
+    "headline": "Bank of America、AIの欠陥修復に1000人",
+    "dek": "AIが発見した欠陥の修復へ、契約社員を大量投入",
+    "category": "Work & Labor",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-3",
+    "headline": "広告表示だけで感染、スパイウェア攻撃を確認",
+    "dek": "広告が表示されただけで感染するゼロクリック型を確認",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-4",
+    "headline": "Google検索のAI回答、リンク表示を強化",
+    "dek": "AI回答内のリンクをより目立つ位置に表示へ変更",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-5",
+    "headline": "台湾、テキサスに最大40億ドルの工業団地計画",
+    "dek": "Nvidia関連の中小サプライヤー向け、第1弾はテキサス",
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-10-16",
     "anchorId": "article-1",
     "headline": "ChatGPTは子どもに安全か、8州が一斉提訴",

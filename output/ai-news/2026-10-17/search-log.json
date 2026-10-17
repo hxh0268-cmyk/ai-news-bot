@@ -1,0 +1,674 @@
+{
+  "date": "2026-10-17",
+  "topic": "ai-news",
+  "summary": {
+    "searches": 10,
+    "search_errors": 0,
+    "results": 91,
+    "sources": 11,
+    "sources_in_search_results": 10,
+    "sources_not_in_search_results": 1
+  },
+  "searches": [
+    {
+      "query": "AI news October 16 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aisdg.substack.com/p/ai-news-for-october-16-2026",
+          "title": "AI News for October 16, 2026 - by Russ McGuire",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://solutionsreview.com/ai-news-for-the-week-of-october-16-updates-from-digitalocean-linux-foundation-onestream-more/",
+          "title": "AI News for the Week of October 16; Updates from DigitalOcean, Linux Foundation, OneStream & More",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.marketingprofs.com/opinions/2026/56192/ai-update-october-16-2026-ai-news-and-views-from-the-past-week",
+          "title": "Artificial Intelligence - AI Update, October 16, 2026: AI News and Views From the Past Week",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/ai-news-today/edition/2026-10-16",
+          "title": "AI News for October 16, 2026 — Daily Edition",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/ai-news-today",
+          "title": "AI News Today, October 16: Top Stories",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-friday-october-16-2026/",
+          "title": "Everything That Happened in AI Today Friday, October 16",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2024_in_artificial_intelligence",
+          "title": "2024 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/2023_in_artificial_intelligence",
+          "title": "2023 in artificial intelligence",
+          "page_age": null
+        },
+        {
+          "url": "https://hipther.com/news/2026/10/16/161179/ai-dispatch-daily-trends-and-innovations-october-16-2026-customers-bank-palantir-meta-muse-spark-ope",
+          "title": "AI News October 16, 2026: Palantir, Muse Spark Open, ServiceNow AI Pas",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "OpenAI 発表 2026年10月16日",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://gihyo.jp/article/2026/08/openai-devdayexchange2026",
+          "title": "「OpenAI DevDay Exchange 2026」10月20日に東京で開催",
+          "page_age": "57 days ago"
+        },
+        {
+          "url": "https://zenn.dev/schroneko/articles/openai-devday-2026",
+          "title": "OpenAI DevDay 2026 発表まとめ",
+          "page_age": "17 days ago"
+        },
+        {
+          "url": "https://x.com/kawai_design/article/2105081232946241921",
+          "title": "【やさしく解説】OpenAI DevDay 2026で何が変わった？ AIに詳しくない人のための全発表ガイド",
+          "page_age": "17 days ago"
+        },
+        {
+          "url": "https://x.com/MakeAI_CEO/article/2105065090450141209",
+          "title": "OpenAI DevDay 2026完全解説",
+          "page_age": "17 days ago"
+        },
+        {
+          "url": "https://b.hatena.ne.jp/entry/s/zenn.dev/schroneko/articles/openai-devday-2026",
+          "title": "[B! ai] OpenAI DevDay 2026 発表まとめ",
+          "page_age": null
+        },
+        {
+          "url": "https://lifepf.net/action/consulting/digital-transformation/generation-ai-digital-transformation/22733/",
+          "title": "AI最新動向（2026年10月16日） - 人生とポートフォリオ",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://fixit.co.jp/insights/openai-devday-2026/",
+          "title": "OpenAI DevDay 2026 発表まとめ｜全 25 項目と提供状況・企業の導入判断",
+          "page_age": "16 days ago"
+        },
+        {
+          "url": "https://smartscope.blog/en/blog/was-announced-openai-devday-2026-features-plan-developer-2026/",
+          "title": "What Was Announced at OpenAI DevDay 2026: Features by Plan and Developer Updates - SmartScope",
+          "page_age": "17 days ago"
+        },
+        {
+          "url": "https://web3rover.substack.com/p/openai-ceo-ai",
+          "title": "解读OpenAI CEO 对自民党AI发展会议上所做宣讲",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "White House Super Intelligence Task Force charter 120-day AI risk report",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://aiweekly.co/alerts/white-house-super-intelligence-task-force-adopts-charter-starts-120-day-ai-risk",
+          "title": "White House Super Intelligence Task Force Adopts Charter, Starts 120-Day AI Risk Report Clock",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.kucoin.com/news/flash/white-house-ai-task-force-launches-120-day-initiative-to-address-superintelligence-risks",
+          "title": "White House AI Task Force Launches 120-Day Initiative to Address Superintelligence Risks",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.yahoo.com/news/politics/articles/white-house-ai-task-force-001605126.html",
+          "title": "White House’s AI task force gets to work",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.crowell.com/en/insights/client-alerts/white-house-announces-ai-responsibility-accord-executive-orders-and-super-intelligence-task-force",
+          "title": "White House AI Responsibility Accord & Super Intelligence Task Force: What Businesses Need to Know",
+          "page_age": "10 days ago"
+        },
+        {
+          "url": "https://thenextweb.com/news/super-intelligence-force-charter-first-meeting-anthropic",
+          "title": "Trump’s AI task force starts work and tells labs to report rogue behaviour",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.aol.com/articles/white-house-forms-ai-task-021345000.html",
+          "title": "White House forms AI task force to report on technology’s risks - AOL",
+          "page_age": "12 days ago"
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/",
+          "title": "Trump unveils his new Super Intelligence Force",
+          "page_age": "11 days ago"
+        },
+        {
+          "url": "https://www.technology.org/2026/10/16/white-house-super-intelligence-force-charter-120-days/",
+          "title": "White House AI Task Force Starts 120-Day Review",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://finance.biggo.com/news/983d440c-5903-4a02-afc7-900b8f580429",
+          "title": "The White House launches superintelligence task force, requires governance plan within 120 days — BigGo Finance",
+          "page_age": "12 days ago"
+        }
+      ]
+    },
+    {
+      "query": "OpenAI ChatGPT voice update new languages Japanese October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://datanorth.ai/news/gpt-live-1-1-new-voices",
+          "title": "OpenAI GPT-Live-1.1: 13 new voices for ChatGPT Voice",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://pasqualepillitteri.it/en/news/24383/gpt-live-1-1-chatgpt-13-new-voices",
+          "title": "GPT-Live-1.1 Arrives in ChatGPT With 13 New Voices and Better Accents",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://note.com/claudegptai/n/n4fa9e92d21d6?hl=en",
+          "title": "ChatGPT Voice Updates to GPT-Live-1.1: How the New Japanese Voices 'Himari' and 'Rindo' Change Workflows｜すずしゃちょう バーニングトライブ",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ChatGPT",
+          "title": "ChatGPT",
+          "page_age": null
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GPT-4o",
+          "title": "GPT-4o",
+          "page_age": null
+        },
+        {
+          "url": "https://root-nation.com/en/news-en/it-news-en/en-chatgpt-voice-gpt-live-1-1/",
+          "title": "OpenAI begins rolling out GPT-Live-1.1- Root-Nation.com",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://diyai.io/news/gpt-live-1-1-new-voices-accents/",
+          "title": "GPT-Live-1.1 Adds New Voices and Better Accents to ChatGPT",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://runtimewire.com/article/openai-gpt-live-1-1-six-languages",
+          "title": "OpenAI updates GPT-Live voice for six languages across ChatGPT, Codex and Dots",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.orcarouter.ai/blog/gpt-live-1-1-voice-rollout-what-changed",
+          "title": "GPT-Live-1.1 Rollout: Six Languages, Two Models, One Card",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Bank of America 1000 contractors Anthropic Mythos vulnerabilities",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.kucoin.com/news/flash/bank-of-america-hires-1-000-contractors-to-address-software-flaws-exposed-by-anthropic-s-mythos-ai",
+          "title": "Bank of America Hires 1,000 Contractors to Address Software Flaws Exposed by Anthropic's Mythos AI",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
+          "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by Anthropic's Mythos",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://www.theregister.com/security/2026/10/15/bank-of-america-had-to-bring-in-1000-contractors-to-patch-all-the-bugs-mythos-identified/5303275",
+          "title": "Bank of America had to bring in 1,000 contractors to patch all the bugs Mythos identified",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://qz.com/bank-of-america-contractors-patch-anthropic-mythos-software-flaws-101426",
+          "title": "Bank of America hired 1,000 contractors to patch software flaws exposed by AI",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://app.dealroom.co/news/note/bofa-hired-1-000-contractors-to-patch-flaws-found-by-anthropic-s-mythos",
+          "title": "Dealroom.co",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://thenextweb.com/news/bank-of-america-1000-contractors-mythos-flaws",
+          "title": "Bank of America CEO says 1000 contractors are fixing AI ...",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://the-decoder.com/bank-of-america-puts-4000-people-on-fixing-vulnerabilities-uncovered-by-anthropics-mythos-and-other-ai-models/",
+          "title": "Bank of America puts 4,000 people on fixing vulnerabilities uncovered by Anthropic's Mythos and other AI models",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.itpro.com/technology/artificial-intelligence/bank-of-america-hired-1-000-security-consultants-to-address-mythos-spotted-flaws",
+          "title": "Bank of America hired 1,000 security consultants to address Mythos-spotted flaws",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.whatjobs.com/news/bank-of-america-hired-1000-contractors-to-patch-flaws-exposed-by-anthropics-mythos/",
+          "title": "Bank of America Hired 1,000 Contractors to Patch Flaws Exposed by Anthropic’s Mythos",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://cryptobriefing.com/bank-of-america-contractors-anthropic-mythos/",
+          "title": "Bank of America hires 1,000 contractors to patch flaws exposed by Anthropic's Mythos",
+          "page_age": "2 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Citizen Lab Candiru spyware ad network October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://techcrunch.com/2026/10/15/citizen-lab-says-governments-are-abusing-online-ads-to-hack-people-with-zero-click-spyware/",
+          "title": "Governments are hacking people with 'zero-click' spyware by showing them online ads",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://thehackernews.com/2026/10/citizen-lab-traces-zero-click-candiru.html",
+          "title": "Citizen Lab Traces Zero-Click Candiru Spyware Infections at Al Jazeera to Targeted Online Ads",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+          "title": "Exposing AdFection: How Discover-Tech Turned Targeted Ads Into a Pipeline for Zero-Click Mercenary Spyware - The Citizen Lab",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://cyberinsider.com/online-ads-infected-targets-with-candiru-spyware-in-zero-click-attacks/",
+          "title": "Online ads infected targets with Candiru spyware in zero-click attacks",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://thenextweb.com/news/citizen-lab-targeted-ads-spyware",
+          "title": "Israeli ad firm used online ads to spread Candiru spyware, report finds",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.aljazeera.com/news/2026/10/15/israeli-ad-tech-firm-helped-spy-on-al-jazeera-devices",
+          "title": "Israeli ad-tech firm helped place spyware on Al Jazeera devices",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Citizen_Lab",
+          "title": "Citizen Lab",
+          "page_age": null
+        },
+        {
+          "url": "https://www.technology.org/2026/10/16/citizen-lab-adfection-discover-tech-candiru-al-jazeera/",
+          "title": "Citizen Lab Says Targeted Ads Delivered Zero-Click Spyware to Al Jazeera",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://newscord.org/article/discover-tech-weaponized-ad-network-to-deliver-zero-click-mercenary-spyware-citi--Story_20261015_CitizenLabsaysgovernf0c572c2",
+          "title": "Citizen Lab Says Discover-Tech Ads Enabled Candiru Spyware To Compromise 45 Al Jazeera Devices: who 44 outlets blamed",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Google AI Mode AI Overviews more links publishers October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://betanews.com/article/google-ai-mode-inline-links-higher-click-data/",
+          "title": "Google moves inline links higher in AI Mode and AI Overviews",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://9to5google.com/2026/10/15/google-ai-mode-overviews-links/",
+          "title": "Google AI Mode and AI Overview updates work to elevate links",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/AI_Overviews",
+          "title": "AI Overviews",
+          "page_age": null
+        },
+        {
+          "url": "https://www.contentgrip.com/google-ai-search-source-links/",
+          "title": "Google AI Search Puts More Source Links Up Front",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.analyticsinsight.net/news/google-search-updates-ai-mode-ai-overviews-with-more-prominent-links",
+          "title": "Google Search Updates AI Mode, AI Overviews with More Prominent Links",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/NotebookLM",
+          "title": "NotebookLM",
+          "page_age": null
+        },
+        {
+          "url": "https://marketing4ecommerce.net/en/google-boosts-ai-overviews/",
+          "title": "Google boosts the presence of websites in Its AI Overviews: more links, news, and featured creators - Marketing4eCommerce English",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.androidauthority.com/google-ai-search-updates-3723858/",
+          "title": "Google is making it easier for you to find the websites you're actually looking for",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://eightysix.digital/blog/google-october-2026-ai-mode-links-update-what-changed-and-what-to-do/",
+          "title": "Google October 2026 AI Mode Links Update: What Changed and What to Do",
+          "page_age": "1 days ago"
+        }
+      ]
+    },
+    {
+      "query": "Goodfire interpretability Qwen3-32B neurons research October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://fourweekmba.com/ai-goodfire-90-of-qwen3-32b-neuron-poles-have-one-main-job/",
+          "title": "Goodfire: 90% of Qwen3-32B Neuron Poles Have One Main Job - FourWeekMBA",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://aiweekly.co/whos-who/edition",
+          "title": "The Who's Who of AI — Your Edition",
+          "page_age": null
+        },
+        {
+          "url": "https://cryptobriefing.com/nick-cammarata-neural-networks-interpretable/",
+          "title": "Former OpenAI researcher Nick Cammarata says most AI neurons are now interpretable",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://superpowerdaily.com/posts/goodfire-researcher-challenges-the-idea-that-ai-s-inner-workings-are-tangled",
+          "title": "Goodfire researcher challenges the idea that AI’s inner workings are tangled",
+          "page_age": null
+        },
+        {
+          "url": "https://ai-tldr.dev/releases/goodfire-neural-networks-already-clean/",
+          "title": "Nick Cammarata — neural networks are already clean",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://explainx.ai/blog/goodfire-neural-networks-are-already-clean-cammarata-neurons-interpretable-90-percent-qwen3-32b-2026",
+          "title": "Goodfire: Neural Networks Are Already Clean, Claim Checked",
+          "page_age": "2 days ago"
+        },
+        {
+          "url": "https://byteiota.com/goodfire-neural-networks-interpretable-not-black-boxes/",
+          "title": "Goodfire: 90% of AI Neurons Aren’t Black Boxes",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://arxiv.org/pdf/2601.03671",
+          "title": "NeuronScope: A Multi-Agent Framework for Explaining Polysemantic Neurons in Language Models",
+          "page_age": null
+        },
+        {
+          "url": "https://arxiv.org/pdf/2309.15025",
+          "title": "Large Language Model Alignment: A Survey",
+          "page_age": null
+        }
+      ]
+    },
+    {
+      "query": "Taiwan $4 billion Texas industrial park Nvidia supply chain Bloomberg October 2026",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://www.investing.com/news/stock-market-news/taiwan-plans-4-bln-texas-park-to-support-nvidias-ai-supply-chain--bloomberg-4952979",
+          "title": "Taiwan plans $4 bln Texas park to support Nvidia’s AI supply chain - Bloomberg By Investing.com",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.bloomberg.com/news/articles/2026-10-16/taiwan-to-fund-4-billion-texas-complex-for-ai-nvidia-partners",
+          "title": "Taiwan to Fund $4 Billion Texas Complex for AI, Nvidia Partners - Bloomberg",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://fourweekmba.com/ai-taiwan-plans-up-to-4b-texas-park-for-nvidias-supply-chain/",
+          "title": "Taiwan Plans Up to $4B Texas Park for Nvidia's Supply Chain - FourWeekMBA",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://theedgemalaysia.com/node/822121",
+          "title": "Taiwan to fund US$4 bil Texas industrial complex for AI, Nvidia partners",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://www.gurufocus.com/news/9127260/taiwan-eyes-4-billion-texas-hub-to-supercharge-nvidias-ai-supply-chain",
+          "title": "Taiwan Eyes $4 Billion Texas Hub to Supercharge Nvidia's AI Supply Chain",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://interestingengineering.com/innovation/taiwan-texas-hub-chip-suppliers",
+          "title": "Taiwan plans $4B Texas industrial park for Nvidia, TSMC suppliers",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://qz.com/taiwan-us-industrial-parks-nvidia-suppliers-texas-101626",
+          "title": "Taiwan is planning U.S. industrial parks for Nvidia's AI suppliers, starting in Texas",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://247wallst.com/investing/2026/10/16/taiwan-is-planning-4-billion-industrial-parks-in-texas-for-nvidias-suppliers/",
+          "title": "Taiwan Is Planning $4 Billion Industrial Parks in Texas for Nvidia’s Suppliers - 24/7 Wall St.",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://cryptobriefing.com/taiwan-texas-industrial-parks-nvidia-suppliers/",
+          "title": "Taiwan plans up to $4 billion Texas industrial park for Nvidia suppliers",
+          "page_age": "0 days ago"
+        }
+      ]
+    },
+    {
+      "query": "OpenAI help.openai.com release notes GPT-Live-1.1 ChatGPT voice",
+      "status": "ok",
+      "error_code": null,
+      "results": [
+        {
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "title": "ChatGPT release notes",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://openai.com/products/release-notes/",
+          "title": "Release Notes",
+          "page_age": "45 days ago"
+        },
+        {
+          "url": "https://app.therundown.ai/guides/gpt-live-1-1-guide",
+          "title": "GPT-Live-1.1: What’s New With ChatGPT Voice?",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://www.notebookcheck.net/ChatGPT-Voice-GPT-Live-1-1-brings-new-voices-for-six-languages.1425810.0.html",
+          "title": "ChatGPT Voice: GPT-Live-1.1 brings new voices for six languages - Notebookcheck News",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://community.openai.com/t/gpt-live-1-1-is-rolling-out-with-new-voices-and-better-accents/1406704",
+          "title": "GPT-Live-1.1 is rolling out with new voices and better accents - Announcements - OpenAI Developer Community",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://pasqualepillitteri.it/en/news/24383/gpt-live-1-1-chatgpt-13-new-voices",
+          "title": "GPT-Live-1.1 Arrives in ChatGPT With 13 New Voices and Better Accents",
+          "page_age": "1 days ago"
+        },
+        {
+          "url": "https://daily.dev/posts/openai-releases-gpt-live-1-1-for-voice-in-chatgpt-codex-and-dots-o1w88f2fm",
+          "title": "OpenAI releases GPT-Live-1.1 for Voice in ChatGPT, Codex and dots",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://root-nation.com/en/news-en/it-news-en/en-chatgpt-voice-gpt-live-1-1/",
+          "title": "OpenAI begins rolling out GPT-Live-1.1- Root-Nation.com",
+          "page_age": "0 days ago"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/GPT-4o",
+          "title": "GPT-4o",
+          "page_age": null
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "importance": 1,
+      "headline": "米政権のAI監視組織、120日で報告へ",
+      "sources": [
+        {
+          "name": "Yahoo News(Semafor)",
+          "url": "https://www.yahoo.com/news/politics/articles/white-house-ai-task-force-001605126.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "White House Super Intelligence Task Force charter 120-day AI risk report"
+          ]
+        },
+        {
+          "name": "TheNextWeb",
+          "url": "https://thenextweb.com/news/super-intelligence-force-charter-first-meeting-anthropic",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "White House Super Intelligence Task Force charter 120-day AI risk report"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 2,
+      "headline": "Bank of America、AIの欠陥修復に1000人",
+      "sources": [
+        {
+          "name": "CNBC",
+          "url": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Bank of America 1000 contractors Anthropic Mythos vulnerabilities"
+          ]
+        },
+        {
+          "name": "The Register",
+          "url": "https://www.theregister.com/security/2026/10/15/bank_of_america_had_to_bring_in_1000_contractors_to_patch_all_the_bugs_mythos_identified/5303275",
+          "in_search_results": false,
+          "match": null,
+          "found_by_queries": []
+        }
+      ]
+    },
+    {
+      "importance": 3,
+      "headline": "広告見ただけで感染、新型スパイウェア判明",
+      "sources": [
+        {
+          "name": "TechCrunch",
+          "url": "https://techcrunch.com/2026/10/15/citizen-lab-says-governments-are-abusing-online-ads-to-hack-people-with-zero-click-spyware/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Citizen Lab Candiru spyware ad network October 2026"
+          ]
+        },
+        {
+          "name": "Citizen Lab",
+          "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Citizen Lab Candiru spyware ad network October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 4,
+      "headline": "ChatGPTの音声が13種類に増加という発表",
+      "sources": [
+        {
+          "name": "OpenAI公式リリースノート",
+          "url": "https://openai.com/products/release-notes/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI help.openai.com release notes GPT-Live-1.1 ChatGPT voice"
+          ]
+        },
+        {
+          "name": "Notebookcheck",
+          "url": "https://www.notebookcheck.net/ChatGPT-Voice-GPT-Live-1-1-brings-new-voices-for-six-languages.1425810.0.html",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "OpenAI help.openai.com release notes GPT-Live-1.1 ChatGPT voice"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 5,
+      "headline": "Google検索のAI回答、リンク表示を強化",
+      "sources": [
+        {
+          "name": "9to5Google",
+          "url": "https://9to5google.com/2026/10/15/google-ai-mode-overviews-links/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Google AI Mode AI Overviews more links publishers October 2026"
+          ]
+        },
+        {
+          "name": "Android Authority",
+          "url": "https://www.androidauthority.com/google-ai-search-updates-3723858/",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Google AI Mode AI Overviews more links publishers October 2026"
+          ]
+        }
+      ]
+    },
+    {
+      "importance": 6,
+      "headline": "台湾、Nvidia供給網へ最大40億ドル投資",
+      "sources": [
+        {
+          "name": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-10-16/taiwan-to-fund-4-billion-texas-complex-for-ai-nvidia-partners",
+          "in_search_results": true,
+          "match": "exact",
+          "found_by_queries": [
+            "Taiwan $4 billion Texas industrial park Nvidia supply chain Bloomberg October 2026"
+          ]
+        }
+      ]
+    }
+  ]
+}

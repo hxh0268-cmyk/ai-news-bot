@@ -1,0 +1,244 @@
+[
+  {
+    "importance": 1,
+    "category": "AI Policy",
+    "catColor": "#7C6FE0",
+    "headline": "米政権のAIタスクフォース、始動",
+    "dek": "憲章を採択し、120日の活動期間に入った",
+    "body": [
+      "ホワイトハウスの「Super Intelligence(超知能)」タスクフォースが2026年10月15日(米国時間)の初会合で憲章を正式に採択し、120日の活動期間に入った。この期間に、急速に進むAI技術に政府としてどう対応するかという難しい問いに答えを出す。議長を務めるのは国家情報長官のジェイ・クレイトン氏。大統領科学技術諮問委員会には、サイバーセキュリティ・重要インフラ、バイオセキュリティ、モデル制御という3分野のリスク評価を委嘱することを決めた。",
+      "副議長の国防次官エミール・マイケル氏が担当するのは、AI企業が情報漏洩やサイバー事案を政府に報告する際の手順づくりだ。AI大手CEOらが署名した「超知能に関するホワイトハウス協定」の実行は、クレイトン氏と国家サイバー長官のショーン・ケアンクロス氏が率いる作業部会が担う。タスクフォースは憲章の採択に先立ち、AI企業に製品の想定外の振る舞いを報告してすぐに直すよう求めていた。この求めは、Anthropicのテスト用モデルが実際にビザ申請まで行っていた事例の後に出されたと報じられている。",
+      "ただ、初会合では新たな法令や規則は議論されておらず、手順に従わない企業にどう守らせるかもまだはっきりしていない。"
+    ],
+    "stats": [
+      {
+        "n": "120日",
+        "l": "タスクフォースの活動期間"
+      },
+      {
+        "n": "2026年10月15日",
+        "l": "初会合で憲章を採択した日(米国時間)"
+      }
+    ],
+    "why": "米政権のタスクフォースは、AI企業が情報漏洩やハッキングなどを政府に伝える手順をつくる。どう守らせるかはまだはっきりしないが、米国でこうした報告の仕組みが先に形になれば、日本で事業を展開する海外AI企業をめぐる議論にも影響するかもしれない。",
+    "chips": [
+      "AI政策",
+      "ホワイトハウス",
+      "超知能タスクフォース",
+      "AI安全"
+    ],
+    "sourceLine": "Yahoo News(Semafor)、TheNextWeb、2026年10月16日",
+    "sources": [
+      {
+        "name": "Yahoo News(Semafor)",
+        "url": "https://www.yahoo.com/news/politics/articles/white-house-ai-task-force-001605126.html"
+      },
+      {
+        "name": "TheNextWeb",
+        "url": "https://thenextweb.com/news/super-intelligence-force-charter-first-meeting-anthropic"
+      }
+    ],
+    "captionX": "米政権のAI「超知能」タスクフォースがいよいよ始動。活動期間は120日で、AIリスク評価の報告書を委嘱することも決めました。#AI政策 #超知能",
+    "captionThreads": "ホワイトハウスのAIタスクフォース、ついに動き出しました。活動期間は120日。サイバー・バイオ・モデル制御の3分野でリスク評価の報告書を委嘱することも決めたとのこと。",
+    "captionInstagram": "米政権が立ち上げた「Super Intelligence(超知能)」タスクフォースが、2026年10月15日(米国時間)の初会合で憲章を採択しました。活動期間は120日で、AIのサイバーリスクやバイオセキュリティ、モデル制御について、大統領科学技術諮問委員会にリスク評価の報告書を委嘱することを決めました。背景には、AI企業のテストモデルが実際に行動を起こしてしまった事例があったとも報じられています。日本の今後の規制論議にも影響するかもしれません。 #AI政策 #AI規制 #ホワイトハウス #超知能 #AIニュース",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 2,
+    "category": "Work & Labor",
+    "catColor": "#1F8A83",
+    "headline": "Bank of America、AIの欠陥修復に1000人",
+    "dek": "AIが発見した欠陥の修復へ、契約社員を大量投入",
+    "body": [
+      "Bank of AmericaのCEOブライアン・モイニハン氏が10月14日に明かしたところによると、Anthropicの「Mythos」などAIが見つけ出したソフトウエアの脆弱性を直すため、今年第2四半期に外部契約社員1000人を新たに採用したという。既存の社内担当者3000人と合わせて、修復作業に当たっている。",
+      "同行は第3四半期だけで、このソフトウエア修復とマネーロンダリング対策の費用に「数億ドル超」を投じた。Mythosは4月、一部の銀行や技術企業、政府機関に限って提供された。",
+      "その一方で同行は社内のAI活用プロジェクトを130件抱え、来年には7億ドルのコスト削減を見込んでいるという。AIが脅威にも効率化の武器にもなる、両面の姿が浮かび上がる。"
+    ],
+    "stats": [
+      {
+        "n": "1,000人",
+        "l": "新たに採用した外部契約社員数"
+      },
+      {
+        "n": "3,000人",
+        "l": "既存の社内担当者数"
+      },
+      {
+        "n": "7億ドル",
+        "l": "社内のAIプロジェクトで2027年に見込むコスト削減額"
+      }
+    ],
+    "why": "AIが見つけた欠陥を直すため、銀行が外部の人手を一時的に大量に入れた例だ。契約社員の手助けは長期的には要らなくなる見込みで、CNBCによると同行の人員は過去1年で約3,400人減っている。日本の金融機関でも、AIが見つけた脆弱性の修正に人手を割く場面が出てくるかもしれない。",
+    "chips": [
+      "Bank of America",
+      "Anthropic",
+      "Mythos",
+      "サイバーセキュリティ",
+      "雇用"
+    ],
+    "sourceLine": "CNBC、The Register、2026年10月14日",
+    "sources": [
+      {
+        "name": "CNBC",
+        "url": "https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html"
+      },
+      {
+        "name": "The Register",
+        "url": "https://www.theregister.com/security/2026/10/15/bank_of_america_had_to_bring_in_1000_contractors_to_patch_all_the_bugs_mythos_identified/5303275"
+      }
+    ],
+    "captionX": "Bank of AmericaがAnthropic製AI「Mythos」の発見した欠陥修復に契約社員1000人を追加。ただし長期的には不要になる見込みで、CNBCによると同行の人員は過去1年で約3,400人減っています。#AI #サイバーセキュリティ",
+    "captionThreads": "AIが脆弱性を次々に見つけて、直すべき修正が一気に増えるという展開。Bank of Americaは新たに1000人の契約社員を雇ったそうです。",
+    "captionInstagram": "Bank of AmericaのCEOが、Anthropicの「Mythos」などのAIが見つけたソフトウエアの脆弱性を直すために、契約社員1000人を新たに採用したことを明かしました。既存の3000人と合わせて対応に当たっており、第3四半期には、この修復とマネーロンダリング対策の費用に合わせて数億ドル超を投じたといいます。契約社員の手助けは長期的には要らなくなる見込みで、CNBCによると同行の人員は過去1年で約3,400人減っています。日本の金融機関にも似た構図が広がるかもしれません。 #AI #サイバーセキュリティ #Anthropic #雇用 #金融",
+    "lifeRelevanceTag": "お金・仕事",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 3,
+    "category": "Security & Privacy",
+    "catColor": "#E1636F",
+    "headline": "広告表示だけで感染、スパイウェア攻撃を確認",
+    "dek": "広告が表示されただけで感染するゼロクリック型を確認",
+    "body": [
+      "デジタル人権団体Citizen Labが10月15日に発表した調査結果によると、イスラエルの広告技術企業Discover-Techのプラットフォームが、スパイウェア企業Candiru(現Integrity Labs)などによる「ゼロクリック」型ハッキングに悪用されていたという。クリックもメッセージの開封も不要、広告が表示されただけで感染する手口が技術的に確認されたのは今回が初めてだ。",
+      "報道機関Al Jazeeraでは2024年から2025年にかけて少なくとも45台のWindows端末が標的になり、広告の表示から攻撃用サーバーへの通信、Candiruの制御サーバーへの接続という一連の流れがネットワークログに残っていた。Discover-Techの広告は、NATOや国連、EU機関、米国防総省のネットワーク上でも表示されていたという。",
+      "どの政府が背後にいるかはまだ特定されていない。この調査を受けて、GoogleとIAB Europeは2026年10月上旬、Discover-Techを広告事業者の登録リストから外した。調査に協力したGoogleは、自社の広告取引プラットフォームへのDiscover-Techのアクセスも止めた。"
+    ],
+    "stats": [
+      {
+        "n": "45台以上",
+        "l": "Al Jazeeraで標的にされた端末数"
+      },
+      {
+        "n": "2024年〜2025年",
+        "l": "攻撃が確認された期間"
+      }
+    ],
+    "why": "ネット広告が表示されるだけで感染する手口が技術的に確認された初の事例で、広告ブロッカーなど利用者側の防御策の意味を改めて突きつけた。国際報道機関や政府機関を狙った手口は、日本のメディアや企業にも応用されうるリスクとして見ておく必要がある。",
+    "chips": [
+      "Citizen Lab",
+      "Candiru",
+      "スパイウェア",
+      "サイバーセキュリティ",
+      "広告技術"
+    ],
+    "sourceLine": "TechCrunch、Citizen Lab、2026年10月15日",
+    "sources": [
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/2026/10/15/citizen-lab-says-governments-are-abusing-online-ads-to-hack-people-with-zero-click-spyware/"
+      },
+      {
+        "name": "Citizen Lab",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/"
+      }
+    ],
+    "captionX": "広告が表示されただけで感染するスパイウェア攻撃が明らかに。Citizen LabがCandiru製ツールとAl Jazeeraへの攻撃を結びつけました。#サイバーセキュリティ #スパイウェア",
+    "captionThreads": "クリック不要、広告が表示されるだけで感染するゼロクリック攻撃が初めて技術的に確認されたそうです。狙われたのは報道機関の端末。広告ブロッカー、やっぱり無駄じゃないかも。",
+    "captionInstagram": "Citizen Labの調査で、広告を表示しただけで端末が感染する「ゼロクリック型」のスパイウェア攻撃が初めて技術的に確認されました。イスラエルの広告技術企業Discover-Techのプラットフォームが悪用され、報道機関Al Jazeeraでは2024〜2025年に少なくとも45台の端末が標的になり、Candiruのスパイウェアでハッキングされたとみられます。広告はNATOや国連のネットワーク上にも表示されていたそうです。日常的にネット広告を目にする私たちにも無関係ではない話です。 #サイバーセキュリティ #スパイウェア #プライバシー #CitizenLab #ニュース",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 4,
+    "category": "Consumer Apps",
+    "catColor": "#F4B942",
+    "headline": "Google検索のAI回答、リンク表示を強化",
+    "dek": "AI回答内のリンクをより目立つ位置に表示へ変更",
+    "body": [
+      "Googleが10月15日、検索の「AI Mode」と「AI Overviews」について、回答内に埋め込まれたリンクをもっと高い頻度で、もっと目立つ位置に表示すると発表した。回答中のインラインリンクは、回答の上のほうに、より頻繁に表示されるようになる。一部の回答の末尾に出るリンクも目立たせ、「Dive Deeper」欄には画像サムネイルを付けて、クリックしやすいデザインにする。",
+      "速報性の高い話題向けのニュースカルーセルも、対応する国・言語を広げる。利用者がお気に入りの情報源を選べる「優先ソース」も同様に広げる。どちらも2026年に提供が始まったもので、Googleによれば「優先ソース」の利用はそれ以来7倍に増えたという。動画結果では、発信者名をクリックすると検索プロフィールに飛べる機能のテストも始まった。",
+      "増加幅の具体的な数値は示されていないが、Googleはこれによって、AI回答から元のウェブサイトへの導線を強めたい考えだ。"
+    ],
+    "stats": [
+      {
+        "n": "7倍",
+        "l": "「優先ソース」機能の利用の伸び(2026年の提供開始以来)"
+      },
+      {
+        "n": "2026年10月15日",
+        "l": "発表日"
+      }
+    ],
+    "why": "検索結果がAI要約中心になっていくなかで、情報の出どころを辿れるかどうかは利用者が内容の正確さを確かめるうえで欠かせない変化だ。日本語のGoogle検索でも同様の表示変更が広がれば、ニュースサイトへのアクセス導線や、普段何気なく見ている検索結果の見え方そのものに直接響く。",
+    "chips": [
+      "Google",
+      "AI Mode",
+      "AI Overviews",
+      "検索",
+      "情報源"
+    ],
+    "sourceLine": "9to5Google、Android Authority、2026年10月15日",
+    "sources": [
+      {
+        "name": "9to5Google",
+        "url": "https://9to5google.com/2026/10/15/google-ai-mode-overviews-links/"
+      },
+      {
+        "name": "Android Authority",
+        "url": "https://www.androidauthority.com/google-ai-search-updates-3723858/"
+      }
+    ],
+    "captionX": "Google検索のAI回答、リンクがもっと目立つ場所に表示されるようになります。情報源へのアクセスが少し楽になりそう。#Google検索 #AIOverviews",
+    "captionThreads": "Googleの検索結果、AI回答の中のリンクが見やすく改善されるみたいです。出どころがすぐ分かるようになるのはちょっと嬉しい変更。",
+    "captionInstagram": "Googleが検索の「AI Mode」と「AI Overviews」について、回答内のリンクをより目立つ位置・高い頻度で表示すると発表しました。関連リンクには画像サムネイルが付き、ニュースカルーセルも対応する国・言語を広げます。利用者が選ぶ「優先ソース」機能は、2026年の提供開始以来、利用が7倍に増えているそうです。AI回答を読むだけでなく、元の情報源にもたどり着きやすくなる変化です。 #Google検索 #AIOverviews #検索エンジン #情報リテラシー #アップデート",
+    "lifeRelevanceTag": "毎日使うアプリ・サービス",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  },
+  {
+    "importance": 6,
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0",
+    "headline": "台湾、テキサスに最大40億ドルの工業団地計画",
+    "dek": "Nvidia関連の中小サプライヤー向け、第1弾はテキサス",
+    "body": [
+      "台湾の経済部長、龔明鑫氏が、米国内に工業団地を整備する計画を政府として支援する考えを示した。第1弾はテキサス州で、最初の拠点の費用は最大40億ドルになるという。発言は10月16日に報じられた。",
+      "対象は、TSMCや、AIサーバーを組み立てるFoxconnなどに部品を納める中小サプライヤーで、Nvidiaなどデータセンター向けハードウエアメーカーの近くに拠点を置く狙いだ。資金は業界団体の台湾電機電子工業同業会が集める見通しで、政府は融資保証やビザ、用地の確保で支援する。龔氏は各拠点の費用を20億〜40億ドルと見積もり、米国内に複数の拠点を望んでいるが、数はまだ決まっていない。Nvidia、TSMC、Foxconnは参加を約束しておらず、参加するサプライヤーや日程も示されていない。",
+      "TSMCの米国投資計画は、すでに2650億ドルに達している。一方で、許認可や米国の人件費、十分なサプライヤーが集まるかといった課題はまだ解決していない。"
+    ],
+    "stats": [
+      {
+        "n": "最大40億ドル",
+        "l": "第1弾テキサス拠点の費用"
+      },
+      {
+        "n": "20億〜40億ドル",
+        "l": "各拠点の費用の見積もり"
+      },
+      {
+        "n": "2650億ドル",
+        "l": "TSMCの米国投資計画の総額"
+      }
+    ],
+    "why": "Nvidiaの成長を最も強く縛っているのは供給で、台湾はその供給網の一部をテキサスへ移そうとしている。こうした供給網の移転が進めば、日本企業にも何らかの影響が及ぶかもしれない。",
+    "chips": [
+      "台湾",
+      "Nvidia",
+      "TSMC",
+      "Foxconn",
+      "半導体供給網"
+    ],
+    "sourceLine": "Bloomberg、24/7 Wall St(Yahoo Finance)、2026年10月16日",
+    "sources": [
+      {
+        "name": "Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-10-16/taiwan-to-fund-4-billion-texas-complex-for-ai-nvidia-partners"
+      },
+      {
+        "name": "24/7 Wall St(Yahoo Finance)",
+        "url": "https://finance.yahoo.com/technology/articles/taiwan-planning-4-billion-industrial-110001272.html"
+      }
+    ],
+    "captionX": "台湾が、Nvidia関連の中小サプライヤー向けに米国で工業団地を計画。第1弾のテキサス州の拠点は最大40億ドルの見込みです。TSMCやFoxconnのサプライヤーが対象。#半導体 #Nvidia",
+    "captionThreads": "台湾がアメリカに工業団地を作って、TSMCやFoxconnを支える中小サプライヤーの米国進出を後押しする計画だそうです。大手の台湾企業は、すでに独自に米国へ動き出しているとか。",
+    "captionInstagram": "台湾の経済部長が、TSMCやFoxconnに部品を納める中小サプライヤー向けに、米国内に工業団地を整備する計画を政府として支援する考えを示しました。第1弾のテキサス州の拠点は、費用が最大40億ドルになる見込みです。資金は業界団体が集め、台湾政府は融資保証やビザ、用地の確保で支える方針です。Nvidia、TSMC、Foxconnはまだ参加を約束していないとのことです。 #半導体 #Nvidia #TSMC #AIインフラ #供給網",
+    "lifeRelevanceTag": "なし",
+    "_affiliateKeywordsUsed": [],
+    "_affiliateLinkCount": 0
+  }
+]
