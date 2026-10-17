@@ -1,5 +1,53 @@
 [
   {
+    "date": "2026-10-17",
+    "anchorId": "article-1",
+    "headline": "米政権のAI監視組織、120日で報告へ",
+    "dek": "米政権がAI監視の新組織を発足、120日で報告書",
+    "category": "AI Policy",
+    "catColor": "#7C6FE0"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-2",
+    "headline": "Bank of America、AIの欠陥修復に1000人",
+    "dek": "AIが発見した欠陥の修復へ、契約社員を大量投入",
+    "category": "Work & Labor",
+    "catColor": "#1F8A83"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-3",
+    "headline": "広告見ただけで感染、新型スパイウェア判明",
+    "dek": "広告を見ただけで感染するゼロクリック型を確認",
+    "category": "Security & Privacy",
+    "catColor": "#E1636F"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-4",
+    "headline": "ChatGPTの音声が13種類に増加という発表",
+    "dek": "日本語含む6言語に新ボイス、全利用者へ順次提供",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-5",
+    "headline": "Google検索のAI回答、リンク表示を強化",
+    "dek": "AI回答内のリンクをより目立つ位置に表示へ変更",
+    "category": "Consumer Apps",
+    "catColor": "#F4B942"
+  },
+  {
+    "date": "2026-10-17",
+    "anchorId": "article-6",
+    "headline": "台湾、Nvidia供給網へ最大40億ドル投資",
+    "dek": "Nvidia関連供給網強化へ、米テキサスに新拠点",
+    "category": "Infrastructure",
+    "catColor": "#7C6FE0"
+  },
+  {
     "date": "2026-10-16",
     "anchorId": "article-1",
     "headline": "ChatGPTは子どもに安全か、8州が一斉提訴",
